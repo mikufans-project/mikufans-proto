@@ -68,6 +68,16 @@ pub struct InvitePkResp {
     pub wait_time: i64,
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct NextEffect {
+    ///
+    #[prost(int64, tag = "1")]
+    pub uid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub effect_id: i64,
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkScoreMultiplePlay {
     ///
@@ -150,6 +160,25 @@ pub struct PkCardPlay {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PkGiftEffect {
+    ///
+    #[prost(int64, tag = "1")]
+    pub sender_uid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub anchor_uid: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub gift_effect_id: i64,
+    ///
+    #[prost(message, repeated, tag = "4")]
+    pub next_effect_list: ::prost::alloc::vec::Vec<NextEffect>,
+    ///
+    #[prost(int64, tag = "5")]
+    pub timestamp: i64,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkInfo {
     ///
     #[prost(message, optional, tag = "1")]
@@ -225,6 +254,9 @@ pub struct PkPlay {
     ///
     #[prost(bool, tag = "11")]
     pub pk_text_enabled: bool,
+    ///
+    #[prost(message, optional, tag = "12")]
+    pub pk_gift_effect: ::core::option::Option<PkGiftEffect>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

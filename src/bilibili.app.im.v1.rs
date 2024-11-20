@@ -1045,6 +1045,8 @@ pub enum ImSettingType {
     SettingTypeAntiHarassmentCommentLimits = 22,
     ///
     SettingTypeAntiHarassmentDanmuLimits = 23,
+    ///
+    SettingTypeUnfollowedMsgReceive = 24,
 }
 impl ImSettingType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -1090,6 +1092,9 @@ impl ImSettingType {
             }
             Self::SettingTypeAntiHarassmentDanmuLimits => {
                 "SETTING_TYPE_ANTI_HARASSMENT_DANMU_LIMITS"
+            }
+            Self::SettingTypeUnfollowedMsgReceive => {
+                "SETTING_TYPE_UNFOLLOWED_MSG_RECEIVE"
             }
         }
     }
@@ -1137,6 +1142,9 @@ impl ImSettingType {
             }
             "SETTING_TYPE_ANTI_HARASSMENT_DANMU_LIMITS" => {
                 Some(Self::SettingTypeAntiHarassmentDanmuLimits)
+            }
+            "SETTING_TYPE_UNFOLLOWED_MSG_RECEIVE" => {
+                Some(Self::SettingTypeUnfollowedMsgReceive)
             }
             _ => None,
         }

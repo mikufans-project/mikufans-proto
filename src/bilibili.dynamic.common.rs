@@ -1133,9 +1133,6 @@ pub struct Opus {
     ///
     #[prost(int64, tag = "11")]
     pub music_id: i64,
-    ///
-    #[prost(bool, tag = "12")]
-    pub video_transcode_timeout: bool,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
