@@ -6387,7 +6387,7 @@ pub struct OnlyFans {
     pub badge: ::core::option::Option<IconBadge>,
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OnlyFansProperty {
     ///
     #[prost(bool, tag = "1")]
@@ -6398,6 +6398,9 @@ pub struct OnlyFansProperty {
     ///
     #[prost(bool, tag = "3")]
     pub allow_download: bool,
+    ///
+    #[prost(string, tag = "4")]
+    pub embed_cashier_link: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

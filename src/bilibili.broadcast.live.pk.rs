@@ -137,6 +137,28 @@ pub struct PkScoreMultiplePlay {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PkCapsule {
+    ///
+    #[prost(enumeration = "PkCapsuleType", tag = "1")]
+    pub capsule_type: i32,
+    ///
+    #[prost(int64, tag = "2")]
+    pub end_time: i64,
+    ///
+    #[prost(string, tag = "3")]
+    pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub animation_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub toast: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkCard {
     ///
     #[prost(string, tag = "1")]
@@ -204,6 +226,9 @@ pub struct PkInfo {
     ///
     #[prost(message, optional, tag = "8")]
     pub pk_play: ::core::option::Option<PkPlay>,
+    ///
+    #[prost(bool, tag = "9")]
+    pub audience_open: bool,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -392,4 +417,36 @@ pub struct PkUser {
     ///
     #[prost(message, repeated, tag = "19")]
     pub pk_cards: ::prost::alloc::vec::Vec<PkCard>,
+    ///
+    #[prost(message, repeated, tag = "20")]
+    pub capsules: ::prost::alloc::vec::Vec<PkCapsule>,
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum PkCapsuleType {
+    ///
+    None = 0,
+    ///
+    FirstMultiple = 1,
+}
+impl PkCapsuleType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::None => "PkCapsuleTypeNone",
+            Self::FirstMultiple => "FirstMultiple",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "PkCapsuleTypeNone" => Some(Self::None),
+            "FirstMultiple" => Some(Self::FirstMultiple),
+            _ => None,
+        }
+    }
 }

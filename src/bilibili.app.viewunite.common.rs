@@ -3591,6 +3591,12 @@ pub struct ViewEpisode {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+    ///
+    #[prost(int32, tag = "43")]
+    pub section_type: i32,
+    ///
+    #[prost(string, tag = "44")]
+    pub show_title: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
