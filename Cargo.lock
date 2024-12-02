@@ -172,7 +172,7 @@ checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 
 [[package]]
 name = "mikufans-proto"
-version = "8.23.0+build.16760339"
+version = "8.24.0+build.16829943"
 dependencies = [
  "prost",
  "prost-types",
