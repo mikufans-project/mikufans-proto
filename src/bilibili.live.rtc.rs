@@ -329,6 +329,9 @@ pub mod bapi_live_rtc_token_proto {
         ///
         #[prost(int32, repeated, tag = "4")]
         pub protocol: ::prost::alloc::vec::Vec<i32>,
+        ///
+        #[prost(bool, tag = "5")]
+        pub turn_only: bool,
     }
     ///
     #[derive(

@@ -117,6 +117,46 @@ pub struct ActivityEntranceModule {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ActivityGuidanceBar {
+    ///
+    #[prost(string, tag = "1")]
+    pub win_id: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "2")]
+    pub login: bool,
+    ///
+    #[prost(string, tag = "3")]
+    pub show_time: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub action: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub close_type: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "7")]
+    pub images: ::core::option::Option<ImagesWidget>,
+    ///
+    #[prost(message, optional, tag = "8")]
+    pub title: ::core::option::Option<TextWidget>,
+    ///
+    #[prost(message, optional, tag = "9")]
+    pub sub_title: ::core::option::Option<TextWidget>,
+    ///
+    #[prost(message, optional, tag = "10")]
+    pub button: ::core::option::Option<ButtonWidget>,
+    ///
+    #[prost(map = "string, string", tag = "11")]
+    pub report: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ActivityIFrame {
     ///
     #[prost(string, tag = "1")]
@@ -398,6 +438,25 @@ pub struct Button {
     ///
     #[prost(string, tag = "6")]
     pub sub_title: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ButtonWidget {
+    ///
+    #[prost(string, tag = "1")]
+    pub code: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub text: ::core::option::Option<TextWidget>,
+    ///
+    #[prost(string, tag = "3")]
+    pub bg_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub action: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub link: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -870,6 +929,16 @@ pub struct IconFont {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ImagesWidget {
+    ///
+    #[prost(string, tag = "1")]
+    pub code: ::prost::alloc::string::String,
+    ///
+    #[prost(string, repeated, tag = "2")]
+    pub url: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Interaction {
     ///
     #[prost(int64, tag = "1")]
@@ -1126,7 +1195,7 @@ pub struct Module {
     ///
     #[prost(
         oneof = "module::Data",
-        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46"
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47"
     )]
     pub data: ::core::option::Option<module::Data>,
 }
@@ -1270,6 +1339,9 @@ pub mod module {
         ///
         #[prost(message, tag = "46")]
         Merchandise(super::Merchandise),
+        ///
+        #[prost(message, tag = "47")]
+        ActivityGuidanceBar(super::ActivityGuidanceBar),
     }
 }
 ///
@@ -1462,6 +1534,16 @@ pub struct OgvTitle {
     ///
     #[prost(string, tag = "9")]
     pub title_img_night: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct OperateAction {
+    ///
+    #[prost(string, tag = "1")]
+    pub action: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub link: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3088,6 +3170,22 @@ pub struct Tag {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TextWidget {
+    ///
+    #[prost(string, tag = "1")]
+    pub code: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub text_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub bg_color: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TheatreHotTopic {
     ///
     #[prost(int64, tag = "1")]
@@ -3660,6 +3758,16 @@ pub struct WikiInfo {
     pub wiki_url: ::prost::alloc::string::String,
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct WinShowCondition {
+    ///
+    #[prost(string, tag = "1")]
+    pub r#type: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub value: ::prost::alloc::string::String,
+}
+///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum AttentionRelationStatus {
@@ -4094,6 +4202,8 @@ pub enum ModuleType {
     PlayList = 54,
     ///
     Merchandise = 55,
+    ///
+    ActivityGuidanceBar = 56,
 }
 impl ModuleType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -4158,6 +4268,7 @@ impl ModuleType {
             Self::ActivityIframe => "ACTIVITY_IFRAME",
             Self::PlayList => "PLAY_LIST",
             Self::Merchandise => "MERCHANDISE",
+            Self::ActivityGuidanceBar => "ACTIVITY_GUIDANCE_BAR",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -4219,6 +4330,7 @@ impl ModuleType {
             "ACTIVITY_IFRAME" => Some(Self::ActivityIframe),
             "PLAY_LIST" => Some(Self::PlayList),
             "MERCHANDISE" => Some(Self::Merchandise),
+            "ACTIVITY_GUIDANCE_BAR" => Some(Self::ActivityGuidanceBar),
             _ => None,
         }
     }

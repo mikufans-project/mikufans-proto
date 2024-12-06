@@ -50,6 +50,22 @@ pub struct Bottom {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct IconInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub icon_night_url: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "3")]
+    pub icon_width: i32,
+    ///
+    #[prost(int32, tag = "4")]
+    pub icon_height: i32,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IpCity {
     ///
     #[prost(message, optional, tag = "1")]
@@ -109,6 +125,35 @@ pub struct LiveInfo {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MallBenefit {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub mall_tags: ::prost::alloc::vec::Vec<MallTagInfo>,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MallTagInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub tag_type: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub tag_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub name: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub icon: ::core::option::Option<IconInfo>,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub name_suffix_icon: ::core::option::Option<IconInfo>,
+    ///
+    #[prost(string, tag = "6")]
+    pub url: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OpusDetailReq {
     ///
     #[prost(int64, tag = "1")]
@@ -164,6 +209,15 @@ pub struct OpusDetailResp {
     ///
     #[prost(message, optional, tag = "13")]
     pub share_info: ::core::option::Option<ShareInfo>,
+    ///
+    #[prost(message, optional, tag = "14")]
+    pub mall_benefit: ::core::option::Option<MallBenefit>,
+    ///
+    #[prost(map = "string, string", tag = "15")]
+    pub track_map: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

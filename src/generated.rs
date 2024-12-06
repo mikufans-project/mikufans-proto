@@ -75,6 +75,9 @@ pub mod bilibili {
                 pub mod home {
                     include!("bilibili.app.distribution.setting.home.rs");
                 }
+                pub mod im {
+                    include!("bilibili.app.distribution.setting.im.rs");
+                }
                 pub mod internaldevice {
                     include!("bilibili.app.distribution.setting.internaldevice.rs");
                 }
