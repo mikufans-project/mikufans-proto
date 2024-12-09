@@ -1024,11 +1024,20 @@ pub struct DmWebViewReply {
     pub qoe: ::core::option::Option<QoeInfo>,
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExpoReport {
     ///
     #[prost(bool, tag = "1")]
     pub should_report_at_end: bool,
+    ///
+    #[prost(double, tag = "2")]
+    pub player_sample: f64,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub durations: ::prost::alloc::vec::Vec<ReportDuration>,
+    ///
+    #[prost(int32, tag = "4")]
+    pub max_size: i32,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1335,6 +1344,16 @@ pub struct QoeInfo {
     ///
     #[prost(string, tag = "1")]
     pub info: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ReportDuration {
+    ///
+    #[prost(int64, tag = "1")]
+    pub start_second: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub end_second: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

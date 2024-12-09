@@ -1114,6 +1114,9 @@ pub struct Tab {
     ///
     #[prost(message, optional, tag = "3")]
     pub danmaku_entrance: ::core::option::Option<TabControl>,
+    ///
+    #[prost(string, tag = "4")]
+    pub tab_bg_pad: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

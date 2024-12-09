@@ -378,6 +378,9 @@ pub struct Dialog {
     ///
     #[prost(int32, tag = "18")]
     pub hide_button_on_half: i32,
+    ///
+    #[prost(string, tag = "19")]
+    pub link_desc: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]

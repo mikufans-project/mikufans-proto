@@ -554,7 +554,7 @@ pub struct ExtData {
     #[prost(enumeration = "ExtDataType", tag = "1")]
     pub r#type: i32,
     ///
-    #[prost(oneof = "ext_data::Data", tags = "2, 3, 4, 5")]
+    #[prost(oneof = "ext_data::Data", tags = "2, 3, 4, 5, 6")]
     pub data: ::core::option::Option<ext_data::Data>,
 }
 /// Nested message and enum types in `ExtData`.
@@ -574,6 +574,9 @@ pub mod ext_data {
         ///
         #[prost(message, tag = "5")]
         ChargingExt(super::ChargingExt),
+        ///
+        #[prost(message, tag = "6")]
+        QrCode(super::QrCode),
     }
 }
 ///
@@ -969,6 +972,16 @@ pub struct QnTrialInfo {
     ///
     #[prost(int32, tag = "9")]
     pub trial_quality_type: i32,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QrCode {
+    ///
+    #[prost(string, tag = "1")]
+    pub link: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub link_desc: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1565,6 +1578,8 @@ pub enum ButtonAction {
     DeliverReport = 17,
     ///
     DeviceManage = 18,
+    ///
+    Reload = 19,
 }
 impl ButtonAction {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -1592,6 +1607,7 @@ impl ButtonAction {
             Self::CheesePay => "BUTTON_ACTION_CHEESE_PAY",
             Self::DeliverReport => "DELIVER_REPORT",
             Self::DeviceManage => "DEVICE_MANAGE",
+            Self::Reload => "RELOAD",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -1616,6 +1632,7 @@ impl ButtonAction {
             "BUTTON_ACTION_CHEESE_PAY" => Some(Self::CheesePay),
             "DELIVER_REPORT" => Some(Self::DeliverReport),
             "DEVICE_MANAGE" => Some(Self::DeviceManage),
+            "RELOAD" => Some(Self::Reload),
             _ => None,
         }
     }
@@ -1914,6 +1931,8 @@ pub enum ExtDataType {
     HeInline = 3,
     ///
     Charging = 4,
+    ///
+    QrCode = 5,
 }
 impl ExtDataType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -1927,6 +1946,7 @@ impl ExtDataType {
             Self::Banner => "BANNER",
             Self::HeInline => "HE_INLINE",
             Self::Charging => "EXT_DATA_TYPE_CHARGING",
+            Self::QrCode => "QR_CODE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -1937,6 +1957,7 @@ impl ExtDataType {
             "BANNER" => Some(Self::Banner),
             "HE_INLINE" => Some(Self::HeInline),
             "EXT_DATA_TYPE_CHARGING" => Some(Self::Charging),
+            "QR_CODE" => Some(Self::QrCode),
             _ => None,
         }
     }
@@ -2093,6 +2114,8 @@ pub enum GuideStyle {
     ChargingText = 4,
     ///
     UniversalIntercept = 5,
+    ///
+    MsgAttachQrCode = 6,
 }
 impl GuideStyle {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -2107,6 +2130,7 @@ impl GuideStyle {
             Self::SimpleText => "SIMPLE_TEXT",
             Self::ChargingText => "CHARGING_TEXT",
             Self::UniversalIntercept => "UNIVERSAL_INTERCEPT",
+            Self::MsgAttachQrCode => "MSG_ATTACH_QR_CODE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -2118,6 +2142,7 @@ impl GuideStyle {
             "SIMPLE_TEXT" => Some(Self::SimpleText),
             "CHARGING_TEXT" => Some(Self::ChargingText),
             "UNIVERSAL_INTERCEPT" => Some(Self::UniversalIntercept),
+            "MSG_ATTACH_QR_CODE" => Some(Self::MsgAttachQrCode),
             _ => None,
         }
     }

@@ -1534,6 +1534,9 @@ pub struct OgvTitle {
     ///
     #[prost(string, tag = "9")]
     pub title_img_night: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "10")]
+    pub webp_dynamic_pic_title_cycle_num: i32,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

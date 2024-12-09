@@ -306,6 +306,24 @@ pub struct Skin {
     ///
     #[prost(string, tag = "8")]
     pub dm_input_frame_night_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub dm_btn_bg_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "10")]
+    pub dm_btn_bg_night_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "11")]
+    pub dm_btn_icon_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "12")]
+    pub dm_btn_icon_night_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "13")]
+    pub dm_input_text_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "14")]
+    pub dm_input_text_night_color: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
