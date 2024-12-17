@@ -1196,6 +1196,15 @@ pub struct Episode {
     ///
     #[prost(message, optional, tag = "17")]
     pub stat_v2: ::core::option::Option<ArchiveStat>,
+    ///
+    #[prost(message, repeated, tag = "18")]
+    pub pages: ::prost::alloc::vec::Vec<super::super::archive::v1::Page>,
+    ///
+    #[prost(double, tag = "19")]
+    pub progress_percent: f64,
+    ///
+    #[prost(int64, tag = "20")]
+    pub duration: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

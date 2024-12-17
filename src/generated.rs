@@ -164,6 +164,11 @@ pub mod bilibili {
                 include!("bilibili.app.playurl.v1.rs");
             }
         }
+        pub mod project {
+            pub mod cny {
+                include!("bilibili.app.project.cny.rs");
+            }
+        }
         pub mod resource {
             pub mod privacy {
                 pub mod v1 {

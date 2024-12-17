@@ -13,6 +13,57 @@ pub struct MidByNameReq {
     #[prost(string, repeated, tag = "1")]
     pub names: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UnameMessageReply {
+    ///
+    #[prost(bool, tag = "1")]
+    pub allow: bool,
+    ///
+    #[prost(bool, tag = "2")]
+    pub realname_or_tel: bool,
+    ///
+    #[prost(string, tag = "3")]
+    pub uname_message: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub confirm_message: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub condition_message: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub bind_tel: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct UnameMessageReq {}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UpdateNameReply {
+    ///
+    #[prost(int64, tag = "1")]
+    pub code: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub msg: ::prost::alloc::string::String,
+    ///
+    #[prost(string, repeated, tag = "3")]
+    pub name_list: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    ///
+    #[prost(string, tag = "4")]
+    pub name: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UpdateNameReq {
+    ///
+    #[prost(string, tag = "1")]
+    pub uname: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub source: ::prost::alloc::string::String,
+}
 /// Generated client implementations.
 pub mod account_interface_v1_client {
     #![allow(
@@ -121,6 +172,66 @@ pub mod account_interface_v1_client {
                 );
             self.inner.unary(req, path, codec).await
         }
+        ///
+        pub async fn uname_message(
+            &mut self,
+            request: impl tonic::IntoRequest<super::UnameMessageReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::UnameMessageReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.account.interfaces.v1.AccountInterfaceV1/UnameMessage",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.account.interfaces.v1.AccountInterfaceV1",
+                        "UnameMessage",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn update_name_v2(
+            &mut self,
+            request: impl tonic::IntoRequest<super::UpdateNameReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::UpdateNameReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.account.interfaces.v1.AccountInterfaceV1/UpdateNameV2",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.account.interfaces.v1.AccountInterfaceV1",
+                        "UpdateNameV2",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
     }
 }
 /// Generated server implementations.
@@ -141,6 +252,19 @@ pub mod account_interface_v1_server {
             &self,
             request: tonic::Request<super::MidByNameReq>,
         ) -> std::result::Result<tonic::Response<super::MidByNameReply>, tonic::Status>;
+        ///
+        async fn uname_message(
+            &self,
+            request: tonic::Request<super::UnameMessageReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::UnameMessageReply>,
+            tonic::Status,
+        >;
+        ///
+        async fn update_name_v2(
+            &self,
+            request: tonic::Request<super::UpdateNameReq>,
+        ) -> std::result::Result<tonic::Response<super::UpdateNameReply>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -250,6 +374,98 @@ pub mod account_interface_v1_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = MidByNameSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.account.interfaces.v1.AccountInterfaceV1/UnameMessage" => {
+                    #[allow(non_camel_case_types)]
+                    struct UnameMessageSvc<T: AccountInterfaceV1>(pub Arc<T>);
+                    impl<
+                        T: AccountInterfaceV1,
+                    > tonic::server::UnaryService<super::UnameMessageReq>
+                    for UnameMessageSvc<T> {
+                        type Response = super::UnameMessageReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::UnameMessageReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as AccountInterfaceV1>::uname_message(&inner, request)
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = UnameMessageSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.account.interfaces.v1.AccountInterfaceV1/UpdateNameV2" => {
+                    #[allow(non_camel_case_types)]
+                    struct UpdateNameV2Svc<T: AccountInterfaceV1>(pub Arc<T>);
+                    impl<
+                        T: AccountInterfaceV1,
+                    > tonic::server::UnaryService<super::UpdateNameReq>
+                    for UpdateNameV2Svc<T> {
+                        type Response = super::UpdateNameReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::UpdateNameReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as AccountInterfaceV1>::update_name_v2(&inner, request)
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = UpdateNameV2Svc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

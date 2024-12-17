@@ -1189,9 +1189,7 @@ pub struct SearchArchiveReq {
     pub ps: i64,
     ///
     #[prost(message, optional, tag = "5")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1220,9 +1218,7 @@ pub struct SearchDynamicReq {
     pub ps: i64,
     ///
     #[prost(message, optional, tag = "5")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

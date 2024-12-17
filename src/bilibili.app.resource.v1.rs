@@ -221,6 +221,9 @@ pub struct PatchInfo {
     ///
     #[prost(int64, tag = "3")]
     pub size: i64,
+    ///
+    #[prost(int64, tag = "4")]
+    pub source_version: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
