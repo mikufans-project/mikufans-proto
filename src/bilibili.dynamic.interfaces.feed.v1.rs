@@ -450,6 +450,18 @@ pub struct DynamicThumbReq {
     ///
     #[prost(string, tag = "7")]
     pub from: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "8")]
+    pub dyn_id_str: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub spmid: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "10")]
+    pub from_spmid: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "11")]
+    pub action_id: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]

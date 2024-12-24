@@ -876,6 +876,12 @@ pub struct User {
     ///
     #[prost(string, tag = "3")]
     pub avatar: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub link: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "5")]
+    pub guest: bool,
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

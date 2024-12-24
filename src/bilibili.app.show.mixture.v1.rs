@@ -28,6 +28,145 @@ pub struct RcmdReason {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionAv {
+    ///
+    #[prost(string, tag = "1")]
+    pub cover: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub cover_view_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub cover_dm_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub cover_right_text1: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub jump_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub up_name: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "7")]
+    pub aid: i64,
+    ///
+    #[prost(string, tag = "8")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub cover43: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionBanner {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub sub_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "4")]
+    pub index: i64,
+    ///
+    #[prost(string, tag = "5")]
+    pub cover: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "6")]
+    pub id: i64,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionCard {
+    ///
+    #[prost(enumeration = "RegionCardType", tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub three_point: ::core::option::Option<ThreePoint>,
+    ///
+    #[prost(oneof = "region_card::Item", tags = "2")]
+    pub item: ::core::option::Option<region_card::Item>,
+}
+/// Nested message and enum types in `RegionCard`.
+pub mod region_card {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Item {
+        ///
+        #[prost(message, tag = "2")]
+        Av(super::RegionAv),
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionContent {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub icons: ::prost::alloc::vec::Vec<RegionIcon>,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionIcon {
+    ///
+    #[prost(string, tag = "1")]
+    pub img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "4")]
+    pub unique_id: i64,
+    ///
+    #[prost(int64, tag = "5")]
+    pub rid: i64,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionLimit {
+    ///
+    #[prost(enumeration = "RegionLimitCode", tag = "1")]
+    pub code: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub message: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct RegionListReq {}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionShortcutReply {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub limit: ::core::option::Option<RegionLimit>,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionShortcutReq {
+    ///
+    #[prost(int64, repeated, tag = "1")]
+    pub unique_id: ::prost::alloc::vec::Vec<i64>,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ThreePoint {
+    ///
+    #[prost(bool, tag = "1")]
+    pub watch_later: bool,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WidgetItem {
     ///
     #[prost(string, tag = "1")]
@@ -73,6 +212,72 @@ pub struct WidgetReq {
     ///
     #[prost(int32, tag = "2")]
     pub page_no: i32,
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum RegionCardType {
+    ///
+    Default = 0,
+    ///
+    Av = 1,
+}
+impl RegionCardType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "REGION_CARD_TYPE_DEFAULT",
+            Self::Av => "REGION_CARD_TYPE_AV",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "REGION_CARD_TYPE_DEFAULT" => Some(Self::Default),
+            "REGION_CARD_TYPE_AV" => Some(Self::Av),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum RegionLimitCode {
+    ///
+    Default = 0,
+    ///
+    NoLogin = 1,
+    ///
+    Max = 2,
+    ///
+    Error = 3,
+}
+impl RegionLimitCode {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "REGION_LIMIT_CODE_DEFAULT",
+            Self::NoLogin => "REGION_LIMIT_CODE_NO_LOGIN",
+            Self::Max => "REGION_LIMIT_CODE_MAX",
+            Self::Error => "REGION_LIMIT_CODE_ERROR",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "REGION_LIMIT_CODE_DEFAULT" => Some(Self::Default),
+            "REGION_LIMIT_CODE_NO_LOGIN" => Some(Self::NoLogin),
+            "REGION_LIMIT_CODE_MAX" => Some(Self::Max),
+            "REGION_LIMIT_CODE_ERROR" => Some(Self::Error),
+            _ => None,
+        }
+    }
 }
 /// Generated client implementations.
 pub mod mixture_client {

@@ -82,6 +82,12 @@ pub struct CosmoMeta {
     ///
     #[prost(string, tag = "17")]
     pub from: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "18")]
+    pub buvid3: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "19")]
+    pub app_id: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -95,6 +101,9 @@ pub struct CosmoParaMeta {
     ///
     #[prost(string, tag = "3")]
     pub from: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub action_id: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

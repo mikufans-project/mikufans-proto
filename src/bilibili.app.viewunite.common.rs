@@ -107,6 +107,12 @@ pub struct ActivityEntrance {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+    ///
+    #[prost(map = "string, string", tag = "11")]
+    pub order_report_params: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

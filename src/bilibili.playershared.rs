@@ -16,7 +16,7 @@ pub struct ArcConf {
     pub unsupport_scene: ::prost::alloc::vec::Vec<i32>,
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AutoQnCtl {
     ///
     #[prost(int64, tag = "1")]
@@ -36,6 +36,22 @@ pub struct AutoQnCtl {
     ///
     #[prost(int64, tag = "6")]
     pub mobile_nologin_full: i64,
+    ///
+    #[prost(map = "string, message", tag = "7")]
+    pub scene_qn_range: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        AutoQnRange,
+    >,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct AutoQnRange {
+    ///
+    #[prost(int64, tag = "1")]
+    pub max: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub min: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -937,6 +953,9 @@ pub struct QnExp {
     ///
     #[prost(bool, tag = "1")]
     pub qn_exp1: bool,
+    ///
+    #[prost(bool, tag = "2")]
+    pub qn_exp2: bool,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1334,7 +1353,7 @@ pub struct Toast {
     pub button: ::core::option::Option<Button>,
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VideoCtrl {
     ///
     #[prost(message, optional, tag = "1")]

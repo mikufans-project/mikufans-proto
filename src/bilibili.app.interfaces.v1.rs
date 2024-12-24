@@ -908,9 +908,7 @@ pub struct MediaVideoReq {
     pub ps: i32,
     ///
     #[prost(message, optional, tag = "7")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
