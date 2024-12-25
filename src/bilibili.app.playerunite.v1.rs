@@ -258,6 +258,33 @@ pub mod player_client {
             self
         }
         ///
+        pub async fn play_addition(
+            &mut self,
+            request: impl tonic::IntoRequest<super::PlayAdditionReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::PlayAdditionReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.playerunite.v1.Player/PlayAddition",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.playerunite.v1.Player", "PlayAddition"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn play_half_channels(
             &mut self,
             request: impl tonic::IntoRequest<super::PlayHalfChannelsReq>,
@@ -332,6 +359,14 @@ pub mod player_server {
     /// Generated trait containing gRPC methods that should be implemented for use with PlayerServer.
     #[async_trait]
     pub trait Player: std::marker::Send + std::marker::Sync + 'static {
+        ///
+        async fn play_addition(
+            &self,
+            request: tonic::Request<super::PlayAdditionReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::PlayAdditionReply>,
+            tonic::Status,
+        >;
         ///
         async fn play_half_channels(
             &self,
@@ -426,6 +461,49 @@ pub mod player_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
+                "/bilibili.app.playerunite.v1.Player/PlayAddition" => {
+                    #[allow(non_camel_case_types)]
+                    struct PlayAdditionSvc<T: Player>(pub Arc<T>);
+                    impl<T: Player> tonic::server::UnaryService<super::PlayAdditionReq>
+                    for PlayAdditionSvc<T> {
+                        type Response = super::PlayAdditionReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::PlayAdditionReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Player>::play_addition(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = PlayAdditionSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.app.playerunite.v1.Player/PlayHalfChannels" => {
                     #[allow(non_camel_case_types)]
                     struct PlayHalfChannelsSvc<T: Player>(pub Arc<T>);

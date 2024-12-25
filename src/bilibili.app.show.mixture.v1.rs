@@ -133,6 +133,43 @@ pub struct RegionIcon {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionIndexReply {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub banner: ::prost::alloc::vec::Vec<RegionBanner>,
+    ///
+    #[prost(bool, tag = "2")]
+    pub has_next: bool,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub cards: ::prost::alloc::vec::Vec<RegionCard>,
+    ///
+    #[prost(string, tag = "4")]
+    pub title: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionIndexReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub rid: i64,
+    ///
+    #[prost(int32, tag = "2")]
+    pub display_id: i32,
+    ///
+    #[prost(bool, tag = "3")]
+    pub need_banner: bool,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub player_args: ::core::option::Option<
+        super::super::super::archive::middleware::v1::PlayerArgs,
+    >,
+    ///
+    #[prost(string, tag = "5")]
+    pub uuid: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionLimit {
     ///
     #[prost(enumeration = "RegionLimitCode", tag = "1")]
@@ -140,6 +177,16 @@ pub struct RegionLimit {
     ///
     #[prost(string, tag = "2")]
     pub message: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RegionListReply {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub shortcut: ::core::option::Option<RegionContent>,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub contents: ::prost::alloc::vec::Vec<RegionContent>,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -391,6 +438,93 @@ pub mod mixture_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn region_index(
+            &mut self,
+            request: impl tonic::IntoRequest<super::RegionIndexReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RegionIndexReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.mixture.v1.Mixture/RegionIndex",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.app.show.mixture.v1.Mixture",
+                        "RegionIndex",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn region_list(
+            &mut self,
+            request: impl tonic::IntoRequest<super::RegionListReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RegionListReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.mixture.v1.Mixture/RegionList",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.show.mixture.v1.Mixture", "RegionList"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn region_shortcut(
+            &mut self,
+            request: impl tonic::IntoRequest<super::RegionShortcutReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RegionShortcutReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.mixture.v1.Mixture/RegionShortcut",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.app.show.mixture.v1.Mixture",
+                        "RegionShortcut",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn widget(
             &mut self,
             request: impl tonic::IntoRequest<super::WidgetReq>,
@@ -435,6 +569,27 @@ pub mod mixture_server {
             request: tonic::Request<super::ChannelRedirectReq>,
         ) -> std::result::Result<
             tonic::Response<super::ChannelRedirectReply>,
+            tonic::Status,
+        >;
+        ///
+        async fn region_index(
+            &self,
+            request: tonic::Request<super::RegionIndexReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RegionIndexReply>,
+            tonic::Status,
+        >;
+        ///
+        async fn region_list(
+            &self,
+            request: tonic::Request<super::RegionListReq>,
+        ) -> std::result::Result<tonic::Response<super::RegionListReply>, tonic::Status>;
+        ///
+        async fn region_shortcut(
+            &self,
+            request: tonic::Request<super::RegionShortcutReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RegionShortcutReply>,
             tonic::Status,
         >;
         ///
@@ -550,6 +705,137 @@ pub mod mixture_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = ChannelRedirectSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.mixture.v1.Mixture/RegionIndex" => {
+                    #[allow(non_camel_case_types)]
+                    struct RegionIndexSvc<T: Mixture>(pub Arc<T>);
+                    impl<T: Mixture> tonic::server::UnaryService<super::RegionIndexReq>
+                    for RegionIndexSvc<T> {
+                        type Response = super::RegionIndexReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::RegionIndexReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mixture>::region_index(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = RegionIndexSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.mixture.v1.Mixture/RegionList" => {
+                    #[allow(non_camel_case_types)]
+                    struct RegionListSvc<T: Mixture>(pub Arc<T>);
+                    impl<T: Mixture> tonic::server::UnaryService<super::RegionListReq>
+                    for RegionListSvc<T> {
+                        type Response = super::RegionListReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::RegionListReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mixture>::region_list(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = RegionListSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.mixture.v1.Mixture/RegionShortcut" => {
+                    #[allow(non_camel_case_types)]
+                    struct RegionShortcutSvc<T: Mixture>(pub Arc<T>);
+                    impl<
+                        T: Mixture,
+                    > tonic::server::UnaryService<super::RegionShortcutReq>
+                    for RegionShortcutSvc<T> {
+                        type Response = super::RegionShortcutReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::RegionShortcutReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mixture>::region_shortcut(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = RegionShortcutSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
