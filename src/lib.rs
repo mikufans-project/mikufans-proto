@@ -10,3 +10,9 @@ mod generated;
 
 // re-export generated types
 pub use generated::*;
+
+/// The version code.
+pub static TARGET_VERSION: &'static str = "8.27.4";
+
+/// The build serial number.
+pub static TARGET_BUILD_SN: i32 = 17175118;
