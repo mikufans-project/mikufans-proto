@@ -6708,6 +6708,9 @@ pub struct OpusSpaceFlowReq {
     ///
     #[prost(message, optional, tag = "3")]
     pub pagination: ::core::option::Option<super::super::super::pagination::Pagination>,
+    ///
+    #[prost(string, tag = "4")]
+    pub filter_type: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

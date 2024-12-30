@@ -823,6 +823,9 @@ pub struct PayWallOnshowAction {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+    ///
+    #[prost(enumeration = "ButtonAction", tag = "3")]
+    pub action_type: i32,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

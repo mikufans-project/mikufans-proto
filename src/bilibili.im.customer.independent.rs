@@ -41,6 +41,16 @@ pub struct EvaluationStepSelect {
     pub select: i32,
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct FinishParagraphsRenderStopPos {
+    ///
+    #[prost(int64, tag = "1")]
+    pub para: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub node: i64,
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgParagraphText {
     ///
@@ -51,6 +61,9 @@ pub struct MsgParagraphText {
     ///
     #[prost(message, optional, tag = "2")]
     pub evaluation: ::core::option::Option<EvaluationShowInfo>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub stop_pos: ::core::option::Option<FinishParagraphsRenderStopPos>,
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

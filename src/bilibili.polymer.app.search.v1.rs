@@ -2642,9 +2642,7 @@ pub struct SearchInlineData {
     pub title: ::prost::alloc::string::String,
     ///
     #[prost(message, optional, tag = "3")]
-    pub player_args: ::core::option::Option<
-        super::super::super::super::app::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<PlayerArgs>,
     ///
     #[prost(int32, tag = "4")]
     pub can_play: i32,
