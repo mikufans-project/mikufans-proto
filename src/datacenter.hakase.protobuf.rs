@@ -368,6 +368,9 @@ pub struct AndroidDeviceInfo {
     /// 留空即可
     #[prost(string, tag = "124")]
     pub cpu_features: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "125")]
+    pub simulator_attr:  ::prost::alloc::string::String,
 }
 /// 传感器信息
 #[allow(clippy::derive_partial_eq_without_eq)]
