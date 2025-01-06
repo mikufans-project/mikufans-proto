@@ -1689,6 +1689,60 @@ pub struct Picture {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PictureListReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub oid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub r#type: i64,
+    ///
+    #[prost(string, tag = "3")]
+    pub extra: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "4")]
+    pub after_rpid: i64,
+    ///
+    #[prost(enumeration = "Mode", tag = "5")]
+    pub mode: i32,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub pagination: ::core::option::Option<
+        super::super::super::super::pagination::FeedPagination,
+    >,
+    ///
+    #[prost(string, tag = "7")]
+    pub session_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "8")]
+    pub main_list_session_id: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PictureListResp {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub replies: ::prost::alloc::vec::Vec<ReplyInfo>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub pagination_reply: ::core::option::Option<
+        super::super::super::super::pagination::FeedPaginationReply,
+    >,
+    ///
+    #[prost(string, tag = "3")]
+    pub session_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub report_params: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub context_feature: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub pagination_end_text: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PreviewListReply {
     ///
     #[prost(message, optional, tag = "1")]
@@ -2757,6 +2811,9 @@ pub mod subject_control {
         ///
         #[prost(string, tag = "2")]
         pub event_id: ::prost::alloc::string::String,
+        ///
+        #[prost(bool, tag = "3")]
+        pub support_pic_list: bool,
     }
 }
 ///
@@ -3606,6 +3663,36 @@ pub mod reply_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn picture_list(
+            &mut self,
+            request: impl tonic::IntoRequest<super::PictureListReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::PictureListResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.main.community.reply.v1.Reply/PictureList",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.main.community.reply.v1.Reply",
+                        "PictureList",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn preview_list(
             &mut self,
             request: impl tonic::IntoRequest<super::PreviewListReq>,
@@ -3890,6 +3977,11 @@ pub mod reply_server {
             &self,
             request: tonic::Request<super::MainListReq>,
         ) -> std::result::Result<tonic::Response<super::MainListReply>, tonic::Status>;
+        ///
+        async fn picture_list(
+            &self,
+            request: tonic::Request<super::PictureListReq>,
+        ) -> std::result::Result<tonic::Response<super::PictureListResp>, tonic::Status>;
         ///
         async fn preview_list(
             &self,
@@ -4269,6 +4361,49 @@ pub mod reply_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = MainListSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.main.community.reply.v1.Reply/PictureList" => {
+                    #[allow(non_camel_case_types)]
+                    struct PictureListSvc<T: Reply>(pub Arc<T>);
+                    impl<T: Reply> tonic::server::UnaryService<super::PictureListReq>
+                    for PictureListSvc<T> {
+                        type Response = super::PictureListResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::PictureListReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Reply>::picture_list(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = PictureListSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

@@ -245,6 +245,9 @@ pub mod subject_description_reply {
         ///
         #[prost(string, tag = "3")]
         pub event_id: ::prost::alloc::string::String,
+        ///
+        #[prost(bool, tag = "4")]
+        pub support_pic_list: bool,
     }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]

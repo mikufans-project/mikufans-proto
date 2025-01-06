@@ -95,9 +95,7 @@ pub struct BigItem {
     pub can_play: i32,
     ///
     #[prost(message, optional, tag = "16")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
     ///
     #[prost(bool, tag = "17")]
     pub is_fav: bool,
@@ -362,6 +360,9 @@ pub struct CursorItem {
     ///
     #[prost(bool, tag = "14")]
     pub has_share: bool,
+    ///
+    #[prost(string, tag = "15")]
+    pub report: ::prost::alloc::string::String,
     ///
     #[prost(oneof = "cursor_item::CardItem", tags = "1, 2, 3, 4, 5")]
     pub card_item: ::core::option::Option<cursor_item::CardItem>,

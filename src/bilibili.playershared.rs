@@ -1020,6 +1020,28 @@ pub struct Report {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ResidentBar {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub question_text: ::core::option::Option<TextInfo>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub button: ::core::option::Option<ButtonInfo>,
+    ///
+    #[prost(string, tag = "4")]
+    pub link: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub report: ::core::option::Option<Report>,
+    ///
+    #[prost(string, tag = "6")]
+    pub bg_image: ::prost::alloc::string::String,
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResponseDash {
     ///
     #[prost(message, repeated, tag = "1")]
@@ -1426,6 +1448,9 @@ pub struct ViewInfo {
     ///
     #[prost(message, optional, tag = "6")]
     pub full_prompt_bar: ::core::option::Option<FullPromptBar>,
+    ///
+    #[prost(message, optional, tag = "7")]
+    pub resident_bar: ::core::option::Option<ResidentBar>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

@@ -297,6 +297,9 @@ pub mod bapi_live_rtc_token_proto {
         ///
         #[prost(message, optional, tag = "10")]
         pub turn_addr: ::core::option::Option<TurnAddr>,
+        ///
+        #[prost(string, tag = "11")]
+        pub media_server_name: ::prost::alloc::string::String,
     }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]

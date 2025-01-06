@@ -1852,20 +1852,26 @@ pub struct OperationCardNew {
     #[prost(enumeration = "BizType", tag = "8")]
     pub biz_type: i32,
     ///
-    #[prost(oneof = "operation_card_new::Render", tags = "6, 7")]
-    pub render: ::core::option::Option<operation_card_new::Render>,
+    #[prost(oneof = "operation_card_new::Param", tags = "9, 10, 11, 12")]
+    pub param: ::core::option::Option<operation_card_new::Param>,
 }
 /// Nested message and enum types in `OperationCardNew`.
 pub mod operation_card_new {
     ///
     #[derive(Clone, PartialEq, ::prost::Oneof)]
-    pub enum Render {
+    pub enum Param {
         ///
-        #[prost(message, tag = "6")]
-        Standard(super::StandardCard),
+        #[prost(message, tag = "9")]
+        Follow(super::BizFollowVideoParam),
         ///
-        #[prost(message, tag = "7")]
-        Skip(super::OperationCard),
+        #[prost(message, tag = "10")]
+        Reserve(super::BizReserveActivityParam),
+        ///
+        #[prost(message, tag = "11")]
+        Jump(super::BizJumpLinkParam),
+        ///
+        #[prost(message, tag = "12")]
+        Game(super::BizReserveGameParam),
     }
 }
 ///
