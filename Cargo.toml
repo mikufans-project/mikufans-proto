@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.29.1+build.17300882"
+version = "8.29.2+build.17320029"
 edition = "2021"
 rust-version = "1.70"   # same with tonic
 
