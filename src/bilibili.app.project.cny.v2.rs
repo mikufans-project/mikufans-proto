@@ -10,116 +10,6 @@ pub struct Answer {
     pub user_option: i64,
 }
 ///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Badge {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub background_color: ::core::option::Option<Color>,
-    ///
-    #[prost(string, tag = "2")]
-    pub text: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ButtonWithToggleState {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub button_checked: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(message, optional, tag = "2")]
-    pub button_unchecked: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(bool, tag = "3")]
-    pub is_checked: bool,
-    ///
-    #[prost(string, tag = "4")]
-    pub oid: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub desc_text: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "6")]
-    pub desc_img: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ButtonWithUrl {
-    ///
-    #[prost(string, tag = "1")]
-    pub btn_text: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub btn_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "3")]
-    pub url: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub btn_img_url: ::prost::alloc::string::String,
-    ///
-    #[prost(double, tag = "5")]
-    pub btn_img_url_w_h_ratio: f64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CampaignBrief {
-    ///
-    #[prost(string, tag = "1")]
-    pub start_time: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "3")]
-    pub sub_title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub title_image: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "5")]
-    pub is_active: bool,
-    ///
-    #[prost(string, tag = "6")]
-    pub active_text: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "7")]
-    pub show_reserve_button: bool,
-    ///
-    #[prost(int64, tag = "8")]
-    pub reserve_sid: i64,
-    ///
-    #[prost(bool, tag = "9")]
-    pub is_reserved: bool,
-    ///
-    #[prost(bool, tag = "10")]
-    pub is_finished: bool,
-    ///
-    #[prost(string, tag = "11")]
-    pub finished_text: ::prost::alloc::string::String,
-    ///
-    #[prost(int64, tag = "12")]
-    pub sort_idx: i64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CampaignsToday {
-    ///
-    #[prost(string, tag = "1")]
-    pub today_date: ::prost::alloc::string::String,
-    ///
-    #[prost(message, repeated, tag = "2")]
-    pub campaigns: ::prost::alloc::vec::Vec<CampaignBrief>,
-    ///
-    #[prost(bool, tag = "3")]
-    pub default_check: bool,
-    ///
-    #[prost(string, tag = "4")]
-    pub today_date_image_checked: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub today_date_image_unchecked: ::prost::alloc::string::String,
-}
-///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ClickAction {
     ///
@@ -143,86 +33,19 @@ pub struct ClickAction {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Color {
+pub struct Conf {
     ///
-    #[prost(string, tag = "1")]
-    pub argb_light: ::prost::alloc::string::String,
+    #[prost(int64, tag = "1")]
+    pub result_request_random: i64,
     ///
-    #[prost(string, tag = "2")]
-    pub argb_dark: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct CommercialImageBar {
-    ///
-    #[prost(string, tag = "1")]
-    pub image_url: ::prost::alloc::string::String,
-    ///
-    #[prost(int64, tag = "2")]
-    pub start_timestamp: i64,
-    ///
-    #[prost(int64, tag = "3")]
-    pub end_timestamp: i64,
-    ///
-    #[prost(string, tag = "4")]
-    pub jump_url: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ComponentHeaderLotteryScratch {
-    ///
-    #[prost(string, tag = "1")]
-    pub image_url: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub text: ::prost::alloc::string::String,
+    #[prost(bool, tag = "2")]
+    pub disable_share_bubble: bool,
     ///
     #[prost(string, tag = "3")]
-    pub jump_url: ::prost::alloc::string::String,
+    pub history_quiz_url: ::prost::alloc::string::String,
     ///
     #[prost(string, tag = "4")]
-    pub image_guide_url: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct DanmuPlayerConfig {
-    ///
-    #[prost(int32, tag = "1")]
-    pub screen_occupancy: i32,
-    ///
-    #[prost(int32, tag = "2")]
-    pub transparency: i32,
-    ///
-    #[prost(int32, tag = "3")]
-    pub duration: i32,
-    ///
-    #[prost(float, tag = "4")]
-    pub scale: f32,
-    ///
-    #[prost(float, tag = "5")]
-    pub stroke_width: f32,
-    ///
-    #[prost(int32, tag = "6")]
-    pub vertical_direction: i32,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ImageWithHw {
-    ///
-    #[prost(string, tag = "1")]
-    pub image_url: ::prost::alloc::string::String,
-    ///
-    #[prost(double, tag = "2")]
-    pub height: f64,
-    ///
-    #[prost(double, tag = "3")]
-    pub width: f64,
-    ///
-    #[prost(string, tag = "4")]
-    pub jump_url: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub track_data: ::prost::alloc::string::String,
+    pub share_game_url: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -233,12 +56,6 @@ pub struct Option {
     ///
     #[prost(string, tag = "2")]
     pub content: ::prost::alloc::string::String,
-    ///
-    #[prost(int64, tag = "3")]
-    pub ratio: i64,
-    ///
-    #[prost(bool, tag = "4")]
-    pub user_selected: bool,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -252,6 +69,12 @@ pub struct PrizeInfo {
     ///
     #[prost(enumeration = "PrizeType", tag = "3")]
     pub r#type: i32,
+    ///
+    #[prost(string, tag = "4")]
+    pub amount: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub prize_id: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -265,9 +88,6 @@ pub struct Question {
     ///
     #[prost(message, repeated, tag = "3")]
     pub options: ::prost::alloc::vec::Vec<Option>,
-    ///
-    #[prost(int64, tag = "4")]
-    pub question_duration: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -279,7 +99,10 @@ pub struct QuestionReview {
     #[prost(string, tag = "2")]
     pub answer: ::prost::alloc::string::String,
     ///
-    #[prost(bool, tag = "3")]
+    #[prost(string, tag = "3")]
+    pub user_answer: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "4")]
     pub is_correct: bool,
 }
 ///
@@ -306,23 +129,8 @@ pub struct QuizResultReq {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuizResultResp {
     ///
-    #[prost(enumeration = "UserSessionStatus", tag = "1")]
-    pub result: i32,
-    ///
-    #[prost(message, repeated, tag = "2")]
-    pub questions: ::prost::alloc::vec::Vec<QuestionReview>,
-    ///
-    #[prost(message, repeated, tag = "3")]
-    pub prizes: ::prost::alloc::vec::Vec<PrizeInfo>,
-    ///
-    #[prost(string, tag = "4")]
-    pub button_link: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "5")]
-    pub stat_completed: bool,
-    ///
-    #[prost(bool, tag = "6")]
-    pub disable_share_bubble: bool,
+    #[prost(message, optional, tag = "1")]
+    pub user_session: ::core::option::Option<UserSession>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -349,65 +157,6 @@ pub struct QuizReviewResp {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct RcmdItemBrief {
-    ///
-    #[prost(string, tag = "1")]
-    pub item_type: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub item_oid: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "3")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub cover: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub jump_url: ::prost::alloc::string::String,
-    ///
-    #[prost(message, optional, tag = "6")]
-    pub badge: ::core::option::Option<Badge>,
-    ///
-    #[prost(string, tag = "7")]
-    pub cover_left_text1: ::prost::alloc::string::String,
-    ///
-    #[prost(enumeration = "PegasusIcon", tag = "8")]
-    pub cover_left_icon1: i32,
-    ///
-    #[prost(string, tag = "9")]
-    pub cover_left_text2: ::prost::alloc::string::String,
-    ///
-    #[prost(enumeration = "PegasusIcon", tag = "10")]
-    pub cover_left_icon2: i32,
-    ///
-    #[prost(string, tag = "11")]
-    pub cover_right_text: ::prost::alloc::string::String,
-    ///
-    #[prost(message, optional, tag = "12")]
-    pub bottom_text: ::core::option::Option<TextWithPrefixImage>,
-    ///
-    #[prost(message, optional, tag = "13")]
-    pub background_color: ::core::option::Option<Color>,
-}
-///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct ReloadLongLiveReq {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct ReloadLongLiveResp {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub long_live: ::core::option::Option<TabSectionLongLive>,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Session {
     ///
     #[prost(string, tag = "1")]
@@ -426,43 +175,34 @@ pub struct Session {
     pub answer_etime: i64,
     ///
     #[prost(string, tag = "6")]
-    pub title_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "7")]
     pub background_img: ::prost::alloc::string::String,
     ///
+    #[prost(string, tag = "7")]
+    pub commercial_icon: ::prost::alloc::string::String,
+    ///
     #[prost(string, tag = "8")]
-    pub after_background_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "9")]
-    pub live_card_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "10")]
     pub jump_url: ::prost::alloc::string::String,
     ///
-    #[prost(int64, tag = "11")]
+    #[prost(int64, tag = "9")]
     pub next_quiz_stime: i64,
     ///
-    #[prost(int64, tag = "12")]
-    pub mtime: i64,
+    #[prost(int64, tag = "10")]
+    pub next_stime: i64,
     ///
-    #[prost(bool, tag = "13")]
-    pub show_live_card: bool,
-    ///
-    #[prost(string, tag = "14")]
-    pub start_button_icon: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "15")]
+    #[prost(string, tag = "11")]
     pub prize_pool_text: ::prost::alloc::string::String,
     ///
-    #[prost(string, tag = "16")]
+    #[prost(string, tag = "12")]
     pub prize_pool_link: ::prost::alloc::string::String,
     ///
-    #[prost(string, tag = "17")]
+    #[prost(string, tag = "13")]
     pub next_prize_pool_text: ::prost::alloc::string::String,
     ///
-    #[prost(bool, tag = "18")]
-    pub special: bool,
+    #[prost(message, optional, tag = "14")]
+    pub question: ::core::option::Option<Question>,
+    ///
+    #[prost(int64, tag = "15")]
+    pub mtime: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -471,36 +211,14 @@ pub struct SessionReview {
     #[prost(string, tag = "1")]
     pub session_name: ::prost::alloc::string::String,
     ///
-    #[prost(message, repeated, tag = "2")]
-    pub questions: ::prost::alloc::vec::Vec<QuestionReview>,
+    #[prost(message, optional, tag = "2")]
+    pub question: ::core::option::Option<QuestionReview>,
     ///
     #[prost(message, repeated, tag = "3")]
     pub prizes: ::prost::alloc::vec::Vec<PrizeInfo>,
     ///
     #[prost(string, tag = "4")]
     pub session_id: ::prost::alloc::string::String,
-    ///
-    #[prost(enumeration = "SessionType", tag = "5")]
-    pub r#type: i32,
-}
-///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct SessionStatusBriefReq {}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SessionStatusBriefResp {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub session: ::core::option::Option<Session>,
-    ///
-    #[prost(message, optional, tag = "2")]
-    pub upcoming_session: ::core::option::Option<Session>,
-    ///
-    #[prost(int64, tag = "3")]
-    pub request_random: i64,
-    ///
-    #[prost(int64, tag = "4")]
-    pub result_request_random: i64,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -515,37 +233,14 @@ pub struct SessionStatusResp {
     #[prost(message, optional, tag = "2")]
     pub upcoming_session: ::core::option::Option<Session>,
     ///
-    #[prost(enumeration = "UserSessionStatus", tag = "3")]
-    pub user_status: i32,
+    #[prost(message, optional, tag = "3")]
+    pub user_session: ::core::option::Option<UserSession>,
     ///
-    #[prost(message, repeated, tag = "4")]
-    pub questions: ::prost::alloc::vec::Vec<Question>,
+    #[prost(message, optional, tag = "4")]
+    pub conf: ::core::option::Option<Conf>,
     ///
     #[prost(int64, tag = "5")]
-    pub request_random: i64,
-    ///
-    #[prost(int64, tag = "6")]
-    pub result_request_random: i64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct StartQuizReq {
-    ///
-    #[prost(string, tag = "1")]
-    pub session_id: ::prost::alloc::string::String,
-    ///
-    #[prost(int64, tag = "2")]
-    pub timestamp: i64,
-    ///
-    #[prost(string, tag = "3")]
-    pub sign: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct StartQuizResp {
-    ///
-    #[prost(message, repeated, tag = "1")]
-    pub questions: ::prost::alloc::vec::Vec<Question>,
+    pub current_time: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -554,8 +249,8 @@ pub struct SubmitQuizReq {
     #[prost(string, tag = "1")]
     pub session_id: ::prost::alloc::string::String,
     ///
-    #[prost(message, repeated, tag = "2")]
-    pub answers: ::prost::alloc::vec::Vec<Answer>,
+    #[prost(message, optional, tag = "2")]
+    pub answer: ::core::option::Option<Answer>,
     ///
     #[prost(message, optional, tag = "3")]
     pub report: ::core::option::Option<QuizReport>,
@@ -567,48 +262,19 @@ pub struct SubmitQuizReq {
     pub sign: ::prost::alloc::string::String,
 }
 ///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct SubmitQuizResp {
-    ///
-    #[prost(enumeration = "UserSessionStatus", tag = "1")]
-    pub result: i32,
-    ///
-    #[prost(message, repeated, tag = "2")]
-    pub questions_review: ::prost::alloc::vec::Vec<QuestionReview>,
-    ///
-    #[prost(message, repeated, tag = "3")]
-    pub prizes: ::prost::alloc::vec::Vec<PrizeInfo>,
-    ///
-    #[prost(message, repeated, tag = "4")]
-    pub questions: ::prost::alloc::vec::Vec<Question>,
-    ///
-    #[prost(string, tag = "5")]
-    pub button_link: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "6")]
-    pub disable_share_bubble: bool,
-}
-///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct TabPageComponent {}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabPageProperty {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub background_color: ::core::option::Option<Color>,
-    ///
-    #[prost(enumeration = "PageTheme", tag = "2")]
-    pub page_theme: i32,
-}
+pub struct SubmitQuizResp {}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TabSection {
     ///
-    #[prost(enumeration = "TabSectionType", tag = "1")]
+    #[prost(enumeration = "super::TabSectionType", tag = "1")]
     pub section_type: i32,
     ///
-    #[prost(oneof = "tab_section::SectionData", tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11")]
+    #[prost(
+        oneof = "tab_section::SectionData",
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+    )]
     pub section_data: ::core::option::Option<tab_section::SectionData>,
 }
 /// Nested message and enum types in `TabSection`.
@@ -618,286 +284,45 @@ pub mod tab_section {
     pub enum SectionData {
         ///
         #[prost(message, tag = "2")]
-        Header(super::TabSectionHeader),
+        Header(super::super::TabSectionHeader),
         ///
         #[prost(message, tag = "3")]
-        LongLive(super::TabSectionLongLive),
+        LongLive(super::super::TabSectionLongLive),
         ///
         #[prost(message, tag = "4")]
-        CampaignScheduling(super::TabSectionCampaignScheduling),
+        CampaignScheduling(super::super::TabSectionCampaignScheduling),
         ///
         #[prost(message, tag = "5")]
-        CampaignSheet(super::TabSectionCampaignSheet),
+        CampaignSheet(super::super::TabSectionCampaignSheet),
         ///
         #[prost(message, tag = "6")]
-        Quiz(super::TabSectionQuiz),
+        Quiz(super::TabSectionQuizV2),
         ///
         #[prost(message, tag = "7")]
-        RelatedRcmd(super::TabSectionRelatedRcmd),
+        RelatedRcmd(super::super::TabSectionRelatedRcmd),
         ///
         #[prost(message, tag = "8")]
-        CampaignBanners(super::TabSectionCampaignBanners),
+        CampaignBanners(super::super::TabSectionCampaignBanners),
         ///
         #[prost(message, tag = "9")]
-        GuidanceLongLive(super::TabSectionGuidanceLongLive),
+        GuidanceLongLive(super::super::TabSectionGuidanceLongLive),
         ///
         #[prost(message, tag = "10")]
-        BackToPegasus(super::TabSectionBackToPegasus),
+        BackToPegasus(super::super::TabSectionBackToPegasus),
         ///
         #[prost(message, tag = "11")]
-        Sponsors(super::TabSectionSponsors),
+        Sponsors(super::super::TabSectionSponsors),
+        ///
+        #[prost(message, tag = "12")]
+        CommercialImageBars(super::super::TabSectionCommercialImageBars),
     }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionBackToPegasus {
-    ///
-    #[prost(string, tag = "1")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub slide_content_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "3")]
-    pub slide_arrow_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub background_img: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionCampaignBanners {
-    ///
-    #[prost(string, tag = "1")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub title_img: ::prost::alloc::string::String,
-    ///
-    #[prost(message, repeated, tag = "3")]
-    pub banners: ::prost::alloc::vec::Vec<ImageWithHw>,
-    ///
-    #[prost(double, tag = "4")]
-    pub display_w_h_ratio: f64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionCampaignScheduling {
-    ///
-    #[prost(string, tag = "1")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub title_img: ::prost::alloc::string::String,
-    ///
-    #[prost(message, repeated, tag = "3")]
-    pub scheduling: ::prost::alloc::vec::Vec<CampaignsToday>,
-    ///
-    #[prost(message, optional, tag = "4")]
-    pub view_all_btn: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(string, tag = "5")]
-    pub dialog_header_background_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "6")]
-    pub dialog_header_title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "7")]
-    pub dialog_header_title_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "8")]
-    pub dialog_header_close_btn_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "9")]
-    pub dialog_bg_top_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "10")]
-    pub dialog_bg_middle_img: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "11")]
-    pub dialog_bg_bottom_img: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionCampaignSheet {
-    ///
-    #[prost(string, tag = "1")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "2")]
-    pub title_img: ::prost::alloc::string::String,
-    ///
-    #[prost(message, optional, tag = "3")]
-    pub view_all_btn: ::core::option::Option<ButtonWithUrl>,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionCommercialImageBars {
-    ///
-    #[prost(message, repeated, tag = "1")]
-    pub images_bars: ::prost::alloc::vec::Vec<CommercialImageBar>,
-    ///
-    #[prost(int64, tag = "2")]
-    pub current_timestamp: i64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionGuidanceLongLive {
+pub struct TabSectionQuizV2 {
     ///
     #[prost(message, optional, tag = "1")]
-    pub guidance_button: ::core::option::Option<ButtonWithUrl>,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionHeader {
-    ///
-    #[prost(string, tag = "1")]
-    pub banner_url: ::prost::alloc::string::String,
-    ///
-    #[prost(message, optional, tag = "2")]
-    pub reward_button: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(message, optional, tag = "3")]
-    pub rule_button: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(message, optional, tag = "4")]
-    pub lottery_scratch: ::core::option::Option<ComponentHeaderLotteryScratch>,
-    ///
-    #[prost(message, optional, tag = "5")]
-    pub reserve_button: ::core::option::Option<ButtonWithToggleState>,
-    ///
-    #[prost(string, tag = "6")]
-    pub sponsor_logo_url: ::prost::alloc::string::String,
-    ///
-    #[prost(message, optional, tag = "7")]
-    pub bili_hbd_entry: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(string, tag = "8")]
-    pub reserved_alt_banner_url: ::prost::alloc::string::String,
-    ///
-    #[prost(double, tag = "9")]
-    pub banner_w_h_ratio: f64,
-    ///
-    #[prost(double, tag = "10")]
-    pub reserved_alt_banner_w_h_ratio: f64,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionLongLive {
-    ///
-    #[prost(int64, tag = "1")]
-    pub room_id: i64,
-    ///
-    #[prost(bool, tag = "2")]
-    pub is_streaming: bool,
-    ///
-    #[prost(string, tag = "3")]
-    pub player_url: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub room_cover: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub jump_url: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "6")]
-    pub show_co_live_users: bool,
-    ///
-    #[prost(message, repeated, tag = "7")]
-    pub co_live_users_info: ::prost::alloc::vec::Vec<UserInfo>,
-    ///
-    #[prost(string, tag = "8")]
-    pub co_live_user_title: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "9")]
-    pub fallback_player_url: ::prost::alloc::string::String,
-    ///
-    #[prost(int64, tag = "10")]
-    pub area_id: i64,
-    ///
-    #[prost(int64, tag = "11")]
-    pub parent_area_id: i64,
-    ///
-    #[prost(int64, tag = "12")]
-    pub anchor_id: i64,
-    ///
-    #[prost(int64, tag = "13")]
-    pub live_id: i64,
-    ///
-    #[prost(string, tag = "14")]
-    pub sub_session_key: ::prost::alloc::string::String,
-    ///
-    #[prost(int32, tag = "15")]
-    pub cny_mode: i32,
-    ///
-    #[prost(int32, tag = "16")]
-    pub dm_count: i32,
-    ///
-    #[prost(bool, tag = "17")]
-    pub dm_end: bool,
-    ///
-    #[prost(string, tag = "18")]
-    pub display_live_room_cover: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "19")]
-    pub display_live_room_title: ::prost::alloc::string::String,
-    ///
-    #[prost(bool, tag = "20")]
-    pub is_mute: bool,
-    ///
-    #[prost(message, optional, tag = "21")]
-    pub danmu_player_config: ::core::option::Option<DanmuPlayerConfig>,
-    ///
-    #[prost(string, tag = "22")]
-    pub danmu_extra: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionQuiz {
-    ///
-    #[prost(message, optional, tag = "1")]
-    pub quiz_session_status: ::core::option::Option<SessionStatusResp>,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionRelatedRcmd {
-    ///
-    #[prost(string, tag = "1")]
-    pub title: ::prost::alloc::string::String,
-    ///
-    #[prost(message, repeated, tag = "2")]
-    pub item_list: ::prost::alloc::vec::Vec<RcmdItemBrief>,
-    ///
-    #[prost(message, optional, tag = "3")]
-    pub bottom_button: ::core::option::Option<ButtonWithUrl>,
-    ///
-    #[prost(string, tag = "4")]
-    pub background_img_top: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub background_img_middle: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "6")]
-    pub background_img_bottom: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TabSectionSponsors {
-    ///
-    #[prost(string, tag = "1")]
-    pub sponsor_img: ::prost::alloc::string::String,
-    ///
-    #[prost(double, tag = "2")]
-    pub img_width: f64,
-    ///
-    #[prost(double, tag = "3")]
-    pub img_height: f64,
-    ///
-    #[prost(string, tag = "4")]
-    pub jump_url: ::prost::alloc::string::String,
-    ///
-    #[prost(double, tag = "5")]
-    pub bottom_margin: f64,
+    pub quiz_session_status_v2: ::core::option::Option<SessionStatusResp>,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -905,13 +330,13 @@ pub struct TabViewReq {
     ///
     #[prost(message, optional, tag = "1")]
     pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
+        super::super::super::archive::middleware::v1::PlayerArgs,
     >,
     ///
     #[prost(bool, tag = "2")]
     pub is_preload: bool,
     ///
-    #[prost(enumeration = "TabViewFrom", tag = "3")]
+    #[prost(enumeration = "super::TabViewFrom", tag = "3")]
     pub view_from: i32,
 }
 ///
@@ -919,114 +344,29 @@ pub struct TabViewReq {
 pub struct TabViewResp {
     ///
     #[prost(message, optional, tag = "1")]
-    pub page_property: ::core::option::Option<TabPageProperty>,
+    pub page_property: ::core::option::Option<super::TabPageProperty>,
     ///
     #[prost(message, optional, tag = "2")]
-    pub page_component: ::core::option::Option<TabPageComponent>,
+    pub page_component: ::core::option::Option<super::TabPageComponent>,
     ///
     #[prost(message, repeated, tag = "3")]
     pub tab_sections: ::prost::alloc::vec::Vec<TabSection>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct TextWithPrefixImage {
+pub struct UserSession {
     ///
-    #[prost(string, tag = "1")]
-    pub text_show: ::prost::alloc::string::String,
+    #[prost(enumeration = "UserSessionStatus", tag = "1")]
+    pub user_status: i32,
     ///
-    #[prost(string, tag = "2")]
-    pub prefix_img: ::prost::alloc::string::String,
+    #[prost(message, optional, tag = "2")]
+    pub question: ::core::option::Option<QuestionReview>,
     ///
-    #[prost(string, tag = "3")]
-    pub text_type: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "4")]
-    pub text_oid: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "5")]
-    pub jump_url: ::prost::alloc::string::String,
-}
-///
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct UserInfo {
-    ///
-    #[prost(int64, tag = "1")]
-    pub mid: i64,
-    ///
-    #[prost(string, tag = "2")]
-    pub name: ::prost::alloc::string::String,
-    ///
-    #[prost(string, tag = "3")]
-    pub face: ::prost::alloc::string::String,
+    #[prost(message, repeated, tag = "3")]
+    pub prizes: ::prost::alloc::vec::Vec<PrizeInfo>,
     ///
     #[prost(bool, tag = "4")]
-    pub is_following: bool,
-}
-///
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum PageTheme {
-    ///
-    Invalid = 0,
-    ///
-    ProjectCny = 1,
-    ///
-    ProjectNewYear2025 = 2,
-}
-impl PageTheme {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
-    pub fn as_str_name(&self) -> &'static str {
-        match self {
-            Self::Invalid => "Page_Theme_Invalid",
-            Self::ProjectCny => "Page_Theme_Project_CNY",
-            Self::ProjectNewYear2025 => "Page_Theme_Project_NewYear2025",
-        }
-    }
-    /// Creates an enum from field names used in the ProtoBuf definition.
-    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
-        match value {
-            "Page_Theme_Invalid" => Some(Self::Invalid),
-            "Page_Theme_Project_CNY" => Some(Self::ProjectCny),
-            "Page_Theme_Project_NewYear2025" => Some(Self::ProjectNewYear2025),
-            _ => None,
-        }
-    }
-}
-///
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum PegasusIcon {
-    ///
-    Invalid = 0,
-    ///
-    Plays = 1,
-    ///
-    Danmakus = 3,
-}
-impl PegasusIcon {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
-    pub fn as_str_name(&self) -> &'static str {
-        match self {
-            Self::Invalid => "Pegasus_Icon_Invalid",
-            Self::Plays => "Pegasus_Icon_Plays",
-            Self::Danmakus => "Pegasus_Icon_Danmakus",
-        }
-    }
-    /// Creates an enum from field names used in the ProtoBuf definition.
-    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
-        match value {
-            "Pegasus_Icon_Invalid" => Some(Self::Invalid),
-            "Pegasus_Icon_Plays" => Some(Self::Plays),
-            "Pegasus_Icon_Danmakus" => Some(Self::Danmakus),
-            _ => None,
-        }
-    }
+    pub stat_completed: bool,
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -1077,7 +417,7 @@ pub enum SessionType {
     Unknown = 0,
     ///
     Guess = 1,
-    ///
+    /// @Deprecated
     Quiz = 2,
     ///
     Activity = 3,
@@ -1109,122 +449,10 @@ impl SessionType {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum TabSectionType {
-    ///
-    TabSectionInvalid = 0,
-    ///
-    TabSectionHeader = 1,
-    ///
-    TabSectionLongLive = 2,
-    ///
-    TabSectionCampaignScheduling = 3,
-    ///
-    TabSectionCampaignSheet = 4,
-    ///
-    TabSectionQuiz = 5,
-    ///
-    TabSectionRelatedRcmd = 6,
-    ///
-    TabSectionCampaignBanners = 7,
-    ///
-    TabSectionGuidanceLongLive = 8,
-    ///
-    TabSectionBackToPegasus = 9,
-    ///
-    TabSectionCampaignSchedulingLunarNewYear = 10,
-    ///
-    TabSectionSponsors = 11,
-    ///
-    TabSectionCommercialImageBars = 12,
-}
-impl TabSectionType {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
-    pub fn as_str_name(&self) -> &'static str {
-        match self {
-            Self::TabSectionInvalid => "Tab_Section_Invalid",
-            Self::TabSectionHeader => "Tab_Section_Header",
-            Self::TabSectionLongLive => "Tab_Section_LongLive",
-            Self::TabSectionCampaignScheduling => "Tab_Section_CampaignScheduling",
-            Self::TabSectionCampaignSheet => "Tab_Section_CampaignSheet",
-            Self::TabSectionQuiz => "Tab_Section_Quiz",
-            Self::TabSectionRelatedRcmd => "Tab_Section_RelatedRcmd",
-            Self::TabSectionCampaignBanners => "Tab_Section_CampaignBanners",
-            Self::TabSectionGuidanceLongLive => "Tab_Section_GuidanceLongLive",
-            Self::TabSectionBackToPegasus => "Tab_Section_BackToPegasus",
-            Self::TabSectionCampaignSchedulingLunarNewYear => {
-                "Tab_Section_CampaignSchedulingLunarNewYear"
-            }
-            Self::TabSectionSponsors => "Tab_Section_Sponsors",
-            Self::TabSectionCommercialImageBars => "Tab_Section_CommercialImageBars",
-        }
-    }
-    /// Creates an enum from field names used in the ProtoBuf definition.
-    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
-        match value {
-            "Tab_Section_Invalid" => Some(Self::TabSectionInvalid),
-            "Tab_Section_Header" => Some(Self::TabSectionHeader),
-            "Tab_Section_LongLive" => Some(Self::TabSectionLongLive),
-            "Tab_Section_CampaignScheduling" => Some(Self::TabSectionCampaignScheduling),
-            "Tab_Section_CampaignSheet" => Some(Self::TabSectionCampaignSheet),
-            "Tab_Section_Quiz" => Some(Self::TabSectionQuiz),
-            "Tab_Section_RelatedRcmd" => Some(Self::TabSectionRelatedRcmd),
-            "Tab_Section_CampaignBanners" => Some(Self::TabSectionCampaignBanners),
-            "Tab_Section_GuidanceLongLive" => Some(Self::TabSectionGuidanceLongLive),
-            "Tab_Section_BackToPegasus" => Some(Self::TabSectionBackToPegasus),
-            "Tab_Section_CampaignSchedulingLunarNewYear" => {
-                Some(Self::TabSectionCampaignSchedulingLunarNewYear)
-            }
-            "Tab_Section_Sponsors" => Some(Self::TabSectionSponsors),
-            "Tab_Section_CommercialImageBars" => {
-                Some(Self::TabSectionCommercialImageBars)
-            }
-            _ => None,
-        }
-    }
-}
-///
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum TabViewFrom {
-    ///
-    Invalid = 0,
-    ///
-    HomeTab = 1,
-    ///
-    Secondary = 2,
-}
-impl TabViewFrom {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
-    pub fn as_str_name(&self) -> &'static str {
-        match self {
-            Self::Invalid => "Tab_View_From_Invalid",
-            Self::HomeTab => "Tab_View_From_HomeTab",
-            Self::Secondary => "Tab_View_From_Secondary",
-        }
-    }
-    /// Creates an enum from field names used in the ProtoBuf definition.
-    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
-        match value {
-            "Tab_View_From_Invalid" => Some(Self::Invalid),
-            "Tab_View_From_HomeTab" => Some(Self::HomeTab),
-            "Tab_View_From_Secondary" => Some(Self::Secondary),
-            _ => None,
-        }
-    }
-}
-///
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
 pub enum UserSessionStatus {
     ///
     UserSessionNotStart = 0,
-    ///
+    /// @Deprecated
     UserSessionParticipated = 1,
     ///
     UserSessionSubmitted = 2,
@@ -1359,11 +587,13 @@ pub mod quiz_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/QuizResult",
+                "/bilibili.app.project.cny.v2.Quiz/QuizResult",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("bilibili.app.project.cny.Quiz", "QuizResult"));
+                .insert(
+                    GrpcMethod::new("bilibili.app.project.cny.v2.Quiz", "QuizResult"),
+                );
             self.inner.unary(req, path, codec).await
         }
         ///
@@ -1381,11 +611,13 @@ pub mod quiz_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/QuizReview",
+                "/bilibili.app.project.cny.v2.Quiz/QuizReview",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("bilibili.app.project.cny.Quiz", "QuizReview"));
+                .insert(
+                    GrpcMethod::new("bilibili.app.project.cny.v2.Quiz", "QuizReview"),
+                );
             self.inner.unary(req, path, codec).await
         }
         ///
@@ -1406,65 +638,13 @@ pub mod quiz_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/SessionStatus",
+                "/bilibili.app.project.cny.v2.Quiz/SessionStatus",
             );
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(
-                    GrpcMethod::new("bilibili.app.project.cny.Quiz", "SessionStatus"),
+                    GrpcMethod::new("bilibili.app.project.cny.v2.Quiz", "SessionStatus"),
                 );
-            self.inner.unary(req, path, codec).await
-        }
-        ///
-        pub async fn session_status_brief(
-            &mut self,
-            request: impl tonic::IntoRequest<super::SessionStatusBriefReq>,
-        ) -> std::result::Result<
-            tonic::Response<super::SessionStatusBriefResp>,
-            tonic::Status,
-        > {
-            self.inner
-                .ready()
-                .await
-                .map_err(|e| {
-                    tonic::Status::unknown(
-                        format!("Service was not ready: {}", e.into()),
-                    )
-                })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/SessionStatusBrief",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(
-                    GrpcMethod::new(
-                        "bilibili.app.project.cny.Quiz",
-                        "SessionStatusBrief",
-                    ),
-                );
-            self.inner.unary(req, path, codec).await
-        }
-        ///
-        pub async fn start_quiz(
-            &mut self,
-            request: impl tonic::IntoRequest<super::StartQuizReq>,
-        ) -> std::result::Result<tonic::Response<super::StartQuizResp>, tonic::Status> {
-            self.inner
-                .ready()
-                .await
-                .map_err(|e| {
-                    tonic::Status::unknown(
-                        format!("Service was not ready: {}", e.into()),
-                    )
-                })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/StartQuiz",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(GrpcMethod::new("bilibili.app.project.cny.Quiz", "StartQuiz"));
             self.inner.unary(req, path, codec).await
         }
         ///
@@ -1482,11 +662,13 @@ pub mod quiz_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Quiz/SubmitQuiz",
+                "/bilibili.app.project.cny.v2.Quiz/SubmitQuiz",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("bilibili.app.project.cny.Quiz", "SubmitQuiz"));
+                .insert(
+                    GrpcMethod::new("bilibili.app.project.cny.v2.Quiz", "SubmitQuiz"),
+                );
             self.inner.unary(req, path, codec).await
         }
     }
@@ -1573,33 +755,6 @@ pub mod tab_client {
             self
         }
         ///
-        pub async fn reload_long_live(
-            &mut self,
-            request: impl tonic::IntoRequest<super::ReloadLongLiveReq>,
-        ) -> std::result::Result<
-            tonic::Response<super::ReloadLongLiveResp>,
-            tonic::Status,
-        > {
-            self.inner
-                .ready()
-                .await
-                .map_err(|e| {
-                    tonic::Status::unknown(
-                        format!("Service was not ready: {}", e.into()),
-                    )
-                })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Tab/ReloadLongLive",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(
-                    GrpcMethod::new("bilibili.app.project.cny.Tab", "ReloadLongLive"),
-                );
-            self.inner.unary(req, path, codec).await
-        }
-        ///
         pub async fn view(
             &mut self,
             request: impl tonic::IntoRequest<super::TabViewReq>,
@@ -1614,11 +769,11 @@ pub mod tab_client {
                 })?;
             let codec = tonic::codec::ProstCodec::default();
             let path = http::uri::PathAndQuery::from_static(
-                "/bilibili.app.project.cny.Tab/View",
+                "/bilibili.app.project.cny.v2.Tab/View",
             );
             let mut req = request.into_request();
             req.extensions_mut()
-                .insert(GrpcMethod::new("bilibili.app.project.cny.Tab", "View"));
+                .insert(GrpcMethod::new("bilibili.app.project.cny.v2.Tab", "View"));
             self.inner.unary(req, path, codec).await
         }
     }
@@ -1654,19 +809,6 @@ pub mod quiz_server {
             tonic::Response<super::SessionStatusResp>,
             tonic::Status,
         >;
-        ///
-        async fn session_status_brief(
-            &self,
-            request: tonic::Request<super::SessionStatusBriefReq>,
-        ) -> std::result::Result<
-            tonic::Response<super::SessionStatusBriefResp>,
-            tonic::Status,
-        >;
-        ///
-        async fn start_quiz(
-            &self,
-            request: tonic::Request<super::StartQuizReq>,
-        ) -> std::result::Result<tonic::Response<super::StartQuizResp>, tonic::Status>;
         ///
         async fn submit_quiz(
             &self,
@@ -1750,7 +892,7 @@ pub mod quiz_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
-                "/bilibili.app.project.cny.Quiz/QuizResult" => {
+                "/bilibili.app.project.cny.v2.Quiz/QuizResult" => {
                     #[allow(non_camel_case_types)]
                     struct QuizResultSvc<T: Quiz>(pub Arc<T>);
                     impl<T: Quiz> tonic::server::UnaryService<super::QuizResultReq>
@@ -1793,7 +935,7 @@ pub mod quiz_server {
                     };
                     Box::pin(fut)
                 }
-                "/bilibili.app.project.cny.Quiz/QuizReview" => {
+                "/bilibili.app.project.cny.v2.Quiz/QuizReview" => {
                     #[allow(non_camel_case_types)]
                     struct QuizReviewSvc<T: Quiz>(pub Arc<T>);
                     impl<T: Quiz> tonic::server::UnaryService<super::QuizReviewReq>
@@ -1836,7 +978,7 @@ pub mod quiz_server {
                     };
                     Box::pin(fut)
                 }
-                "/bilibili.app.project.cny.Quiz/SessionStatus" => {
+                "/bilibili.app.project.cny.v2.Quiz/SessionStatus" => {
                     #[allow(non_camel_case_types)]
                     struct SessionStatusSvc<T: Quiz>(pub Arc<T>);
                     impl<T: Quiz> tonic::server::UnaryService<super::SessionStatusReq>
@@ -1879,95 +1021,7 @@ pub mod quiz_server {
                     };
                     Box::pin(fut)
                 }
-                "/bilibili.app.project.cny.Quiz/SessionStatusBrief" => {
-                    #[allow(non_camel_case_types)]
-                    struct SessionStatusBriefSvc<T: Quiz>(pub Arc<T>);
-                    impl<
-                        T: Quiz,
-                    > tonic::server::UnaryService<super::SessionStatusBriefReq>
-                    for SessionStatusBriefSvc<T> {
-                        type Response = super::SessionStatusBriefResp;
-                        type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
-                            tonic::Status,
-                        >;
-                        fn call(
-                            &mut self,
-                            request: tonic::Request<super::SessionStatusBriefReq>,
-                        ) -> Self::Future {
-                            let inner = Arc::clone(&self.0);
-                            let fut = async move {
-                                <T as Quiz>::session_status_brief(&inner, request).await
-                            };
-                            Box::pin(fut)
-                        }
-                    }
-                    let accept_compression_encodings = self.accept_compression_encodings;
-                    let send_compression_encodings = self.send_compression_encodings;
-                    let max_decoding_message_size = self.max_decoding_message_size;
-                    let max_encoding_message_size = self.max_encoding_message_size;
-                    let inner = self.inner.clone();
-                    let fut = async move {
-                        let method = SessionStatusBriefSvc(inner);
-                        let codec = tonic::codec::ProstCodec::default();
-                        let mut grpc = tonic::server::Grpc::new(codec)
-                            .apply_compression_config(
-                                accept_compression_encodings,
-                                send_compression_encodings,
-                            )
-                            .apply_max_message_size_config(
-                                max_decoding_message_size,
-                                max_encoding_message_size,
-                            );
-                        let res = grpc.unary(method, req).await;
-                        Ok(res)
-                    };
-                    Box::pin(fut)
-                }
-                "/bilibili.app.project.cny.Quiz/StartQuiz" => {
-                    #[allow(non_camel_case_types)]
-                    struct StartQuizSvc<T: Quiz>(pub Arc<T>);
-                    impl<T: Quiz> tonic::server::UnaryService<super::StartQuizReq>
-                    for StartQuizSvc<T> {
-                        type Response = super::StartQuizResp;
-                        type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
-                            tonic::Status,
-                        >;
-                        fn call(
-                            &mut self,
-                            request: tonic::Request<super::StartQuizReq>,
-                        ) -> Self::Future {
-                            let inner = Arc::clone(&self.0);
-                            let fut = async move {
-                                <T as Quiz>::start_quiz(&inner, request).await
-                            };
-                            Box::pin(fut)
-                        }
-                    }
-                    let accept_compression_encodings = self.accept_compression_encodings;
-                    let send_compression_encodings = self.send_compression_encodings;
-                    let max_decoding_message_size = self.max_decoding_message_size;
-                    let max_encoding_message_size = self.max_encoding_message_size;
-                    let inner = self.inner.clone();
-                    let fut = async move {
-                        let method = StartQuizSvc(inner);
-                        let codec = tonic::codec::ProstCodec::default();
-                        let mut grpc = tonic::server::Grpc::new(codec)
-                            .apply_compression_config(
-                                accept_compression_encodings,
-                                send_compression_encodings,
-                            )
-                            .apply_max_message_size_config(
-                                max_decoding_message_size,
-                                max_encoding_message_size,
-                            );
-                        let res = grpc.unary(method, req).await;
-                        Ok(res)
-                    };
-                    Box::pin(fut)
-                }
-                "/bilibili.app.project.cny.Quiz/SubmitQuiz" => {
+                "/bilibili.app.project.cny.v2.Quiz/SubmitQuiz" => {
                     #[allow(non_camel_case_types)]
                     struct SubmitQuizSvc<T: Quiz>(pub Arc<T>);
                     impl<T: Quiz> tonic::server::UnaryService<super::SubmitQuizReq>
@@ -2043,7 +1097,7 @@ pub mod quiz_server {
         }
     }
     /// Generated gRPC service name
-    pub const SERVICE_NAME: &str = "bilibili.app.project.cny.Quiz";
+    pub const SERVICE_NAME: &str = "bilibili.app.project.cny.v2.Quiz";
     impl<T> tonic::server::NamedService for QuizServer<T> {
         const NAME: &'static str = SERVICE_NAME;
     }
@@ -2061,14 +1115,6 @@ pub mod tab_server {
     /// Generated trait containing gRPC methods that should be implemented for use with TabServer.
     #[async_trait]
     pub trait Tab: std::marker::Send + std::marker::Sync + 'static {
-        ///
-        async fn reload_long_live(
-            &self,
-            request: tonic::Request<super::ReloadLongLiveReq>,
-        ) -> std::result::Result<
-            tonic::Response<super::ReloadLongLiveResp>,
-            tonic::Status,
-        >;
         ///
         async fn view(
             &self,
@@ -2152,50 +1198,7 @@ pub mod tab_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
-                "/bilibili.app.project.cny.Tab/ReloadLongLive" => {
-                    #[allow(non_camel_case_types)]
-                    struct ReloadLongLiveSvc<T: Tab>(pub Arc<T>);
-                    impl<T: Tab> tonic::server::UnaryService<super::ReloadLongLiveReq>
-                    for ReloadLongLiveSvc<T> {
-                        type Response = super::ReloadLongLiveResp;
-                        type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
-                            tonic::Status,
-                        >;
-                        fn call(
-                            &mut self,
-                            request: tonic::Request<super::ReloadLongLiveReq>,
-                        ) -> Self::Future {
-                            let inner = Arc::clone(&self.0);
-                            let fut = async move {
-                                <T as Tab>::reload_long_live(&inner, request).await
-                            };
-                            Box::pin(fut)
-                        }
-                    }
-                    let accept_compression_encodings = self.accept_compression_encodings;
-                    let send_compression_encodings = self.send_compression_encodings;
-                    let max_decoding_message_size = self.max_decoding_message_size;
-                    let max_encoding_message_size = self.max_encoding_message_size;
-                    let inner = self.inner.clone();
-                    let fut = async move {
-                        let method = ReloadLongLiveSvc(inner);
-                        let codec = tonic::codec::ProstCodec::default();
-                        let mut grpc = tonic::server::Grpc::new(codec)
-                            .apply_compression_config(
-                                accept_compression_encodings,
-                                send_compression_encodings,
-                            )
-                            .apply_max_message_size_config(
-                                max_decoding_message_size,
-                                max_encoding_message_size,
-                            );
-                        let res = grpc.unary(method, req).await;
-                        Ok(res)
-                    };
-                    Box::pin(fut)
-                }
-                "/bilibili.app.project.cny.Tab/View" => {
+                "/bilibili.app.project.cny.v2.Tab/View" => {
                     #[allow(non_camel_case_types)]
                     struct ViewSvc<T: Tab>(pub Arc<T>);
                     impl<T: Tab> tonic::server::UnaryService<super::TabViewReq>
@@ -2271,7 +1274,7 @@ pub mod tab_server {
         }
     }
     /// Generated gRPC service name
-    pub const SERVICE_NAME: &str = "bilibili.app.project.cny.Tab";
+    pub const SERVICE_NAME: &str = "bilibili.app.project.cny.v2.Tab";
     impl<T> tonic::server::NamedService for TabServer<T> {
         const NAME: &'static str = SERVICE_NAME;
     }

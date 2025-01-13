@@ -710,6 +710,12 @@ pub enum MsgType {
     BusinessLink = 10022,
     ///
     SysBar = 10023,
+    ///
+    VirtualCome = 10024,
+    ///
+    CloseVirtualCome = 10025,
+    ///
+    CommentQuote = 10026,
 }
 impl MsgType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -748,6 +754,9 @@ impl MsgType {
             Self::ParagraphText => "MSG_TYPE_PARAGRAPH_TEXT",
             Self::BusinessLink => "MSG_TYPE_BUSINESS_LINK",
             Self::SysBar => "MSG_TYPE_SYS_BAR",
+            Self::VirtualCome => "MSG_TYPE_VIRTUAL_COME",
+            Self::CloseVirtualCome => "MSG_TYPE_CLOSE_VIRTUAL_COME",
+            Self::CommentQuote => "MSG_TYPE_COMMENT_QUOTE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -783,6 +792,9 @@ impl MsgType {
             "MSG_TYPE_PARAGRAPH_TEXT" => Some(Self::ParagraphText),
             "MSG_TYPE_BUSINESS_LINK" => Some(Self::BusinessLink),
             "MSG_TYPE_SYS_BAR" => Some(Self::SysBar),
+            "MSG_TYPE_VIRTUAL_COME" => Some(Self::VirtualCome),
+            "MSG_TYPE_CLOSE_VIRTUAL_COME" => Some(Self::CloseVirtualCome),
+            "MSG_TYPE_COMMENT_QUOTE" => Some(Self::CommentQuote),
             _ => None,
         }
     }

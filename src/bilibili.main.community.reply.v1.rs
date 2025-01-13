@@ -2811,9 +2811,6 @@ pub mod subject_control {
         ///
         #[prost(string, tag = "2")]
         pub event_id: ::prost::alloc::string::String,
-        ///
-        #[prost(bool, tag = "3")]
-        pub support_pic_list: bool,
     }
 }
 ///

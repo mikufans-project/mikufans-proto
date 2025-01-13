@@ -243,6 +243,9 @@ pub struct RatingGuidePopupParams {
     ///
     #[prost(int64, tag = "2")]
     pub like_count: i64,
+    ///
+    #[prost(int32, tag = "3")]
+    pub special_page: i32,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

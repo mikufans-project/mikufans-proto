@@ -567,6 +567,9 @@ pub struct EasterEgg {
     ///
     #[prost(int32, tag = "12")]
     pub source_size: i32,
+    ///
+    #[prost(int32, tag = "13")]
+    pub egg_type: i32,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

@@ -95,9 +95,7 @@ pub struct BigItem {
     pub can_play: i32,
     ///
     #[prost(message, optional, tag = "16")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
     ///
     #[prost(bool, tag = "17")]
     pub is_fav: bool,
@@ -421,9 +419,7 @@ pub struct CursorReq {
     pub player_preload: ::core::option::Option<PlayerPreloadParams>,
     ///
     #[prost(message, optional, tag = "4")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -471,9 +467,7 @@ pub struct CursorV2Req {
     pub player_preload: ::core::option::Option<PlayerPreloadParams>,
     ///
     #[prost(message, optional, tag = "4")]
-    pub player_args: ::core::option::Option<
-        super::super::archive::middleware::v1::PlayerArgs,
-    >,
+    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
     ///
     #[prost(bool, tag = "5")]
     pub is_local: bool,

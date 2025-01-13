@@ -167,6 +167,9 @@ pub mod bilibili {
         pub mod project {
             pub mod cny {
                 include!("bilibili.app.project.cny.rs");
+                pub mod v2 {
+                    include!("bilibili.app.project.cny.v2.rs");
+                }
             }
         }
         pub mod resource {

@@ -106,6 +106,12 @@ pub struct ItemInfoDescVo {
     ///
     #[prost(int32, tag = "8")]
     pub count: i32,
+    ///
+    #[prost(string, tag = "9")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "10")]
+    pub guide_text: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -218,6 +224,9 @@ pub struct OpusDetailResp {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+    ///
+    #[prost(string, tag = "16")]
+    pub item_type: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

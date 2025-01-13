@@ -988,6 +988,9 @@ pub struct ReserveCalendarInfo {
     ///
     #[prost(string, tag = "5")]
     pub bussiness_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub url: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
