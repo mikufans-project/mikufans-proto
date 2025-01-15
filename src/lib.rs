@@ -15,4 +15,4 @@ pub use generated::*;
 pub static TARGET_VERSION: &'static str = "8.30.0";
 
 /// The build serial number.
-pub static TARGET_BUILD_SN: i32 = 17425312;
+pub static TARGET_BUILD_SN: i32 = 17448734;
