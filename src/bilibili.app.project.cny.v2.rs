@@ -222,7 +222,11 @@ pub struct SessionReview {
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct SessionStatusReq {}
+pub struct SessionStatusReq {
+    ///
+    #[prost(enumeration = "SessionStatusScene", tag = "1")]
+    pub scene: i32,
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionStatusResp {
@@ -405,6 +409,55 @@ impl PrizeType {
             "PrizeTypeCash" => Some(Self::Cash),
             "PrizeTypeGift" => Some(Self::Gift),
             "PrizeTypeLiveGift" => Some(Self::LiveGift),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SessionStatusScene {
+    ///
+    Unknown = 0,
+    ///
+    Auto = 1,
+    ///
+    Foreground = 2,
+    ///
+    Live = 3,
+    ///
+    Tab = 4,
+    ///
+    SubTab = 5,
+    ///
+    Retry = 6,
+}
+impl SessionStatusScene {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unknown => "SessionStatusSceneUnknown",
+            Self::Auto => "SessionStatusSceneAuto",
+            Self::Foreground => "SessionStatusSceneForeground",
+            Self::Live => "SessionStatusSceneLive",
+            Self::Tab => "SessionStatusSceneTab",
+            Self::SubTab => "SessionStatusSceneSubTab",
+            Self::Retry => "SessionStatusSceneRetry",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "SessionStatusSceneUnknown" => Some(Self::Unknown),
+            "SessionStatusSceneAuto" => Some(Self::Auto),
+            "SessionStatusSceneForeground" => Some(Self::Foreground),
+            "SessionStatusSceneLive" => Some(Self::Live),
+            "SessionStatusSceneTab" => Some(Self::Tab),
+            "SessionStatusSceneSubTab" => Some(Self::SubTab),
+            "SessionStatusSceneRetry" => Some(Self::Retry),
             _ => None,
         }
     }
