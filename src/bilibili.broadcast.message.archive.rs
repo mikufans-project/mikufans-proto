@@ -94,7 +94,10 @@ pub mod video_up_client {
         pub async fn video_data(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::VideoDataReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::VideoDataReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -115,7 +118,7 @@ pub mod video_up_client {
                         "VideoData",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -132,11 +135,17 @@ pub mod video_up_server {
     /// Generated trait containing gRPC methods that should be implemented for use with VideoUpServer.
     #[async_trait]
     pub trait VideoUp: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the VideoData method.
+        type VideoDataStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::VideoDataReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn video_data(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::VideoDataReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::VideoDataStream>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -218,11 +227,12 @@ pub mod video_up_server {
                 "/bilibili.broadcast.message.archive.VideoUp/VideoData" => {
                     #[allow(non_camel_case_types)]
                     struct VideoDataSvc<T: VideoUp>(pub Arc<T>);
-                    impl<T: VideoUp> tonic::server::UnaryService<()>
+                    impl<T: VideoUp> tonic::server::ServerStreamingService<()>
                     for VideoDataSvc<T> {
                         type Response = super::VideoDataReply;
+                        type ResponseStream = T::VideoDataStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -250,7 +260,7 @@ pub mod video_up_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

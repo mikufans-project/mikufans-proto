@@ -243,7 +243,10 @@ pub mod notify_client {
         pub async fn watch_notify(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyRsp>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::NotifyRsp>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -264,7 +267,7 @@ pub mod notify_client {
                         "WatchNotify",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -281,11 +284,20 @@ pub mod notify_server {
     /// Generated trait containing gRPC methods that should be implemented for use with NotifyServer.
     #[async_trait]
     pub trait Notify: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchNotify method.
+        type WatchNotifyStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::NotifyRsp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_notify(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyRsp>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::WatchNotifyStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -367,11 +379,12 @@ pub mod notify_server {
                 "/bilibili.broadcast.message.im.Notify/WatchNotify" => {
                     #[allow(non_camel_case_types)]
                     struct WatchNotifySvc<T: Notify>(pub Arc<T>);
-                    impl<T: Notify> tonic::server::UnaryService<()>
+                    impl<T: Notify> tonic::server::ServerStreamingService<()>
                     for WatchNotifySvc<T> {
                         type Response = super::NotifyRsp;
+                        type ResponseStream = T::WatchNotifyStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -399,7 +412,7 @@ pub mod notify_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

@@ -134,7 +134,7 @@ pub mod b_group_client {
         ///
         pub async fn app_event_stream(
             &mut self,
-            request: impl tonic::IntoRequest<super::AppEventMessage>,
+            request: impl tonic::IntoStreamingRequest<Message = super::AppEventMessage>,
         ) -> std::result::Result<tonic::Response<()>, tonic::Status> {
             self.inner
                 .ready()
@@ -148,7 +148,7 @@ pub mod b_group_client {
             let path = http::uri::PathAndQuery::from_static(
                 "/bilibili.broadcast.message.bgroup.BGroup/AppEventStream",
             );
-            let mut req = request.into_request();
+            let mut req = request.into_streaming_request();
             req.extensions_mut()
                 .insert(
                     GrpcMethod::new(
@@ -156,7 +156,7 @@ pub mod b_group_client {
                         "AppEventStream",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.client_streaming(req, path, codec).await
         }
     }
 }
@@ -176,7 +176,7 @@ pub mod b_group_server {
         ///
         async fn app_event_stream(
             &self,
-            request: tonic::Request<super::AppEventMessage>,
+            request: tonic::Request<tonic::Streaming<super::AppEventMessage>>,
         ) -> std::result::Result<tonic::Response<()>, tonic::Status>;
     }
     ///
@@ -259,7 +259,9 @@ pub mod b_group_server {
                 "/bilibili.broadcast.message.bgroup.BGroup/AppEventStream" => {
                     #[allow(non_camel_case_types)]
                     struct AppEventStreamSvc<T: BGroup>(pub Arc<T>);
-                    impl<T: BGroup> tonic::server::UnaryService<super::AppEventMessage>
+                    impl<
+                        T: BGroup,
+                    > tonic::server::ClientStreamingService<super::AppEventMessage>
                     for AppEventStreamSvc<T> {
                         type Response = ();
                         type Future = BoxFuture<
@@ -268,7 +270,9 @@ pub mod b_group_server {
                         >;
                         fn call(
                             &mut self,
-                            request: tonic::Request<super::AppEventMessage>,
+                            request: tonic::Request<
+                                tonic::Streaming<super::AppEventMessage>,
+                            >,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
                             let fut = async move {
@@ -294,7 +298,7 @@ pub mod b_group_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.client_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

@@ -149,7 +149,10 @@ pub mod merchant_notify_client {
         pub async fn message_notify(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyReq>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::NotifyReq>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -170,7 +173,7 @@ pub mod merchant_notify_client {
                         "MessageNotify",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -187,11 +190,20 @@ pub mod merchant_notify_server {
     /// Generated trait containing gRPC methods that should be implemented for use with MerchantNotifyServer.
     #[async_trait]
     pub trait MerchantNotify: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the MessageNotify method.
+        type MessageNotifyStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::NotifyReq, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn message_notify(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyReq>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::MessageNotifyStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -273,11 +285,12 @@ pub mod merchant_notify_server {
                 "/bilibili.broadcast.message.mall.MerchantNotify/MessageNotify" => {
                     #[allow(non_camel_case_types)]
                     struct MessageNotifySvc<T: MerchantNotify>(pub Arc<T>);
-                    impl<T: MerchantNotify> tonic::server::UnaryService<()>
+                    impl<T: MerchantNotify> tonic::server::ServerStreamingService<()>
                     for MessageNotifySvc<T> {
                         type Response = super::NotifyReq;
+                        type ResponseStream = T::MessageNotifyStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -305,7 +318,7 @@ pub mod merchant_notify_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

@@ -415,7 +415,10 @@ pub mod tv_client {
         pub async fn account(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::AccountNotify>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::AccountNotify>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -431,14 +434,14 @@ pub mod tv_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "Account"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn common_push(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::CommonPushNotify>,
+            tonic::Response<tonic::codec::Streaming<super::CommonPushNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -458,13 +461,16 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "CommonPush"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn esports(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::EsportsNotify>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::EsportsNotify>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -480,14 +486,14 @@ pub mod tv_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "Esports"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn feed_client_smart(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::FeedClientSmartNotify>,
+            tonic::Response<tonic::codec::Streaming<super::FeedClientSmartNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -510,14 +516,14 @@ pub mod tv_client {
                         "FeedClientSmart",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn live_bottom(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveBottomConfNotify>,
+            tonic::Response<tonic::codec::Streaming<super::LiveBottomConfNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -537,14 +543,14 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "LiveBottom"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn live_common_msg(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveCommonNotify>,
+            tonic::Response<tonic::codec::Streaming<super::LiveCommonNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -564,13 +570,16 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "LiveCommonMsg"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn live_skip(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::LiveSkipNotify>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::LiveSkipNotify>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -586,14 +595,14 @@ pub mod tv_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "LiveSkip"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn live_status(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveStatusNotify>,
+            tonic::Response<tonic::codec::Streaming<super::LiveStatusNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -613,14 +622,14 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "LiveStatus"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn main_red_dot(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::MainRedDotReply>,
+            tonic::Response<tonic::codec::Streaming<super::MainRedDotReply>>,
             tonic::Status,
         > {
             self.inner
@@ -640,13 +649,16 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "MainRedDot"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn notify_pop(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyPopReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::NotifyPopReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -664,14 +676,14 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "NotifyPop"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn ogv_pay_order(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::OgvPayOrderReply>,
+            tonic::Response<tonic::codec::Streaming<super::OgvPayOrderReply>>,
             tonic::Status,
         > {
             self.inner
@@ -691,13 +703,16 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "OgvPayOrder"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn proj(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::ProjReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::ProjReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -713,13 +728,16 @@ pub mod tv_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "Proj"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn proj_core(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::ProjReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::ProjReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -735,14 +753,14 @@ pub mod tv_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "ProjCore"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn proj_live_event(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::ProjLiveEventNotify>,
+            tonic::Response<tonic::codec::Streaming<super::ProjLiveEventNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -762,14 +780,14 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "ProjLiveEvent"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn publicity(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::PublicityNotify>,
+            tonic::Response<tonic::codec::Streaming<super::PublicityNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -789,14 +807,14 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "Publicity"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
         ///
         pub async fn viewer_num_msg(
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveViewerMsgNotify>,
+            tonic::Response<tonic::codec::Streaming<super::LiveViewerMsgNotify>>,
             tonic::Status,
         > {
             self.inner
@@ -816,7 +834,7 @@ pub mod tv_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.message.tv.Tv", "ViewerNumMsg"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -833,108 +851,195 @@ pub mod tv_server {
     /// Generated trait containing gRPC methods that should be implemented for use with TvServer.
     #[async_trait]
     pub trait Tv: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the Account method.
+        type AccountStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::AccountNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn account(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::AccountNotify>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::AccountStream>, tonic::Status>;
+        /// Server streaming response type for the CommonPush method.
+        type CommonPushStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::CommonPushNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn common_push(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<
-            tonic::Response<super::CommonPushNotify>,
-            tonic::Status,
-        >;
+        ) -> std::result::Result<tonic::Response<Self::CommonPushStream>, tonic::Status>;
+        /// Server streaming response type for the Esports method.
+        type EsportsStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::EsportsNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn esports(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::EsportsNotify>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::EsportsStream>, tonic::Status>;
+        /// Server streaming response type for the FeedClientSmart method.
+        type FeedClientSmartStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::FeedClientSmartNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn feed_client_smart(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::FeedClientSmartNotify>,
+            tonic::Response<Self::FeedClientSmartStream>,
             tonic::Status,
         >;
+        /// Server streaming response type for the LiveBottom method.
+        type LiveBottomStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LiveBottomConfNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn live_bottom(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<
-            tonic::Response<super::LiveBottomConfNotify>,
-            tonic::Status,
-        >;
+        ) -> std::result::Result<tonic::Response<Self::LiveBottomStream>, tonic::Status>;
+        /// Server streaming response type for the LiveCommonMsg method.
+        type LiveCommonMsgStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LiveCommonNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn live_common_msg(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveCommonNotify>,
+            tonic::Response<Self::LiveCommonMsgStream>,
             tonic::Status,
         >;
+        /// Server streaming response type for the LiveSkip method.
+        type LiveSkipStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LiveSkipNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn live_skip(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::LiveSkipNotify>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::LiveSkipStream>, tonic::Status>;
+        /// Server streaming response type for the LiveStatus method.
+        type LiveStatusStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LiveStatusNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn live_status(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<
-            tonic::Response<super::LiveStatusNotify>,
-            tonic::Status,
-        >;
+        ) -> std::result::Result<tonic::Response<Self::LiveStatusStream>, tonic::Status>;
+        /// Server streaming response type for the MainRedDot method.
+        type MainRedDotStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::MainRedDotReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn main_red_dot(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::MainRedDotReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::MainRedDotStream>, tonic::Status>;
+        /// Server streaming response type for the NotifyPop method.
+        type NotifyPopStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::NotifyPopReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn notify_pop(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::NotifyPopReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::NotifyPopStream>, tonic::Status>;
+        /// Server streaming response type for the OgvPayOrder method.
+        type OgvPayOrderStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::OgvPayOrderReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn ogv_pay_order(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::OgvPayOrderReply>,
+            tonic::Response<Self::OgvPayOrderStream>,
             tonic::Status,
         >;
+        /// Server streaming response type for the Proj method.
+        type ProjStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ProjReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn proj(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::ProjReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::ProjStream>, tonic::Status>;
+        /// Server streaming response type for the ProjCore method.
+        type ProjCoreStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ProjReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn proj_core(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::ProjReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::ProjCoreStream>, tonic::Status>;
+        /// Server streaming response type for the ProjLiveEvent method.
+        type ProjLiveEventStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ProjLiveEventNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn proj_live_event(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::ProjLiveEventNotify>,
+            tonic::Response<Self::ProjLiveEventStream>,
             tonic::Status,
         >;
+        /// Server streaming response type for the Publicity method.
+        type PublicityStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::PublicityNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn publicity(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::PublicityNotify>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::PublicityStream>, tonic::Status>;
+        /// Server streaming response type for the ViewerNumMsg method.
+        type ViewerNumMsgStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LiveViewerMsgNotify, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn viewer_num_msg(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LiveViewerMsgNotify>,
+            tonic::Response<Self::ViewerNumMsgStream>,
             tonic::Status,
         >;
     }
@@ -1018,10 +1123,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/Account" => {
                     #[allow(non_camel_case_types)]
                     struct AccountSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for AccountSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for AccountSvc<T> {
                         type Response = super::AccountNotify;
+                        type ResponseStream = T::AccountStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1049,7 +1156,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1057,10 +1164,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/CommonPush" => {
                     #[allow(non_camel_case_types)]
                     struct CommonPushSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for CommonPushSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for CommonPushSvc<T> {
                         type Response = super::CommonPushNotify;
+                        type ResponseStream = T::CommonPushStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1088,7 +1197,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1096,10 +1205,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/Esports" => {
                     #[allow(non_camel_case_types)]
                     struct EsportsSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for EsportsSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for EsportsSvc<T> {
                         type Response = super::EsportsNotify;
+                        type ResponseStream = T::EsportsStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1127,7 +1238,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1135,11 +1246,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/FeedClientSmart" => {
                     #[allow(non_camel_case_types)]
                     struct FeedClientSmartSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()>
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
                     for FeedClientSmartSvc<T> {
                         type Response = super::FeedClientSmartNotify;
+                        type ResponseStream = T::FeedClientSmartStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1167,7 +1279,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1175,10 +1287,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/LiveBottom" => {
                     #[allow(non_camel_case_types)]
                     struct LiveBottomSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for LiveBottomSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for LiveBottomSvc<T> {
                         type Response = super::LiveBottomConfNotify;
+                        type ResponseStream = T::LiveBottomStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1206,7 +1320,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1214,10 +1328,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/LiveCommonMsg" => {
                     #[allow(non_camel_case_types)]
                     struct LiveCommonMsgSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for LiveCommonMsgSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for LiveCommonMsgSvc<T> {
                         type Response = super::LiveCommonNotify;
+                        type ResponseStream = T::LiveCommonMsgStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1245,7 +1361,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1253,10 +1369,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/LiveSkip" => {
                     #[allow(non_camel_case_types)]
                     struct LiveSkipSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for LiveSkipSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for LiveSkipSvc<T> {
                         type Response = super::LiveSkipNotify;
+                        type ResponseStream = T::LiveSkipStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1284,7 +1402,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1292,10 +1410,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/LiveStatus" => {
                     #[allow(non_camel_case_types)]
                     struct LiveStatusSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for LiveStatusSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for LiveStatusSvc<T> {
                         type Response = super::LiveStatusNotify;
+                        type ResponseStream = T::LiveStatusStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1323,7 +1443,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1331,10 +1451,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/MainRedDot" => {
                     #[allow(non_camel_case_types)]
                     struct MainRedDotSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for MainRedDotSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for MainRedDotSvc<T> {
                         type Response = super::MainRedDotReply;
+                        type ResponseStream = T::MainRedDotStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1362,7 +1484,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1370,10 +1492,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/NotifyPop" => {
                     #[allow(non_camel_case_types)]
                     struct NotifyPopSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for NotifyPopSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for NotifyPopSvc<T> {
                         type Response = super::NotifyPopReply;
+                        type ResponseStream = T::NotifyPopStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1401,7 +1525,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1409,10 +1533,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/OgvPayOrder" => {
                     #[allow(non_camel_case_types)]
                     struct OgvPayOrderSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for OgvPayOrderSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for OgvPayOrderSvc<T> {
                         type Response = super::OgvPayOrderReply;
+                        type ResponseStream = T::OgvPayOrderStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1440,7 +1566,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1448,10 +1574,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/Proj" => {
                     #[allow(non_camel_case_types)]
                     struct ProjSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for ProjSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for ProjSvc<T> {
                         type Response = super::ProjReply;
+                        type ResponseStream = T::ProjStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1479,7 +1607,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1487,10 +1615,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/ProjCore" => {
                     #[allow(non_camel_case_types)]
                     struct ProjCoreSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for ProjCoreSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for ProjCoreSvc<T> {
                         type Response = super::ProjReply;
+                        type ResponseStream = T::ProjCoreStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1518,7 +1648,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1526,10 +1656,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/ProjLiveEvent" => {
                     #[allow(non_camel_case_types)]
                     struct ProjLiveEventSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for ProjLiveEventSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for ProjLiveEventSvc<T> {
                         type Response = super::ProjLiveEventNotify;
+                        type ResponseStream = T::ProjLiveEventStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1557,7 +1689,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1565,10 +1697,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/Publicity" => {
                     #[allow(non_camel_case_types)]
                     struct PublicitySvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for PublicitySvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for PublicitySvc<T> {
                         type Response = super::PublicityNotify;
+                        type ResponseStream = T::PublicityStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1596,7 +1730,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1604,10 +1738,12 @@ pub mod tv_server {
                 "/bilibili.broadcast.message.tv.Tv/ViewerNumMsg" => {
                     #[allow(non_camel_case_types)]
                     struct ViewerNumMsgSvc<T: Tv>(pub Arc<T>);
-                    impl<T: Tv> tonic::server::UnaryService<()> for ViewerNumMsgSvc<T> {
+                    impl<T: Tv> tonic::server::ServerStreamingService<()>
+                    for ViewerNumMsgSvc<T> {
                         type Response = super::LiveViewerMsgNotify;
+                        type ResponseStream = T::ViewerNumMsgStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1635,7 +1771,7 @@ pub mod tv_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

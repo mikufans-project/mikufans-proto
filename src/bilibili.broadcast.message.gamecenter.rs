@@ -127,7 +127,10 @@ pub mod game_center_push_client {
         pub async fn push_event(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::PushEventReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::PushEventReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -148,7 +151,7 @@ pub mod game_center_push_client {
                         "PushEvent",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -165,11 +168,17 @@ pub mod game_center_push_server {
     /// Generated trait containing gRPC methods that should be implemented for use with GameCenterPushServer.
     #[async_trait]
     pub trait GameCenterPush: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the PushEvent method.
+        type PushEventStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::PushEventReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn push_event(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::PushEventReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::PushEventStream>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -251,11 +260,12 @@ pub mod game_center_push_server {
                 "/bilibili.broadcast.message.gamecenter.GameCenterPush/PushEvent" => {
                     #[allow(non_camel_case_types)]
                     struct PushEventSvc<T: GameCenterPush>(pub Arc<T>);
-                    impl<T: GameCenterPush> tonic::server::UnaryService<()>
+                    impl<T: GameCenterPush> tonic::server::ServerStreamingService<()>
                     for PushEventSvc<T> {
                         type Response = super::PushEventReply;
+                        type ResponseStream = T::PushEventStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -283,7 +293,7 @@ pub mod game_center_push_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

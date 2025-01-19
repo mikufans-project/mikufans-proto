@@ -562,7 +562,7 @@ pub mod native_page_client {
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::NativePageEvent>,
+            tonic::Response<tonic::codec::Streaming<super::NativePageEvent>>,
             tonic::Status,
         > {
             self.inner
@@ -585,7 +585,7 @@ pub mod native_page_client {
                         "WatchNotify",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -675,7 +675,7 @@ pub mod resource_client {
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::TopActivityReply>,
+            tonic::Response<tonic::codec::Streaming<super::TopActivityReply>>,
             tonic::Status,
         > {
             self.inner
@@ -698,7 +698,7 @@ pub mod resource_client {
                         "TopActivity",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -787,7 +787,10 @@ pub mod search_client {
         pub async fn chat_result_push(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::ChatResult>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::ChatResult>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -808,7 +811,7 @@ pub mod search_client {
                         "ChatResultPush",
                     ),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -825,11 +828,20 @@ pub mod native_page_server {
     /// Generated trait containing gRPC methods that should be implemented for use with NativePageServer.
     #[async_trait]
     pub trait NativePage: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchNotify method.
+        type WatchNotifyStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::NativePageEvent, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_notify(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::NativePageEvent>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::WatchNotifyStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -911,11 +923,12 @@ pub mod native_page_server {
                 "/bilibili.broadcast.message.main.NativePage/WatchNotify" => {
                     #[allow(non_camel_case_types)]
                     struct WatchNotifySvc<T: NativePage>(pub Arc<T>);
-                    impl<T: NativePage> tonic::server::UnaryService<()>
+                    impl<T: NativePage> tonic::server::ServerStreamingService<()>
                     for WatchNotifySvc<T> {
                         type Response = super::NativePageEvent;
+                        type ResponseStream = T::WatchNotifyStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -943,7 +956,7 @@ pub mod native_page_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -999,12 +1012,18 @@ pub mod resource_server {
     /// Generated trait containing gRPC methods that should be implemented for use with ResourceServer.
     #[async_trait]
     pub trait Resource: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the TopActivity method.
+        type TopActivityStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::TopActivityReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn top_activity(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::TopActivityReply>,
+            tonic::Response<Self::TopActivityStream>,
             tonic::Status,
         >;
     }
@@ -1088,11 +1107,12 @@ pub mod resource_server {
                 "/bilibili.broadcast.message.main.Resource/TopActivity" => {
                     #[allow(non_camel_case_types)]
                     struct TopActivitySvc<T: Resource>(pub Arc<T>);
-                    impl<T: Resource> tonic::server::UnaryService<()>
+                    impl<T: Resource> tonic::server::ServerStreamingService<()>
                     for TopActivitySvc<T> {
                         type Response = super::TopActivityReply;
+                        type ResponseStream = T::TopActivityStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1120,7 +1140,7 @@ pub mod resource_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1176,11 +1196,20 @@ pub mod search_server {
     /// Generated trait containing gRPC methods that should be implemented for use with SearchServer.
     #[async_trait]
     pub trait Search: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the ChatResultPush method.
+        type ChatResultPushStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ChatResult, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn chat_result_push(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::ChatResult>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::ChatResultPushStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -1262,11 +1291,12 @@ pub mod search_server {
                 "/bilibili.broadcast.message.main.Search/ChatResultPush" => {
                     #[allow(non_camel_case_types)]
                     struct ChatResultPushSvc<T: Search>(pub Arc<T>);
-                    impl<T: Search> tonic::server::UnaryService<()>
+                    impl<T: Search> tonic::server::ServerStreamingService<()>
                     for ChatResultPushSvc<T> {
                         type Response = super::ChatResult;
+                        type ResponseStream = T::ChatResultPushStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1294,7 +1324,7 @@ pub mod search_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

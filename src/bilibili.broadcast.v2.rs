@@ -97,7 +97,10 @@ pub mod laser_client {
         pub async fn watch_event(
             &mut self,
             request: impl tonic::IntoRequest<()>,
-        ) -> std::result::Result<tonic::Response<super::LaserEventResp>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::LaserEventResp>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -113,7 +116,7 @@ pub mod laser_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.v2.Laser", "WatchEvent"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -130,11 +133,17 @@ pub mod laser_server {
     /// Generated trait containing gRPC methods that should be implemented for use with LaserServer.
     #[async_trait]
     pub trait Laser: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchEvent method.
+        type WatchEventStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LaserEventResp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_event(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::LaserEventResp>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::WatchEventStream>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -216,10 +225,12 @@ pub mod laser_server {
                 "/bilibili.broadcast.v2.Laser/WatchEvent" => {
                     #[allow(non_camel_case_types)]
                     struct WatchEventSvc<T: Laser>(pub Arc<T>);
-                    impl<T: Laser> tonic::server::UnaryService<()> for WatchEventSvc<T> {
+                    impl<T: Laser> tonic::server::ServerStreamingService<()>
+                    for WatchEventSvc<T> {
                         type Response = super::LaserEventResp;
+                        type ResponseStream = T::WatchEventStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -247,7 +258,7 @@ pub mod laser_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

@@ -366,9 +366,9 @@ pub mod probe_client {
         ///
         pub async fn test_stream(
             &mut self,
-            request: impl tonic::IntoRequest<super::ProbeStreamReq>,
+            request: impl tonic::IntoStreamingRequest<Message = super::ProbeStreamReq>,
         ) -> std::result::Result<
-            tonic::Response<super::ProbeStreamReply>,
+            tonic::Response<tonic::codec::Streaming<super::ProbeStreamReply>>,
             tonic::Status,
         > {
             self.inner
@@ -383,16 +383,19 @@ pub mod probe_client {
             let path = http::uri::PathAndQuery::from_static(
                 "/bilibili.api.probe.v1.Probe/TestStream",
             );
-            let mut req = request.into_request();
+            let mut req = request.into_streaming_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.api.probe.v1.Probe", "TestStream"));
-            self.inner.unary(req, path, codec).await
+            self.inner.streaming(req, path, codec).await
         }
         ///
         pub async fn test_sub(
             &mut self,
             request: impl tonic::IntoRequest<super::ProbeSubReq>,
-        ) -> std::result::Result<tonic::Response<super::ProbeSubReply>, tonic::Status> {
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::ProbeSubReply>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -408,7 +411,7 @@ pub mod probe_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.api.probe.v1.Probe", "TestSub"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -639,19 +642,28 @@ pub mod probe_server {
             &self,
             request: tonic::Request<super::ProbeReq>,
         ) -> std::result::Result<tonic::Response<super::ProbeReply>, tonic::Status>;
+        /// Server streaming response type for the TestStream method.
+        type TestStreamStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ProbeStreamReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn test_stream(
             &self,
-            request: tonic::Request<super::ProbeStreamReq>,
-        ) -> std::result::Result<
-            tonic::Response<super::ProbeStreamReply>,
-            tonic::Status,
-        >;
+            request: tonic::Request<tonic::Streaming<super::ProbeStreamReq>>,
+        ) -> std::result::Result<tonic::Response<Self::TestStreamStream>, tonic::Status>;
+        /// Server streaming response type for the TestSub method.
+        type TestSubStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ProbeSubReply, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn test_sub(
             &self,
             request: tonic::Request<super::ProbeSubReq>,
-        ) -> std::result::Result<tonic::Response<super::ProbeSubReply>, tonic::Status>;
+        ) -> std::result::Result<tonic::Response<Self::TestSubStream>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -819,16 +831,19 @@ pub mod probe_server {
                 "/bilibili.api.probe.v1.Probe/TestStream" => {
                     #[allow(non_camel_case_types)]
                     struct TestStreamSvc<T: Probe>(pub Arc<T>);
-                    impl<T: Probe> tonic::server::UnaryService<super::ProbeStreamReq>
+                    impl<T: Probe> tonic::server::StreamingService<super::ProbeStreamReq>
                     for TestStreamSvc<T> {
                         type Response = super::ProbeStreamReply;
+                        type ResponseStream = T::TestStreamStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(
                             &mut self,
-                            request: tonic::Request<super::ProbeStreamReq>,
+                            request: tonic::Request<
+                                tonic::Streaming<super::ProbeStreamReq>,
+                            >,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
                             let fut = async move {
@@ -854,7 +869,7 @@ pub mod probe_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -862,11 +877,14 @@ pub mod probe_server {
                 "/bilibili.api.probe.v1.Probe/TestSub" => {
                     #[allow(non_camel_case_types)]
                     struct TestSubSvc<T: Probe>(pub Arc<T>);
-                    impl<T: Probe> tonic::server::UnaryService<super::ProbeSubReq>
+                    impl<
+                        T: Probe,
+                    > tonic::server::ServerStreamingService<super::ProbeSubReq>
                     for TestSubSvc<T> {
                         type Response = super::ProbeSubReply;
+                        type ResponseStream = T::TestSubStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(
@@ -897,7 +915,7 @@ pub mod probe_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)

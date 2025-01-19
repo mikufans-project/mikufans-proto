@@ -918,8 +918,11 @@ pub mod broadcast_room_client {
         ///
         pub async fn enter(
             &mut self,
-            request: impl tonic::IntoRequest<super::RoomReq>,
-        ) -> std::result::Result<tonic::Response<super::RoomResp>, tonic::Status> {
+            request: impl tonic::IntoStreamingRequest<Message = super::RoomReq>,
+        ) -> std::result::Result<
+            tonic::Response<tonic::codec::Streaming<super::RoomResp>>,
+            tonic::Status,
+        > {
             self.inner
                 .ready()
                 .await
@@ -932,10 +935,10 @@ pub mod broadcast_room_client {
             let path = http::uri::PathAndQuery::from_static(
                 "/bilibili.broadcast.v1.BroadcastRoom/Enter",
             );
-            let mut req = request.into_request();
+            let mut req = request.into_streaming_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.v1.BroadcastRoom", "Enter"));
-            self.inner.unary(req, path, codec).await
+            self.inner.streaming(req, path, codec).await
         }
     }
 }
@@ -1025,7 +1028,7 @@ pub mod laser_client {
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LaserLogUploadResp>,
+            tonic::Response<tonic::codec::Streaming<super::LaserLogUploadResp>>,
             tonic::Status,
         > {
             self.inner
@@ -1045,7 +1048,7 @@ pub mod laser_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.v1.Laser", "WatchLogUploadEvent"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -1135,7 +1138,7 @@ pub mod mod_manager_client {
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::ModResourceResp>,
+            tonic::Response<tonic::codec::Streaming<super::ModResourceResp>>,
             tonic::Status,
         > {
             self.inner
@@ -1155,7 +1158,7 @@ pub mod mod_manager_client {
                 .insert(
                     GrpcMethod::new("bilibili.broadcast.v1.ModManager", "WatchResource"),
                 );
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -1245,7 +1248,7 @@ pub mod push_client {
             &mut self,
             request: impl tonic::IntoRequest<()>,
         ) -> std::result::Result<
-            tonic::Response<super::PushMessageResp>,
+            tonic::Response<tonic::codec::Streaming<super::PushMessageResp>>,
             tonic::Status,
         > {
             self.inner
@@ -1263,7 +1266,7 @@ pub mod push_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.v1.Push", "WatchMessage"));
-            self.inner.unary(req, path, codec).await
+            self.inner.server_streaming(req, path, codec).await
         }
     }
 }
@@ -1351,7 +1354,7 @@ pub mod test2_client {
         ///
         pub async fn test(
             &mut self,
-            request: impl tonic::IntoRequest<super::AddParams>,
+            request: impl tonic::IntoStreamingRequest<Message = super::AddParams>,
         ) -> std::result::Result<tonic::Response<()>, tonic::Status> {
             self.inner
                 .ready()
@@ -1365,10 +1368,10 @@ pub mod test2_client {
             let path = http::uri::PathAndQuery::from_static(
                 "/bilibili.broadcast.v1.Test2/Test",
             );
-            let mut req = request.into_request();
+            let mut req = request.into_streaming_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.broadcast.v1.Test2", "Test"));
-            self.inner.unary(req, path, codec).await
+            self.inner.client_streaming(req, path, codec).await
         }
     }
 }
@@ -1385,11 +1388,17 @@ pub mod broadcast_room_server {
     /// Generated trait containing gRPC methods that should be implemented for use with BroadcastRoomServer.
     #[async_trait]
     pub trait BroadcastRoom: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the Enter method.
+        type EnterStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::RoomResp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn enter(
             &self,
-            request: tonic::Request<super::RoomReq>,
-        ) -> std::result::Result<tonic::Response<super::RoomResp>, tonic::Status>;
+            request: tonic::Request<tonic::Streaming<super::RoomReq>>,
+        ) -> std::result::Result<tonic::Response<Self::EnterStream>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -1471,16 +1480,18 @@ pub mod broadcast_room_server {
                 "/bilibili.broadcast.v1.BroadcastRoom/Enter" => {
                     #[allow(non_camel_case_types)]
                     struct EnterSvc<T: BroadcastRoom>(pub Arc<T>);
-                    impl<T: BroadcastRoom> tonic::server::UnaryService<super::RoomReq>
-                    for EnterSvc<T> {
+                    impl<
+                        T: BroadcastRoom,
+                    > tonic::server::StreamingService<super::RoomReq> for EnterSvc<T> {
                         type Response = super::RoomResp;
+                        type ResponseStream = T::EnterStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(
                             &mut self,
-                            request: tonic::Request<super::RoomReq>,
+                            request: tonic::Request<tonic::Streaming<super::RoomReq>>,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
                             let fut = async move {
@@ -1506,7 +1517,7 @@ pub mod broadcast_room_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1562,12 +1573,18 @@ pub mod laser_server {
     /// Generated trait containing gRPC methods that should be implemented for use with LaserServer.
     #[async_trait]
     pub trait Laser: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchLogUploadEvent method.
+        type WatchLogUploadEventStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::LaserLogUploadResp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_log_upload_event(
             &self,
             request: tonic::Request<()>,
         ) -> std::result::Result<
-            tonic::Response<super::LaserLogUploadResp>,
+            tonic::Response<Self::WatchLogUploadEventStream>,
             tonic::Status,
         >;
     }
@@ -1651,11 +1668,12 @@ pub mod laser_server {
                 "/bilibili.broadcast.v1.Laser/WatchLogUploadEvent" => {
                     #[allow(non_camel_case_types)]
                     struct WatchLogUploadEventSvc<T: Laser>(pub Arc<T>);
-                    impl<T: Laser> tonic::server::UnaryService<()>
+                    impl<T: Laser> tonic::server::ServerStreamingService<()>
                     for WatchLogUploadEventSvc<T> {
                         type Response = super::LaserLogUploadResp;
+                        type ResponseStream = T::WatchLogUploadEventStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1683,7 +1701,7 @@ pub mod laser_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1739,11 +1757,20 @@ pub mod mod_manager_server {
     /// Generated trait containing gRPC methods that should be implemented for use with ModManagerServer.
     #[async_trait]
     pub trait ModManager: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchResource method.
+        type WatchResourceStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::ModResourceResp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_resource(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::ModResourceResp>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::WatchResourceStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -1825,11 +1852,12 @@ pub mod mod_manager_server {
                 "/bilibili.broadcast.v1.ModManager/WatchResource" => {
                     #[allow(non_camel_case_types)]
                     struct WatchResourceSvc<T: ModManager>(pub Arc<T>);
-                    impl<T: ModManager> tonic::server::UnaryService<()>
+                    impl<T: ModManager> tonic::server::ServerStreamingService<()>
                     for WatchResourceSvc<T> {
                         type Response = super::ModResourceResp;
+                        type ResponseStream = T::WatchResourceStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -1857,7 +1885,7 @@ pub mod mod_manager_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -1913,11 +1941,20 @@ pub mod push_server {
     /// Generated trait containing gRPC methods that should be implemented for use with PushServer.
     #[async_trait]
     pub trait Push: std::marker::Send + std::marker::Sync + 'static {
+        /// Server streaming response type for the WatchMessage method.
+        type WatchMessageStream: tonic::codegen::tokio_stream::Stream<
+                Item = std::result::Result<super::PushMessageResp, tonic::Status>,
+            >
+            + std::marker::Send
+            + 'static;
         ///
         async fn watch_message(
             &self,
             request: tonic::Request<()>,
-        ) -> std::result::Result<tonic::Response<super::PushMessageResp>, tonic::Status>;
+        ) -> std::result::Result<
+            tonic::Response<Self::WatchMessageStream>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -1999,11 +2036,12 @@ pub mod push_server {
                 "/bilibili.broadcast.v1.Push/WatchMessage" => {
                     #[allow(non_camel_case_types)]
                     struct WatchMessageSvc<T: Push>(pub Arc<T>);
-                    impl<T: Push> tonic::server::UnaryService<()>
+                    impl<T: Push> tonic::server::ServerStreamingService<()>
                     for WatchMessageSvc<T> {
                         type Response = super::PushMessageResp;
+                        type ResponseStream = T::WatchMessageStream;
                         type Future = BoxFuture<
-                            tonic::Response<Self::Response>,
+                            tonic::Response<Self::ResponseStream>,
                             tonic::Status,
                         >;
                         fn call(&mut self, request: tonic::Request<()>) -> Self::Future {
@@ -2031,7 +2069,7 @@ pub mod push_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.server_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
@@ -2090,7 +2128,7 @@ pub mod test2_server {
         ///
         async fn test(
             &self,
-            request: tonic::Request<super::AddParams>,
+            request: tonic::Request<tonic::Streaming<super::AddParams>>,
         ) -> std::result::Result<tonic::Response<()>, tonic::Status>;
     }
     ///
@@ -2173,7 +2211,9 @@ pub mod test2_server {
                 "/bilibili.broadcast.v1.Test2/Test" => {
                     #[allow(non_camel_case_types)]
                     struct TestSvc<T: Test2>(pub Arc<T>);
-                    impl<T: Test2> tonic::server::UnaryService<super::AddParams>
+                    impl<
+                        T: Test2,
+                    > tonic::server::ClientStreamingService<super::AddParams>
                     for TestSvc<T> {
                         type Response = ();
                         type Future = BoxFuture<
@@ -2182,7 +2222,7 @@ pub mod test2_server {
                         >;
                         fn call(
                             &mut self,
-                            request: tonic::Request<super::AddParams>,
+                            request: tonic::Request<tonic::Streaming<super::AddParams>>,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
                             let fut = async move {
@@ -2208,7 +2248,7 @@ pub mod test2_server {
                                 max_decoding_message_size,
                                 max_encoding_message_size,
                             );
-                        let res = grpc.unary(method, req).await;
+                        let res = grpc.client_streaming(method, req).await;
                         Ok(res)
                     };
                     Box::pin(fut)
