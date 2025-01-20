@@ -1207,6 +1207,9 @@ pub struct VideoPlayData {
     ///
     #[prost(int64, tag = "4")]
     pub ep_id: i64,
+    ///
+    #[prost(int64, tag = "5")]
+    pub cid: i64,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]

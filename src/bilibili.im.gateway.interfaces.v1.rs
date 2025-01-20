@@ -98,6 +98,9 @@ pub struct ClearBubbleMsgReq {
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ClearBubbleMsgRsp {}
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ClearMessageToastReq {}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CoinCard {
     ///
@@ -306,6 +309,22 @@ pub struct LikeCard {
     ///
     #[prost(message, optional, tag = "3")]
     pub thank_button: ::core::option::Option<ThankButton>,
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct MessageToastReq {}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MessageToastRsp {
+    ///
+    #[prost(string, tag = "1")]
+    pub content: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "ToastType", tag = "3")]
+    pub toast_type: i32,
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1072,6 +1091,39 @@ impl SessionsFilterType {
         }
     }
 }
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum ToastType {
+    ///
+    Default = 0,
+    ///
+    Ban = 1,
+    ///
+    Report = 2,
+}
+impl ToastType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "ToastTypeDefault",
+            Self::Ban => "ToastTypeBan",
+            Self::Report => "ToastTypeReport",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "ToastTypeDefault" => Some(Self::Default),
+            "ToastTypeBan" => Some(Self::Ban),
+            "ToastTypeReport" => Some(Self::Report),
+            _ => None,
+        }
+    }
+}
 /// Generated client implementations.
 pub mod im_gateway_api_client {
     #![allow(
@@ -1179,6 +1231,33 @@ pub mod im_gateway_api_client {
                     GrpcMethod::new(
                         "bilibili.im.gateway.interfaces.v1.ImGatewayApi",
                         "ClearBubbleMsg",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn clear_message_toast(
+            &mut self,
+            request: impl tonic::IntoRequest<super::ClearMessageToastReq>,
+        ) -> std::result::Result<tonic::Response<()>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.im.gateway.interfaces.v1.ImGatewayApi/ClearMessageToast",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.im.gateway.interfaces.v1.ImGatewayApi",
+                        "ClearMessageToast",
                     ),
                 );
             self.inner.unary(req, path, codec).await
@@ -1410,6 +1489,36 @@ pub mod im_gateway_api_client {
                     GrpcMethod::new(
                         "bilibili.im.gateway.interfaces.v1.ImGatewayApi",
                         "HarmonyTotalUnread",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn message_toast(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MessageToastReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::MessageToastRsp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.im.gateway.interfaces.v1.ImGatewayApi/MessageToast",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.im.gateway.interfaces.v1.ImGatewayApi",
+                        "MessageToast",
                     ),
                 );
             self.inner.unary(req, path, codec).await
@@ -1743,6 +1852,11 @@ pub mod im_gateway_api_server {
             tonic::Status,
         >;
         ///
+        async fn clear_message_toast(
+            &self,
+            request: tonic::Request<super::ClearMessageToastReq>,
+        ) -> std::result::Result<tonic::Response<()>, tonic::Status>;
+        ///
         async fn del_msg(
             &self,
             request: tonic::Request<super::DelMsgReq>,
@@ -1794,6 +1908,11 @@ pub mod im_gateway_api_server {
             tonic::Response<super::HarmonyTotalUnreadRsp>,
             tonic::Status,
         >;
+        ///
+        async fn message_toast(
+            &self,
+            request: tonic::Request<super::MessageToastReq>,
+        ) -> std::result::Result<tonic::Response<super::MessageToastRsp>, tonic::Status>;
         ///
         async fn msg_feed_action(
             &self,
@@ -1965,6 +2084,52 @@ pub mod im_gateway_api_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = ClearBubbleMsgSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.im.gateway.interfaces.v1.ImGatewayApi/ClearMessageToast" => {
+                    #[allow(non_camel_case_types)]
+                    struct ClearMessageToastSvc<T: ImGatewayApi>(pub Arc<T>);
+                    impl<
+                        T: ImGatewayApi,
+                    > tonic::server::UnaryService<super::ClearMessageToastReq>
+                    for ClearMessageToastSvc<T> {
+                        type Response = ();
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::ClearMessageToastReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as ImGatewayApi>::clear_message_toast(&inner, request)
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = ClearMessageToastSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -2325,6 +2490,51 @@ pub mod im_gateway_api_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = HarmonyTotalUnreadSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.im.gateway.interfaces.v1.ImGatewayApi/MessageToast" => {
+                    #[allow(non_camel_case_types)]
+                    struct MessageToastSvc<T: ImGatewayApi>(pub Arc<T>);
+                    impl<
+                        T: ImGatewayApi,
+                    > tonic::server::UnaryService<super::MessageToastReq>
+                    for MessageToastSvc<T> {
+                        type Response = super::MessageToastRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::MessageToastReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as ImGatewayApi>::message_toast(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = MessageToastSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

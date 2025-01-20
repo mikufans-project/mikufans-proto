@@ -12,7 +12,7 @@ mod generated;
 pub use generated::*;
 
 /// The version code.
-pub static TARGET_VERSION: &'static str = "8.30.0";
+pub static TARGET_VERSION: &'static str = "8.31.0";
 
 /// The build serial number.
-pub static TARGET_BUILD_SN: i32 = 17448734;
+pub static TARGET_BUILD_SN: i32 = 17499997;

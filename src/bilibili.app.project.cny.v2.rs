@@ -75,6 +75,9 @@ pub struct PrizeInfo {
     ///
     #[prost(string, tag = "5")]
     pub prize_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub jump_url: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -203,6 +206,9 @@ pub struct Session {
     ///
     #[prost(int64, tag = "15")]
     pub mtime: i64,
+    ///
+    #[prost(string, tag = "16")]
+    pub commercial_icon_jump_url: ::prost::alloc::string::String,
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
