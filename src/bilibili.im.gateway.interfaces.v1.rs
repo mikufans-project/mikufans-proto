@@ -99,7 +99,11 @@ pub struct ClearBubbleMsgReq {
 pub struct ClearBubbleMsgRsp {}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
-pub struct ClearMessageToastReq {}
+pub struct ClearMessageToastReq {
+    ///
+    #[prost(enumeration = "ToastType", tag = "1")]
+    pub toast_type: i32,
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CoinCard {
@@ -1098,7 +1102,7 @@ pub enum ToastType {
     ///
     Default = 0,
     ///
-    Ban = 1,
+    Banned = 1,
     ///
     Report = 2,
 }
@@ -1110,7 +1114,7 @@ impl ToastType {
     pub fn as_str_name(&self) -> &'static str {
         match self {
             Self::Default => "ToastTypeDefault",
-            Self::Ban => "ToastTypeBan",
+            Self::Banned => "ToastTypeBanned",
             Self::Report => "ToastTypeReport",
         }
     }
@@ -1118,7 +1122,7 @@ impl ToastType {
     pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
         match value {
             "ToastTypeDefault" => Some(Self::Default),
-            "ToastTypeBan" => Some(Self::Ban),
+            "ToastTypeBanned" => Some(Self::Banned),
             "ToastTypeReport" => Some(Self::Report),
             _ => None,
         }
