@@ -11,7 +11,7 @@ description = "gRPC APIs for Mikufans"
 keywords = ["mikufans"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/cxw620/mikufans-proto"
+repository = "https://github.com/mikufans-project/mikufans-proto"
 
 [dependencies]
 prost = "0.13"
