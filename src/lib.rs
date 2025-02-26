@@ -1,3 +1,4 @@
+#[allow(clippy::empty_docs)]
 pub mod datacenter {
     pub mod hakase {
         pub mod protobuf {
@@ -6,13 +7,15 @@ pub mod datacenter {
     }
 }
 
+#[allow(deprecated)]
+#[allow(clippy::empty_docs)]
 mod generated;
 
 // re-export generated types
 pub use generated::*;
 
 /// The version code.
-pub static TARGET_VERSION: &'static str = "8.32.0";
+pub static TARGET_VERSION: &str = "8.35.0";
 
 /// The build serial number.
-pub static TARGET_BUILD_SN: i32 = 17584272;
+pub static TARGET_BUILD_SN: i32 = 17808858;

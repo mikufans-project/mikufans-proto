@@ -18,6 +18,16 @@ pub struct GenWebTicketRequest {
     #[prost(string, tag = "4")]
     pub token: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GenWebTicketRequest {
+    const NAME: &'static str = "GenWebTicketRequest";
+    const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.ticket.v1.GenWebTicketRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.ticket.v1.GenWebTicketRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenWebTicketResponse {
@@ -46,6 +56,16 @@ pub mod gen_web_ticket_response {
         #[prost(string, tag = "1")]
         pub v_voucher: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for Context {
+        const NAME: &'static str = "Context";
+        const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.api.ticket.v1.GenWebTicketResponse.Context".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.api.ticket.v1.GenWebTicketResponse.Context".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Nav {
@@ -55,6 +75,26 @@ pub mod gen_web_ticket_response {
         ///
         #[prost(string, tag = "2")]
         pub sub: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Nav {
+        const NAME: &'static str = "Nav";
+        const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.api.ticket.v1.GenWebTicketResponse.Nav".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.api.ticket.v1.GenWebTicketResponse.Nav".into()
+        }
+    }
+}
+impl ::prost::Name for GenWebTicketResponse {
+    const NAME: &'static str = "GenWebTicketResponse";
+    const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.ticket.v1.GenWebTicketResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.ticket.v1.GenWebTicketResponse".into()
     }
 }
 ///
@@ -75,6 +115,16 @@ pub struct GetTicketRequest {
     ///
     #[prost(string, tag = "4")]
     pub token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GetTicketRequest {
+    const NAME: &'static str = "GetTicketRequest";
+    const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.ticket.v1.GetTicketRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.ticket.v1.GetTicketRequest".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -100,6 +150,26 @@ pub mod get_ticket_response {
         ///
         #[prost(string, tag = "1")]
         pub v_voucher: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Context {
+        const NAME: &'static str = "Context";
+        const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.api.ticket.v1.GetTicketResponse.Context".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.api.ticket.v1.GetTicketResponse.Context".into()
+        }
+    }
+}
+impl ::prost::Name for GetTicketResponse {
+    const NAME: &'static str = "GetTicketResponse";
+    const PACKAGE: &'static str = "bilibili.api.ticket.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.ticket.v1.GetTicketResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.ticket.v1.GetTicketResponse".into()
     }
 }
 /// Generated client implementations.

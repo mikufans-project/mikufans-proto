@@ -2,6 +2,16 @@
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ActionReportReply {}
+impl ::prost::Name for ActionReportReply {
+    const NAME: &'static str = "ActionReportReply";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.campus.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.campus.v1.ActionReportReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.campus.v1.ActionReportReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ActionReportReq {
@@ -14,6 +24,16 @@ pub struct ActionReportReq {
     ///
     #[prost(int64, tag = "3")]
     pub campus_id: i64,
+}
+impl ::prost::Name for ActionReportReq {
+    const NAME: &'static str = "ActionReportReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.campus.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.campus.v1.ActionReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.campus.v1.ActionReportReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

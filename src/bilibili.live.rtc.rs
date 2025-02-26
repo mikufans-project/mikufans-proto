@@ -14,12 +14,32 @@ pub mod bapi_live_rtc_health_proto {
         #[prost(int64, tag = "2")]
         pub rx_rate: i64,
     }
+    impl ::prost::Name for Bandwidth {
+        const NAME: &'static str = "Bandwidth";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.Bandwidth".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.Bandwidth".into()
+        }
+    }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
     pub struct Cpu {
         ///
         #[prost(float, tag = "1")]
         pub usage: f32,
+    }
+    impl ::prost::Name for Cpu {
+        const NAME: &'static str = "Cpu";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.Cpu".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.Cpu".into()
+        }
     }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -30,6 +50,16 @@ pub mod bapi_live_rtc_health_proto {
         ///
         #[prost(int64, tag = "2")]
         pub free: i64,
+    }
+    impl ::prost::Name for Disk {
+        const NAME: &'static str = "Disk";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.Disk".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.Disk".into()
+        }
     }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -62,6 +92,16 @@ pub mod bapi_live_rtc_health_proto {
         #[prost(bool, tag = "9")]
         pub network_available: bool,
     }
+    impl ::prost::Name for HealthInfo {
+        const NAME: &'static str = "HealthInfo";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.HealthInfo".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.HealthInfo".into()
+        }
+    }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
     pub struct Memory {
@@ -71,6 +111,16 @@ pub mod bapi_live_rtc_health_proto {
         ///
         #[prost(int64, tag = "2")]
         pub free: i64,
+    }
+    impl ::prost::Name for Memory {
+        const NAME: &'static str = "Memory";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.Memory".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.Memory".into()
+        }
     }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -85,6 +135,26 @@ pub mod bapi_live_rtc_health_proto {
         #[prost(float, tag = "3")]
         pub zero_score_ratio: f32,
     }
+    impl ::prost::Name for ServiceQuality {
+        const NAME: &'static str = "ServiceQuality";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.ServiceQuality".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.ServiceQuality".into()
+        }
+    }
+}
+impl ::prost::Name for BapiLiveRtcHealthProto {
+    const NAME: &'static str = "BAPILiveRTCHealthProto";
+    const PACKAGE: &'static str = "bilibili.live.rtc";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.BAPILiveRTCHealthProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.BAPILiveRTCHealthProto".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -98,12 +168,32 @@ pub mod bapi_live_rtc_legacy_proto {
         #[prost(int32, repeated, tag = "1")]
         pub media_type: ::prost::alloc::vec::Vec<i32>,
     }
+    impl ::prost::Name for MediaTypeField {
+        const NAME: &'static str = "MediaTypeField";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCLegacyProto.MediaTypeField".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCLegacyProto.MediaTypeField".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct RtcSubscribe {
         ///
         #[prost(map = "int32, message", tag = "1")]
         pub subscribe: ::std::collections::HashMap<i32, MediaTypeField>,
+    }
+    impl ::prost::Name for RtcSubscribe {
+        const NAME: &'static str = "RtcSubscribe";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCLegacyProto.RtcSubscribe".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCLegacyProto.RtcSubscribe".into()
+        }
     }
     ///
     #[derive(
@@ -157,6 +247,16 @@ pub mod bapi_live_rtc_legacy_proto {
         }
     }
 }
+impl ::prost::Name for BapiLiveRtcLegacyProto {
+    const NAME: &'static str = "BAPILiveRTCLegacyProto";
+    const PACKAGE: &'static str = "bilibili.live.rtc";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.BAPILiveRTCLegacyProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.BAPILiveRTCLegacyProto".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BapiLiveRtcStreamProto {}
@@ -177,6 +277,16 @@ pub mod bapi_live_rtc_stream_proto {
         ///
         #[prost(int32, tag = "4")]
         pub ssrc: i32,
+    }
+    impl ::prost::Name for AudioMetaData {
+        const NAME: &'static str = "AudioMetaData";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCStreamProto.AudioMetaData".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCStreamProto.AudioMetaData".into()
+        }
     }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -201,6 +311,16 @@ pub mod bapi_live_rtc_stream_proto {
             Video(super::VideoMetaData),
         }
     }
+    impl ::prost::Name for StreamMeta {
+        const NAME: &'static str = "StreamMeta";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCStreamProto.StreamMeta".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCStreamProto.StreamMeta".into()
+        }
+    }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
     pub struct VideoMetaData {
@@ -210,6 +330,16 @@ pub mod bapi_live_rtc_stream_proto {
         ///
         #[prost(int32, tag = "2")]
         pub ssrc: i32,
+    }
+    impl ::prost::Name for VideoMetaData {
+        const NAME: &'static str = "VideoMetaData";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCStreamProto.VideoMetaData".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCStreamProto.VideoMetaData".into()
+        }
     }
     ///
     #[derive(
@@ -259,6 +389,16 @@ pub mod bapi_live_rtc_stream_proto {
         }
     }
 }
+impl ::prost::Name for BapiLiveRtcStreamProto {
+    const NAME: &'static str = "BAPILiveRTCStreamProto";
+    const PACKAGE: &'static str = "bilibili.live.rtc";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.BAPILiveRTCStreamProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.BAPILiveRTCStreamProto".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BapiLiveRtcTokenProto {}
@@ -301,6 +441,16 @@ pub mod bapi_live_rtc_token_proto {
         #[prost(string, tag = "11")]
         pub media_server_name: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for AccessToken {
+        const NAME: &'static str = "AccessToken";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCTokenProto.AccessToken".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCTokenProto.AccessToken".into()
+        }
+    }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
     pub struct Token {
@@ -316,6 +466,16 @@ pub mod bapi_live_rtc_token_proto {
         ///
         #[prost(enumeration = "super::bapi_live_rtc_user_proto::UserRole", tag = "4")]
         pub role: i32,
+    }
+    impl ::prost::Name for Token {
+        const NAME: &'static str = "Token";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCTokenProto.Token".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCTokenProto.Token".into()
+        }
     }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -335,6 +495,16 @@ pub mod bapi_live_rtc_token_proto {
         ///
         #[prost(bool, tag = "5")]
         pub turn_only: bool,
+    }
+    impl ::prost::Name for TurnAddr {
+        const NAME: &'static str = "TurnAddr";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCTokenProto.TurnAddr".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCTokenProto.TurnAddr".into()
+        }
     }
     ///
     #[derive(
@@ -380,6 +550,16 @@ pub mod bapi_live_rtc_token_proto {
         }
     }
 }
+impl ::prost::Name for BapiLiveRtcTokenProto {
+    const NAME: &'static str = "BAPILiveRTCTokenProto";
+    const PACKAGE: &'static str = "bilibili.live.rtc";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.BAPILiveRTCTokenProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.BAPILiveRTCTokenProto".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BapiLiveRtcUserProto {}
@@ -394,6 +574,16 @@ pub mod bapi_live_rtc_user_proto {
         ///
         #[prost(bool, tag = "2")]
         pub h265: bool,
+    }
+    impl ::prost::Name for CodecCapability {
+        const NAME: &'static str = "CodecCapability";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCUserProto.CodecCapability".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCUserProto.CodecCapability".into()
+        }
     }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -417,6 +607,16 @@ pub mod bapi_live_rtc_user_proto {
         #[prost(int32, tag = "6")]
         pub temporal_count: i32,
     }
+    impl ::prost::Name for Stream {
+        const NAME: &'static str = "Stream";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCUserProto.Stream".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCUserProto.Stream".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct User {
@@ -438,6 +638,16 @@ pub mod bapi_live_rtc_user_proto {
         ///
         #[prost(message, optional, tag = "6")]
         pub decode_capability: ::core::option::Option<CodecCapability>,
+    }
+    impl ::prost::Name for User {
+        const NAME: &'static str = "User";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCUserProto.User".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCUserProto.User".into()
+        }
     }
     ///
     #[derive(
@@ -548,5 +758,15 @@ pub mod bapi_live_rtc_user_proto {
                 _ => None,
             }
         }
+    }
+}
+impl ::prost::Name for BapiLiveRtcUserProto {
+    const NAME: &'static str = "BAPILiveRTCUserProto";
+    const PACKAGE: &'static str = "bilibili.live.rtc";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.BAPILiveRTCUserProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.BAPILiveRTCUserProto".into()
     }
 }

@@ -120,3 +120,13 @@ pub mod other_settings_config {
         }
     }
 }
+impl ::prost::Name for OtherSettingsConfig {
+    const NAME: &'static str = "OtherSettingsConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.other";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.other.OtherSettingsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.other.OtherSettingsConfig".into()
+    }
+}

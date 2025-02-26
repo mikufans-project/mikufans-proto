@@ -9,6 +9,16 @@ pub struct AppEventMessage {
     #[prost(int64, tag = "2")]
     pub timestamp: i64,
 }
+impl ::prost::Name for AppEventMessage {
+    const NAME: &'static str = "AppEventMessage";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.bgroup";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.bgroup.AppEventMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.bgroup.AppEventMessage".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

@@ -6,12 +6,32 @@ pub struct BgmPlayReply {
     #[prost(string, tag = "1")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BgmPlayReply {
+    const NAME: &'static str = "BgmPlayReply";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.BgmPlayReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.BgmPlayReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BgmPlayReq {
     ///
     #[prost(int64, tag = "1")]
     pub music_id: i64,
+}
+impl ::prost::Name for BgmPlayReq {
+    const NAME: &'static str = "BgmPlayReq";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.BgmPlayReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.BgmPlayReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod story_client {

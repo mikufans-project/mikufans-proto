@@ -8,6 +8,16 @@ pub struct GetActProgressReply {
         super::super::super::super::broadcast::message::main::NativePageEvent,
     >,
 }
+impl ::prost::Name for GetActProgressReply {
+    const NAME: &'static str = "GetActProgressReply";
+    const PACKAGE: &'static str = "bilibili.app.show.gateway.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.gateway.v1.GetActProgressReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.gateway.v1.GetActProgressReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetActProgressReq {
@@ -17,6 +27,16 @@ pub struct GetActProgressReq {
     ///
     #[prost(int64, tag = "2")]
     pub mid: i64,
+}
+impl ::prost::Name for GetActProgressReq {
+    const NAME: &'static str = "GetActProgressReq";
+    const PACKAGE: &'static str = "bilibili.app.show.gateway.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.gateway.v1.GetActProgressReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.gateway.v1.GetActProgressReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod app_show_client {

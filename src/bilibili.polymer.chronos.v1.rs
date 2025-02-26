@@ -12,6 +12,16 @@ pub struct ObtainChronosPackageReq {
     #[prost(string, tag = "3")]
     pub biz_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ObtainChronosPackageReq {
+    const NAME: &'static str = "ObtainChronosPackageReq";
+    const PACKAGE: &'static str = "bilibili.polymer.chronos.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.chronos.v1.ObtainChronosPackageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.chronos.v1.ObtainChronosPackageReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ObtainChronosPackageRsp {
@@ -24,6 +34,16 @@ pub struct ObtainChronosPackageRsp {
     ///
     #[prost(string, tag = "3")]
     pub sign: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ObtainChronosPackageRsp {
+    const NAME: &'static str = "ObtainChronosPackageRsp";
+    const PACKAGE: &'static str = "bilibili.polymer.chronos.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.chronos.v1.ObtainChronosPackageRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.chronos.v1.ObtainChronosPackageRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -40,6 +60,16 @@ pub struct ObtainChronosPackageV2Req {
     ///
     #[prost(string, tag = "4")]
     pub business_app_key: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ObtainChronosPackageV2Req {
+    const NAME: &'static str = "ObtainChronosPackageV2Req";
+    const PACKAGE: &'static str = "bilibili.polymer.chronos.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.chronos.v1.ObtainChronosPackageV2Req".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.chronos.v1.ObtainChronosPackageV2Req".into()
+    }
 }
 /// Generated client implementations.
 pub mod chronos_service_client {

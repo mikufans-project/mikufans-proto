@@ -18,6 +18,16 @@ pub struct NewDoVoteReq {
     #[prost(int64, tag = "5")]
     pub op_bit: i64,
 }
+impl ::prost::Name for NewDoVoteReq {
+    const NAME: &'static str = "NewDoVoteReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.vote.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.vote.v1.NewDoVoteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.vote.v1.NewDoVoteReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NewDoVoteRsp {
@@ -31,6 +41,16 @@ pub struct NewDoVoteRsp {
     #[prost(message, optional, tag = "3")]
     pub vote_info: ::core::option::Option<VoteInfo>,
 }
+impl ::prost::Name for NewDoVoteRsp {
+    const NAME: &'static str = "NewDoVoteRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.vote.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.vote.v1.NewDoVoteRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.vote.v1.NewDoVoteRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VoteBizInfo {
@@ -43,6 +63,16 @@ pub struct VoteBizInfo {
     ///
     #[prost(string, tag = "3")]
     pub biz_ext: ::prost::alloc::string::String,
+}
+impl ::prost::Name for VoteBizInfo {
+    const NAME: &'static str = "VoteBizInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.vote.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.vote.v1.VoteBizInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.vote.v1.VoteBizInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -120,6 +150,16 @@ pub struct VoteInfo {
     #[prost(int64, tag = "24")]
     pub only_fans_level: i64,
 }
+impl ::prost::Name for VoteInfo {
+    const NAME: &'static str = "VoteInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.vote.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.vote.v1.VoteInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.vote.v1.VoteInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VoteOptionInfo {
@@ -141,6 +181,16 @@ pub struct VoteOptionInfo {
     ///
     #[prost(string, tag = "6")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for VoteOptionInfo {
+    const NAME: &'static str = "VoteOptionInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.vote.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.vote.v1.VoteOptionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.vote.v1.VoteOptionInfo".into()
+    }
 }
 /// Generated client implementations.
 pub mod vote_client {

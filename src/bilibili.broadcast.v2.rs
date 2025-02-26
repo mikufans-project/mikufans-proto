@@ -12,6 +12,16 @@ pub struct LaserEventResp {
     #[prost(string, tag = "3")]
     pub params: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LaserEventResp {
+    const NAME: &'static str = "LaserEventResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v2.LaserEventResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v2.LaserEventResp".into()
+    }
+}
 /// Generated client implementations.
 pub mod laser_client {
     #![allow(

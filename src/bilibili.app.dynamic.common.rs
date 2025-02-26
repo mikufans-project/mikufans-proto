@@ -12,6 +12,16 @@ pub struct ItemWhRatio {
     #[prost(int32, tag = "3")]
     pub height: i32,
 }
+impl ::prost::Name for ItemWhRatio {
+    const NAME: &'static str = "ItemWHRatio";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.common.ItemWHRatio".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.common.ItemWHRatio".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

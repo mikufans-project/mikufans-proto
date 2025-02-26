@@ -6,10 +6,30 @@ pub struct MidStoryConfig {
     #[prost(message, optional, tag = "1")]
     pub gesture_type: ::core::option::Option<super::super::Int64Value>,
 }
+impl ::prost::Name for MidStoryConfig {
+    const NAME: &'static str = "MidStoryConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.story";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.story.MidStoryConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.story.MidStoryConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct StoryConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub gesture_type: ::core::option::Option<super::super::Int64Value>,
+}
+impl ::prost::Name for StoryConfig {
+    const NAME: &'static str = "StoryConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.story";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.story.StoryConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.story.StoryConfig".into()
+    }
 }

@@ -6,3 +6,13 @@ pub struct MidImConfig {
     #[prost(message, optional, tag = "1")]
     pub can_airdrop_to_im: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for MidImConfig {
+    const NAME: &'static str = "MidImConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.im";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.im.MidImConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.im.MidImConfig".into()
+    }
+}

@@ -15,21 +15,41 @@ pub struct BoolValue {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BoolValue {
+    const NAME: &'static str = "BoolValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.BoolValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.BoolValue".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BytesValue {
     ///
-    #[prost(bytes = "vec", tag = "1")]
-    pub value: ::prost::alloc::vec::Vec<u8>,
+    #[prost(bytes = "bytes", tag = "1")]
+    pub value: ::prost::bytes::Bytes,
     ///
     #[prost(int64, tag = "2")]
     pub last_modified: i64,
     ///
-    #[prost(bytes = "vec", tag = "3")]
-    pub default_value: ::prost::alloc::vec::Vec<u8>,
+    #[prost(bytes = "bytes", tag = "3")]
+    pub default_value: ::prost::bytes::Bytes,
     ///
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
+}
+impl ::prost::Name for BytesValue {
+    const NAME: &'static str = "BytesValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.BytesValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.BytesValue".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -47,6 +67,16 @@ pub struct DoubleValue {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DoubleValue {
+    const NAME: &'static str = "DoubleValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.DoubleValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.DoubleValue".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FloatValue {
@@ -63,12 +93,32 @@ pub struct FloatValue {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FloatValue {
+    const NAME: &'static str = "FloatValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.FloatValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.FloatValue".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserPreferenceReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub value: ::prost::alloc::vec::Vec<::prost_types::Any>,
+}
+impl ::prost::Name for GetUserPreferenceReply {
+    const NAME: &'static str = "GetUserPreferenceReply";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.GetUserPreferenceReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.GetUserPreferenceReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -82,6 +132,16 @@ pub struct GetUserPreferenceReq {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+}
+impl ::prost::Name for GetUserPreferenceReq {
+    const NAME: &'static str = "GetUserPreferenceReq";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.GetUserPreferenceReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.GetUserPreferenceReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -99,6 +159,16 @@ pub struct Int32Value {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Int32Value {
+    const NAME: &'static str = "Int32Value";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.Int32Value".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.Int32Value".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Int64Value {
@@ -115,9 +185,29 @@ pub struct Int64Value {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Int64Value {
+    const NAME: &'static str = "Int64Value";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.Int64Value".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.Int64Value".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SetUserPreferenceReply {}
+impl ::prost::Name for SetUserPreferenceReply {
+    const NAME: &'static str = "SetUserPreferenceReply";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.SetUserPreferenceReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.SetUserPreferenceReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetUserPreferenceReq {
@@ -130,6 +220,16 @@ pub struct SetUserPreferenceReq {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+}
+impl ::prost::Name for SetUserPreferenceReq {
+    const NAME: &'static str = "SetUserPreferenceReq";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.SetUserPreferenceReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.SetUserPreferenceReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -147,6 +247,16 @@ pub struct StringValue {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for StringValue {
+    const NAME: &'static str = "StringValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.StringValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.StringValue".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UInt32Value {
@@ -162,6 +272,16 @@ pub struct UInt32Value {
     ///
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UInt32Value {
+    const NAME: &'static str = "UInt32Value";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.UInt32Value".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.UInt32Value".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -179,6 +299,16 @@ pub struct UInt64Value {
     #[prost(string, tag = "4")]
     pub exp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UInt64Value {
+    const NAME: &'static str = "UInt64Value";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.UInt64Value".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.UInt64Value".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserPreferenceReply {
@@ -186,9 +316,29 @@ pub struct UserPreferenceReply {
     #[prost(message, repeated, tag = "1")]
     pub preference: ::prost::alloc::vec::Vec<::prost_types::Any>,
 }
+impl ::prost::Name for UserPreferenceReply {
+    const NAME: &'static str = "UserPreferenceReply";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.UserPreferenceReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.UserPreferenceReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UserPreferenceReq {}
+impl ::prost::Name for UserPreferenceReq {
+    const NAME: &'static str = "UserPreferenceReq";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.UserPreferenceReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.UserPreferenceReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DefaultValue {
@@ -228,6 +378,16 @@ pub mod default_value {
         ///
         #[prost(bytes, tag = "9")]
         BytesValue(::prost::alloc::vec::Vec<u8>),
+    }
+}
+impl ::prost::Name for DefaultValue {
+    const NAME: &'static str = "defaultValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.defaultValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.defaultValue".into()
     }
 }
 /// Generated client implementations.

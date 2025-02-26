@@ -19,3 +19,13 @@ pub struct MidHomeConfig {
         super::super::Int64Value,
     >,
 }
+impl ::prost::Name for MidHomeConfig {
+    const NAME: &'static str = "MidHomeConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.home";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.home.MidHomeConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.home.MidHomeConfig".into()
+    }
+}

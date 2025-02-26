@@ -28,3 +28,13 @@ pub struct PgcAnyModel {
         super::super::super::pgc::gateway::player::v2::PlayExtInfo,
     >,
 }
+impl ::prost::Name for PgcAnyModel {
+    const NAME: &'static str = "PGCAnyModel";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pgcanymodel.PGCAnyModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pgcanymodel.PGCAnyModel".into()
+    }
+}

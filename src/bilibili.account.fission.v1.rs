@@ -9,6 +9,16 @@ pub struct AnimateIcon {
     #[prost(string, tag = "2")]
     pub json: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AnimateIcon {
+    const NAME: &'static str = "AnimateIcon";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.AnimateIcon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.AnimateIcon".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EntranceReply {
@@ -25,9 +35,29 @@ pub struct EntranceReply {
     #[prost(message, optional, tag = "4")]
     pub animate_icon: ::core::option::Option<AnimateIcon>,
 }
+impl ::prost::Name for EntranceReply {
+    const NAME: &'static str = "EntranceReply";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.EntranceReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.EntranceReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct EntranceReq {}
+impl ::prost::Name for EntranceReq {
+    const NAME: &'static str = "EntranceReq";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.EntranceReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.EntranceReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PrivacyReply {
@@ -35,12 +65,32 @@ pub struct PrivacyReply {
     #[prost(string, tag = "1")]
     pub message: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PrivacyReply {
+    const NAME: &'static str = "PrivacyReply";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.PrivacyReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.PrivacyReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PrivacyReq {
     ///
     #[prost(string, tag = "1")]
     pub activity_uid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PrivacyReq {
+    const NAME: &'static str = "PrivacyReq";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.PrivacyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.PrivacyReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -55,9 +105,29 @@ pub struct WindowReply {
     #[prost(string, tag = "3")]
     pub report_data: ::prost::alloc::string::String,
 }
+impl ::prost::Name for WindowReply {
+    const NAME: &'static str = "WindowReply";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.WindowReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.WindowReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct WindowReq {}
+impl ::prost::Name for WindowReq {
+    const NAME: &'static str = "WindowReq";
+    const PACKAGE: &'static str = "bilibili.account.fission.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.fission.v1.WindowReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.fission.v1.WindowReq".into()
+    }
+}
 /// Generated client implementations.
 pub mod fission_client {
     #![allow(

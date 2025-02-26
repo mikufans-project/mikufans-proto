@@ -12,6 +12,16 @@ pub struct Avatar {
     #[prost(enumeration = "AvatarType", tag = "3")]
     pub avatar_type: i32,
 }
+impl ::prost::Name for Avatar {
+    const NAME: &'static str = "Avatar";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Avatar".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Avatar".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Bubble {
@@ -21,6 +31,16 @@ pub struct Bubble {
     ///
     #[prost(string, tag = "2")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Bubble {
+    const NAME: &'static str = "Bubble";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Bubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Bubble".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -41,6 +61,16 @@ pub struct BubbleV2 {
     #[prost(enumeration = "ExposureType", tag = "5")]
     pub exposure_type: i32,
 }
+impl ::prost::Name for BubbleV2 {
+    const NAME: &'static str = "BubbleV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.BubbleV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.BubbleV2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Button {
@@ -51,12 +81,32 @@ pub struct Button {
     #[prost(enumeration = "ToastFunctionType", tag = "2")]
     pub action: i32,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BuzzwordConfig {
     ///
     #[prost(message, repeated, tag = "1")]
     pub keywords: ::prost::alloc::vec::Vec<BuzzwordShowConfig>,
+}
+impl ::prost::Name for BuzzwordConfig {
+    const NAME: &'static str = "BuzzwordConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.BuzzwordConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.BuzzwordConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -80,6 +130,16 @@ pub struct BuzzwordShowConfig {
     #[prost(int32, tag = "6")]
     pub schema_type: i32,
 }
+impl ::prost::Name for BuzzwordShowConfig {
+    const NAME: &'static str = "BuzzwordShowConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.BuzzwordShowConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.BuzzwordShowConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CheckBox {
@@ -96,6 +156,16 @@ pub struct CheckBox {
     #[prost(bool, tag = "4")]
     pub show: bool,
 }
+impl ::prost::Name for CheckBox {
+    const NAME: &'static str = "CheckBox";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.CheckBox".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.CheckBox".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CheckBoxV2 {
@@ -108,6 +178,16 @@ pub struct CheckBoxV2 {
     ///
     #[prost(bool, tag = "3")]
     pub default_value: bool,
+}
+impl ::prost::Name for CheckBoxV2 {
+    const NAME: &'static str = "CheckBoxV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.CheckBoxV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.CheckBoxV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -133,6 +213,16 @@ pub struct ClickButton {
     ///
     #[prost(message, optional, tag = "7")]
     pub bubble: ::core::option::Option<Bubble>,
+}
+impl ::prost::Name for ClickButton {
+    const NAME: &'static str = "ClickButton";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ClickButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ClickButton".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -162,12 +252,32 @@ pub struct ClickButtonV2 {
     #[prost(enumeration = "ExposureType", tag = "8")]
     pub exposure_type: i32,
 }
+impl ::prost::Name for ClickButtonV2 {
+    const NAME: &'static str = "ClickButtonV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ClickButtonV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ClickButtonV2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Command {
     ///
     #[prost(message, repeated, tag = "1")]
     pub command_dms: ::prost::alloc::vec::Vec<CommandDm>,
+}
+impl ::prost::Name for Command {
+    const NAME: &'static str = "Command";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Command".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Command".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -215,12 +325,32 @@ pub struct CommandDm {
     #[prost(int32, tag = "14")]
     pub attr: i32,
 }
+impl ::prost::Name for CommandDm {
+    const NAME: &'static str = "CommandDm";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.CommandDm".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.CommandDm".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DanmakuAiFlag {
     ///
     #[prost(message, repeated, tag = "1")]
     pub dm_flags: ::prost::alloc::vec::Vec<DanmakuFlag>,
+}
+impl ::prost::Name for DanmakuAiFlag {
+    const NAME: &'static str = "DanmakuAIFlag";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmakuAIFlag".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmakuAIFlag".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -283,6 +413,16 @@ pub struct DanmakuElem {
     #[prost(enumeration = "DmFromType", tag = "27")]
     pub dm_from: i32,
 }
+impl ::prost::Name for DanmakuElem {
+    const NAME: &'static str = "DanmakuElem";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmakuElem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmakuElem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DanmakuFlag {
@@ -292,6 +432,16 @@ pub struct DanmakuFlag {
     ///
     #[prost(int32, tag = "2")]
     pub flag: i32,
+}
+impl ::prost::Name for DanmakuFlag {
+    const NAME: &'static str = "DanmakuFlag";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmakuFlag".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmakuFlag".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -305,6 +455,16 @@ pub struct DanmakuFlagConfig {
     ///
     #[prost(int32, tag = "3")]
     pub rec_switch: i32,
+}
+impl ::prost::Name for DanmakuFlagConfig {
+    const NAME: &'static str = "DanmakuFlagConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmakuFlagConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmakuFlagConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -366,6 +526,16 @@ pub struct DanmuDefaultPlayerConfig {
     ///
     #[prost(bool, tag = "20")]
     pub player_danmaku_enable_herd_dm: bool,
+}
+impl ::prost::Name for DanmuDefaultPlayerConfig {
+    const NAME: &'static str = "DanmuDefaultPlayerConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuDefaultPlayerConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuDefaultPlayerConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -458,12 +628,32 @@ pub struct DanmuPlayerConfig {
     #[prost(bool, tag = "28")]
     pub player_danmaku_people_proof: bool,
 }
+impl ::prost::Name for DanmuPlayerConfig {
+    const NAME: &'static str = "DanmuPlayerConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuPlayerConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuPlayerConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DanmuPlayerConfigPanel {
     ///
     #[prost(string, tag = "1")]
     pub selection_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DanmuPlayerConfigPanel {
+    const NAME: &'static str = "DanmuPlayerConfigPanel";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuPlayerConfigPanel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuPlayerConfigPanel".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -474,6 +664,16 @@ pub struct DanmuPlayerDynamicConfig {
     ///
     #[prost(float, tag = "14")]
     pub player_danmaku_domain: f32,
+}
+impl ::prost::Name for DanmuPlayerDynamicConfig {
+    const NAME: &'static str = "DanmuPlayerDynamicConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuPlayerDynamicConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuPlayerDynamicConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -492,6 +692,16 @@ pub struct DanmuPlayerViewConfig {
     ///
     #[prost(message, optional, tag = "4")]
     pub danmuku_player_config_panel: ::core::option::Option<DanmuPlayerConfigPanel>,
+}
+impl ::prost::Name for DanmuPlayerViewConfig {
+    const NAME: &'static str = "DanmuPlayerViewConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuPlayerViewConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuPlayerViewConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -575,6 +785,16 @@ pub struct DanmuWebPlayerConfig {
     #[prost(int32, tag = "26")]
     pub dm_density: i32,
 }
+impl ::prost::Name for DanmuWebPlayerConfig {
+    const NAME: &'static str = "DanmuWebPlayerConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DanmuWebPlayerConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DanmuWebPlayerConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmColorful {
@@ -584,6 +804,16 @@ pub struct DmColorful {
     ///
     #[prost(string, tag = "2")]
     pub src: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DmColorful {
+    const NAME: &'static str = "DmColorful";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmColorful".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmColorful".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -601,9 +831,29 @@ pub struct DmExpoReportReq {
     #[prost(string, tag = "4")]
     pub spmid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DmExpoReportReq {
+    const NAME: &'static str = "DmExpoReportReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmExpoReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmExpoReportReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DmExpoReportRes {}
+impl ::prost::Name for DmExpoReportRes {
+    const NAME: &'static str = "DmExpoReportRes";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmExpoReportRes".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmExpoReportRes".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmHerdView {
@@ -613,6 +863,16 @@ pub struct DmHerdView {
     ///
     #[prost(message, repeated, tag = "2")]
     pub herd_dms: ::prost::alloc::vec::Vec<ViewHerdDmElem>,
+}
+impl ::prost::Name for DmHerdView {
+    const NAME: &'static str = "DmHerdView";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmHerdView".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmHerdView".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -636,6 +896,16 @@ pub struct DmMaskWall {
     #[prost(message, repeated, tag = "6")]
     pub contents: ::prost::alloc::vec::Vec<DmMaskWallContent>,
 }
+impl ::prost::Name for DmMaskWall {
+    const NAME: &'static str = "DmMaskWall";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmMaskWall".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmMaskWall".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmMaskWallContent {
@@ -645,6 +915,16 @@ pub struct DmMaskWallContent {
     ///
     #[prost(string, tag = "2")]
     pub content: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DmMaskWallContent {
+    const NAME: &'static str = "DmMaskWallContent";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmMaskWallContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmMaskWallContent".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -730,6 +1010,16 @@ pub struct DmPlayerConfigReq {
     #[prost(message, optional, tag = "26")]
     pub people_proof: ::core::option::Option<PlayerDanmakuPeopleProof>,
 }
+impl ::prost::Name for DmPlayerConfigReq {
+    const NAME: &'static str = "DmPlayerConfigReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmPlayerConfigReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmPlayerConfigReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DmSegConfig {
@@ -739,6 +1029,16 @@ pub struct DmSegConfig {
     ///
     #[prost(int64, tag = "2")]
     pub total: i64,
+}
+impl ::prost::Name for DmSegConfig {
+    const NAME: &'static str = "DmSegConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -761,6 +1061,16 @@ pub struct DmSegMobileReply {
     ///
     #[prost(string, tag = "6")]
     pub context_src: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DmSegMobileReply {
+    const NAME: &'static str = "DmSegMobileReply";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegMobileReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegMobileReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -799,6 +1109,16 @@ pub struct DmSegMobileReq {
     #[prost(string, tag = "11")]
     pub context_ext: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DmSegMobileReq {
+    const NAME: &'static str = "DmSegMobileReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegMobileReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegMobileReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmSegOttReply {
@@ -808,6 +1128,16 @@ pub struct DmSegOttReply {
     ///
     #[prost(int32, tag = "2")]
     pub state: i32,
+}
+impl ::prost::Name for DmSegOttReply {
+    const NAME: &'static str = "DmSegOttReply";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegOttReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegOttReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -825,6 +1155,16 @@ pub struct DmSegOttReq {
     #[prost(int64, tag = "4")]
     pub segment_index: i64,
 }
+impl ::prost::Name for DmSegOttReq {
+    const NAME: &'static str = "DmSegOttReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegOttReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegOttReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmSegSdkReply {
@@ -834,6 +1174,16 @@ pub struct DmSegSdkReply {
     ///
     #[prost(message, repeated, tag = "2")]
     pub elems: ::prost::alloc::vec::Vec<DanmakuElem>,
+}
+impl ::prost::Name for DmSegSdkReply {
+    const NAME: &'static str = "DmSegSDKReply";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegSDKReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegSDKReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -851,6 +1201,16 @@ pub struct DmSegSdkReq {
     #[prost(int64, tag = "4")]
     pub segment_index: i64,
 }
+impl ::prost::Name for DmSegSdkReq {
+    const NAME: &'static str = "DmSegSDKReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegSDKReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegSDKReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmSubView {
@@ -866,6 +1226,16 @@ pub struct DmSubView {
     ///
     #[prost(message, repeated, tag = "4")]
     pub post_panel2: ::prost::alloc::vec::Vec<PostPanelV2>,
+}
+impl ::prost::Name for DmSubView {
+    const NAME: &'static str = "DmSubView";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSubView".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSubView".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -946,6 +1316,16 @@ pub struct DmViewReply {
     #[prost(message, optional, tag = "25")]
     pub qoe: ::core::option::Option<QoeInfo>,
 }
+impl ::prost::Name for DmViewReply {
+    const NAME: &'static str = "DmViewReply";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmViewReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmViewReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmViewReq {
@@ -967,6 +1347,16 @@ pub struct DmViewReq {
     ///
     #[prost(string, tag = "6")]
     pub context_ext: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DmViewReq {
+    const NAME: &'static str = "DmViewReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmViewReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmViewReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1023,6 +1413,16 @@ pub struct DmWebViewReply {
     #[prost(message, optional, tag = "17")]
     pub qoe: ::core::option::Option<QoeInfo>,
 }
+impl ::prost::Name for DmWebViewReply {
+    const NAME: &'static str = "DmWebViewReply";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmWebViewReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmWebViewReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExpoReport {
@@ -1039,6 +1439,16 @@ pub struct ExpoReport {
     #[prost(int32, tag = "4")]
     pub max_size: i32,
 }
+impl ::prost::Name for ExpoReport {
+    const NAME: &'static str = "ExpoReport";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ExpoReport".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ExpoReport".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Expression {
@@ -1052,6 +1462,16 @@ pub struct Expression {
     #[prost(message, repeated, tag = "3")]
     pub period: ::prost::alloc::vec::Vec<Period>,
 }
+impl ::prost::Name for Expression {
+    const NAME: &'static str = "Expression";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Expression".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Expression".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Expressions {
@@ -1059,12 +1479,32 @@ pub struct Expressions {
     #[prost(message, repeated, tag = "1")]
     pub data: ::prost::alloc::vec::Vec<Expression>,
 }
+impl ::prost::Name for Expressions {
+    const NAME: &'static str = "Expressions";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Expressions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Expressions".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct InlinePlayerDanmakuSwitch {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for InlinePlayerDanmakuSwitch {
+    const NAME: &'static str = "InlinePlayerDanmakuSwitch";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.InlinePlayerDanmakuSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.InlinePlayerDanmakuSwitch".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1075,6 +1515,16 @@ pub struct Label {
     ///
     #[prost(string, repeated, tag = "2")]
     pub content: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for Label {
+    const NAME: &'static str = "Label";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Label".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Label".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1092,6 +1542,16 @@ pub struct LabelV2 {
     #[prost(enumeration = "ExposureType", tag = "4")]
     pub exposure_type: i32,
 }
+impl ::prost::Name for LabelV2 {
+    const NAME: &'static str = "LabelV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.LabelV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.LabelV2".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Period {
@@ -1102,12 +1562,32 @@ pub struct Period {
     #[prost(int64, tag = "2")]
     pub end: i64,
 }
+impl ::prost::Name for Period {
+    const NAME: &'static str = "Period";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Period".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Period".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuAiRecommendedLevel {
     ///
     #[prost(int32, tag = "1")]
     pub value: i32,
+}
+impl ::prost::Name for PlayerDanmakuAiRecommendedLevel {
+    const NAME: &'static str = "PlayerDanmakuAiRecommendedLevel";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedLevel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedLevel".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1116,12 +1596,32 @@ pub struct PlayerDanmakuAiRecommendedLevelV2 {
     #[prost(int32, tag = "1")]
     pub value: i32,
 }
+impl ::prost::Name for PlayerDanmakuAiRecommendedLevelV2 {
+    const NAME: &'static str = "PlayerDanmakuAiRecommendedLevelV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedLevelV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedLevelV2".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuAiRecommendedSwitch {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuAiRecommendedSwitch {
+    const NAME: &'static str = "PlayerDanmakuAiRecommendedSwitch";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuAiRecommendedSwitch".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1130,12 +1630,32 @@ pub struct PlayerDanmakuBlockbottom {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuBlockbottom {
+    const NAME: &'static str = "PlayerDanmakuBlockbottom";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlockbottom".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlockbottom".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuBlockcolorful {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuBlockcolorful {
+    const NAME: &'static str = "PlayerDanmakuBlockcolorful";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlockcolorful".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlockcolorful".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1144,12 +1664,32 @@ pub struct PlayerDanmakuBlockrepeat {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuBlockrepeat {
+    const NAME: &'static str = "PlayerDanmakuBlockrepeat";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlockrepeat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlockrepeat".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuBlockscroll {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuBlockscroll {
+    const NAME: &'static str = "PlayerDanmakuBlockscroll";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlockscroll".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlockscroll".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1158,12 +1698,32 @@ pub struct PlayerDanmakuBlockspecial {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuBlockspecial {
+    const NAME: &'static str = "PlayerDanmakuBlockspecial";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlockspecial".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlockspecial".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuBlocktop {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuBlocktop {
+    const NAME: &'static str = "PlayerDanmakuBlocktop";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlocktop".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlocktop".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1172,12 +1732,32 @@ pub struct PlayerDanmakuBlocktopBottom {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuBlocktopBottom {
+    const NAME: &'static str = "PlayerDanmakuBlocktopBottom";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuBlocktopBottom".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuBlocktopBottom".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuDensity {
     ///
     #[prost(int32, tag = "1")]
     pub value: i32,
+}
+impl ::prost::Name for PlayerDanmakuDensity {
+    const NAME: &'static str = "PlayerDanmakuDensity";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuDensity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuDensity".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1186,12 +1766,32 @@ pub struct PlayerDanmakuDomain {
     #[prost(float, tag = "1")]
     pub value: f32,
 }
+impl ::prost::Name for PlayerDanmakuDomain {
+    const NAME: &'static str = "PlayerDanmakuDomain";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuDomain".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuDomain".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuDomainV2 {
     ///
     #[prost(int32, tag = "1")]
     pub value: i32,
+}
+impl ::prost::Name for PlayerDanmakuDomainV2 {
+    const NAME: &'static str = "PlayerDanmakuDomainV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuDomainV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuDomainV2".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1200,12 +1800,32 @@ pub struct PlayerDanmakuEnableHerdDm {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuEnableHerdDm {
+    const NAME: &'static str = "PlayerDanmakuEnableHerdDm";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuEnableHerdDm".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuEnableHerdDm".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuEnableblocklist {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuEnableblocklist {
+    const NAME: &'static str = "PlayerDanmakuEnableblocklist";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuEnableblocklist".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuEnableblocklist".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1214,12 +1834,32 @@ pub struct PlayerDanmakuOpacity {
     #[prost(float, tag = "1")]
     pub value: f32,
 }
+impl ::prost::Name for PlayerDanmakuOpacity {
+    const NAME: &'static str = "PlayerDanmakuOpacity";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuOpacity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuOpacity".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuPeopleProof {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuPeopleProof {
+    const NAME: &'static str = "PlayerDanmakuPeopleProof";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuPeopleProof".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuPeopleProof".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1228,12 +1868,32 @@ pub struct PlayerDanmakuScalingfactor {
     #[prost(float, tag = "1")]
     pub value: f32,
 }
+impl ::prost::Name for PlayerDanmakuScalingfactor {
+    const NAME: &'static str = "PlayerDanmakuScalingfactor";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuScalingfactor".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuScalingfactor".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuSeniorModeSwitch {
     ///
     #[prost(int32, tag = "1")]
     pub value: i32,
+}
+impl ::prost::Name for PlayerDanmakuSeniorModeSwitch {
+    const NAME: &'static str = "PlayerDanmakuSeniorModeSwitch";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuSeniorModeSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuSeniorModeSwitch".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1242,12 +1902,32 @@ pub struct PlayerDanmakuSpeed {
     #[prost(int32, tag = "1")]
     pub value: i32,
 }
+impl ::prost::Name for PlayerDanmakuSpeed {
+    const NAME: &'static str = "PlayerDanmakuSpeed";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuSpeed".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuSpeed".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuSubtitleProof {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuSubtitleProof {
+    const NAME: &'static str = "PlayerDanmakuSubtitleProof";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuSubtitleProof".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuSubtitleProof".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1259,6 +1939,16 @@ pub struct PlayerDanmakuSwitch {
     #[prost(bool, tag = "2")]
     pub can_ignore: bool,
 }
+impl ::prost::Name for PlayerDanmakuSwitch {
+    const NAME: &'static str = "PlayerDanmakuSwitch";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuSwitch".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuSwitchSave {
@@ -1266,12 +1956,32 @@ pub struct PlayerDanmakuSwitchSave {
     #[prost(bool, tag = "1")]
     pub value: bool,
 }
+impl ::prost::Name for PlayerDanmakuSwitchSave {
+    const NAME: &'static str = "PlayerDanmakuSwitchSave";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuSwitchSave".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuSwitchSave".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerDanmakuUseDefaultConfig {
     ///
     #[prost(bool, tag = "1")]
     pub value: bool,
+}
+impl ::prost::Name for PlayerDanmakuUseDefaultConfig {
+    const NAME: &'static str = "PlayerDanmakuUseDefaultConfig";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PlayerDanmakuUseDefaultConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PlayerDanmakuUseDefaultConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1303,6 +2013,16 @@ pub struct PostPanel {
     ///
     #[prost(message, optional, tag = "9")]
     pub toast: ::core::option::Option<Toast>,
+}
+impl ::prost::Name for PostPanel {
+    const NAME: &'static str = "PostPanel";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PostPanel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PostPanel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1338,12 +2058,32 @@ pub struct PostPanelV2 {
     #[prost(enumeration = "PostStatus", tag = "10")]
     pub post_status: i32,
 }
+impl ::prost::Name for PostPanelV2 {
+    const NAME: &'static str = "PostPanelV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.PostPanelV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.PostPanelV2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QoeInfo {
     ///
     #[prost(string, tag = "1")]
     pub info: ::prost::alloc::string::String,
+}
+impl ::prost::Name for QoeInfo {
+    const NAME: &'static str = "QoeInfo";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.QoeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.QoeInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1355,6 +2095,16 @@ pub struct ReportDuration {
     #[prost(int64, tag = "2")]
     pub end_second: i64,
 }
+impl ::prost::Name for ReportDuration {
+    const NAME: &'static str = "ReportDuration";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ReportDuration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ReportDuration".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Response {
@@ -1364,6 +2114,16 @@ pub struct Response {
     ///
     #[prost(string, tag = "2")]
     pub message: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Response {
+    const NAME: &'static str = "Response";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Response".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Response".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1402,6 +2162,16 @@ pub struct SubtitleItem {
     #[prost(enumeration = "SubtitleRole", tag = "11")]
     pub role: i32,
 }
+impl ::prost::Name for SubtitleItem {
+    const NAME: &'static str = "SubtitleItem";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.SubtitleItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.SubtitleItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TextInput {
@@ -1430,6 +2200,16 @@ pub struct TextInput {
     #[prost(message, optional, tag = "8")]
     pub label: ::core::option::Option<Label>,
 }
+impl ::prost::Name for TextInput {
+    const NAME: &'static str = "TextInput";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.TextInput".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.TextInput".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TextInputV2 {
@@ -1452,6 +2232,16 @@ pub struct TextInputV2 {
     #[prost(int32, tag = "6")]
     pub text_input_limit: i32,
 }
+impl ::prost::Name for TextInputV2 {
+    const NAME: &'static str = "TextInputV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.TextInputV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.TextInputV2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Toast {
@@ -1468,6 +2258,16 @@ pub struct Toast {
     #[prost(message, optional, tag = "4")]
     pub button: ::core::option::Option<Button>,
 }
+impl ::prost::Name for Toast {
+    const NAME: &'static str = "Toast";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.Toast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.Toast".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ToastButtonV2 {
@@ -1477,6 +2277,16 @@ pub struct ToastButtonV2 {
     ///
     #[prost(enumeration = "ToastFunctionType", tag = "2")]
     pub action: i32,
+}
+impl ::prost::Name for ToastButtonV2 {
+    const NAME: &'static str = "ToastButtonV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ToastButtonV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ToastButtonV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1490,6 +2300,16 @@ pub struct ToastV2 {
     ///
     #[prost(message, optional, tag = "3")]
     pub toast_button_v2: ::core::option::Option<ToastButtonV2>,
+}
+impl ::prost::Name for ToastV2 {
+    const NAME: &'static str = "ToastV2";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ToastV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ToastV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1513,6 +2333,16 @@ pub struct UserInfo {
     #[prost(int32, tag = "6")]
     pub rank: i32,
 }
+impl ::prost::Name for UserInfo {
+    const NAME: &'static str = "UserInfo";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.UserInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.UserInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VideoMask {
@@ -1532,6 +2362,16 @@ pub struct VideoMask {
     #[prost(string, tag = "5")]
     pub mask_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for VideoMask {
+    const NAME: &'static str = "VideoMask";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.VideoMask".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.VideoMask".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VideoSubtitle {
@@ -1544,6 +2384,16 @@ pub struct VideoSubtitle {
     ///
     #[prost(message, repeated, tag = "3")]
     pub subtitles: ::prost::alloc::vec::Vec<SubtitleItem>,
+}
+impl ::prost::Name for VideoSubtitle {
+    const NAME: &'static str = "VideoSubtitle";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.VideoSubtitle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.VideoSubtitle".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1566,6 +2416,16 @@ pub struct ViewHerdDmElem {
     ///
     #[prost(int32, tag = "6")]
     pub end_progress: i32,
+}
+impl ::prost::Name for ViewHerdDmElem {
+    const NAME: &'static str = "ViewHerdDmElem";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.ViewHerdDmElem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.ViewHerdDmElem".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

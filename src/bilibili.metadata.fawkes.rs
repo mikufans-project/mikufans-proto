@@ -12,6 +12,16 @@ pub struct FawkesReply {
     #[prost(string, tag = "3")]
     pub dd: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FawkesReply {
+    const NAME: &'static str = "FawkesReply";
+    const PACKAGE: &'static str = "bilibili.metadata.fawkes";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.fawkes.FawkesReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.fawkes.FawkesReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FawkesReq {
@@ -24,4 +34,14 @@ pub struct FawkesReq {
     ///
     #[prost(string, tag = "3")]
     pub session_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for FawkesReq {
+    const NAME: &'static str = "FawkesReq";
+    const PACKAGE: &'static str = "bilibili.metadata.fawkes";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.fawkes.FawkesReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.fawkes.FawkesReq".into()
+    }
 }

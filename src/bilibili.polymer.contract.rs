@@ -15,6 +15,16 @@ pub struct AddContractReply {
     #[prost(string, tag = "4")]
     pub input_title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AddContractReply {
+    const NAME: &'static str = "AddContractReply";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.AddContractReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.AddContractReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddContractReq {
@@ -76,6 +86,16 @@ pub mod add_contract_req {
         }
     }
 }
+impl ::prost::Name for AddContractReq {
+    const NAME: &'static str = "AddContractReq";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.AddContractReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.AddContractReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CommonReq {
@@ -101,6 +121,16 @@ pub struct CommonReq {
     #[prost(string, tag = "7")]
     pub spmid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CommonReq {
+    const NAME: &'static str = "CommonReq";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.CommonReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.CommonReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ContractCard {
@@ -110,6 +140,16 @@ pub struct ContractCard {
     ///
     #[prost(string, tag = "2")]
     pub sub_title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ContractCard {
+    const NAME: &'static str = "ContractCard";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.ContractCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.ContractCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -123,6 +163,16 @@ pub struct ContractConfigReply {
     ///
     #[prost(message, optional, tag = "3")]
     pub contract_card: ::core::option::Option<ContractCard>,
+}
+impl ::prost::Name for ContractConfigReply {
+    const NAME: &'static str = "ContractConfigReply";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.ContractConfigReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.ContractConfigReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -187,6 +237,16 @@ pub mod contract_config_req {
                 _ => None,
             }
         }
+    }
+}
+impl ::prost::Name for ContractConfigReq {
+    const NAME: &'static str = "ContractConfigReq";
+    const PACKAGE: &'static str = "bilibili.polymer.contract";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.contract.ContractConfigReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.contract.ContractConfigReq".into()
     }
 }
 /// Generated client implementations.

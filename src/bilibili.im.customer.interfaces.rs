@@ -12,6 +12,16 @@ pub struct AiInfo {
     #[prost(string, repeated, tag = "3")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for AiInfo {
+    const NAME: &'static str = "AiInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.AiInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.AiInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Announcement {
@@ -28,9 +38,29 @@ pub struct Announcement {
     #[prost(string, tag = "4")]
     pub jump_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Announcement {
+    const NAME: &'static str = "Announcement";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.Announcement".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.Announcement".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Empty {}
+impl ::prost::Name for Empty {
+    const NAME: &'static str = "Empty";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.Empty".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.Empty".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FinishParagraphsRenderReq {
@@ -44,9 +74,29 @@ pub struct FinishParagraphsRenderReq {
     #[prost(message, optional, tag = "3")]
     pub stop_pos: ::core::option::Option<FinishParagraphsRenderStopPos>,
 }
+impl ::prost::Name for FinishParagraphsRenderReq {
+    const NAME: &'static str = "FinishParagraphsRenderReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.FinishParagraphsRenderReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.FinishParagraphsRenderReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FinishParagraphsRenderRsp {}
+impl ::prost::Name for FinishParagraphsRenderRsp {
+    const NAME: &'static str = "FinishParagraphsRenderRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.FinishParagraphsRenderRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.FinishParagraphsRenderRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FinishParagraphsRenderStopPos {
@@ -56,6 +106,16 @@ pub struct FinishParagraphsRenderStopPos {
     ///
     #[prost(int64, tag = "2")]
     pub node: i64,
+}
+impl ::prost::Name for FinishParagraphsRenderStopPos {
+    const NAME: &'static str = "FinishParagraphsRenderStopPos";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.FinishParagraphsRenderStopPos".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.FinishParagraphsRenderStopPos".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -70,6 +130,16 @@ pub struct GetNewSessionsReq {
     #[prost(int64, tag = "3")]
     pub recv_uid: i64,
 }
+impl ::prost::Name for GetNewSessionsReq {
+    const NAME: &'static str = "GetNewSessionsReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetNewSessionsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetNewSessionsReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSessDetailReq {
@@ -80,12 +150,32 @@ pub struct GetSessDetailReq {
     #[prost(int64, tag = "2")]
     pub group_id: i64,
 }
+impl ::prost::Name for GetSessDetailReq {
+    const NAME: &'static str = "GetSessDetailReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetSessDetailReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetSessDetailReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSessDetailRsp {
     ///
     #[prost(message, repeated, tag = "1")]
     pub session_list: ::prost::alloc::vec::Vec<super::model::SessionInfo>,
+}
+impl ::prost::Name for GetSessDetailRsp {
+    const NAME: &'static str = "GetSessDetailRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetSessDetailRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetSessDetailRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -100,6 +190,16 @@ pub struct GetSessionsReq {
     #[prost(int32, tag = "3")]
     pub size: i32,
 }
+impl ::prost::Name for GetSessionsReq {
+    const NAME: &'static str = "GetSessionsReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetSessionsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetSessionsReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetUserSettingsReq {
@@ -109,6 +209,16 @@ pub struct GetUserSettingsReq {
     ///
     #[prost(int64, tag = "2")]
     pub shop_id: i64,
+}
+impl ::prost::Name for GetUserSettingsReq {
+    const NAME: &'static str = "GetUserSettingsReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetUserSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetUserSettingsReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -123,6 +233,16 @@ pub struct GetUserSettingsRsp {
     #[prost(string, tag = "3")]
     pub report_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GetUserSettingsRsp {
+    const NAME: &'static str = "GetUserSettingsRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.GetUserSettingsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.GetUserSettingsRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct OutCustomerQueueReq {
@@ -136,6 +256,16 @@ pub struct OutCustomerQueueReq {
     #[prost(int64, tag = "3")]
     pub msg_key: i64,
 }
+impl ::prost::Name for OutCustomerQueueReq {
+    const NAME: &'static str = "OutCustomerQueueReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.OutCustomerQueueReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.OutCustomerQueueReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PopResultUpdateReq {
@@ -146,12 +276,32 @@ pub struct PopResultUpdateReq {
     #[prost(bool, tag = "2")]
     pub is_allow: bool,
 }
+impl ::prost::Name for PopResultUpdateReq {
+    const NAME: &'static str = "PopResultUpdateReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.PopResultUpdateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.PopResultUpdateReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PopResultUpdateRsp {
     ///
     #[prost(string, tag = "1")]
     pub msg: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PopResultUpdateRsp {
+    const NAME: &'static str = "PopResultUpdateRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.PopResultUpdateRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.PopResultUpdateRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -169,12 +319,32 @@ pub struct PreEvaluateReq {
     #[prost(int64, tag = "4")]
     pub msg_key: i64,
 }
+impl ::prost::Name for PreEvaluateReq {
+    const NAME: &'static str = "PreEvaluateReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.PreEvaluateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.PreEvaluateReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PreEvaluateRsp {
     ///
     #[prost(message, optional, tag = "1")]
     pub rsp: ::core::option::Option<super::model::EvaluationShowInfo>,
+}
+impl ::prost::Name for PreEvaluateRsp {
+    const NAME: &'static str = "PreEvaluateRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.PreEvaluateRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.PreEvaluateRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -192,6 +362,16 @@ pub struct RemoveSessionReq {
     #[prost(int32, tag = "4")]
     pub session_type: i32,
 }
+impl ::prost::Name for RemoveSessionReq {
+    const NAME: &'static str = "RemoveSessionReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.RemoveSessionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.RemoveSessionReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SendHeartBeatReq {
@@ -201,6 +381,16 @@ pub struct SendHeartBeatReq {
     ///
     #[prost(int64, tag = "2")]
     pub shop_father_id: i64,
+}
+impl ::prost::Name for SendHeartBeatReq {
+    const NAME: &'static str = "SendHeartBeatReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SendHeartBeatReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SendHeartBeatReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -218,6 +408,16 @@ pub struct SendMsgExt {
     #[prost(string, tag = "4")]
     pub from_spmid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SendMsgExt {
+    const NAME: &'static str = "SendMsgExt";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SendMsgExt".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SendMsgExt".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SendMsgReq {
@@ -230,6 +430,16 @@ pub struct SendMsgReq {
     ///
     #[prost(message, optional, tag = "3")]
     pub ext: ::core::option::Option<SendMsgExt>,
+}
+impl ::prost::Name for SendMsgReq {
+    const NAME: &'static str = "SendMsgReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SendMsgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SendMsgReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -246,6 +456,16 @@ pub struct SendMsgRsp {
     ///
     #[prost(message, optional, tag = "4")]
     pub ai_info: ::core::option::Option<AiInfo>,
+}
+impl ::prost::Name for SendMsgRsp {
+    const NAME: &'static str = "SendMsgRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SendMsgRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SendMsgRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -281,6 +501,16 @@ pub struct SessionMsgReq {
     #[prost(message, optional, tag = "10")]
     pub ext: ::core::option::Option<SessionMsgReqExt>,
 }
+impl ::prost::Name for SessionMsgReq {
+    const NAME: &'static str = "SessionMsgReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SessionMsgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SessionMsgReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionMsgReqExt {
@@ -290,6 +520,16 @@ pub struct SessionMsgReqExt {
     ///
     #[prost(string, tag = "2")]
     pub source_bvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SessionMsgReqExt {
+    const NAME: &'static str = "SessionMsgReqExt";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SessionMsgReqExt".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SessionMsgReqExt".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -313,6 +553,16 @@ pub struct SessionMsgRsp {
     #[prost(int32, tag = "6")]
     pub fetch_interval: i32,
 }
+impl ::prost::Name for SessionMsgRsp {
+    const NAME: &'static str = "SessionMsgRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SessionMsgRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SessionMsgRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionsRsp {
@@ -322,6 +572,16 @@ pub struct SessionsRsp {
     ///
     #[prost(int32, tag = "2")]
     pub has_more: i32,
+}
+impl ::prost::Name for SessionsRsp {
+    const NAME: &'static str = "SessionsRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SessionsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SessionsRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -339,6 +599,16 @@ pub struct SetTopReq {
     #[prost(int32, tag = "4")]
     pub session_type: i32,
 }
+impl ::prost::Name for SetTopReq {
+    const NAME: &'static str = "SetTopReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SetTopReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SetTopReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SetUserSettingsReq {
@@ -355,12 +625,32 @@ pub struct SetUserSettingsReq {
     #[prost(bool, tag = "4")]
     pub do_not_disturb: bool,
 }
+impl ::prost::Name for SetUserSettingsReq {
+    const NAME: &'static str = "SetUserSettingsReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SetUserSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SetUserSettingsReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetUserSettingsRsp {
     ///
     #[prost(string, tag = "1")]
     pub msg: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SetUserSettingsRsp {
+    const NAME: &'static str = "SetUserSettingsRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.SetUserSettingsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.SetUserSettingsRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -372,6 +662,16 @@ pub struct Shop {
     #[prost(int64, tag = "2")]
     pub shop_id: i64,
 }
+impl ::prost::Name for Shop {
+    const NAME: &'static str = "Shop";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.Shop".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.Shop".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ShopCfgReq {
@@ -382,12 +682,32 @@ pub struct ShopCfgReq {
     #[prost(int64, tag = "2")]
     pub shop_father_id: i64,
 }
+impl ::prost::Name for ShopCfgReq {
+    const NAME: &'static str = "ShopCfgReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.ShopCfgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.ShopCfgReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShopCfgRsp {
     ///
     #[prost(message, optional, tag = "1")]
     pub announcement: ::core::option::Option<Announcement>,
+}
+impl ::prost::Name for ShopCfgRsp {
+    const NAME: &'static str = "ShopCfgRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.ShopCfgRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.ShopCfgRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -399,6 +719,16 @@ pub struct ShopInfoReq {
     #[prost(int64, tag = "2")]
     pub shop_father_id: i64,
 }
+impl ::prost::Name for ShopInfoReq {
+    const NAME: &'static str = "ShopInfoReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.ShopInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.ShopInfoReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShopInfoRsp {
@@ -408,6 +738,16 @@ pub struct ShopInfoRsp {
     ///
     #[prost(string, tag = "2")]
     pub face: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShopInfoRsp {
+    const NAME: &'static str = "ShopInfoRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.ShopInfoRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.ShopInfoRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -419,6 +759,16 @@ pub struct UpdateAckReq {
     #[prost(int64, tag = "2")]
     pub shop_id: i64,
 }
+impl ::prost::Name for UpdateAckReq {
+    const NAME: &'static str = "UpdateAckReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.UpdateAckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.UpdateAckReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct WindowOptionsReq {
@@ -428,6 +778,16 @@ pub struct WindowOptionsReq {
     ///
     #[prost(int64, tag = "3")]
     pub shop_id: i64,
+}
+impl ::prost::Name for WindowOptionsReq {
+    const NAME: &'static str = "WindowOptionsReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.WindowOptionsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.WindowOptionsReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -447,6 +807,16 @@ pub struct WindowOptionsRsp {
     ///
     #[prost(message, optional, tag = "5")]
     pub history: ::core::option::Option<super::model::WindowOptionHistory>,
+}
+impl ::prost::Name for WindowOptionsRsp {
+    const NAME: &'static str = "WindowOptionsRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.WindowOptionsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.WindowOptionsRsp".into()
+    }
 }
 /// Generated client implementations.
 pub mod customer_interface_client {

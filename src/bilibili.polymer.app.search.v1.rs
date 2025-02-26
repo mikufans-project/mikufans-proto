@@ -30,6 +30,16 @@ pub struct Args {
     #[prost(int64, tag = "9")]
     pub aid: i64,
 }
+impl ::prost::Name for Args {
+    const NAME: &'static str = "Args";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Args".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Args".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AvItem {
@@ -82,6 +92,16 @@ pub struct AvItem {
     #[prost(bool, tag = "16")]
     pub is_inline: bool,
 }
+impl ::prost::Name for AvItem {
+    const NAME: &'static str = "AvItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.AvItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.AvItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Avatar {
@@ -110,6 +130,16 @@ pub struct Avatar {
     #[prost(message, optional, tag = "8")]
     pub nft_face_icon: ::core::option::Option<NftFaceIcon>,
 }
+impl ::prost::Name for Avatar {
+    const NAME: &'static str = "Avatar";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Avatar".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Avatar".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Background {
@@ -123,6 +153,16 @@ pub struct Background {
     #[prost(string, tag = "3")]
     pub fg_pic_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Background {
+    const NAME: &'static str = "Background";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Background".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Background".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Badge {
@@ -132,6 +172,16 @@ pub struct Badge {
     ///
     #[prost(string, tag = "2")]
     pub bg_cover: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Badge {
+    const NAME: &'static str = "Badge";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Badge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Badge".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -143,6 +193,16 @@ pub struct Badge2 {
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Badge2 {
+    const NAME: &'static str = "Badge2";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Badge2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Badge2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BottomButton {
@@ -152,6 +212,16 @@ pub struct BottomButton {
     ///
     #[prost(string, tag = "2")]
     pub link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for BottomButton {
+    const NAME: &'static str = "BottomButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.BottomButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.BottomButton".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -199,6 +269,16 @@ pub struct BrandAdAccount {
     #[prost(int32, tag = "14")]
     pub face_nft_new: i32,
 }
+impl ::prost::Name for BrandAdAccount {
+    const NAME: &'static str = "BrandADAccount";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.BrandADAccount".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.BrandADAccount".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BrandAdArc {
@@ -233,6 +313,16 @@ pub struct BrandAdArc {
     #[prost(string, tag = "10")]
     pub cover: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BrandAdArc {
+    const NAME: &'static str = "BrandADArc";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.BrandADArc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.BrandADArc".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Button {
@@ -261,6 +351,16 @@ pub struct Button {
     #[prost(message, optional, tag = "8")]
     pub relation: ::core::option::Option<Relation>,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ButtonMeta {
@@ -277,6 +377,16 @@ pub struct ButtonMeta {
     #[prost(string, tag = "4")]
     pub toast: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ButtonMeta {
+    const NAME: &'static str = "ButtonMeta";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ButtonMeta".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ButtonMeta".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardBusinessBadge {
@@ -286,6 +396,16 @@ pub struct CardBusinessBadge {
     ///
     #[prost(message, optional, tag = "2")]
     pub badge_style: ::core::option::Option<ReasonStyle>,
+}
+impl ::prost::Name for CardBusinessBadge {
+    const NAME: &'static str = "CardBusinessBadge";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CardBusinessBadge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CardBusinessBadge".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -315,6 +435,16 @@ pub struct CardLayout {
     #[prost(int32, tag = "8")]
     pub column: i32,
 }
+impl ::prost::Name for CardLayout {
+    const NAME: &'static str = "CardLayout";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CardLayout".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CardLayout".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ChannelLabel {
@@ -327,6 +457,16 @@ pub struct ChannelLabel {
     ///
     #[prost(int32, tag = "3")]
     pub icon_type: i32,
+}
+impl ::prost::Name for ChannelLabel {
+    const NAME: &'static str = "ChannelLabel";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ChannelLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ChannelLabel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -359,6 +499,16 @@ pub struct ChannelMixedItem {
     #[prost(message, optional, tag = "9")]
     pub badge: ::core::option::Option<Badge2>,
 }
+impl ::prost::Name for ChannelMixedItem {
+    const NAME: &'static str = "ChannelMixedItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ChannelMixedItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ChannelMixedItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CheckMore {
@@ -368,6 +518,16 @@ pub struct CheckMore {
     ///
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CheckMore {
+    const NAME: &'static str = "CheckMore";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CheckMore".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CheckMore".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -379,6 +539,16 @@ pub struct CloudGameParams {
     #[prost(string, tag = "2")]
     pub scene: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CloudGameParams {
+    const NAME: &'static str = "CloudGameParams";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CloudGameParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CloudGameParams".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Colors {
@@ -388,6 +558,16 @@ pub struct Colors {
     ///
     #[prost(string, tag = "2")]
     pub night: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Colors {
+    const NAME: &'static str = "Colors";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Colors".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Colors".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -419,6 +599,16 @@ pub struct Comment {
     ///
     #[prost(int64, tag = "9")]
     pub id: i64,
+}
+impl ::prost::Name for Comment {
+    const NAME: &'static str = "Comment";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Comment".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Comment".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -463,6 +653,16 @@ pub struct DetailsRelationItem {
     #[prost(int32, tag = "13")]
     pub icon_type: i32,
 }
+impl ::prost::Name for DetailsRelationItem {
+    const NAME: &'static str = "DetailsRelationItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.DetailsRelationItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.DetailsRelationItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Disclaimer {
@@ -485,6 +685,26 @@ pub mod disclaimer {
         #[prost(string, tag = "2")]
         pub text: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for Item {
+        const NAME: &'static str = "Item";
+        const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.polymer.app.search.v1.Disclaimer.Item".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.polymer.app.search.v1.Disclaimer.Item".into()
+        }
+    }
+}
+impl ::prost::Name for Disclaimer {
+    const NAME: &'static str = "Disclaimer";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Disclaimer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Disclaimer".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -495,6 +715,16 @@ pub struct DislikeReason {
     ///
     #[prost(string, tag = "2")]
     pub name: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DislikeReason {
+    const NAME: &'static str = "DislikeReason";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.DislikeReason".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.DislikeReason".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -518,6 +748,16 @@ pub struct DisplayOption {
     #[prost(int32, tag = "6")]
     pub tag_highlight_opti: i32,
 }
+impl ::prost::Name for DisplayOption {
+    const NAME: &'static str = "DisplayOption";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.DisplayOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.DisplayOption".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DyTopic {
@@ -527,6 +767,16 @@ pub struct DyTopic {
     ///
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DyTopic {
+    const NAME: &'static str = "DyTopic";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.DyTopic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.DyTopic".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -571,6 +821,16 @@ pub struct EasterEgg {
     #[prost(int32, tag = "13")]
     pub egg_type: i32,
 }
+impl ::prost::Name for EasterEgg {
+    const NAME: &'static str = "EasterEgg";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.EasterEgg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.EasterEgg".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Episode {
@@ -589,6 +849,16 @@ pub struct Episode {
     ///
     #[prost(int32, tag = "5")]
     pub position: i32,
+}
+impl ::prost::Name for Episode {
+    const NAME: &'static str = "Episode";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Episode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Episode".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -621,6 +891,16 @@ pub struct EpisodeNew {
     #[prost(string, tag = "9")]
     pub label: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EpisodeNew {
+    const NAME: &'static str = "EpisodeNew";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.EpisodeNew".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.EpisodeNew".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExtraLink {
@@ -631,12 +911,32 @@ pub struct ExtraLink {
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ExtraLink {
+    const NAME: &'static str = "ExtraLink";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ExtraLink".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ExtraLink".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Feedback {
     ///
     #[prost(message, repeated, tag = "1")]
     pub sections: ::prost::alloc::vec::Vec<FeedbackSection>,
+}
+impl ::prost::Name for Feedback {
+    const NAME: &'static str = "Feedback";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Feedback".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Feedback".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -647,6 +947,16 @@ pub struct FeedbackItem {
     ///
     #[prost(int32, tag = "2")]
     pub id: i32,
+}
+impl ::prost::Name for FeedbackItem {
+    const NAME: &'static str = "FeedbackItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FeedbackItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FeedbackItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -660,6 +970,16 @@ pub struct FeedbackSection {
     ///
     #[prost(message, repeated, tag = "3")]
     pub items: ::prost::alloc::vec::Vec<FeedbackItem>,
+}
+impl ::prost::Name for FeedbackSection {
+    const NAME: &'static str = "FeedbackSection";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FeedbackSection".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FeedbackSection".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -704,6 +1024,16 @@ pub struct FoldingTimeLine {
     #[prost(string, tag = "13")]
     pub icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FoldingTimeLine {
+    const NAME: &'static str = "FoldingTimeLine";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FoldingTimeLine".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FoldingTimeLine".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FollowButton {
@@ -720,6 +1050,16 @@ pub struct FollowButton {
     #[prost(string, tag = "3")]
     pub status_report: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FollowButton {
+    const NAME: &'static str = "FollowButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FollowButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FollowButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FollowButtonV2 {
@@ -732,6 +1072,16 @@ pub struct FollowButtonV2 {
     ///
     #[prost(string, tag = "3")]
     pub status_report: ::prost::alloc::string::String,
+}
+impl ::prost::Name for FollowButtonV2 {
+    const NAME: &'static str = "FollowButtonV2";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FollowButtonV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FollowButtonV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -764,6 +1114,16 @@ pub struct FullTextResult {
     #[prost(string, tag = "9")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FullTextResult {
+    const NAME: &'static str = "FullTextResult";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FullTextResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FullTextResult".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GloryInfo {
@@ -777,6 +1137,16 @@ pub struct GloryInfo {
     #[prost(message, repeated, tag = "3")]
     pub items: ::prost::alloc::vec::Vec<GloryItem>,
 }
+impl ::prost::Name for GloryInfo {
+    const NAME: &'static str = "GloryInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.GloryInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.GloryInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GloryItem {
@@ -786,6 +1156,16 @@ pub struct GloryItem {
     ///
     #[prost(string, tag = "2")]
     pub cover: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GloryItem {
+    const NAME: &'static str = "GloryItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.GloryItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.GloryItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -803,6 +1183,16 @@ pub struct GotoIcon {
     #[prost(int32, tag = "4")]
     pub icon_height: i32,
 }
+impl ::prost::Name for GotoIcon {
+    const NAME: &'static str = "GotoIcon";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.GotoIcon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.GotoIcon".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InlineProgressBar {
@@ -819,6 +1209,16 @@ pub struct InlineProgressBar {
     #[prost(string, tag = "4")]
     pub icon_stop_hash: ::prost::alloc::string::String,
 }
+impl ::prost::Name for InlineProgressBar {
+    const NAME: &'static str = "InlineProgressBar";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.InlineProgressBar".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.InlineProgressBar".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InlineThreePointPanel {
@@ -834,6 +1234,16 @@ pub struct InlineThreePointPanel {
     ///
     #[prost(message, repeated, tag = "4")]
     pub functional_buttons: ::prost::alloc::vec::Vec<ShareButtonItem>,
+}
+impl ::prost::Name for InlineThreePointPanel {
+    const NAME: &'static str = "InlineThreePointPanel";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.InlineThreePointPanel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.InlineThreePointPanel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1041,6 +1451,16 @@ pub mod item {
         TimeLine(super::SearchTimeLineCard),
     }
 }
+impl ::prost::Name for Item {
+    const NAME: &'static str = "Item";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Item".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Item".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LabelStyle {
@@ -1072,6 +1492,16 @@ pub struct LabelStyle {
     #[prost(string, tag = "9")]
     pub icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LabelStyle {
+    const NAME: &'static str = "LabelStyle";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.LabelStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.LabelStyle".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LikeResource {
@@ -1081,6 +1511,16 @@ pub struct LikeResource {
     ///
     #[prost(string, tag = "2")]
     pub content_hash: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LikeResource {
+    const NAME: &'static str = "LikeResource";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.LikeResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.LikeResource".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1110,6 +1550,16 @@ pub struct LiveBadgeResource {
     #[prost(string, tag = "8")]
     pub font_color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LiveBadgeResource {
+    const NAME: &'static str = "LiveBadgeResource";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.LiveBadgeResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.LiveBadgeResource".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Mask {
@@ -1119,6 +1569,16 @@ pub struct Mask {
     ///
     #[prost(message, optional, tag = "2")]
     pub button: ::core::option::Option<Button>,
+}
+impl ::prost::Name for Mask {
+    const NAME: &'static str = "Mask";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Mask".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Mask".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1148,6 +1608,16 @@ pub struct MatchInfoObj {
     #[prost(message, optional, tag = "8")]
     pub match_button: ::core::option::Option<MatchItem>,
 }
+impl ::prost::Name for MatchInfoObj {
+    const NAME: &'static str = "MatchInfoObj";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.MatchInfoObj".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.MatchInfoObj".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MatchItem {
@@ -1173,6 +1643,16 @@ pub struct MatchItem {
     #[prost(message, optional, tag = "7")]
     pub texts: ::core::option::Option<Texts>,
 }
+impl ::prost::Name for MatchItem {
+    const NAME: &'static str = "MatchItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.MatchItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.MatchItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MatchTeam {
@@ -1188,6 +1668,16 @@ pub struct MatchTeam {
     ///
     #[prost(int32, tag = "4")]
     pub score: i32,
+}
+impl ::prost::Name for MatchTeam {
+    const NAME: &'static str = "MatchTeam";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.MatchTeam".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.MatchTeam".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1207,6 +1697,16 @@ pub struct Nav {
     ///
     #[prost(int32, tag = "5")]
     pub show_more: i32,
+}
+impl ::prost::Name for Nav {
+    const NAME: &'static str = "Nav";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Nav".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Nav".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1230,6 +1730,16 @@ pub struct Navigation {
     #[prost(message, optional, tag = "6")]
     pub button: ::core::option::Option<NavigationButton>,
 }
+impl ::prost::Name for Navigation {
+    const NAME: &'static str = "Navigation";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Navigation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Navigation".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NavigationButton {
@@ -1243,6 +1753,16 @@ pub struct NavigationButton {
     #[prost(string, tag = "3")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for NavigationButton {
+    const NAME: &'static str = "NavigationButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.NavigationButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.NavigationButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NftFaceIcon {
@@ -1255,6 +1775,16 @@ pub struct NftFaceIcon {
     ///
     #[prost(int32, tag = "3")]
     pub show_status: i32,
+}
+impl ::prost::Name for NftFaceIcon {
+    const NAME: &'static str = "NftFaceIcon";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.NftFaceIcon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.NftFaceIcon".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1293,6 +1823,16 @@ pub struct Notice {
     #[prost(string, tag = "11")]
     pub bg_color_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Notice {
+    const NAME: &'static str = "Notice";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Notice".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Notice".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OfficialVerify {
@@ -1302,6 +1842,16 @@ pub struct OfficialVerify {
     ///
     #[prost(string, tag = "2")]
     pub desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OfficialVerify {
+    const NAME: &'static str = "OfficialVerify";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.OfficialVerify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.OfficialVerify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1319,6 +1869,16 @@ pub struct OgvCardUi {
     #[prost(string, tag = "4")]
     pub mask_opacity: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OgvCardUi {
+    const NAME: &'static str = "OgvCardUI";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.OgvCardUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.OgvCardUI".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct OgvClipInfo {
@@ -1328,6 +1888,16 @@ pub struct OgvClipInfo {
     ///
     #[prost(int64, tag = "2")]
     pub play_end_time: i64,
+}
+impl ::prost::Name for OgvClipInfo {
+    const NAME: &'static str = "OgvClipInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.OgvClipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.OgvClipInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1345,6 +1915,16 @@ pub struct OgvRecommendWord {
     #[prost(string, tag = "4")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OgvRecommendWord {
+    const NAME: &'static str = "OgvRecommendWord";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.OgvRecommendWord".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.OgvRecommendWord".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PageOffset {
@@ -1354,6 +1934,16 @@ pub struct PageOffset {
     ///
     #[prost(string, tag = "2")]
     pub qv_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PageOffset {
+    const NAME: &'static str = "PageOffset";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PageOffset".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PageOffset".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1377,6 +1967,16 @@ pub struct PediaCardUi {
     #[prost(string, tag = "6")]
     pub module_color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PediaCardUi {
+    const NAME: &'static str = "PediaCardUI";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PediaCardUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PediaCardUI".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PediaCover {
@@ -1396,6 +1996,16 @@ pub struct PediaCover {
     #[prost(int32, tag = "5")]
     pub cover_height: i32,
 }
+impl ::prost::Name for PediaCover {
+    const NAME: &'static str = "PediaCover";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PediaCover".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PediaCover".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PicNavigation {
@@ -1411,6 +2021,16 @@ pub struct PicNavigation {
     ///
     #[prost(string, tag = "4")]
     pub cover_night_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PicNavigation {
+    const NAME: &'static str = "PicNavigation";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PicNavigation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PicNavigation".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1464,6 +2084,16 @@ pub struct PlayerArgs {
     #[prost(int32, tag = "17")]
     pub report_history: i32,
 }
+impl ::prost::Name for PlayerArgs {
+    const NAME: &'static str = "PlayerArgs";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PlayerArgs".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PlayerArgs".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayerGrade {
@@ -1489,6 +2119,16 @@ pub struct PlayerGrade {
     #[prost(message, optional, tag = "7")]
     pub watch_button: ::core::option::Option<WatchButton>,
 }
+impl ::prost::Name for PlayerGrade {
+    const NAME: &'static str = "PlayerGrade";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PlayerGrade".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PlayerGrade".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayerWidget {
@@ -1499,6 +2139,16 @@ pub struct PlayerWidget {
     #[prost(string, tag = "2")]
     pub desc: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PlayerWidget {
+    const NAME: &'static str = "PlayerWidget";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PlayerWidget".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PlayerWidget".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PurchaseButton {
@@ -1508,6 +2158,16 @@ pub struct PurchaseButton {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PurchaseButton {
+    const NAME: &'static str = "PurchaseButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.PurchaseButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.PurchaseButton".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1543,12 +2203,32 @@ pub struct RankInfo {
     #[prost(int64, tag = "10")]
     pub rank_type: i64,
 }
+impl ::prost::Name for RankInfo {
+    const NAME: &'static str = "RankInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.RankInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.RankInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RcmdReason {
     ///
     #[prost(string, tag = "1")]
     pub content: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RcmdReason {
+    const NAME: &'static str = "RcmdReason";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.RcmdReason".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.RcmdReason".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1578,6 +2258,16 @@ pub struct ReasonStyle {
     #[prost(int32, tag = "8")]
     pub bg_style: i32,
 }
+impl ::prost::Name for ReasonStyle {
+    const NAME: &'static str = "ReasonStyle";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ReasonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ReasonStyle".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RecommendWord {
@@ -1593,6 +2283,16 @@ pub struct RecommendWord {
     ///
     #[prost(string, tag = "4")]
     pub from_source: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RecommendWord {
+    const NAME: &'static str = "RecommendWord";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.RecommendWord".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.RecommendWord".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1616,12 +2316,32 @@ pub struct RelatedQuery {
     #[prost(string, tag = "6")]
     pub icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RelatedQuery {
+    const NAME: &'static str = "RelatedQuery";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.RelatedQuery".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.RelatedQuery".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Relation {
     ///
     #[prost(int32, tag = "1")]
     pub status: i32,
+}
+impl ::prost::Name for Relation {
+    const NAME: &'static str = "Relation";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Relation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Relation".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1651,6 +2371,16 @@ pub struct ReserveInfo {
     #[prost(int64, tag = "8")]
     pub bg_color: i64,
 }
+impl ::prost::Name for ReserveInfo {
+    const NAME: &'static str = "ReserveInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ReserveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ReserveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RightTopLiveBadge {
@@ -1663,6 +2393,16 @@ pub struct RightTopLiveBadge {
     ///
     #[prost(string, tag = "3")]
     pub live_stats_desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RightTopLiveBadge {
+    const NAME: &'static str = "RightTopLiveBadge";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.RightTopLiveBadge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.RightTopLiveBadge".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1695,12 +2435,32 @@ pub struct SaleInfo {
     #[prost(string, tag = "9")]
     pub tips_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SaleInfo {
+    const NAME: &'static str = "SaleInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SaleInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SaleInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchAdCard {
     ///
     #[prost(string, tag = "1")]
     pub json_str: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchAdCard {
+    const NAME: &'static str = "SearchAdCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchAdCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchAdCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1773,6 +2533,16 @@ pub struct SearchAllRequest {
     #[prost(string, tag = "20")]
     pub user_act: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchAllRequest {
+    const NAME: &'static str = "SearchAllRequest";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchAllRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchAllRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchAllResponse {
@@ -1833,6 +2603,16 @@ pub struct SearchAllResponse {
     #[prost(int32, tag = "20")]
     pub is_new_user: i32,
 }
+impl ::prost::Name for SearchAllResponse {
+    const NAME: &'static str = "SearchAllResponse";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchAllResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchAllResponse".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchArticleCard {
@@ -1887,6 +2667,16 @@ pub struct SearchArticleCard {
     ///
     #[prost(message, optional, tag = "17")]
     pub card_layout: ::core::option::Option<CardLayout>,
+}
+impl ::prost::Name for SearchArticleCard {
+    const NAME: &'static str = "SearchArticleCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchArticleCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchArticleCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1995,6 +2785,16 @@ pub struct SearchAuthorNewCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+}
+impl ::prost::Name for SearchAuthorNewCard {
+    const NAME: &'static str = "SearchAuthorNewCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchAuthorNewCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchAuthorNewCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2105,6 +2905,16 @@ pub struct SearchBangumiCard {
     #[prost(message, optional, tag = "35")]
     pub sale_info: ::core::option::Option<SaleInfo>,
 }
+impl ::prost::Name for SearchBangumiCard {
+    const NAME: &'static str = "SearchBangumiCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchBangumiCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchBangumiCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchBannerCard {
@@ -2114,6 +2924,16 @@ pub struct SearchBannerCard {
     ///
     #[prost(string, tag = "2")]
     pub cover: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchBannerCard {
+    const NAME: &'static str = "SearchBannerCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchBannerCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchBannerCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2156,6 +2976,16 @@ pub struct SearchByTypeRequest {
     #[prost(string, tag = "11")]
     pub user_act: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchByTypeRequest {
+    const NAME: &'static str = "SearchByTypeRequest";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchByTypeRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchByTypeRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchByTypeResponse {
@@ -2195,6 +3025,16 @@ pub struct SearchByTypeResponse {
     #[prost(int64, tag = "10")]
     pub page: i64,
 }
+impl ::prost::Name for SearchByTypeResponse {
+    const NAME: &'static str = "SearchByTypeResponse";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchByTypeResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchByTypeResponse".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchChatGptCard {
@@ -2231,6 +3071,16 @@ pub struct SearchChatGptCard {
     ///
     #[prost(message, optional, tag = "11")]
     pub beta_text_color: ::core::option::Option<Colors>,
+}
+impl ::prost::Name for SearchChatGptCard {
+    const NAME: &'static str = "SearchChatGPTCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchChatGPTCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchChatGPTCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2278,6 +3128,16 @@ pub struct SearchCheese {
     #[prost(message, optional, tag = "14")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchCheese {
+    const NAME: &'static str = "SearchCheese";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchCheese".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchCheese".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchCollectionCard {
@@ -2317,6 +3177,16 @@ pub struct SearchCollectionCard {
     ///
     #[prost(int32, tag = "12")]
     pub is_hide_title: i32,
+}
+impl ::prost::Name for SearchCollectionCard {
+    const NAME: &'static str = "SearchCollectionCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchCollectionCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchCollectionCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2364,6 +3234,16 @@ pub struct SearchComicCard {
     #[prost(int64, tag = "14")]
     pub cid: i64,
 }
+impl ::prost::Name for SearchComicCard {
+    const NAME: &'static str = "SearchComicCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchComicCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchComicCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchComicInfo {
@@ -2377,6 +3257,16 @@ pub struct SearchComicInfo {
     #[prost(message, optional, tag = "3")]
     pub comic: ::core::option::Option<SearchComicCard>,
 }
+impl ::prost::Name for SearchComicInfo {
+    const NAME: &'static str = "SearchComicInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchComicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchComicInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchComicRequest {
@@ -2384,12 +3274,32 @@ pub struct SearchComicRequest {
     #[prost(string, tag = "1")]
     pub id_list: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchComicRequest {
+    const NAME: &'static str = "SearchComicRequest";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchComicRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchComicRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchComicResponse {
     ///
     #[prost(message, repeated, tag = "1")]
     pub items: ::prost::alloc::vec::Vec<SearchComicInfo>,
+}
+impl ::prost::Name for SearchComicResponse {
+    const NAME: &'static str = "SearchComicResponse";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchComicResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchComicResponse".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2439,6 +3349,16 @@ pub struct SearchCommentCard {
     #[prost(string, tag = "14")]
     pub icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchCommentCard {
+    const NAME: &'static str = "SearchCommentCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchCommentCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchCommentCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchCommentClusterCard {
@@ -2454,6 +3374,16 @@ pub struct SearchCommentClusterCard {
     ///
     #[prost(bool, tag = "4")]
     pub is_more: bool,
+}
+impl ::prost::Name for SearchCommentClusterCard {
+    const NAME: &'static str = "SearchCommentClusterCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchCommentClusterCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchCommentClusterCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2513,6 +3443,16 @@ pub struct SearchDoubleColumnCard {
     #[prost(int32, tag = "18")]
     pub aspect_ratio: i32,
 }
+impl ::prost::Name for SearchDoubleColumnCard {
+    const NAME: &'static str = "SearchDoubleColumnCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchDoubleColumnCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchDoubleColumnCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchDynamicCard {
@@ -2546,6 +3486,16 @@ pub struct SearchDynamicCard {
     ///
     #[prost(message, optional, tag = "10")]
     pub card_layout: ::core::option::Option<CardLayout>,
+}
+impl ::prost::Name for SearchDynamicCard {
+    const NAME: &'static str = "SearchDynamicCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchDynamicCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchDynamicCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2602,6 +3552,16 @@ pub struct SearchGameCard {
     #[prost(message, optional, tag = "17")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchGameCard {
+    const NAME: &'static str = "SearchGameCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchGameCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchGameCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchHotBannerCard {
@@ -2624,6 +3584,16 @@ pub struct SearchHotBannerCard {
     #[prost(string, tag = "6")]
     pub description: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchHotBannerCard {
+    const NAME: &'static str = "SearchHotBannerCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchHotBannerCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchHotBannerCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchHotRecommend {
@@ -2633,6 +3603,16 @@ pub struct SearchHotRecommend {
     ///
     #[prost(string, tag = "2")]
     pub cover: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchHotRecommend {
+    const NAME: &'static str = "SearchHotRecommend";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchHotRecommend".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchHotRecommend".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2758,6 +3738,16 @@ pub struct SearchInlineData {
     #[prost(string, tag = "40")]
     pub report_flow_data: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchInlineData {
+    const NAME: &'static str = "SearchInlineData";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchInlineData".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchInlineData".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchLikeButtonItem {
@@ -2785,6 +3775,16 @@ pub struct SearchLikeButtonItem {
     ///
     #[prost(message, optional, tag = "8")]
     pub dislike_night_resource: ::core::option::Option<LikeResource>,
+}
+impl ::prost::Name for SearchLikeButtonItem {
+    const NAME: &'static str = "SearchLikeButtonItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLikeButtonItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLikeButtonItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2829,6 +3829,16 @@ pub struct SearchLiveCard {
     #[prost(message, optional, tag = "13")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchLiveCard {
+    const NAME: &'static str = "SearchLiveCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLiveCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLiveCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchLiveInlineCard {
@@ -2867,6 +3877,16 @@ pub struct SearchLiveInlineCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+}
+impl ::prost::Name for SearchLiveInlineCard {
+    const NAME: &'static str = "SearchLiveInlineCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLiveInlineCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLiveInlineCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2943,6 +3963,16 @@ pub struct SearchLiveMaster {
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
 }
+impl ::prost::Name for SearchLiveMaster {
+    const NAME: &'static str = "SearchLiveMaster";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLiveMaster".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLiveMaster".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchLiveRoom {
@@ -2989,12 +4019,32 @@ pub struct SearchLiveRoom {
     #[prost(string, tag = "14")]
     pub live_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchLiveRoom {
+    const NAME: &'static str = "SearchLiveRoom";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLiveRoom".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLiveRoom".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SearchLiveRoomTitle {
     ///
     #[prost(int32, tag = "1")]
     pub total_count: i32,
+}
+impl ::prost::Name for SearchLiveRoomTitle {
+    const NAME: &'static str = "SearchLiveRoomTitle";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchLiveRoomTitle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchLiveRoomTitle".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3030,6 +4080,16 @@ pub struct SearchMusicCard {
     #[prost(message, optional, tag = "10")]
     pub feedback: ::core::option::Option<Feedback>,
 }
+impl ::prost::Name for SearchMusicCard {
+    const NAME: &'static str = "SearchMusicCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchMusicCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchMusicCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchNpsCard {
@@ -3051,6 +4111,26 @@ pub mod search_nps_card {
         ///
         #[prost(string, tag = "1")]
         pub text: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Option {
+        const NAME: &'static str = "Option";
+        const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.polymer.app.search.v1.SearchNPSCard.Option".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.polymer.app.search.v1.SearchNPSCard.Option".into()
+        }
+    }
+}
+impl ::prost::Name for SearchNpsCard {
+    const NAME: &'static str = "SearchNPSCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchNPSCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchNPSCard".into()
     }
 }
 ///
@@ -3087,6 +4167,16 @@ pub struct SearchNewChannelCard {
     #[prost(message, optional, tag = "10")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchNewChannelCard {
+    const NAME: &'static str = "SearchNewChannelCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchNewChannelCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchNewChannelCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchNoResultSuggestWordCard {
@@ -3112,6 +4202,16 @@ pub struct SearchNoResultSuggestWordCard {
     #[prost(string, tag = "7")]
     pub suffix: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchNoResultSuggestWordCard {
+    const NAME: &'static str = "SearchNoResultSuggestWordCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchNoResultSuggestWordCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchNoResultSuggestWordCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchOgvCard {
@@ -3136,6 +4236,16 @@ pub struct SearchOgvCard {
     ///
     #[prost(string, tag = "7")]
     pub cover_uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchOgvCard {
+    const NAME: &'static str = "SearchOgvCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3185,6 +4295,16 @@ pub struct SearchOgvChannelCard {
     ///
     #[prost(message, optional, tag = "15")]
     pub card_layout: ::core::option::Option<CardLayout>,
+}
+impl ::prost::Name for SearchOgvChannelCard {
+    const NAME: &'static str = "SearchOgvChannelCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvChannelCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvChannelCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3241,6 +4361,16 @@ pub struct SearchOgvInlineCard {
     #[prost(message, optional, tag = "17")]
     pub sale_info: ::core::option::Option<SaleInfo>,
 }
+impl ::prost::Name for SearchOgvInlineCard {
+    const NAME: &'static str = "SearchOgvInlineCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvInlineCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvInlineCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchOgvRecommendCard {
@@ -3256,6 +4386,16 @@ pub struct SearchOgvRecommendCard {
     ///
     #[prost(string, tag = "4")]
     pub special_bg_color: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchOgvRecommendCard {
+    const NAME: &'static str = "SearchOgvRecommendCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvRecommendCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvRecommendCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3294,6 +4434,16 @@ pub struct SearchOgvRelationCard {
     #[prost(message, optional, tag = "11")]
     pub sale_info: ::core::option::Option<SaleInfo>,
 }
+impl ::prost::Name for SearchOgvRelationCard {
+    const NAME: &'static str = "SearchOgvRelationCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvRelationCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvRelationCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchOlympicGameCard {
@@ -3331,6 +4481,16 @@ pub struct SearchOlympicGameCard {
     #[prost(message, optional, tag = "11")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchOlympicGameCard {
+    const NAME: &'static str = "SearchOlympicGameCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOlympicGameCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOlympicGameCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchOlympicWikiCard {
@@ -3362,6 +4522,16 @@ pub struct SearchOlympicWikiCard {
     #[prost(message, repeated, tag = "9")]
     pub navigation: ::prost::alloc::vec::Vec<Navigation>,
 }
+impl ::prost::Name for SearchOlympicWikiCard {
+    const NAME: &'static str = "SearchOlympicWikiCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOlympicWikiCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOlympicWikiCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchPediaCard {
@@ -3387,6 +4557,16 @@ pub struct SearchPediaCard {
     #[prost(message, optional, tag = "7")]
     pub card_business_badge: ::core::option::Option<CardBusinessBadge>,
 }
+impl ::prost::Name for SearchPediaCard {
+    const NAME: &'static str = "SearchPediaCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchPediaCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchPediaCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchPediaPicCard {
@@ -3405,6 +4585,16 @@ pub struct SearchPediaPicCard {
     ///
     #[prost(int32, tag = "5")]
     pub cover_type: i32,
+}
+impl ::prost::Name for SearchPediaPicCard {
+    const NAME: &'static str = "SearchPediaPicCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchPediaPicCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchPediaPicCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3433,6 +4623,16 @@ pub struct SearchPlayListCard {
     ///
     #[prost(int32, tag = "8")]
     pub is_hide_title: i32,
+}
+impl ::prost::Name for SearchPlayListCard {
+    const NAME: &'static str = "SearchPlayListCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchPlayListCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchPlayListCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3477,6 +4677,16 @@ pub struct SearchPurchaseCard {
     #[prost(message, optional, tag = "13")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchPurchaseCard {
+    const NAME: &'static str = "SearchPurchaseCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchPurchaseCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchPurchaseCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchQaCard {
@@ -3519,6 +4729,16 @@ pub struct SearchQaCard {
     #[prost(message, optional, tag = "12")]
     pub feedback: ::core::option::Option<Feedback>,
 }
+impl ::prost::Name for SearchQaCard {
+    const NAME: &'static str = "SearchQACard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchQACard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchQACard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchRecommendTipCard {
@@ -3528,6 +4748,16 @@ pub struct SearchRecommendTipCard {
     ///
     #[prost(string, tag = "2")]
     pub cover: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchRecommendTipCard {
+    const NAME: &'static str = "SearchRecommendTipCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchRecommendTipCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchRecommendTipCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3542,6 +4772,16 @@ pub struct SearchRecommendWordCard {
     #[prost(message, repeated, tag = "3")]
     pub list: ::prost::alloc::vec::Vec<RecommendWord>,
 }
+impl ::prost::Name for SearchRecommendWordCard {
+    const NAME: &'static str = "SearchRecommendWordCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchRecommendWordCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchRecommendWordCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchRelatedSearch {
@@ -3555,6 +4795,16 @@ pub struct SearchRelatedSearch {
     #[prost(message, optional, tag = "3")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchRelatedSearch {
+    const NAME: &'static str = "SearchRelatedSearch";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchRelatedSearch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchRelatedSearch".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchReserveRequest {
@@ -3565,12 +4815,32 @@ pub struct SearchReserveRequest {
     #[prost(string, tag = "2")]
     pub oid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchReserveRequest {
+    const NAME: &'static str = "SearchReserveRequest";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchReserveRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchReserveRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchReserveResponse {
     ///
     #[prost(message, optional, tag = "1")]
     pub reserve_info: ::core::option::Option<ReserveInfo>,
+}
+impl ::prost::Name for SearchReserveResponse {
+    const NAME: &'static str = "SearchReserveResponse";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchReserveResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchReserveResponse".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3599,6 +4869,16 @@ pub struct SearchSeriesCard {
     ///
     #[prost(int32, tag = "8")]
     pub is_hide_title: i32,
+}
+impl ::prost::Name for SearchSeriesCard {
+    const NAME: &'static str = "SearchSeriesCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSeriesCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSeriesCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3634,6 +4914,16 @@ pub struct SearchSpecialCard {
     #[prost(message, optional, tag = "10")]
     pub card_layout: ::core::option::Option<CardLayout>,
 }
+impl ::prost::Name for SearchSpecialCard {
+    const NAME: &'static str = "SearchSpecialCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSpecialCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSpecialCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchSpecialGuideCard {
@@ -3649,6 +4939,16 @@ pub struct SearchSpecialGuideCard {
     ///
     #[prost(string, tag = "4")]
     pub desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchSpecialGuideCard {
+    const NAME: &'static str = "SearchSpecialGuideCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSpecialGuideCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSpecialGuideCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3683,6 +4983,16 @@ pub struct SearchSportCard {
     ///
     #[prost(message, optional, tag = "10")]
     pub player_grade: ::core::option::Option<PlayerGrade>,
+}
+impl ::prost::Name for SearchSportCard {
+    const NAME: &'static str = "SearchSportCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSportCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSportCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3723,6 +5033,16 @@ pub struct SearchSportInlineCard {
     ///
     #[prost(message, optional, tag = "12")]
     pub player_grade: ::core::option::Option<PlayerGrade>,
+}
+impl ::prost::Name for SearchSportInlineCard {
+    const NAME: &'static str = "SearchSportInlineCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSportInlineCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSportInlineCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3767,6 +5087,16 @@ pub struct SearchSubjectCard {
     #[prost(message, optional, tag = "13")]
     pub button: ::core::option::Option<WatchButton>,
 }
+impl ::prost::Name for SearchSubjectCard {
+    const NAME: &'static str = "SearchSubjectCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchSubjectCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchSubjectCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchTimeLineCard {
@@ -3792,6 +5122,16 @@ pub struct SearchTimeLineCard {
     #[prost(message, optional, tag = "7")]
     pub watch_button: ::core::option::Option<WatchButton>,
 }
+impl ::prost::Name for SearchTimeLineCard {
+    const NAME: &'static str = "SearchTimeLineCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchTimeLineCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchTimeLineCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchTipsCard {
@@ -3807,6 +5147,16 @@ pub struct SearchTipsCard {
     ///
     #[prost(string, tag = "134")]
     pub cover_night: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchTipsCard {
+    const NAME: &'static str = "SearchTipsCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchTipsCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchTipsCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3875,6 +5225,16 @@ pub struct SearchTopGameCard {
     #[prost(message, optional, tag = "21")]
     pub rec_tag: ::core::option::Option<ReasonStyle>,
 }
+impl ::prost::Name for SearchTopGameCard {
+    const NAME: &'static str = "SearchTopGameCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchTopGameCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchTopGameCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchUpRecommend {
@@ -3899,6 +5259,16 @@ pub struct SearchUpRecommend {
     ///
     #[prost(string, tag = "7")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchUpRecommend {
+    const NAME: &'static str = "SearchUPRecommend";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchUPRecommend".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchUPRecommend".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -3944,6 +5314,16 @@ pub struct SearchUgcInlineCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+}
+impl ::prost::Name for SearchUgcInlineCard {
+    const NAME: &'static str = "SearchUgcInlineCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchUgcInlineCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchUgcInlineCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4013,6 +5393,16 @@ pub struct SearchUpperCard {
     ///
     #[prost(string, tag = "21")]
     pub user_card_desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchUpperCard {
+    const NAME: &'static str = "SearchUpperCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchUpperCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchUpperCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4108,6 +5498,16 @@ pub struct SearchVideoCard {
     #[prost(string, repeated, tag = "30")]
     pub highlight_tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for SearchVideoCard {
+    const NAME: &'static str = "SearchVideoCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchVideoCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchVideoCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Share {
@@ -4118,6 +5518,16 @@ pub struct Share {
     #[prost(message, optional, tag = "2")]
     pub video: ::core::option::Option<Video>,
 }
+impl ::prost::Name for Share {
+    const NAME: &'static str = "Share";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Share".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Share".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareButtonItem {
@@ -4127,6 +5537,16 @@ pub struct ShareButtonItem {
     ///
     #[prost(message, repeated, tag = "2")]
     pub button_metas: ::prost::alloc::vec::Vec<ButtonMeta>,
+}
+impl ::prost::Name for ShareButtonItem {
+    const NAME: &'static str = "ShareButtonItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ShareButtonItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ShareButtonItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4189,6 +5609,16 @@ pub struct SharePlane {
     #[prost(string, tag = "19")]
     pub from: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SharePlane {
+    const NAME: &'static str = "SharePlane";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SharePlane".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SharePlane".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ShareTo {
@@ -4235,6 +5665,16 @@ pub struct ShareTo {
     #[prost(bool, tag = "14")]
     pub twitter: bool,
 }
+impl ::prost::Name for ShareTo {
+    const NAME: &'static str = "ShareTo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ShareTo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ShareTo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Space {
@@ -4253,6 +5693,16 @@ pub struct Space {
     ///
     #[prost(string, tag = "5")]
     pub space_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Space {
+    const NAME: &'static str = "Space";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Space".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Space".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4282,6 +5732,16 @@ pub struct SportsMatchItem {
     #[prost(string, tag = "8")]
     pub sub_extra_icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SportsMatchItem {
+    const NAME: &'static str = "SportsMatchItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SportsMatchItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SportsMatchItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Stat {
@@ -4294,6 +5754,16 @@ pub struct Stat {
     ///
     #[prost(int32, tag = "3")]
     pub reply: i32,
+}
+impl ::prost::Name for Stat {
+    const NAME: &'static str = "Stat";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Stat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Stat".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4308,6 +5778,16 @@ pub struct TabInfo {
     #[prost(int32, tag = "3")]
     pub sort: i32,
 }
+impl ::prost::Name for TabInfo {
+    const NAME: &'static str = "TabInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TabInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TabInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TextButton {
@@ -4317,6 +5797,16 @@ pub struct TextButton {
     ///
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TextButton {
+    const NAME: &'static str = "TextButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TextButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TextButton".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4328,6 +5818,16 @@ pub struct TextLabel {
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for TextLabel {
+    const NAME: &'static str = "TextLabel";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TextLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TextLabel".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Texts {
@@ -4337,6 +5837,16 @@ pub struct Texts {
     ///
     #[prost(string, tag = "2")]
     pub unbooking_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Texts {
+    const NAME: &'static str = "Texts";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Texts".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Texts".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4351,6 +5861,16 @@ pub struct ThreePoint {
     #[prost(string, tag = "3")]
     pub title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ThreePoint {
+    const NAME: &'static str = "ThreePoint";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ThreePoint".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ThreePoint".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ThreePoint2 {
@@ -4363,6 +5883,16 @@ pub struct ThreePoint2 {
     ///
     #[prost(int32, tag = "3")]
     pub watch_later: i32,
+}
+impl ::prost::Name for ThreePoint2 {
+    const NAME: &'static str = "ThreePoint2";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ThreePoint2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ThreePoint2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4382,6 +5912,16 @@ pub struct ThreePointV2 {
     ///
     #[prost(int64, tag = "5")]
     pub id: i64,
+}
+impl ::prost::Name for ThreePointV2 {
+    const NAME: &'static str = "ThreePointV2";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ThreePointV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ThreePointV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4420,6 +5960,16 @@ pub struct ThreePointV3 {
     #[prost(int32, tag = "11")]
     pub default_id: i32,
 }
+impl ::prost::Name for ThreePointV3 {
+    const NAME: &'static str = "ThreePointV3";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ThreePointV3".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ThreePointV3".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ThreePointV4 {
@@ -4429,6 +5979,16 @@ pub struct ThreePointV4 {
     ///
     #[prost(message, optional, tag = "2")]
     pub watch_later: ::core::option::Option<WatchLater>,
+}
+impl ::prost::Name for ThreePointV4 {
+    const NAME: &'static str = "ThreePointV4";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ThreePointV4".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ThreePointV4".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4461,6 +6021,16 @@ pub struct TimeLine {
     #[prost(message, repeated, tag = "9")]
     pub items: ::prost::alloc::vec::Vec<VideoTextItem>,
 }
+impl ::prost::Name for TimeLine {
+    const NAME: &'static str = "TimeLine";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TimeLine".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TimeLine".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TimeLineEvents {
@@ -4476,6 +6046,16 @@ pub struct TimeLineEvents {
     ///
     #[prost(string, tag = "4")]
     pub jump_link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TimeLineEvents {
+    const NAME: &'static str = "TimeLineEvents";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TimeLineEvents".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TimeLineEvents".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4498,6 +6078,16 @@ pub struct TopGameUi {
     ///
     #[prost(string, tag = "6")]
     pub module_color: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TopGameUi {
+    const NAME: &'static str = "TopGameUI";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TopGameUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TopGameUI".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4536,6 +6126,16 @@ pub struct TopicItem {
     #[prost(string, tag = "11")]
     pub publish_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for TopicItem {
+    const NAME: &'static str = "TopicItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TopicItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TopicItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TrafficConfig {
@@ -4549,6 +6149,16 @@ pub struct TrafficConfig {
     #[prost(int64, tag = "3")]
     pub default_option_id: i64,
 }
+impl ::prost::Name for TrafficConfig {
+    const NAME: &'static str = "TrafficConfig";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TrafficConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TrafficConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TrafficConfigOption {
@@ -4558,6 +6168,16 @@ pub struct TrafficConfigOption {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TrafficConfigOption {
+    const NAME: &'static str = "TrafficConfigOption";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.TrafficConfigOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.TrafficConfigOption".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4604,6 +6224,16 @@ pub struct UpRecommendItem {
     #[prost(int32, tag = "13")]
     pub is_live: i32,
 }
+impl ::prost::Name for UpRecommendItem {
+    const NAME: &'static str = "UPRecommendItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.UPRecommendItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.UPRecommendItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpArgs {
@@ -4620,6 +6250,16 @@ pub struct UpArgs {
     #[prost(int32, tag = "4")]
     pub selected: i32,
 }
+impl ::prost::Name for UpArgs {
+    const NAME: &'static str = "UpArgs";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.UpArgs".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.UpArgs".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Upper {
@@ -4635,6 +6275,16 @@ pub struct Upper {
     ///
     #[prost(string, tag = "4")]
     pub ptime_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Upper {
+    const NAME: &'static str = "Upper";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Upper".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Upper".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4661,6 +6311,16 @@ pub struct Video {
     #[prost(string, tag = "7")]
     pub short_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Video {
+    const NAME: &'static str = "Video";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.Video".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.Video".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VideoTextItem {
@@ -4682,6 +6342,16 @@ pub struct VideoTextItem {
     ///
     #[prost(string, tag = "6")]
     pub video_time: ::prost::alloc::string::String,
+}
+impl ::prost::Name for VideoTextItem {
+    const NAME: &'static str = "VideoTextItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.VideoTextItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.VideoTextItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4723,6 +6393,16 @@ pub struct VipInfo {
     #[prost(int32, tag = "12")]
     pub tv_vip_pay_type: i32,
 }
+impl ::prost::Name for VipInfo {
+    const NAME: &'static str = "VipInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.VipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.VipInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VipLabel {
@@ -4763,6 +6443,16 @@ pub struct VipLabel {
     #[prost(string, tag = "12")]
     pub img_label_uri_hant_static: ::prost::alloc::string::String,
 }
+impl ::prost::Name for VipLabel {
+    const NAME: &'static str = "VipLabel";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.VipLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.VipLabel".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WatchButton {
@@ -4773,6 +6463,16 @@ pub struct WatchButton {
     #[prost(string, tag = "2")]
     pub link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for WatchButton {
+    const NAME: &'static str = "WatchButton";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.WatchButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.WatchButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WatchLater {
@@ -4782,6 +6482,16 @@ pub struct WatchLater {
     ///
     #[prost(string, tag = "2")]
     pub bvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for WatchLater {
+    const NAME: &'static str = "WatchLater";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.WatchLater".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.WatchLater".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -4807,6 +6517,16 @@ pub struct WatchedShow {
     ///
     #[prost(string, tag = "7")]
     pub icon_web: ::prost::alloc::string::String,
+}
+impl ::prost::Name for WatchedShow {
+    const NAME: &'static str = "WatchedShow";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.WatchedShow".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.WatchedShow".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

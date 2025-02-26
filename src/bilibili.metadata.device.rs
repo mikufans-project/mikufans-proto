@@ -51,12 +51,52 @@ pub struct Device {
     #[prost(string, tag = "16")]
     pub guest_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Device {
+    const NAME: &'static str = "Device";
+    const PACKAGE: &'static str = "bilibili.metadata.device";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.device.Device".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.device.Device".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DeviceType {}
+impl ::prost::Name for DeviceType {
+    const NAME: &'static str = "DeviceType";
+    const PACKAGE: &'static str = "bilibili.metadata.device";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.device.DeviceType".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.device.DeviceType".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MobiApp {}
+impl ::prost::Name for MobiApp {
+    const NAME: &'static str = "MobiApp";
+    const PACKAGE: &'static str = "bilibili.metadata.device";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.device.MobiApp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.device.MobiApp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Platform {}
+impl ::prost::Name for Platform {
+    const NAME: &'static str = "Platform";
+    const PACKAGE: &'static str = "bilibili.metadata.device";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.device.Platform".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.device.Platform".into()
+    }
+}

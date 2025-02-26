@@ -12,6 +12,16 @@ pub struct Download {
     #[prost(message, repeated, tag = "3")]
     pub list: ::prost::alloc::vec::Vec<ResourceItem>,
 }
+impl ::prost::Name for Download {
+    const NAME: &'static str = "Download";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.Download".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.Download".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DownloadReply {
@@ -24,6 +34,16 @@ pub struct DownloadReply {
     ///
     #[prost(map = "string, message", tag = "3")]
     pub dwtime: ::std::collections::HashMap<::prost::alloc::string::String, DwTime>,
+}
+impl ::prost::Name for DownloadReply {
+    const NAME: &'static str = "DownloadReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.DownloadReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.DownloadReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -41,6 +61,16 @@ pub struct DownloadReq {
     #[prost(int64, tag = "4")]
     pub screen_height: i64,
 }
+impl ::prost::Name for DownloadReq {
+    const NAME: &'static str = "DownloadReq";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.DownloadReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.DownloadReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DwTime {
@@ -54,6 +84,16 @@ pub struct DwTime {
     #[prost(message, repeated, tag = "3")]
     pub low: ::prost::alloc::vec::Vec<DwTimePiece>,
 }
+impl ::prost::Name for DwTime {
+    const NAME: &'static str = "DwTime";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.DwTime".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.DwTime".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DwTimePiece {
@@ -64,6 +104,16 @@ pub struct DwTimePiece {
     #[prost(int64, tag = "2")]
     pub end: i64,
 }
+impl ::prost::Name for DwTimePiece {
+    const NAME: &'static str = "DwTimePiece";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.DwTimePiece".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.DwTimePiece".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Host {
@@ -73,6 +123,16 @@ pub struct Host {
     ///
     #[prost(string, tag = "2")]
     pub bfs: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Host {
+    const NAME: &'static str = "Host";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.Host".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.Host".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -89,6 +149,16 @@ pub struct ListReply {
     ///
     #[prost(message, optional, tag = "4")]
     pub host: ::core::option::Option<Host>,
+}
+impl ::prost::Name for ListReply {
+    const NAME: &'static str = "ListReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.ListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.ListReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -129,6 +199,16 @@ pub struct ListReq {
     ///
     #[prost(bool, tag = "12")]
     pub support_peak: bool,
+}
+impl ::prost::Name for ListReq {
+    const NAME: &'static str = "ListReq";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.ListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.ListReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -209,6 +289,16 @@ pub struct ModuleReply {
     #[prost(string, tag = "24")]
     pub password: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ModuleReply {
+    const NAME: &'static str = "ModuleReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.ModuleReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.ModuleReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PatchInfo {
@@ -225,6 +315,16 @@ pub struct PatchInfo {
     #[prost(int64, tag = "4")]
     pub source_version: i64,
 }
+impl ::prost::Name for PatchInfo {
+    const NAME: &'static str = "PatchInfo";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.PatchInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.PatchInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PoolReply {
@@ -234,6 +334,16 @@ pub struct PoolReply {
     ///
     #[prost(message, repeated, tag = "2")]
     pub modules: ::prost::alloc::vec::Vec<ModuleReply>,
+}
+impl ::prost::Name for PoolReply {
+    const NAME: &'static str = "PoolReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.PoolReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.PoolReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -272,6 +382,16 @@ pub struct ResourceItem {
     #[prost(string, tag = "11")]
     pub extra: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ResourceItem {
+    const NAME: &'static str = "ResourceItem";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.ResourceItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.ResourceItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VersionListReq {
@@ -281,6 +401,16 @@ pub struct VersionListReq {
     ///
     #[prost(message, repeated, tag = "2")]
     pub versions: ::prost::alloc::vec::Vec<VersionReq>,
+}
+impl ::prost::Name for VersionListReq {
+    const NAME: &'static str = "VersionListReq";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.VersionListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.VersionListReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -294,6 +424,16 @@ pub struct VersionReq {
     ///
     #[prost(int64, tag = "3")]
     pub r#type: i64,
+}
+impl ::prost::Name for VersionReq {
+    const NAME: &'static str = "VersionReq";
+    const PACKAGE: &'static str = "bilibili.app.resource.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.v1.VersionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.v1.VersionReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

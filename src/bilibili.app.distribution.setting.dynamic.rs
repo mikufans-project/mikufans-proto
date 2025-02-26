@@ -6,10 +6,30 @@ pub struct DynamicAutoPlay {
     #[prost(message, optional, tag = "1")]
     pub value: ::core::option::Option<super::super::Int64Value>,
 }
+impl ::prost::Name for DynamicAutoPlay {
+    const NAME: &'static str = "DynamicAutoPlay";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.dynamic";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.dynamic.DynamicAutoPlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.dynamic.DynamicAutoPlay".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynamicDeviceConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub auto_play: ::core::option::Option<DynamicAutoPlay>,
+}
+impl ::prost::Name for DynamicDeviceConfig {
+    const NAME: &'static str = "DynamicDeviceConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.dynamic";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.dynamic.DynamicDeviceConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.dynamic.DynamicDeviceConfig".into()
+    }
 }

@@ -6,3 +6,13 @@ pub struct RoomProto {
     #[prost(string, repeated, tag = "1")]
     pub room_id: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for RoomProto {
+    const NAME: &'static str = "RoomProto";
+    const PACKAGE: &'static str = "pgc.biz";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.biz.RoomProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.biz.RoomProto".into()
+    }
+}

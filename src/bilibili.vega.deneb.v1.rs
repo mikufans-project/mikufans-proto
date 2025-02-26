@@ -18,6 +18,16 @@ pub struct MessagePullsReply {
     #[prost(bool, tag = "5")]
     pub has_next: bool,
 }
+impl ::prost::Name for MessagePullsReply {
+    const NAME: &'static str = "MessagePullsReply";
+    const PACKAGE: &'static str = "bilibili.vega.deneb.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vega.deneb.v1.MessagePullsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vega.deneb.v1.MessagePullsReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MessagePullsReq {
@@ -33,6 +43,16 @@ pub struct MessagePullsReq {
     ///
     #[prost(int32, tag = "4")]
     pub ps: i32,
+}
+impl ::prost::Name for MessagePullsReq {
+    const NAME: &'static str = "MessagePullsReq";
+    const PACKAGE: &'static str = "bilibili.vega.deneb.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vega.deneb.v1.MessagePullsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vega.deneb.v1.MessagePullsReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod vega_deneb_rpc_client {

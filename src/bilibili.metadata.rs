@@ -24,3 +24,13 @@ pub struct Metadata {
     #[prost(string, tag = "7")]
     pub platform: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Metadata {
+    const NAME: &'static str = "Metadata";
+    const PACKAGE: &'static str = "bilibili.metadata";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.Metadata".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.Metadata".into()
+    }
+}

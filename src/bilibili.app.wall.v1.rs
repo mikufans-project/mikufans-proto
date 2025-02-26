@@ -18,15 +18,45 @@ pub struct RuleInfo {
     #[prost(string, repeated, tag = "5")]
     pub a_backup: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for RuleInfo {
+    const NAME: &'static str = "RuleInfo";
+    const PACKAGE: &'static str = "bilibili.app.wall.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.wall.v1.RuleInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.wall.v1.RuleInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RuleRequest {}
+impl ::prost::Name for RuleRequest {
+    const NAME: &'static str = "RuleRequest";
+    const PACKAGE: &'static str = "bilibili.app.wall.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.wall.v1.RuleRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.wall.v1.RuleRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RulesInfo {
     ///
     #[prost(message, repeated, tag = "1")]
     pub rules_info: ::prost::alloc::vec::Vec<RuleInfo>,
+}
+impl ::prost::Name for RulesInfo {
+    const NAME: &'static str = "RulesInfo";
+    const PACKAGE: &'static str = "bilibili.app.wall.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.wall.v1.RulesInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.wall.v1.RulesInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -40,6 +70,16 @@ pub struct RulesReply {
     ///
     #[prost(string, tag = "2")]
     pub hash_value: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RulesReply {
+    const NAME: &'static str = "RulesReply";
+    const PACKAGE: &'static str = "bilibili.app.wall.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.wall.v1.RulesReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.wall.v1.RulesReply".into()
+    }
 }
 /// Generated client implementations.
 pub mod wall_client {

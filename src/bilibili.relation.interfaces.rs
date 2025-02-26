@@ -66,6 +66,16 @@ pub mod at_group {
         }
     }
 }
+impl ::prost::Name for AtGroup {
+    const NAME: &'static str = "AtGroup";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.AtGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.AtGroup".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AtItem {
@@ -90,12 +100,32 @@ pub struct AtItem {
         super::super::dagw::component::avatar::v1::AvatarItem,
     >,
 }
+impl ::prost::Name for AtItem {
+    const NAME: &'static str = "AtItem";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.AtItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.AtItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AtSearchReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub groups: ::prost::alloc::vec::Vec<AtGroup>,
+}
+impl ::prost::Name for AtSearchReply {
+    const NAME: &'static str = "AtSearchReply";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.AtSearchReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.AtSearchReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -109,6 +139,16 @@ pub struct AtSearchReq {
     ///
     #[prost(int32, tag = "3")]
     pub scene: i32,
+}
+impl ::prost::Name for AtSearchReq {
+    const NAME: &'static str = "AtSearchReq";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.AtSearchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.AtSearchReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -138,9 +178,29 @@ pub struct FollowingReq {
     #[prost(string, tag = "8")]
     pub action_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FollowingReq {
+    const NAME: &'static str = "FollowingReq";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.FollowingReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.FollowingReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ModifyRelationReply {}
+impl ::prost::Name for ModifyRelationReply {
+    const NAME: &'static str = "ModifyRelationReply";
+    const PACKAGE: &'static str = "bilibili.relation.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.relation.interfaces.ModifyRelationReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.relation.interfaces.ModifyRelationReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

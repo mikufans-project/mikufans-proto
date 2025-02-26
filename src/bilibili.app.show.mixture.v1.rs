@@ -9,12 +9,32 @@ pub struct ChannelRedirectReply {
     #[prost(string, tag = "2")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ChannelRedirectReply {
+    const NAME: &'static str = "ChannelRedirectReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.ChannelRedirectReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.ChannelRedirectReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ChannelRedirectReq {
     ///
     #[prost(int64, tag = "1")]
     pub id: i64,
+}
+impl ::prost::Name for ChannelRedirectReq {
+    const NAME: &'static str = "ChannelRedirectReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.ChannelRedirectReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.ChannelRedirectReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -25,6 +45,16 @@ pub struct RcmdReason {
     ///
     #[prost(int32, tag = "2")]
     pub corner_mark: i32,
+}
+impl ::prost::Name for RcmdReason {
+    const NAME: &'static str = "RcmdReason";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RcmdReason".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RcmdReason".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -57,6 +87,16 @@ pub struct RegionAv {
     #[prost(string, tag = "9")]
     pub cover43: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RegionAv {
+    const NAME: &'static str = "RegionAv";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionAv".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionAv".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionBanner {
@@ -78,6 +118,16 @@ pub struct RegionBanner {
     ///
     #[prost(int64, tag = "6")]
     pub id: i64,
+}
+impl ::prost::Name for RegionBanner {
+    const NAME: &'static str = "RegionBanner";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionBanner".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionBanner".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -102,6 +152,16 @@ pub mod region_card {
         Av(super::RegionAv),
     }
 }
+impl ::prost::Name for RegionCard {
+    const NAME: &'static str = "RegionCard";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionContent {
@@ -111,6 +171,16 @@ pub struct RegionContent {
     ///
     #[prost(message, repeated, tag = "2")]
     pub icons: ::prost::alloc::vec::Vec<RegionIcon>,
+}
+impl ::prost::Name for RegionContent {
+    const NAME: &'static str = "RegionContent";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionContent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -131,6 +201,16 @@ pub struct RegionIcon {
     #[prost(int64, tag = "5")]
     pub rid: i64,
 }
+impl ::prost::Name for RegionIcon {
+    const NAME: &'static str = "RegionIcon";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionIcon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionIcon".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionIndexReply {
@@ -146,6 +226,16 @@ pub struct RegionIndexReply {
     ///
     #[prost(string, tag = "4")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RegionIndexReply {
+    const NAME: &'static str = "RegionIndexReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionIndexReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionIndexReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -168,6 +258,16 @@ pub struct RegionIndexReq {
     #[prost(string, tag = "5")]
     pub uuid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RegionIndexReq {
+    const NAME: &'static str = "RegionIndexReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionIndexReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionIndexReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionLimit {
@@ -177,6 +277,16 @@ pub struct RegionLimit {
     ///
     #[prost(string, tag = "2")]
     pub message: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RegionLimit {
+    const NAME: &'static str = "RegionLimit";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionLimit".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -188,15 +298,45 @@ pub struct RegionListReply {
     #[prost(message, repeated, tag = "2")]
     pub contents: ::prost::alloc::vec::Vec<RegionContent>,
 }
+impl ::prost::Name for RegionListReply {
+    const NAME: &'static str = "RegionListReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionListReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RegionListReq {}
+impl ::prost::Name for RegionListReq {
+    const NAME: &'static str = "RegionListReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionListReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionShortcutReply {
     ///
     #[prost(message, optional, tag = "1")]
     pub limit: ::core::option::Option<RegionLimit>,
+}
+impl ::prost::Name for RegionShortcutReply {
+    const NAME: &'static str = "RegionShortcutReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionShortcutReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionShortcutReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -205,12 +345,32 @@ pub struct RegionShortcutReq {
     #[prost(int64, repeated, tag = "1")]
     pub unique_id: ::prost::alloc::vec::Vec<i64>,
 }
+impl ::prost::Name for RegionShortcutReq {
+    const NAME: &'static str = "RegionShortcutReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.RegionShortcutReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.RegionShortcutReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ThreePoint {
     ///
     #[prost(bool, tag = "1")]
     pub watch_later: bool,
+}
+impl ::prost::Name for ThreePoint {
+    const NAME: &'static str = "ThreePoint";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.ThreePoint".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.ThreePoint".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -243,12 +403,32 @@ pub struct WidgetItem {
     #[prost(int32, tag = "9")]
     pub view_icon: i32,
 }
+impl ::prost::Name for WidgetItem {
+    const NAME: &'static str = "WidgetItem";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.WidgetItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.WidgetItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WidgetReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub item: ::prost::alloc::vec::Vec<WidgetItem>,
+}
+impl ::prost::Name for WidgetReply {
+    const NAME: &'static str = "WidgetReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.WidgetReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.WidgetReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -259,6 +439,16 @@ pub struct WidgetReq {
     ///
     #[prost(int32, tag = "2")]
     pub page_no: i32,
+}
+impl ::prost::Name for WidgetReq {
+    const NAME: &'static str = "WidgetReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.WidgetReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.WidgetReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

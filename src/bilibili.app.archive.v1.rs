@@ -105,6 +105,16 @@ pub struct Arc {
     #[prost(string, tag = "42")]
     pub first_frame: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Arc {
+    const NAME: &'static str = "Arc";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Arc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Arc".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Author {
@@ -118,6 +128,16 @@ pub struct Author {
     #[prost(string, tag = "3")]
     pub face: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Author {
+    const NAME: &'static str = "Author";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Author".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Author".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Dimension {
@@ -130,6 +150,16 @@ pub struct Dimension {
     ///
     #[prost(int64, tag = "3")]
     pub rotate: i64,
+}
+impl ::prost::Name for Dimension {
+    const NAME: &'static str = "Dimension";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Dimension".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Dimension".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -164,6 +194,16 @@ pub struct Page {
     ///
     #[prost(string, tag = "10")]
     pub first_frame: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Page {
+    const NAME: &'static str = "Page";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Page".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Page".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -211,6 +251,16 @@ pub struct Rights {
     #[prost(int32, tag = "14")]
     pub pay_free_watch: i32,
 }
+impl ::prost::Name for Rights {
+    const NAME: &'static str = "Rights";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Rights".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Rights".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SeasonTheme {
@@ -224,6 +274,16 @@ pub struct SeasonTheme {
     #[prost(string, tag = "3")]
     pub text_color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SeasonTheme {
+    const NAME: &'static str = "SeasonTheme";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.SeasonTheme".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.SeasonTheme".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct StaffInfo {
@@ -236,6 +296,16 @@ pub struct StaffInfo {
     ///
     #[prost(int64, tag = "3")]
     pub attribute: i64,
+}
+impl ::prost::Name for StaffInfo {
+    const NAME: &'static str = "StaffInfo";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.StaffInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.StaffInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -273,4 +343,14 @@ pub struct Stat {
     ///
     #[prost(int32, tag = "11")]
     pub dislike: i32,
+}
+impl ::prost::Name for Stat {
+    const NAME: &'static str = "Stat";
+    const PACKAGE: &'static str = "bilibili.app.archive.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.v1.Stat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.v1.Stat".into()
+    }
 }

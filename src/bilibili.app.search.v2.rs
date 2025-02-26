@@ -6,6 +6,16 @@ pub struct CancelChatTaskReply {
     #[prost(int32, tag = "1")]
     pub code: i32,
 }
+impl ::prost::Name for CancelChatTaskReply {
+    const NAME: &'static str = "CancelChatTaskReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.CancelChatTaskReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.CancelChatTaskReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CancelChatTaskReq {
@@ -15,6 +25,16 @@ pub struct CancelChatTaskReq {
     ///
     #[prost(string, tag = "2")]
     pub from_source: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CancelChatTaskReq {
+    const NAME: &'static str = "CancelChatTaskReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.CancelChatTaskReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.CancelChatTaskReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -38,9 +58,29 @@ pub struct GetChatAuthReply {
     #[prost(int32, tag = "6")]
     pub jump_link_type: i32,
 }
+impl ::prost::Name for GetChatAuthReply {
+    const NAME: &'static str = "GetChatAuthReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.GetChatAuthReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.GetChatAuthReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetChatAuthReq {}
+impl ::prost::Name for GetChatAuthReq {
+    const NAME: &'static str = "GetChatAuthReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.GetChatAuthReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.GetChatAuthReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetChatResultReq {
@@ -56,6 +96,16 @@ pub struct GetChatResultReq {
     ///
     #[prost(string, tag = "4")]
     pub track_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GetChatResultReq {
+    const NAME: &'static str = "GetChatResultReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.GetChatResultReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.GetChatResultReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -79,6 +129,16 @@ pub struct QueryRecAfterClickItem {
     #[prost(string, tag = "6")]
     pub icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryRecAfterClickItem {
+    const NAME: &'static str = "QueryRecAfterClickItem";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.QueryRecAfterClickItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.QueryRecAfterClickItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryRecAfterClickReply {
@@ -88,6 +148,16 @@ pub struct QueryRecAfterClickReply {
     ///
     #[prost(message, optional, tag = "2")]
     pub query_rec_result: ::core::option::Option<QueryRecAfterClickResult>,
+}
+impl ::prost::Name for QueryRecAfterClickReply {
+    const NAME: &'static str = "QueryRecAfterClickReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.QueryRecAfterClickReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.QueryRecAfterClickReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -117,6 +187,16 @@ pub struct QueryRecAfterClickReq {
     #[prost(string, tag = "8")]
     pub user_act: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryRecAfterClickReq {
+    const NAME: &'static str = "QueryRecAfterClickReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.QueryRecAfterClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.QueryRecAfterClickReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryRecAfterClickResult {
@@ -145,6 +225,16 @@ pub struct QueryRecAfterClickResult {
     #[prost(string, tag = "8")]
     pub user_act: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QueryRecAfterClickResult {
+    const NAME: &'static str = "QueryRecAfterClickResult";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.QueryRecAfterClickResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.QueryRecAfterClickResult".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SearchDelFollowRequest {
@@ -155,12 +245,32 @@ pub struct SearchDelFollowRequest {
     #[prost(enumeration = "FollowTypeEnum", tag = "2")]
     pub follow_type: i32,
 }
+impl ::prost::Name for SearchDelFollowRequest {
+    const NAME: &'static str = "SearchDelFollowRequest";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchDelFollowRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchDelFollowRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchDelFollowResponse {
     ///
     #[prost(string, tag = "1")]
     pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchDelFollowResponse {
+    const NAME: &'static str = "SearchDelFollowResponse";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchDelFollowResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchDelFollowResponse".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -205,12 +315,32 @@ pub struct SearchEggInfo {
     #[prost(string, tag = "13")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchEggInfo {
+    const NAME: &'static str = "SearchEggInfo";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchEggInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchEggInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchEggInfos {
     ///
     #[prost(message, repeated, tag = "1")]
     pub egg_info: ::prost::alloc::vec::Vec<SearchEggInfo>,
+}
+impl ::prost::Name for SearchEggInfos {
+    const NAME: &'static str = "SearchEggInfos";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchEggInfos".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchEggInfos".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -225,9 +355,29 @@ pub struct SearchEggReply {
     #[prost(message, optional, tag = "3")]
     pub result: ::core::option::Option<SearchEggInfos>,
 }
+impl ::prost::Name for SearchEggReply {
+    const NAME: &'static str = "SearchEggReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchEggReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchEggReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SearchEggReq {}
+impl ::prost::Name for SearchEggReq {
+    const NAME: &'static str = "SearchEggReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchEggReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchEggReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SearchFollowRequest {
@@ -238,12 +388,32 @@ pub struct SearchFollowRequest {
     #[prost(enumeration = "FollowTypeEnum", tag = "2")]
     pub follow_type: i32,
 }
+impl ::prost::Name for SearchFollowRequest {
+    const NAME: &'static str = "SearchFollowRequest";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchFollowRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchFollowRequest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchFollowResponse {
     ///
     #[prost(string, tag = "1")]
     pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchFollowResponse {
+    const NAME: &'static str = "SearchFollowResponse";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchFollowResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchFollowResponse".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -254,6 +424,16 @@ pub struct SearchLikeReply {
     ///
     #[prost(int64, tag = "2")]
     pub dislike_number: i64,
+}
+impl ::prost::Name for SearchLikeReply {
+    const NAME: &'static str = "SearchLikeReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchLikeReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchLikeReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -268,6 +448,16 @@ pub struct SearchLikeReq {
     #[prost(enumeration = "Action", tag = "3")]
     pub action: i32,
 }
+impl ::prost::Name for SearchLikeReq {
+    const NAME: &'static str = "SearchLikeReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchLikeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchLikeReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchShortUrlReply {
@@ -275,12 +465,32 @@ pub struct SearchShortUrlReply {
     #[prost(string, tag = "1")]
     pub origin_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchShortUrlReply {
+    const NAME: &'static str = "SearchShortUrlReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchShortUrlReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchShortUrlReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchShortUrlReq {
     ///
     #[prost(string, tag = "1")]
     pub short_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchShortUrlReq {
+    const NAME: &'static str = "SearchShortUrlReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SearchShortUrlReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SearchShortUrlReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -291,6 +501,16 @@ pub struct SubmitChatTaskReply {
     ///
     #[prost(string, tag = "2")]
     pub session_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SubmitChatTaskReply {
+    const NAME: &'static str = "SubmitChatTaskReply";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SubmitChatTaskReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SubmitChatTaskReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -304,6 +524,16 @@ pub struct SubmitChatTaskReq {
     ///
     #[prost(string, tag = "3")]
     pub from_source: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SubmitChatTaskReq {
+    const NAME: &'static str = "SubmitChatTaskReq";
+    const PACKAGE: &'static str = "bilibili.app.search.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.search.v2.SubmitChatTaskReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.search.v2.SubmitChatTaskReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -12,6 +12,16 @@ pub struct DeviceAppList {
     #[prost(string, repeated, tag = "3")]
     pub user_app_list: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for DeviceAppList {
+    const NAME: &'static str = "DeviceAppList";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.DeviceAppList".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.DeviceAppList".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FetchPublicKeyReply {
@@ -24,6 +34,16 @@ pub struct FetchPublicKeyReply {
     ///
     #[prost(int64, tag = "3")]
     pub deadline: i64,
+}
+impl ::prost::Name for FetchPublicKeyReply {
+    const NAME: &'static str = "FetchPublicKeyReply";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.FetchPublicKeyReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.FetchPublicKeyReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -89,6 +109,16 @@ pub struct GaiaDeviceBasicInfo {
     #[prost(string, tag = "20")]
     pub network: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GaiaDeviceBasicInfo {
+    const NAME: &'static str = "GaiaDeviceBasicInfo";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.GaiaDeviceBasicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.GaiaDeviceBasicInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GaiaEncryptMsgReq {
@@ -98,6 +128,16 @@ pub struct GaiaEncryptMsgReq {
     ///
     #[prost(bytes = "vec", tag = "2")]
     pub encrypt_payload: ::prost::alloc::vec::Vec<u8>,
+}
+impl ::prost::Name for GaiaEncryptMsgReq {
+    const NAME: &'static str = "GaiaEncryptMsgReq";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.GaiaEncryptMsgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.GaiaEncryptMsgReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -115,12 +155,32 @@ pub struct GaiaMsgHeader {
     #[prost(int64, tag = "4")]
     pub ts: i64,
 }
+impl ::prost::Name for GaiaMsgHeader {
+    const NAME: &'static str = "GaiaMsgHeader";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.GaiaMsgHeader".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.GaiaMsgHeader".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadAppListReply {
     ///
     #[prost(string, tag = "1")]
     pub trace_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UploadAppListReply {
+    const NAME: &'static str = "UploadAppListReply";
+    const PACKAGE: &'static str = "bilibili.gaia.gw";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.gaia.gw.UploadAppListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.gaia.gw.UploadAppListReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

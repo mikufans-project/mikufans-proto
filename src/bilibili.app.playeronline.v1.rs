@@ -2,6 +2,16 @@
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NoReply {}
+impl ::prost::Name for NoReply {
+    const NAME: &'static str = "NoReply";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.NoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.NoReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayerOnlineReply {
@@ -27,6 +37,16 @@ pub struct PlayerOnlineReply {
     #[prost(string, tag = "7")]
     pub total_number_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PlayerOnlineReply {
+    const NAME: &'static str = "PlayerOnlineReply";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.PlayerOnlineReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.PlayerOnlineReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerOnlineReq {
@@ -39,6 +59,16 @@ pub struct PlayerOnlineReq {
     ///
     #[prost(bool, tag = "3")]
     pub play_open: bool,
+}
+impl ::prost::Name for PlayerOnlineReq {
+    const NAME: &'static str = "PlayerOnlineReq";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.PlayerOnlineReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.PlayerOnlineReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -53,12 +83,32 @@ pub struct PremiereInfoReply {
     #[prost(int64, tag = "3")]
     pub interaction: i64,
 }
+impl ::prost::Name for PremiereInfoReply {
+    const NAME: &'static str = "PremiereInfoReply";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.PremiereInfoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.PremiereInfoReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PremiereInfoReq {
     ///
     #[prost(int64, tag = "1")]
     pub aid: i64,
+}
+impl ::prost::Name for PremiereInfoReq {
+    const NAME: &'static str = "PremiereInfoReq";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.PremiereInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.PremiereInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -72,6 +122,16 @@ pub struct ReportWatchReq {
     ///
     #[prost(string, tag = "3")]
     pub buvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ReportWatchReq {
+    const NAME: &'static str = "ReportWatchReq";
+    const PACKAGE: &'static str = "bilibili.app.playeronline.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playeronline.v1.ReportWatchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playeronline.v1.ReportWatchReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod player_online_client {

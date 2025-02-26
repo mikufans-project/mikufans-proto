@@ -12,6 +12,16 @@ pub struct AntiHarassmentInfo {
     #[prost(int64, tag = "3")]
     pub expire_time: i64,
 }
+impl ::prost::Name for AntiHarassmentInfo {
+    const NAME: &'static str = "AntiHarassmentInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.AntiHarassmentInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.AntiHarassmentInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AntiHarassmentSetting {
@@ -43,6 +53,16 @@ pub struct AntiHarassmentSetting {
     #[prost(int64, tag = "9")]
     pub auto_limit_expire_time: i64,
 }
+impl ::prost::Name for AntiHarassmentSetting {
+    const NAME: &'static str = "AntiHarassmentSetting";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.AntiHarassmentSetting".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.AntiHarassmentSetting".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LoadAntiHarassmentSettingsReq {
@@ -55,6 +75,16 @@ pub struct LoadAntiHarassmentSettingsReq {
     ///
     #[prost(int64, tag = "3")]
     pub send_mid: i64,
+}
+impl ::prost::Name for LoadAntiHarassmentSettingsReq {
+    const NAME: &'static str = "LoadAntiHarassmentSettingsReq";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.LoadAntiHarassmentSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.LoadAntiHarassmentSettingsReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -69,6 +99,16 @@ pub struct LoadAntiHarassmentSettingsRsp {
     #[prost(int32, tag = "3")]
     pub show_window: i32,
 }
+impl ::prost::Name for LoadAntiHarassmentSettingsRsp {
+    const NAME: &'static str = "LoadAntiHarassmentSettingsRsp";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.LoadAntiHarassmentSettingsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.LoadAntiHarassmentSettingsRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct StoreAntiHarassmentSettingsReq {
@@ -82,9 +122,29 @@ pub struct StoreAntiHarassmentSettingsReq {
     #[prost(message, optional, tag = "3")]
     pub anti_harassment_setting: ::core::option::Option<AntiHarassmentSetting>,
 }
+impl ::prost::Name for StoreAntiHarassmentSettingsReq {
+    const NAME: &'static str = "StoreAntiHarassmentSettingsReq";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.StoreAntiHarassmentSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.StoreAntiHarassmentSettingsReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct StoreAntiHarassmentSettingsRsp {}
+impl ::prost::Name for StoreAntiHarassmentSettingsRsp {
+    const NAME: &'static str = "StoreAntiHarassmentSettingsRsp";
+    const PACKAGE: &'static str = "bilibili.polymer.community.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.community.govern.v1.StoreAntiHarassmentSettingsRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.community.govern.v1.StoreAntiHarassmentSettingsRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

@@ -21,6 +21,16 @@ pub struct Article {
     #[prost(string, repeated, tag = "6")]
     pub biz_tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for Article {
+    const NAME: &'static str = "Article";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Article".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Article".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AtGroup {
@@ -33,6 +43,16 @@ pub struct AtGroup {
     ///
     #[prost(message, repeated, tag = "3")]
     pub items: ::prost::alloc::vec::Vec<AtItem>,
+}
+impl ::prost::Name for AtGroup {
+    const NAME: &'static str = "AtGroup";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.AtGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.AtGroup".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -53,6 +73,16 @@ pub struct AtItem {
     #[prost(int32, tag = "5")]
     pub official_verify_type: i32,
 }
+impl ::prost::Name for AtItem {
+    const NAME: &'static str = "AtItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.AtItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.AtItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AtListReq {
@@ -60,12 +90,32 @@ pub struct AtListReq {
     #[prost(int64, tag = "1")]
     pub uid: i64,
 }
+impl ::prost::Name for AtListReq {
+    const NAME: &'static str = "AtListReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.AtListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.AtListReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AtListRsp {
     ///
     #[prost(message, repeated, tag = "1")]
     pub groups: ::prost::alloc::vec::Vec<AtGroup>,
+}
+impl ::prost::Name for AtListRsp {
+    const NAME: &'static str = "AtListRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.AtListRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.AtListRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -77,6 +127,16 @@ pub struct AtSearchReq {
     #[prost(string, tag = "2")]
     pub keyword: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AtSearchReq {
+    const NAME: &'static str = "AtSearchReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.AtSearchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.AtSearchReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BottomBusiness {
@@ -86,6 +146,16 @@ pub struct BottomBusiness {
     ///
     #[prost(int64, tag = "2")]
     pub r#type: i64,
+}
+impl ::prost::Name for BottomBusiness {
+    const NAME: &'static str = "BottomBusiness";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.BottomBusiness".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.BottomBusiness".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -97,6 +167,16 @@ pub struct CardParagraph {
     #[prost(string, tag = "2")]
     pub default_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CardParagraph {
+    const NAME: &'static str = "CardParagraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CardParagraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CardParagraph".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CodeParagraph {
@@ -106,6 +186,16 @@ pub struct CodeParagraph {
     ///
     #[prost(string, tag = "2")]
     pub content: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CodeParagraph {
+    const NAME: &'static str = "CodeParagraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CodeParagraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CodeParagraph".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -123,6 +213,16 @@ pub struct CreateActivity {
     #[prost(int32, tag = "4")]
     pub action: i32,
 }
+impl ::prost::Name for CreateActivity {
+    const NAME: &'static str = "CreateActivity";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateActivity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateActivity".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateAttachCard {
@@ -135,6 +235,16 @@ pub struct CreateAttachCard {
     ///
     #[prost(message, optional, tag = "3")]
     pub commercial: ::core::option::Option<CreateCommercialCard>,
+}
+impl ::prost::Name for CreateAttachCard {
+    const NAME: &'static str = "CreateAttachCard";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateAttachCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateAttachCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -155,6 +265,16 @@ pub struct CreateCheckResp {
     #[prost(message, optional, tag = "5")]
     pub plus_red_dot: ::core::option::Option<PlusRedDot>,
 }
+impl ::prost::Name for CreateCheckResp {
+    const NAME: &'static str = "CreateCheckResp";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateCheckResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateCheckResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreateCommercialCard {
@@ -164,6 +284,16 @@ pub struct CreateCommercialCard {
     ///
     #[prost(int64, tag = "2")]
     pub commercial_entity_id: i64,
+}
+impl ::prost::Name for CreateCommercialCard {
+    const NAME: &'static str = "CreateCommercialCard";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateCommercialCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateCommercialCard".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -181,6 +311,16 @@ pub struct CreateCommonAttachCard {
     #[prost(int32, tag = "4")]
     pub reserve_lottery: i32,
 }
+impl ::prost::Name for CreateCommonAttachCard {
+    const NAME: &'static str = "CreateCommonAttachCard";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateCommonAttachCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateCommonAttachCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateContent {
@@ -190,6 +330,16 @@ pub struct CreateContent {
     ///
     #[prost(string, tag = "2")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CreateContent {
+    const NAME: &'static str = "CreateContent";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateContent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -206,6 +356,16 @@ pub struct CreateContentItem {
     ///
     #[prost(message, optional, tag = "4")]
     pub goods: ::core::option::Option<GoodsContent>,
+}
+impl ::prost::Name for CreateContentItem {
+    const NAME: &'static str = "CreateContentItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateContentItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateContentItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -307,6 +467,16 @@ pub struct CreateDynVideo {
     #[prost(message, optional, tag = "32")]
     pub topic_detail: ::core::option::Option<DynVideoTopic>,
 }
+impl ::prost::Name for CreateDynVideo {
+    const NAME: &'static str = "CreateDynVideo";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateDynVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateDynVideo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateDynVideoResult {
@@ -323,12 +493,32 @@ pub struct CreateDynVideoResult {
     #[prost(message, optional, tag = "4")]
     pub push_intro: ::core::option::Option<DynVideoPushIntro>,
 }
+impl ::prost::Name for CreateDynVideoResult {
+    const NAME: &'static str = "CreateDynVideoResult";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateDynVideoResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateDynVideoResult".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateExtraInfo {
     ///
     #[prost(string, tag = "1")]
     pub adcm_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CreateExtraInfo {
+    const NAME: &'static str = "CreateExtraInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateExtraInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateExtraInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -339,6 +529,16 @@ pub struct CreateGoodsCard {
     ///
     #[prost(message, repeated, tag = "2")]
     pub goods_card_items: ::prost::alloc::vec::Vec<CreateGoodsCardItem>,
+}
+impl ::prost::Name for CreateGoodsCard {
+    const NAME: &'static str = "CreateGoodsCard";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateGoodsCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateGoodsCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -352,6 +552,16 @@ pub struct CreateGoodsCardItem {
     ///
     #[prost(int64, tag = "3")]
     pub act_mid: i64,
+}
+impl ::prost::Name for CreateGoodsCardItem {
+    const NAME: &'static str = "CreateGoodsCardItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateGoodsCardItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateGoodsCardItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -405,6 +615,16 @@ pub struct CreateOption {
     #[prost(message, optional, tag = "20")]
     pub live_water_mark: ::core::option::Option<LiveWaterMark>,
 }
+impl ::prost::Name for CreateOption {
+    const NAME: &'static str = "CreateOption";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateOption".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreatePic {
@@ -429,6 +649,16 @@ pub struct CreatePic {
     ///
     #[prost(double, tag = "7")]
     pub live_video_size: f64,
+}
+impl ::prost::Name for CreatePic {
+    const NAME: &'static str = "CreatePic";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreatePic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreatePic".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -476,6 +706,16 @@ pub struct CreatePicTag {
     #[prost(string, tag = "14")]
     pub poi: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CreatePicTag {
+    const NAME: &'static str = "CreatePicTag";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreatePicTag".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreatePicTag".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateResp {
@@ -501,6 +741,16 @@ pub struct CreateResp {
     #[prost(message, optional, tag = "7")]
     pub share_window: ::core::option::Option<ShareDynWindow>,
 }
+impl ::prost::Name for CreateResp {
+    const NAME: &'static str = "CreateResp";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateTag {
@@ -513,6 +763,16 @@ pub struct CreateTag {
     ///
     #[prost(message, optional, tag = "3")]
     pub diversion: ::core::option::Option<BottomBusiness>,
+}
+impl ::prost::Name for CreateTag {
+    const NAME: &'static str = "CreateTag";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateTag".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateTag".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -533,6 +793,16 @@ pub struct CreateTopic {
     #[prost(int64, tag = "5")]
     pub super_topic_id: i64,
 }
+impl ::prost::Name for CreateTopic {
+    const NAME: &'static str = "CreateTopic";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.CreateTopic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.CreateTopic".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynIdentity {
@@ -543,6 +813,16 @@ pub struct DynIdentity {
     #[prost(message, optional, tag = "2")]
     pub revs_id: ::core::option::Option<DynRevsId>,
 }
+impl ::prost::Name for DynIdentity {
+    const NAME: &'static str = "DynIdentity";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynIdentity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynIdentity".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynRevsId {
@@ -552,6 +832,16 @@ pub struct DynRevsId {
     ///
     #[prost(int64, tag = "2")]
     pub rid: i64,
+}
+impl ::prost::Name for DynRevsId {
+    const NAME: &'static str = "DynRevsId";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynRevsId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynRevsId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -680,6 +970,16 @@ pub struct DynVideoEditor {
     #[prost(int32, tag = "41")]
     pub pip_count: i32,
 }
+impl ::prost::Name for DynVideoEditor {
+    const NAME: &'static str = "DynVideoEditor";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoEditor".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoEditor".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynVideoHotAct {
@@ -705,6 +1005,16 @@ pub struct DynVideoHotAct {
     #[prost(string, tag = "7")]
     pub link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DynVideoHotAct {
+    const NAME: &'static str = "DynVideoHotAct";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoHotAct".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoHotAct".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynVideoMultiP {
@@ -721,6 +1031,16 @@ pub struct DynVideoMultiP {
     #[prost(message, optional, tag = "4")]
     pub editor: ::core::option::Option<DynVideoEditor>,
 }
+impl ::prost::Name for DynVideoMultiP {
+    const NAME: &'static str = "DynVideoMultiP";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoMultiP".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoMultiP".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynVideoPushIntro {
@@ -730,6 +1050,16 @@ pub struct DynVideoPushIntro {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DynVideoPushIntro {
+    const NAME: &'static str = "DynVideoPushIntro";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoPushIntro".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoPushIntro".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -744,6 +1074,16 @@ pub struct DynVideoSubmitActBanner {
     #[prost(message, repeated, tag = "3")]
     pub list: ::prost::alloc::vec::Vec<DynVideoHotAct>,
 }
+impl ::prost::Name for DynVideoSubmitActBanner {
+    const NAME: &'static str = "DynVideoSubmitActBanner";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoSubmitActBanner".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoSubmitActBanner".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynVideoTopic {
@@ -753,6 +1093,16 @@ pub struct DynVideoTopic {
     ///
     #[prost(int64, tag = "2")]
     pub from_topic_id: i64,
+}
+impl ::prost::Name for DynVideoTopic {
+    const NAME: &'static str = "DynVideoTopic";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoTopic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoTopic".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -767,6 +1117,16 @@ pub struct DynVideoVote {
     #[prost(int32, tag = "3")]
     pub top_for_reply: i32,
 }
+impl ::prost::Name for DynVideoVote {
+    const NAME: &'static str = "DynVideoVote";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoVote".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoVote".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynVideoWatermark {
@@ -780,12 +1140,32 @@ pub struct DynVideoWatermark {
     #[prost(int32, tag = "3")]
     pub position: i32,
 }
+impl ::prost::Name for DynVideoWatermark {
+    const NAME: &'static str = "DynVideoWatermark";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.DynVideoWatermark".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.DynVideoWatermark".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EmoteNode {
     ///
     #[prost(string, tag = "1")]
     pub raw_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EmoteNode {
+    const NAME: &'static str = "EmoteNode";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.EmoteNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.EmoteNode".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -815,6 +1195,16 @@ pub struct ExtLbs {
     #[prost(string, tag = "8")]
     pub show_distance: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ExtLbs {
+    const NAME: &'static str = "ExtLbs";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ExtLbs".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ExtLbs".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FormulaNode {
@@ -825,6 +1215,16 @@ pub struct FormulaNode {
     #[prost(message, optional, tag = "2")]
     pub pic: ::core::option::Option<Pic>,
 }
+impl ::prost::Name for FormulaNode {
+    const NAME: &'static str = "FormulaNode";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.FormulaNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.FormulaNode".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUidByNameReq {
@@ -832,12 +1232,32 @@ pub struct GetUidByNameReq {
     #[prost(string, repeated, tag = "1")]
     pub names: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for GetUidByNameReq {
+    const NAME: &'static str = "GetUidByNameReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.GetUidByNameReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.GetUidByNameReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUidByNameRsp {
     ///
     #[prost(map = "string, int64", tag = "1")]
     pub uids: ::std::collections::HashMap<::prost::alloc::string::String, i64>,
+}
+impl ::prost::Name for GetUidByNameRsp {
+    const NAME: &'static str = "GetUidByNameRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.GetUidByNameRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.GetUidByNameRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -864,6 +1284,16 @@ pub struct GoodsContent {
     #[prost(int64, tag = "7")]
     pub sub_type: i64,
 }
+impl ::prost::Name for GoodsContent {
+    const NAME: &'static str = "GoodsContent";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.GoodsContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.GoodsContent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LaunchedActivity {
@@ -876,6 +1306,16 @@ pub struct LaunchedActivity {
     ///
     #[prost(message, optional, tag = "3")]
     pub show_more: ::core::option::Option<ShowMoreLaunchedActivity>,
+}
+impl ::prost::Name for LaunchedActivity {
+    const NAME: &'static str = "LaunchedActivity";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LaunchedActivity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LaunchedActivity".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -890,6 +1330,16 @@ pub struct LaunchedActivityItem {
     #[prost(int32, tag = "3")]
     pub activity_state: i32,
 }
+impl ::prost::Name for LaunchedActivityItem {
+    const NAME: &'static str = "LaunchedActivityItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LaunchedActivityItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LaunchedActivityItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LbsLoc {
@@ -900,12 +1350,32 @@ pub struct LbsLoc {
     #[prost(double, tag = "2")]
     pub lng: f64,
 }
+impl ::prost::Name for LbsLoc {
+    const NAME: &'static str = "LbsLoc";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LbsLoc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LbsLoc".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LineParagraph {
     ///
     #[prost(message, optional, tag = "1")]
     pub pic: ::core::option::Option<Pic>,
+}
+impl ::prost::Name for LineParagraph {
+    const NAME: &'static str = "LineParagraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LineParagraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LineParagraph".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -962,6 +1432,26 @@ pub mod link_node {
         #[prost(string, tag = "7")]
         pub font_level: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for LinkNodeStyle {
+        const NAME: &'static str = "LinkNodeStyle";
+        const PACKAGE: &'static str = "bilibili.dynamic.common";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.dynamic.common.LinkNode.LinkNodeStyle".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.dynamic.common.LinkNode.LinkNodeStyle".into()
+        }
+    }
+}
+impl ::prost::Name for LinkNode {
+    const NAME: &'static str = "LinkNode";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LinkNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LinkNode".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -984,6 +1474,16 @@ pub struct LiveWaterMark {
     ///
     #[prost(string, tag = "6")]
     pub biz: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LiveWaterMark {
+    const NAME: &'static str = "LiveWaterMark";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.LiveWaterMark".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.LiveWaterMark".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1028,6 +1528,16 @@ pub struct MetaDataCtrl {
     #[prost(string, tag = "13")]
     pub ip: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MetaDataCtrl {
+    const NAME: &'static str = "MetaDataCtrl";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.MetaDataCtrl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.MetaDataCtrl".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OnlyFansDndSetting {
@@ -1046,6 +1556,16 @@ pub struct OnlyFansDndSetting {
     ///
     #[prost(string, tag = "5")]
     pub pop_btn_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OnlyFansDndSetting {
+    const NAME: &'static str = "OnlyFansDndSetting";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OnlyFansDndSetting".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OnlyFansDndSetting".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1072,6 +1592,16 @@ pub struct OnlyFansOption {
     #[prost(string, tag = "7")]
     pub desc_subtitle: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OnlyFansOption {
+    const NAME: &'static str = "OnlyFansOption";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OnlyFansOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OnlyFansOption".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OnlyFansPermission {
@@ -1096,6 +1626,16 @@ pub struct OnlyFansPermission {
     ///
     #[prost(message, optional, tag = "7")]
     pub dnd_setting: ::core::option::Option<OnlyFansDndSetting>,
+}
+impl ::prost::Name for OnlyFansPermission {
+    const NAME: &'static str = "OnlyFansPermission";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OnlyFansPermission".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OnlyFansPermission".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1134,12 +1674,32 @@ pub struct Opus {
     #[prost(int64, tag = "11")]
     pub music_id: i64,
 }
+impl ::prost::Name for Opus {
+    const NAME: &'static str = "Opus";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Opus".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Opus".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OpusContent {
     ///
     #[prost(message, repeated, tag = "1")]
     pub paragraphs: ::prost::alloc::vec::Vec<Paragraph>,
+}
+impl ::prost::Name for OpusContent {
+    const NAME: &'static str = "OpusContent";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OpusContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OpusContent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1169,12 +1729,32 @@ pub struct OpusSummary {
     #[prost(int64, tag = "8")]
     pub music_id: i64,
 }
+impl ::prost::Name for OpusSummary {
+    const NAME: &'static str = "OpusSummary";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OpusSummary".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OpusSummary".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OpusTag {
     ///
     #[prost(message, optional, tag = "1")]
     pub tag: ::core::option::Option<LinkNode>,
+}
+impl ::prost::Name for OpusTag {
+    const NAME: &'static str = "OpusTag";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OpusTag".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OpusTag".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1216,6 +1796,16 @@ pub mod paragraph {
         #[prost(string, tag = "3")]
         pub theme: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for ListFormat {
+        const NAME: &'static str = "ListFormat";
+        const PACKAGE: &'static str = "bilibili.dynamic.common";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.dynamic.common.Paragraph.ListFormat".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.dynamic.common.Paragraph.ListFormat".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct ParagraphFormat {
@@ -1225,6 +1815,16 @@ pub mod paragraph {
         ///
         #[prost(message, optional, tag = "2")]
         pub list_format: ::core::option::Option<ListFormat>,
+    }
+    impl ::prost::Name for ParagraphFormat {
+        const NAME: &'static str = "ParagraphFormat";
+        const PACKAGE: &'static str = "bilibili.dynamic.common";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.dynamic.common.Paragraph.ParagraphFormat".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.dynamic.common.Paragraph.ParagraphFormat".into()
+        }
     }
     ///
     #[derive(
@@ -1333,6 +1933,16 @@ pub mod paragraph {
         }
     }
 }
+impl ::prost::Name for Paragraph {
+    const NAME: &'static str = "Paragraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Paragraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Paragraph".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PermissionWebItem {
@@ -1348,6 +1958,16 @@ pub struct PermissionWebItem {
     ///
     #[prost(string, repeated, tag = "4")]
     pub features: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for PermissionWebItem {
+    const NAME: &'static str = "PermissionWebItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PermissionWebItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PermissionWebItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1389,6 +2009,16 @@ pub struct PermissionsWeb {
     #[prost(message, optional, tag = "12")]
     pub goods: ::core::option::Option<PermissionWebItem>,
 }
+impl ::prost::Name for PermissionsWeb {
+    const NAME: &'static str = "PermissionsWeb";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PermissionsWeb".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PermissionsWeb".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pic {
@@ -1422,6 +2052,16 @@ pub struct Pic {
     ///
     #[prost(string, tag = "10")]
     pub live_video_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Pic {
+    const NAME: &'static str = "Pic";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Pic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Pic".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1479,12 +2119,32 @@ pub mod pic_paragraph {
         }
     }
 }
+impl ::prost::Name for PicParagraph {
+    const NAME: &'static str = "PicParagraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PicParagraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PicParagraph".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlusRedDot {
     ///
     #[prost(int64, tag = "1")]
     pub plus_has_red_dot: i64,
+}
+impl ::prost::Name for PlusRedDot {
+    const NAME: &'static str = "PlusRedDot";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PlusRedDot".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PlusRedDot".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1511,6 +2171,16 @@ pub struct Program {
     #[prost(string, tag = "7")]
     pub jump_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Program {
+    const NAME: &'static str = "Program";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Program".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Program".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PubInfo {
@@ -1526,6 +2196,16 @@ pub struct PubInfo {
     ///
     #[prost(int64, tag = "4")]
     pub timer_pub_time: i64,
+}
+impl ::prost::Name for PubInfo {
+    const NAME: &'static str = "PubInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PubInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PubInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1549,6 +2229,16 @@ pub struct PublishSetting {
     #[prost(int64, tag = "6")]
     pub title_max_len: i64,
 }
+impl ::prost::Name for PublishSetting {
+    const NAME: &'static str = "PublishSetting";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PublishSetting".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PublishSetting".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PublishWebSettings {
@@ -1568,6 +2258,16 @@ pub struct PublishWebSettings {
     #[prost(int64, tag = "5")]
     pub max_pic_count_type: i64,
 }
+impl ::prost::Name for PublishWebSettings {
+    const NAME: &'static str = "PublishWebSettings";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PublishWebSettings".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PublishWebSettings".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PublishYellowBar {
@@ -1581,6 +2281,16 @@ pub struct PublishYellowBar {
     #[prost(string, tag = "3")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PublishYellowBar {
+    const NAME: &'static str = "PublishYellowBar";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.PublishYellowBar".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.PublishYellowBar".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RepostInitCheck {
@@ -1593,6 +2303,16 @@ pub struct RepostInitCheck {
     ///
     #[prost(int32, tag = "3")]
     pub share_mode: i32,
+}
+impl ::prost::Name for RepostInitCheck {
+    const NAME: &'static str = "RepostInitCheck";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.RepostInitCheck".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.RepostInitCheck".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1610,6 +2330,16 @@ pub struct ShareChannel {
     #[prost(message, repeated, tag = "4")]
     pub share_channels: ::prost::alloc::vec::Vec<ShareChannelItem>,
 }
+impl ::prost::Name for ShareChannel {
+    const NAME: &'static str = "ShareChannel";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareChannel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareChannel".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareChannelItem {
@@ -1626,6 +2356,16 @@ pub struct ShareChannelItem {
     #[prost(message, optional, tag = "4")]
     pub reserve: ::core::option::Option<ShareReserve>,
 }
+impl ::prost::Name for ShareChannelItem {
+    const NAME: &'static str = "ShareChannelItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareChannelItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareChannelItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareDynWindow {
@@ -1638,6 +2378,16 @@ pub struct ShareDynWindow {
     ///
     #[prost(message, optional, tag = "3")]
     pub dyn_item: ::core::option::Option<super::super::app::dynamic::v2::DynamicItem>,
+}
+impl ::prost::Name for ShareDynWindow {
+    const NAME: &'static str = "ShareDynWindow";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareDynWindow".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareDynWindow".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1673,6 +2423,16 @@ pub struct ShareReserve {
     #[prost(string, tag = "10")]
     pub badge_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ShareReserve {
+    const NAME: &'static str = "ShareReserve";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareReserve".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareReserve".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareReserveLottery {
@@ -1682,6 +2442,16 @@ pub struct ShareReserveLottery {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShareReserveLottery {
+    const NAME: &'static str = "ShareReserveLottery";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareReserveLottery".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareReserveLottery".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1696,6 +2466,16 @@ pub struct ShareReservePoster {
     #[prost(double, tag = "3")]
     pub height: f64,
 }
+impl ::prost::Name for ShareReservePoster {
+    const NAME: &'static str = "ShareReservePoster";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareReservePoster".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareReservePoster".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareResult {
@@ -1709,6 +2489,16 @@ pub struct ShareResult {
     #[prost(int64, tag = "3")]
     pub forbid_sync_comment: i64,
 }
+impl ::prost::Name for ShareResult {
+    const NAME: &'static str = "ShareResult";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShareResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShareResult".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShowMoreLaunchedActivity {
@@ -1718,6 +2508,16 @@ pub struct ShowMoreLaunchedActivity {
     ///
     #[prost(string, tag = "2")]
     pub jump_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShowMoreLaunchedActivity {
+    const NAME: &'static str = "ShowMoreLaunchedActivity";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.ShowMoreLaunchedActivity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.ShowMoreLaunchedActivity".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1743,6 +2543,16 @@ pub struct Sketch {
     ///
     #[prost(string, tag = "7")]
     pub target_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Sketch {
+    const NAME: &'static str = "Sketch";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Sketch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Sketch".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1821,12 +2631,32 @@ pub mod text_node {
         }
     }
 }
+impl ::prost::Name for TextNode {
+    const NAME: &'static str = "TextNode";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.TextNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.TextNode".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TextParagraph {
     ///
     #[prost(message, repeated, tag = "1")]
     pub nodes: ::prost::alloc::vec::Vec<TextNode>,
+}
+impl ::prost::Name for TextParagraph {
+    const NAME: &'static str = "TextParagraph";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.TextParagraph".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.TextParagraph".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1843,6 +2673,16 @@ pub struct UpPermission {
     ///
     #[prost(message, optional, tag = "4")]
     pub only_fans_permission: ::core::option::Option<OnlyFansPermission>,
+}
+impl ::prost::Name for UpPermission {
+    const NAME: &'static str = "UpPermission";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.UpPermission".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.UpPermission".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1872,6 +2712,16 @@ pub struct UpPermissionItem {
     #[prost(int64, tag = "8")]
     pub has_red_dot: i64,
 }
+impl ::prost::Name for UpPermissionItem {
+    const NAME: &'static str = "UpPermissionItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.UpPermissionItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.UpPermissionItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserCreateMeta {
@@ -1885,6 +2735,16 @@ pub struct UserCreateMeta {
     #[prost(int32, tag = "3")]
     pub repost_mode: i32,
 }
+impl ::prost::Name for UserCreateMeta {
+    const NAME: &'static str = "UserCreateMeta";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.UserCreateMeta".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.UserCreateMeta".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Version {
@@ -1895,6 +2755,16 @@ pub struct Version {
     #[prost(int64, tag = "2")]
     pub version_id: i64,
 }
+impl ::prost::Name for Version {
+    const NAME: &'static str = "Version";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Version".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Version".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct VideoShareInfo {
@@ -1904,6 +2774,16 @@ pub struct VideoShareInfo {
     ///
     #[prost(int32, tag = "2")]
     pub part: i32,
+}
+impl ::prost::Name for VideoShareInfo {
+    const NAME: &'static str = "VideoShareInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.VideoShareInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.VideoShareInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1938,6 +2818,16 @@ pub struct VideoTs {
     ///
     #[prost(string, tag = "10")]
     pub desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for VideoTs {
+    const NAME: &'static str = "VideoTs";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.VideoTs".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.VideoTs".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1978,6 +2868,26 @@ pub mod word_node {
         ///
         #[prost(bool, tag = "4")]
         pub underline: bool,
+    }
+    impl ::prost::Name for WordNodeStyle {
+        const NAME: &'static str = "WordNodeStyle";
+        const PACKAGE: &'static str = "bilibili.dynamic.common";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.dynamic.common.WordNode.WordNodeStyle".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.dynamic.common.WordNode.WordNodeStyle".into()
+        }
+    }
+}
+impl ::prost::Name for WordNode {
+    const NAME: &'static str = "WordNode";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.WordNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.WordNode".into()
     }
 }
 ///

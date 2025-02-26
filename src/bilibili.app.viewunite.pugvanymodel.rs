@@ -6,6 +6,16 @@ pub struct AbTest {
     #[prost(map = "string, int32", tag = "1")]
     pub exp: ::std::collections::HashMap<::prost::alloc::string::String, i32>,
 }
+impl ::prost::Name for AbTest {
+    const NAME: &'static str = "AbTest";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.AbTest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.AbTest".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CatalogueInfo {
@@ -18,6 +28,16 @@ pub struct CatalogueInfo {
     ///
     #[prost(string, tag = "3")]
     pub catalogue_update_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CatalogueInfo {
+    const NAME: &'static str = "CatalogueInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.CatalogueInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.CatalogueInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -38,6 +58,16 @@ pub struct CatalogueLiveInfo {
     #[prost(enumeration = "LiveStatus", tag = "5")]
     pub status: i32,
 }
+impl ::prost::Name for CatalogueLiveInfo {
+    const NAME: &'static str = "CatalogueLiveInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.CatalogueLiveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.CatalogueLiveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CourseCoach {
@@ -47,6 +77,16 @@ pub struct CourseCoach {
     ///
     #[prost(string, tag = "2")]
     pub directory_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CourseCoach {
+    const NAME: &'static str = "CourseCoach";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.CourseCoach".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.CourseCoach".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -73,12 +113,32 @@ pub struct Courseware {
     #[prost(string, tag = "7")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Courseware {
+    const NAME: &'static str = "Courseware";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.Courseware".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.Courseware".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CoursewareInfo {
     ///
     #[prost(message, repeated, tag = "1")]
     pub coursewares: ::prost::alloc::vec::Vec<Courseware>,
+}
+impl ::prost::Name for CoursewareInfo {
+    const NAME: &'static str = "CoursewareInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.CoursewareInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.CoursewareInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -99,6 +159,16 @@ pub struct CredentialInfo {
     #[prost(int64, tag = "5")]
     pub require_ep: i64,
 }
+impl ::prost::Name for CredentialInfo {
+    const NAME: &'static str = "CredentialInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.CredentialInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.CredentialInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DanmakuControl {
@@ -108,6 +178,16 @@ pub struct DanmakuControl {
     ///
     #[prost(message, optional, tag = "2")]
     pub extra_content: ::core::option::Option<ExtraContent>,
+}
+impl ::prost::Name for DanmakuControl {
+    const NAME: &'static str = "DanmakuControl";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.DanmakuControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.DanmakuControl".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -132,6 +212,16 @@ pub mod episode {
         LiveEpisode(super::LiveEpisode),
     }
 }
+impl ::prost::Name for Episode {
+    const NAME: &'static str = "Episode";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.Episode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.Episode".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct EpisodeDimension {
@@ -144,6 +234,16 @@ pub struct EpisodeDimension {
     ///
     #[prost(int64, tag = "3")]
     pub rotate: i64,
+}
+impl ::prost::Name for EpisodeDimension {
+    const NAME: &'static str = "EpisodeDimension";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.EpisodeDimension".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.EpisodeDimension".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -161,12 +261,32 @@ pub struct EpisodeHistory {
     #[prost(string, tag = "4")]
     pub full_watched_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EpisodeHistory {
+    const NAME: &'static str = "EpisodeHistory";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.EpisodeHistory".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.EpisodeHistory".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EpisodeLabel {
     ///
     #[prost(string, tag = "1")]
     pub type_label: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EpisodeLabel {
+    const NAME: &'static str = "EpisodeLabel";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.EpisodeLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.EpisodeLabel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -175,12 +295,32 @@ pub struct EpisodeSelectionLabel {
     #[prost(string, tag = "1")]
     pub type_label: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EpisodeSelectionLabel {
+    const NAME: &'static str = "EpisodeSelectionLabel";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.EpisodeSelectionLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.EpisodeSelectionLabel".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExtraContent {
     ///
     #[prost(string, tag = "1")]
     pub disabled_reason: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ExtraContent {
+    const NAME: &'static str = "ExtraContent";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.ExtraContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.ExtraContent".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -189,12 +329,32 @@ pub struct FragmentVideoMessage {
     #[prost(bool, tag = "1")]
     pub has_fragment_video: bool,
 }
+impl ::prost::Name for FragmentVideoMessage {
+    const NAME: &'static str = "FragmentVideoMessage";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.FragmentVideoMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.FragmentVideoMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GiftInfo {
     ///
     #[prost(string, tag = "1")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GiftInfo {
+    const NAME: &'static str = "GiftInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.GiftInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.GiftInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -239,6 +399,16 @@ pub struct LiveEpisode {
     #[prost(message, optional, tag = "13")]
     pub selection_label: ::core::option::Option<EpisodeSelectionLabel>,
 }
+impl ::prost::Name for LiveEpisode {
+    const NAME: &'static str = "LiveEpisode";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.LiveEpisode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.LiveEpisode".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LiveInfo {
@@ -260,6 +430,16 @@ pub struct LiveInfo {
     ///
     #[prost(bool, tag = "6")]
     pub be_subscription_prebook: bool,
+}
+impl ::prost::Name for LiveInfo {
+    const NAME: &'static str = "LiveInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.LiveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.LiveInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -283,6 +463,16 @@ pub struct NetdiskCourseware {
     #[prost(string, tag = "6")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for NetdiskCourseware {
+    const NAME: &'static str = "NetdiskCourseware";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.NetdiskCourseware".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.NetdiskCourseware".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NetdiskCoursewareInfo {
@@ -290,12 +480,32 @@ pub struct NetdiskCoursewareInfo {
     #[prost(message, repeated, tag = "1")]
     pub coursewares: ::prost::alloc::vec::Vec<NetdiskCourseware>,
 }
+impl ::prost::Name for NetdiskCoursewareInfo {
+    const NAME: &'static str = "NetdiskCoursewareInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.NetdiskCoursewareInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.NetdiskCoursewareInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OperationArea {
     ///
     #[prost(message, repeated, tag = "1")]
     pub buttons: ::prost::alloc::vec::Vec<OperationAreaButton>,
+}
+impl ::prost::Name for OperationArea {
+    const NAME: &'static str = "OperationArea";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.OperationArea".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.OperationArea".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -313,6 +523,16 @@ pub struct OperationAreaButton {
     #[prost(string, tag = "4")]
     pub link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OperationAreaButton {
+    const NAME: &'static str = "OperationAreaButton";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.OperationAreaButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.OperationAreaButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PostPurchaseInfo {
@@ -322,6 +542,16 @@ pub struct PostPurchaseInfo {
     ///
     #[prost(int64, tag = "2")]
     pub pop_up_interval: i64,
+}
+impl ::prost::Name for PostPurchaseInfo {
+    const NAME: &'static str = "PostPurchaseInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.PostPurchaseInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.PostPurchaseInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -338,6 +568,16 @@ pub struct SeasonCatalogue {
     ///
     #[prost(int64, tag = "4")]
     pub end_ep_index: i64,
+}
+impl ::prost::Name for SeasonCatalogue {
+    const NAME: &'static str = "SeasonCatalogue";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonCatalogue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonCatalogue".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -397,6 +637,16 @@ pub struct SeasonCoupon {
     #[prost(bool, tag = "18")]
     pub scene_countdown: bool,
 }
+impl ::prost::Name for SeasonCoupon {
+    const NAME: &'static str = "SeasonCoupon";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonCoupon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonCoupon".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SeasonCustom {
@@ -406,6 +656,16 @@ pub struct SeasonCustom {
     ///
     #[prost(message, optional, tag = "2")]
     pub danmaku_control: ::core::option::Option<DanmakuControl>,
+}
+impl ::prost::Name for SeasonCustom {
+    const NAME: &'static str = "SeasonCustom";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonCustom".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonCustom".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -429,6 +689,16 @@ pub struct SeasonOverview {
     #[prost(string, tag = "6")]
     pub title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SeasonOverview {
+    const NAME: &'static str = "SeasonOverview";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonOverview".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonOverview".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SeasonPayment {
@@ -447,6 +717,16 @@ pub struct SeasonPayment {
     ///
     #[prost(string, tag = "5")]
     pub original_price_desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SeasonPayment {
+    const NAME: &'static str = "SeasonPayment";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonPayment".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonPayment".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -467,6 +747,16 @@ pub struct SeasonSection {
     #[prost(message, repeated, tag = "5")]
     pub episodes: ::prost::alloc::vec::Vec<Episode>,
 }
+impl ::prost::Name for SeasonSection {
+    const NAME: &'static str = "SeasonSection";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonSection".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonSection".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SeasonStat {
@@ -477,12 +767,32 @@ pub struct SeasonStat {
     #[prost(int64, tag = "2")]
     pub share: i64,
 }
+impl ::prost::Name for SeasonStat {
+    const NAME: &'static str = "SeasonStat";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SeasonStat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SeasonStat".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SectionInfo {
     ///
     #[prost(message, repeated, tag = "1")]
     pub sections: ::prost::alloc::vec::Vec<SeasonSection>,
+}
+impl ::prost::Name for SectionInfo {
+    const NAME: &'static str = "SectionInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.SectionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.SectionInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -545,6 +855,16 @@ pub struct VideoEpisode {
     #[prost(message, optional, tag = "19")]
     pub dimension: ::core::option::Option<EpisodeDimension>,
 }
+impl ::prost::Name for VideoEpisode {
+    const NAME: &'static str = "VideoEpisode";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.VideoEpisode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.VideoEpisode".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ViewPugvAny {
@@ -597,6 +917,16 @@ pub struct ViewPugvAny {
     #[prost(message, optional, tag = "16")]
     pub fragment_video_message: ::core::option::Option<FragmentVideoMessage>,
 }
+impl ::prost::Name for ViewPugvAny {
+    const NAME: &'static str = "ViewPugvAny";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.ViewPugvAny".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.ViewPugvAny".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct WaterMark {
@@ -606,6 +936,16 @@ pub struct WaterMark {
     ///
     #[prost(int64, tag = "2")]
     pub watermark_interval: i64,
+}
+impl ::prost::Name for WaterMark {
+    const NAME: &'static str = "WaterMark";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.WaterMark".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.WaterMark".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

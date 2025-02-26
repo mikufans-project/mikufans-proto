@@ -9,10 +9,30 @@ pub struct SearchAutoPlay {
     #[prost(message, optional, tag = "2")]
     pub affected_by_server_side: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for SearchAutoPlay {
+    const NAME: &'static str = "SearchAutoPlay";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.search";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.search.SearchAutoPlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.search.SearchAutoPlay".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchDeviceConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub auto_play: ::core::option::Option<SearchAutoPlay>,
+}
+impl ::prost::Name for SearchDeviceConfig {
+    const NAME: &'static str = "SearchDeviceConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.search";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.search.SearchDeviceConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.search.SearchDeviceConfig".into()
+    }
 }

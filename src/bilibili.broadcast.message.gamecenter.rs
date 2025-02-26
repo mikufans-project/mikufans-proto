@@ -6,12 +6,32 @@ pub struct PushEventMessage {
     #[prost(enumeration = "PushEvent", tag = "1")]
     pub event_type: i32,
 }
+impl ::prost::Name for PushEventMessage {
+    const NAME: &'static str = "PushEventMessage";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.gamecenter";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.gamecenter.PushEventMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.gamecenter.PushEventMessage".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PushEventReply {
     ///
     #[prost(enumeration = "PushEvent", tag = "1")]
     pub event_type: i32,
+}
+impl ::prost::Name for PushEventReply {
+    const NAME: &'static str = "PushEventReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.gamecenter";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.gamecenter.PushEventReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.gamecenter.PushEventReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

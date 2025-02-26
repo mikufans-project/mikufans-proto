@@ -6,9 +6,29 @@ pub struct DummyReq {
     #[prost(int32, tag = "1")]
     pub idl: i32,
 }
+impl ::prost::Name for DummyReq {
+    const NAME: &'static str = "DummyReq";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.DummyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.DummyReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DummyRsp {}
+impl ::prost::Name for DummyRsp {
+    const NAME: &'static str = "DummyRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.DummyRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.DummyRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EmotionInfo {
@@ -25,6 +45,16 @@ pub struct EmotionInfo {
     #[prost(string, tag = "4")]
     pub gif_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EmotionInfo {
+    const NAME: &'static str = "EmotionInfo";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.EmotionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.EmotionInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserCosmoStateReq {
@@ -34,6 +64,16 @@ pub struct GetUserCosmoStateReq {
     ///
     #[prost(int64, tag = "2")]
     pub card_send_mid: i64,
+}
+impl ::prost::Name for GetUserCosmoStateReq {
+    const NAME: &'static str = "GetUserCosmoStateReq";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.GetUserCosmoStateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.GetUserCosmoStateReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -54,12 +94,32 @@ pub struct GetUserCosmoStateRsp {
     #[prost(string, tag = "5")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GetUserCosmoStateRsp {
+    const NAME: &'static str = "GetUserCosmoStateRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.GetUserCosmoStateRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.GetUserCosmoStateRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HasLikeState {
     ///
     #[prost(enumeration = "MsgLikeState", tag = "1")]
     pub state: i32,
+}
+impl ::prost::Name for HasLikeState {
+    const NAME: &'static str = "HasLikeState";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.HasLikeState".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.HasLikeState".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -71,12 +131,32 @@ pub struct MsgDetail {
     #[prost(int64, tag = "2")]
     pub seqno: i64,
 }
+impl ::prost::Name for MsgDetail {
+    const NAME: &'static str = "MsgDetail";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.MsgDetail".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.MsgDetail".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgFeedUnreadRsp {
     ///
     #[prost(map = "string, int64", tag = "1")]
     pub unread: ::std::collections::HashMap<::prost::alloc::string::String, i64>,
+}
+impl ::prost::Name for MsgFeedUnreadRsp {
+    const NAME: &'static str = "MsgFeedUnreadRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.MsgFeedUnreadRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.MsgFeedUnreadRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -88,12 +168,32 @@ pub struct NewTotalUnread {
     #[prost(int32, tag = "2")]
     pub unread_type: i32,
 }
+impl ::prost::Name for NewTotalUnread {
+    const NAME: &'static str = "NewTotalUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.NewTotalUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.NewTotalUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqAckAssisMsg {
     ///
     #[prost(int64, tag = "1")]
     pub ack_seqno: i64,
+}
+impl ::prost::Name for ReqAckAssisMsg {
+    const NAME: &'static str = "ReqAckAssisMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqAckAssisMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqAckAssisMsg".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -108,15 +208,55 @@ pub struct ReqAckSessions {
     #[prost(int32, tag = "3")]
     pub size: i32,
 }
+impl ::prost::Name for ReqAckSessions {
+    const NAME: &'static str = "ReqAckSessions";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqAckSessions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqAckSessions".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqBatRmSess {}
+impl ::prost::Name for ReqBatRmSess {
+    const NAME: &'static str = "ReqBatRmSess";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqBatRmSess".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqBatRmSess".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqCloseClearUnreadUi {}
+impl ::prost::Name for ReqCloseClearUnreadUi {
+    const NAME: &'static str = "ReqCloseClearUnreadUI";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqCloseClearUnreadUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqCloseClearUnreadUI".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqGetDiscussListInImPage {}
+impl ::prost::Name for ReqGetDiscussListInImPage {
+    const NAME: &'static str = "ReqGetDiscussListInImPage";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqGetDiscussListInImPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqGetDiscussListInImPage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReqGetMsg {
@@ -129,6 +269,16 @@ pub struct ReqGetMsg {
     ///
     #[prost(message, repeated, tag = "3")]
     pub msg_detail: ::prost::alloc::vec::Vec<MsgDetail>,
+}
+impl ::prost::Name for ReqGetMsg {
+    const NAME: &'static str = "ReqGetMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqGetMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqGetMsg".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -167,12 +317,32 @@ pub struct ReqGetSessions {
     #[prost(int64, tag = "11")]
     pub ai_uid: i64,
 }
+impl ::prost::Name for ReqGetSessions {
+    const NAME: &'static str = "ReqGetSessions";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqGetSessions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqGetSessions".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReqGetSpecificSessions {
     ///
     #[prost(message, repeated, tag = "1")]
     pub talker_sessions: ::prost::alloc::vec::Vec<SimpleSession>,
+}
+impl ::prost::Name for ReqGetSpecificSessions {
+    const NAME: &'static str = "ReqGetSpecificSessions";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqGetSpecificSessions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqGetSpecificSessions".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -184,6 +354,16 @@ pub struct ReqGroupAssisMsg {
     #[prost(int32, tag = "2")]
     pub size: i32,
 }
+impl ::prost::Name for ReqGroupAssisMsg {
+    const NAME: &'static str = "ReqGroupAssisMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqGroupAssisMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqGroupAssisMsg".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqLikeMsg {
@@ -193,6 +373,16 @@ pub struct ReqLikeMsg {
     ///
     #[prost(enumeration = "MsgLikeAction", tag = "2")]
     pub action: i32,
+}
+impl ::prost::Name for ReqLikeMsg {
+    const NAME: &'static str = "ReqLikeMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqLikeMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqLikeMsg".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -204,12 +394,32 @@ pub struct ReqLiveInfo {
     #[prost(int64, tag = "2")]
     pub talker_id: i64,
 }
+impl ::prost::Name for ReqLiveInfo {
+    const NAME: &'static str = "ReqLiveInfo";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqLiveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqLiveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReqMsgHasLike {
     ///
     #[prost(int64, repeated, tag = "1")]
     pub msg_keys: ::prost::alloc::vec::Vec<i64>,
+}
+impl ::prost::Name for ReqMsgHasLike {
+    const NAME: &'static str = "ReqMsgHasLike";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqMsgHasLike".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqMsgHasLike".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -230,12 +440,32 @@ pub struct ReqNewSessions {
     #[prost(int32, repeated, tag = "5")]
     pub sids: ::prost::alloc::vec::Vec<i32>,
 }
+impl ::prost::Name for ReqNewSessions {
+    const NAME: &'static str = "ReqNewSessions";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqNewSessions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqNewSessions".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqRelationSync {
     ///
     #[prost(int64, tag = "1")]
     pub client_relation_oplog_seqno: i64,
+}
+impl ::prost::Name for ReqRelationSync {
+    const NAME: &'static str = "ReqRelationSync";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqRelationSync".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqRelationSync".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -252,6 +482,16 @@ pub struct ReqRemoveSession {
     ///
     #[prost(int64, tag = "4")]
     pub shop_father_id: i64,
+}
+impl ::prost::Name for ReqRemoveSession {
+    const NAME: &'static str = "ReqRemoveSession";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqRemoveSession".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqRemoveSession".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -272,6 +512,16 @@ pub struct ReqSendMsg {
     #[prost(string, tag = "5")]
     pub dev_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ReqSendMsg {
+    const NAME: &'static str = "ReqSendMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSendMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSendMsg".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqSessionDetail {
@@ -285,12 +535,32 @@ pub struct ReqSessionDetail {
     #[prost(int64, tag = "3")]
     pub uid: i64,
 }
+impl ::prost::Name for ReqSessionDetail {
+    const NAME: &'static str = "ReqSessionDetail";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSessionDetail".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSessionDetail".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReqSessionDetails {
     ///
     #[prost(message, repeated, tag = "1")]
     pub sess_ids: ::prost::alloc::vec::Vec<ReqSessionDetail>,
+}
+impl ::prost::Name for ReqSessionDetails {
+    const NAME: &'static str = "ReqSessionDetails";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSessionDetails".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSessionDetails".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -326,6 +596,16 @@ pub struct ReqSessionMsg {
     #[prost(bool, tag = "10")]
     pub need_ai_msg: bool,
 }
+impl ::prost::Name for ReqSessionMsg {
+    const NAME: &'static str = "ReqSessionMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSessionMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSessionMsg".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqSetTop {
@@ -345,6 +625,16 @@ pub struct ReqSetTop {
     #[prost(int64, tag = "5")]
     pub shop_father_id: i64,
 }
+impl ::prost::Name for ReqSetTop {
+    const NAME: &'static str = "ReqSetTop";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSetTop".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSetTop".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqShareList {
@@ -354,6 +644,16 @@ pub struct ReqShareList {
     ///
     #[prost(int32, tag = "2")]
     pub source: i32,
+}
+impl ::prost::Name for ReqShareList {
+    const NAME: &'static str = "ReqShareList";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqShareList".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqShareList".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -367,6 +667,16 @@ pub struct ReqShowClearUnreadUi {
     ///
     #[prost(int32, tag = "4")]
     pub show_dustbin: i32,
+}
+impl ::prost::Name for ReqShowClearUnreadUi {
+    const NAME: &'static str = "ReqShowClearUnreadUI";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqShowClearUnreadUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqShowClearUnreadUI".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -384,6 +694,16 @@ pub struct ReqSingleUnread {
     #[prost(int32, tag = "4")]
     pub show_dustbin: i32,
 }
+impl ::prost::Name for ReqSingleUnread {
+    const NAME: &'static str = "ReqSingleUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSingleUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSingleUnread".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReqSpecificSingleUnread {
@@ -391,12 +711,32 @@ pub struct ReqSpecificSingleUnread {
     #[prost(message, repeated, tag = "1")]
     pub talker_sessions: ::prost::alloc::vec::Vec<SimpleSession>,
 }
+impl ::prost::Name for ReqSpecificSingleUnread {
+    const NAME: &'static str = "ReqSpecificSingleUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSpecificSingleUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSpecificSingleUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqSyncAck {
     ///
     #[prost(int64, tag = "1")]
     pub client_seqno: i64,
+}
+impl ::prost::Name for ReqSyncAck {
+    const NAME: &'static str = "ReqSyncAck";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqSyncAck".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqSyncAck".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -423,6 +763,16 @@ pub struct ReqTotalUnread {
     #[prost(int32, tag = "7")]
     pub sysup_on: i32,
 }
+impl ::prost::Name for ReqTotalUnread {
+    const NAME: &'static str = "ReqTotalUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqTotalUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqTotalUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqUpdateAck {
@@ -435,6 +785,16 @@ pub struct ReqUpdateAck {
     ///
     #[prost(int64, tag = "3")]
     pub ack_seqno: i64,
+}
+impl ::prost::Name for ReqUpdateAck {
+    const NAME: &'static str = "ReqUpdateAck";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqUpdateAck".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqUpdateAck".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -449,6 +809,16 @@ pub struct ReqUpdateIntercept {
     #[prost(int32, tag = "3")]
     pub status: i32,
 }
+impl ::prost::Name for ReqUpdateIntercept {
+    const NAME: &'static str = "ReqUpdateIntercept";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqUpdateIntercept".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqUpdateIntercept".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ReqUpdateTotalUnread {
@@ -456,9 +826,29 @@ pub struct ReqUpdateTotalUnread {
     #[prost(enumeration = "UpdateUnreadScope", tag = "1")]
     pub scope: i32,
 }
+impl ::prost::Name for ReqUpdateTotalUnread {
+    const NAME: &'static str = "ReqUpdateTotalUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ReqUpdateTotalUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ReqUpdateTotalUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RspCloseClearUnreadUi {}
+impl ::prost::Name for RspCloseClearUnreadUi {
+    const NAME: &'static str = "RspCloseClearUnreadUI";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspCloseClearUnreadUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspCloseClearUnreadUI".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspGetDiscussListInImPage {
@@ -466,12 +856,32 @@ pub struct RspGetDiscussListInImPage {
     #[prost(message, repeated, tag = "1")]
     pub discuss_list: ::prost::alloc::vec::Vec<SingleDiscussInImPage>,
 }
+impl ::prost::Name for RspGetDiscussListInImPage {
+    const NAME: &'static str = "RspGetDiscussListInImPage";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspGetDiscussListInImPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspGetDiscussListInImPage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspGetMsg {
     ///
     #[prost(message, repeated, tag = "1")]
     pub msg: ::prost::alloc::vec::Vec<super::super::r#type::Msg>,
+}
+impl ::prost::Name for RspGetMsg {
+    const NAME: &'static str = "RspGetMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspGetMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspGetMsg".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -483,6 +893,16 @@ pub struct RspLiveInfo {
     #[prost(string, tag = "2")]
     pub jump_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RspLiveInfo {
+    const NAME: &'static str = "RspLiveInfo";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspLiveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspLiveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspMsgHasLike {
@@ -490,12 +910,32 @@ pub struct RspMsgHasLike {
     #[prost(map = "int64, message", tag = "1")]
     pub states: ::std::collections::HashMap<i64, HasLikeState>,
 }
+impl ::prost::Name for RspMsgHasLike {
+    const NAME: &'static str = "RspMsgHasLike";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspMsgHasLike".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspMsgHasLike".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RspMyGroupUnread {
     ///
     #[prost(int32, tag = "1")]
     pub unread_count: i32,
+}
+impl ::prost::Name for RspMyGroupUnread {
+    const NAME: &'static str = "RspMyGroupUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspMyGroupUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspMyGroupUnread".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -515,6 +955,16 @@ pub struct RspRelationSync {
     ///
     #[prost(message, repeated, tag = "5")]
     pub group_list: ::prost::alloc::vec::Vec<super::super::r#type::GroupRelation>,
+}
+impl ::prost::Name for RspRelationSync {
+    const NAME: &'static str = "RspRelationSync";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspRelationSync".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspRelationSync".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -540,12 +990,32 @@ pub struct RspSendMsg {
     #[prost(int64, tag = "6")]
     pub seqno: i64,
 }
+impl ::prost::Name for RspSendMsg {
+    const NAME: &'static str = "RspSendMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSendMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSendMsg".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspSessionDetails {
     ///
     #[prost(message, repeated, tag = "1")]
     pub sess_infos: ::prost::alloc::vec::Vec<super::super::r#type::SessionInfo>,
+}
+impl ::prost::Name for RspSessionDetails {
+    const NAME: &'static str = "RspSessionDetails";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSessionDetails".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSessionDetails".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -565,6 +1035,16 @@ pub struct RspSessionMsg {
     ///
     #[prost(message, repeated, tag = "5")]
     pub e_infos: ::prost::alloc::vec::Vec<EmotionInfo>,
+}
+impl ::prost::Name for RspSessionMsg {
+    const NAME: &'static str = "RspSessionMsg";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSessionMsg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSessionMsg".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -588,6 +1068,16 @@ pub struct RspSessions {
     #[prost(bool, tag = "6")]
     pub show_level: bool,
 }
+impl ::prost::Name for RspSessions {
+    const NAME: &'static str = "RspSessions";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSessions".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSessions".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspShareList {
@@ -598,6 +1088,16 @@ pub struct RspShareList {
     #[prost(int32, tag = "2")]
     pub is_address_list_empty: i32,
 }
+impl ::prost::Name for RspShareList {
+    const NAME: &'static str = "RspShareList";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspShareList".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspShareList".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspShowClearUnreadUi {
@@ -607,6 +1107,16 @@ pub struct RspShowClearUnreadUi {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RspShowClearUnreadUi {
+    const NAME: &'static str = "RspShowClearUnreadUI";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspShowClearUnreadUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspShowClearUnreadUI".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -633,6 +1143,16 @@ pub struct RspSingleUnread {
     #[prost(int64, tag = "7")]
     pub biz_msg_follow_unread: i64,
 }
+impl ::prost::Name for RspSingleUnread {
+    const NAME: &'static str = "RspSingleUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSingleUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSingleUnread".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspSpecificSingleUnread {
@@ -643,9 +1163,29 @@ pub struct RspSpecificSingleUnread {
     #[prost(int64, tag = "2")]
     pub all_unread_cnt: i64,
 }
+impl ::prost::Name for RspSpecificSingleUnread {
+    const NAME: &'static str = "RspSpecificSingleUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSpecificSingleUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSpecificSingleUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RspSyncAck {}
+impl ::prost::Name for RspSyncAck {
+    const NAME: &'static str = "RspSyncAck";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspSyncAck".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspSyncAck".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RspTotalUnread {
@@ -668,9 +1208,29 @@ pub struct RspTotalUnread {
     #[prost(message, optional, tag = "6")]
     pub new_total_unread: ::core::option::Option<NewTotalUnread>,
 }
+impl ::prost::Name for RspTotalUnread {
+    const NAME: &'static str = "RspTotalUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspTotalUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspTotalUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RspUpdateTotalUnread {}
+impl ::prost::Name for RspUpdateTotalUnread {
+    const NAME: &'static str = "RspUpdateTotalUnread";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.RspUpdateTotalUnread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.RspUpdateTotalUnread".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SessionSingleUnreadRsp {
@@ -702,6 +1262,16 @@ pub struct SessionSingleUnreadRsp {
     #[prost(int64, tag = "9")]
     pub custom_unread: i64,
 }
+impl ::prost::Name for SessionSingleUnreadRsp {
+    const NAME: &'static str = "SessionSingleUnreadRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.SessionSingleUnreadRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.SessionSingleUnreadRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareSessionInfo {
@@ -718,6 +1288,16 @@ pub struct ShareSessionInfo {
     #[prost(int32, tag = "4")]
     pub official_type: i32,
 }
+impl ::prost::Name for ShareSessionInfo {
+    const NAME: &'static str = "ShareSessionInfo";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.ShareSessionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.ShareSessionInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SimpleSession {
@@ -727,6 +1307,16 @@ pub struct SimpleSession {
     ///
     #[prost(int32, tag = "2")]
     pub session_type: i32,
+}
+impl ::prost::Name for SimpleSession {
+    const NAME: &'static str = "SimpleSession";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.SimpleSession".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.SimpleSession".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -750,6 +1340,16 @@ pub struct SingleDiscussInImPage {
     #[prost(int32, tag = "6")]
     pub r#type: i32,
 }
+impl ::prost::Name for SingleDiscussInImPage {
+    const NAME: &'static str = "SingleDiscussInImPage";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.SingleDiscussInImPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.SingleDiscussInImPage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SysMsgInterfaceLastMsgRsp {
@@ -765,6 +1365,16 @@ pub struct SysMsgInterfaceLastMsgRsp {
     ///
     #[prost(int64, tag = "4")]
     pub id: i64,
+}
+impl ::prost::Name for SysMsgInterfaceLastMsgRsp {
+    const NAME: &'static str = "SysMsgInterfaceLastMsgRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.SysMsgInterfaceLastMsgRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.SysMsgInterfaceLastMsgRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -782,12 +1392,32 @@ pub struct UpdateUserCosmoStateReq {
     #[prost(int32, tag = "4")]
     pub op_type: i32,
 }
+impl ::prost::Name for UpdateUserCosmoStateReq {
+    const NAME: &'static str = "UpdateUserCosmoStateReq";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.UpdateUserCosmoStateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.UpdateUserCosmoStateReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateUserCosmoStateRsp {
     ///
     #[prost(string, tag = "1")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UpdateUserCosmoStateRsp {
+    const NAME: &'static str = "UpdateUserCosmoStateRsp";
+    const PACKAGE: &'static str = "bilibili.im.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.interfaces.v1.UpdateUserCosmoStateRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.interfaces.v1.UpdateUserCosmoStateRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -2,9 +2,29 @@
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NoArgRequest {}
+impl ::prost::Name for NoArgRequest {
+    const NAME: &'static str = "NoArgRequest";
+    const PACKAGE: &'static str = "bilibili.app.resource.privacy.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.privacy.v1.NoArgRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.privacy.v1.NoArgRequest".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NoReply {}
+impl ::prost::Name for NoReply {
+    const NAME: &'static str = "NoReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.privacy.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.privacy.v1.NoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.privacy.v1.NoReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PrivacyConfigItem {
@@ -24,12 +44,32 @@ pub struct PrivacyConfigItem {
     #[prost(string, tag = "5")]
     pub sub_title_uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PrivacyConfigItem {
+    const NAME: &'static str = "PrivacyConfigItem";
+    const PACKAGE: &'static str = "bilibili.app.resource.privacy.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.privacy.v1.PrivacyConfigItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.privacy.v1.PrivacyConfigItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PrivacyConfigReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub privacy_config_item: ::prost::alloc::vec::Vec<PrivacyConfigItem>,
+}
+impl ::prost::Name for PrivacyConfigReply {
+    const NAME: &'static str = "PrivacyConfigReply";
+    const PACKAGE: &'static str = "bilibili.app.resource.privacy.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.privacy.v1.PrivacyConfigReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.privacy.v1.PrivacyConfigReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -40,6 +80,16 @@ pub struct SetPrivacyConfigRequest {
     ///
     #[prost(enumeration = "PrivacyConfigState", tag = "2")]
     pub state: i32,
+}
+impl ::prost::Name for SetPrivacyConfigRequest {
+    const NAME: &'static str = "SetPrivacyConfigRequest";
+    const PACKAGE: &'static str = "bilibili.app.resource.privacy.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.resource.privacy.v1.SetPrivacyConfigRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.resource.privacy.v1.SetPrivacyConfigRequest".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

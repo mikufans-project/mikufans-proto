@@ -15,12 +15,32 @@ pub struct ButtonStyle {
     #[prost(string, tag = "4")]
     pub jump_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ButtonStyle {
+    const NAME: &'static str = "ButtonStyle";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.ugcanymodel.ButtonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.ugcanymodel.ButtonStyle".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Clip {
     ///
     #[prost(message, optional, tag = "1")]
     pub clip_info: ::core::option::Option<ClipInfo>,
+}
+impl ::prost::Name for Clip {
+    const NAME: &'static str = "Clip";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.ugcanymodel.Clip".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.ugcanymodel.Clip".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -38,6 +58,16 @@ pub struct ClipInfo {
     #[prost(int64, tag = "4")]
     pub end: i64,
 }
+impl ::prost::Name for ClipInfo {
+    const NAME: &'static str = "ClipInfo";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.ugcanymodel.ClipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.ugcanymodel.ClipInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayLimit {
@@ -54,6 +84,16 @@ pub struct PlayLimit {
     #[prost(message, optional, tag = "4")]
     pub button: ::core::option::Option<ButtonStyle>,
 }
+impl ::prost::Name for PlayLimit {
+    const NAME: &'static str = "PlayLimit";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.ugcanymodel.PlayLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.ugcanymodel.PlayLimit".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UgcAnyModel {
@@ -63,6 +103,16 @@ pub struct UgcAnyModel {
     ///
     #[prost(message, optional, tag = "3")]
     pub clip: ::core::option::Option<Clip>,
+}
+impl ::prost::Name for UgcAnyModel {
+    const NAME: &'static str = "UGCAnyModel";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.ugcanymodel.UGCAnyModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.ugcanymodel.UGCAnyModel".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

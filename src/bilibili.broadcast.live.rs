@@ -12,6 +12,16 @@ pub struct BroadcastMessage {
     #[prost(message, optional, tag = "3")]
     pub common: ::core::option::Option<Common>,
 }
+impl ::prost::Name for BroadcastMessage {
+    const NAME: &'static str = "BroadcastMessage";
+    const PACKAGE: &'static str = "bilibili.broadcast.live";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.BroadcastMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.BroadcastMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Common {
@@ -33,6 +43,16 @@ pub struct Common {
     ///
     #[prost(int64, tag = "6")]
     pub sort: i64,
+}
+impl ::prost::Name for Common {
+    const NAME: &'static str = "Common";
+    const PACKAGE: &'static str = "bilibili.broadcast.live";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.Common".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.Common".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -21,6 +21,16 @@ pub struct AssistantInfo {
     #[prost(bool, tag = "6")]
     pub is_mystery: bool,
 }
+impl ::prost::Name for AssistantInfo {
+    const NAME: &'static str = "AssistantInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.AssistantInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.AssistantInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmConf {
@@ -30,6 +40,16 @@ pub struct DmConf {
     ///
     #[prost(string, tag = "2")]
     pub bg_color: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DmConf {
+    const NAME: &'static str = "DmConf";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.DmConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.DmConf".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -44,6 +64,16 @@ pub struct EscapeInfo {
     #[prost(string, tag = "3")]
     pub tips: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EscapeInfo {
+    const NAME: &'static str = "EscapeInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.EscapeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.EscapeInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FinalConf {
@@ -57,6 +87,16 @@ pub struct FinalConf {
     #[prost(int64, tag = "3")]
     pub switch: i64,
 }
+impl ::prost::Name for FinalConf {
+    const NAME: &'static str = "FinalConf";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.FinalConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.FinalConf".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct InvitePkResp {
@@ -67,6 +107,16 @@ pub struct InvitePkResp {
     #[prost(int64, tag = "2")]
     pub wait_time: i64,
 }
+impl ::prost::Name for InvitePkResp {
+    const NAME: &'static str = "InvitePkResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.InvitePkResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.InvitePkResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NextEffect {
@@ -76,6 +126,16 @@ pub struct NextEffect {
     ///
     #[prost(int64, tag = "2")]
     pub effect_id: i64,
+}
+impl ::prost::Name for NextEffect {
+    const NAME: &'static str = "NextEffect";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.NextEffect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.NextEffect".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -135,6 +195,16 @@ pub struct PkScoreMultiplePlay {
     #[prost(string, tag = "18")]
     pub guide_str: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PkScoreMultiplePlay {
+    const NAME: &'static str = "PKScoreMultiplePlay";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PKScoreMultiplePlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PKScoreMultiplePlay".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkCapsule {
@@ -157,6 +227,16 @@ pub struct PkCapsule {
     #[prost(string, tag = "6")]
     pub toast: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PkCapsule {
+    const NAME: &'static str = "PkCapsule";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkCapsule".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkCapsule".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkCard {
@@ -173,12 +253,32 @@ pub struct PkCard {
     #[prost(string, tag = "4")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PkCard {
+    const NAME: &'static str = "PkCard";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkCardPlay {
     ///
     #[prost(string, tag = "1")]
     pub rule_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PkCardPlay {
+    const NAME: &'static str = "PkCardPlay";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkCardPlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkCardPlay".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -198,6 +298,16 @@ pub struct PkGiftEffect {
     ///
     #[prost(int64, tag = "5")]
     pub timestamp: i64,
+}
+impl ::prost::Name for PkGiftEffect {
+    const NAME: &'static str = "PkGiftEffect";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkGiftEffect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkGiftEffect".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -230,6 +340,16 @@ pub struct PkInfo {
     #[prost(bool, tag = "9")]
     pub audience_open: bool,
 }
+impl ::prost::Name for PkInfo {
+    const NAME: &'static str = "PkInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PkMatchInfo {
@@ -242,6 +362,16 @@ pub struct PkMatchInfo {
     ///
     #[prost(int64, tag = "3")]
     pub match_end_time: i64,
+}
+impl ::prost::Name for PkMatchInfo {
+    const NAME: &'static str = "PkMatchInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkMatchInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkMatchInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -282,6 +412,16 @@ pub struct PkPlay {
     ///
     #[prost(message, optional, tag = "12")]
     pub pk_gift_effect: ::core::option::Option<PkGiftEffect>,
+}
+impl ::prost::Name for PkPlay {
+    const NAME: &'static str = "PkPlay";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.PkPlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.PkPlay".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -344,6 +484,16 @@ pub struct PkBasic {
         ::prost::alloc::string::String,
     >,
 }
+impl ::prost::Name for PkBasic {
+    const NAME: &'static str = "pkBasic";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.pkBasic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.pkBasic".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PkGroup {
@@ -359,6 +509,16 @@ pub struct PkGroup {
     ///
     #[prost(int64, tag = "4")]
     pub is_winner: i64,
+}
+impl ::prost::Name for PkGroup {
+    const NAME: &'static str = "pkGroup";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.pkGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.pkGroup".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -420,6 +580,16 @@ pub struct PkUser {
     ///
     #[prost(message, repeated, tag = "20")]
     pub capsules: ::prost::alloc::vec::Vec<PkCapsule>,
+}
+impl ::prost::Name for PkUser {
+    const NAME: &'static str = "pkUser";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.pk";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.pk.pkUser".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.pk.pkUser".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -24,6 +24,16 @@ pub struct Restriction {
     #[prost(int32, tag = "7")]
     pub teenagers_age: i32,
 }
+impl ::prost::Name for Restriction {
+    const NAME: &'static str = "Restriction";
+    const PACKAGE: &'static str = "bilibili.metadata.restriction";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.restriction.Restriction".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.restriction.Restriction".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

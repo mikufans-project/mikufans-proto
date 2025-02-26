@@ -15,6 +15,16 @@ pub struct Locale {
     #[prost(string, tag = "4")]
     pub timezone: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Locale {
+    const NAME: &'static str = "Locale";
+    const PACKAGE: &'static str = "bilibili.metadata.locale";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.locale.Locale".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.locale.Locale".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LocaleIds {
@@ -27,4 +37,14 @@ pub struct LocaleIds {
     ///
     #[prost(string, tag = "3")]
     pub region: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LocaleIds {
+    const NAME: &'static str = "LocaleIds";
+    const PACKAGE: &'static str = "bilibili.metadata.locale";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.locale.LocaleIds".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.locale.LocaleIds".into()
+    }
 }

@@ -27,6 +27,16 @@ pub struct ClientStatsPayload {
     #[prost(string, tag = "8")]
     pub business_name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ClientStatsPayload {
+    const NAME: &'static str = "ClientStatsPayload";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.ClientStatsPayload".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.ClientStatsPayload".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RtcAvReceiverStats {
@@ -40,6 +50,16 @@ pub struct RtcAvReceiverStats {
     #[prost(message, repeated, tag = "3")]
     pub audio: ::prost::alloc::vec::Vec<RtcAudioReceiverInfo>,
 }
+impl ::prost::Name for RtcAvReceiverStats {
+    const NAME: &'static str = "RtcAVReceiverStats";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcAVReceiverStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcAVReceiverStats".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RtcAvSenderStats {
@@ -52,6 +72,16 @@ pub struct RtcAvSenderStats {
     ///
     #[prost(message, repeated, tag = "3")]
     pub audio: ::prost::alloc::vec::Vec<RtcAudioSenderInfo>,
+}
+impl ::prost::Name for RtcAvSenderStats {
+    const NAME: &'static str = "RtcAVSenderStats";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcAVSenderStats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcAVSenderStats".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -153,6 +183,16 @@ pub struct RtcAudioReceiverInfo {
     #[prost(int64, tag = "32")]
     pub uid: i64,
 }
+impl ::prost::Name for RtcAudioReceiverInfo {
+    const NAME: &'static str = "RtcAudioReceiverInfo";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcAudioReceiverInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcAudioReceiverInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RtcAudioSenderInfo {
@@ -216,6 +256,16 @@ pub struct RtcAudioSenderInfo {
     ///
     #[prost(string, tag = "20")]
     pub media_source_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RtcAudioSenderInfo {
+    const NAME: &'static str = "RtcAudioSenderInfo";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcAudioSenderInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcAudioSenderInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -287,6 +337,16 @@ pub struct RtcCandidatePair {
     #[prost(bool, tag = "22")]
     pub writable: bool,
 }
+impl ::prost::Name for RtcCandidatePair {
+    const NAME: &'static str = "RtcCandidatePair";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcCandidatePair".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcCandidatePair".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RtcDataChannel {
@@ -314,6 +374,16 @@ pub struct RtcDataChannel {
     ///
     #[prost(int32, tag = "8")]
     pub messages_received: i32,
+}
+impl ::prost::Name for RtcDataChannel {
+    const NAME: &'static str = "RtcDataChannel";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcDataChannel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcDataChannel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -343,6 +413,16 @@ pub struct RtcLocalCandidate {
     #[prost(int64, tag = "8")]
     pub priority: i64,
 }
+impl ::prost::Name for RtcLocalCandidate {
+    const NAME: &'static str = "RtcLocalCandidate";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcLocalCandidate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcLocalCandidate".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RtcRemoteCandidate {
@@ -367,6 +447,16 @@ pub struct RtcRemoteCandidate {
     ///
     #[prost(int64, tag = "7")]
     pub priority: i64,
+}
+impl ::prost::Name for RtcRemoteCandidate {
+    const NAME: &'static str = "RtcRemoteCandidate";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcRemoteCandidate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcRemoteCandidate".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -395,6 +485,16 @@ pub struct RtcTransport {
     ///
     #[prost(int32, tag = "8")]
     pub selected_candidate_pair_changes: i32,
+}
+impl ::prost::Name for RtcTransport {
+    const NAME: &'static str = "RtcTransport";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcTransport".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcTransport".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -510,6 +610,16 @@ pub struct RtcVideoReceiverInfo {
     ///
     #[prost(double, tag = "37")]
     pub frames_per_second: f64,
+}
+impl ::prost::Name for RtcVideoReceiverInfo {
+    const NAME: &'static str = "RtcVideoReceiverInfo";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcVideoReceiverInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcVideoReceiverInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -652,4 +762,14 @@ pub struct RtcVideoSenderInfo {
     ///
     #[prost(double, tag = "46")]
     pub target_bitrate: f64,
+}
+impl ::prost::Name for RtcVideoSenderInfo {
+    const NAME: &'static str = "RtcVideoSenderInfo";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel.report";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.report.RtcVideoSenderInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.report.RtcVideoSenderInfo".into()
+    }
 }

@@ -18,6 +18,16 @@ pub struct Button {
     #[prost(message, optional, tag = "5")]
     pub time_limit: ::core::option::Option<TimeLimited>,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CosmoBusiness {
@@ -27,6 +37,16 @@ pub struct CosmoBusiness {
     ///
     #[prost(string, tag = "2")]
     pub sub_business: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CosmoBusiness {
+    const NAME: &'static str = "CosmoBusiness";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.CosmoBusiness".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.CosmoBusiness".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -89,6 +109,16 @@ pub struct CosmoMeta {
     #[prost(int64, tag = "19")]
     pub app_id: i64,
 }
+impl ::prost::Name for CosmoMeta {
+    const NAME: &'static str = "CosmoMeta";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.CosmoMeta".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.CosmoMeta".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CosmoParaMeta {
@@ -104,6 +134,16 @@ pub struct CosmoParaMeta {
     ///
     #[prost(string, tag = "4")]
     pub action_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CosmoParaMeta {
+    const NAME: &'static str = "CosmoParaMeta";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.CosmoParaMeta".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.CosmoParaMeta".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -121,12 +161,32 @@ pub struct Entity {
     #[prost(int64, tag = "4")]
     pub up_mid: i64,
 }
+impl ::prost::Name for Entity {
+    const NAME: &'static str = "Entity";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.Entity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.Entity".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct EntityType {
     ///
     #[prost(enumeration = "EntityBiz", tag = "1")]
     pub biz: i32,
+}
+impl ::prost::Name for EntityType {
+    const NAME: &'static str = "EntityType";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.EntityType".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.EntityType".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -138,6 +198,16 @@ pub struct IconRes {
     #[prost(string, tag = "2")]
     pub dark: ::prost::alloc::string::String,
 }
+impl ::prost::Name for IconRes {
+    const NAME: &'static str = "IconRes";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.IconRes".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.IconRes".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShowText {
@@ -147,6 +217,16 @@ pub struct ShowText {
     ///
     #[prost(string, tag = "2")]
     pub sub_title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShowText {
+    const NAME: &'static str = "ShowText";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.ShowText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.ShowText".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -161,9 +241,29 @@ pub struct SimpleActionReq {
     #[prost(message, optional, tag = "3")]
     pub meta: ::core::option::Option<CosmoParaMeta>,
 }
+impl ::prost::Name for SimpleActionReq {
+    const NAME: &'static str = "SimpleActionReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SimpleActionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SimpleActionReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SimpleActionRsp {}
+impl ::prost::Name for SimpleActionRsp {
+    const NAME: &'static str = "SimpleActionRsp";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SimpleActionRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SimpleActionRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscribeCard {
@@ -177,12 +277,32 @@ pub struct SubscribeCard {
     #[prost(message, optional, tag = "3")]
     pub button: ::core::option::Option<Button>,
 }
+impl ::prost::Name for SubscribeCard {
+    const NAME: &'static str = "SubscribeCard";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SubscribeCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SubscribeCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscribeCardReq {
     ///
     #[prost(message, optional, tag = "1")]
     pub business: ::core::option::Option<CosmoBusiness>,
+}
+impl ::prost::Name for SubscribeCardReq {
+    const NAME: &'static str = "SubscribeCardReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SubscribeCardReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SubscribeCardReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -193,6 +313,16 @@ pub struct SubscribeCardRsp {
     ///
     #[prost(message, optional, tag = "2")]
     pub card: ::core::option::Option<SubscribeCard>,
+}
+impl ::prost::Name for SubscribeCardRsp {
+    const NAME: &'static str = "SubscribeCardRsp";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SubscribeCardRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SubscribeCardRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -207,12 +337,32 @@ pub struct SubscribeReq {
     #[prost(message, optional, tag = "3")]
     pub button: ::core::option::Option<Button>,
 }
+impl ::prost::Name for SubscribeReq {
+    const NAME: &'static str = "SubscribeReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SubscribeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SubscribeReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscribeRsp {
     ///
     #[prost(message, optional, tag = "1")]
     pub button: ::core::option::Option<Button>,
+}
+impl ::prost::Name for SubscribeRsp {
+    const NAME: &'static str = "SubscribeRsp";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.SubscribeRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.SubscribeRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -223,6 +373,16 @@ pub struct TimeLimited {
     ///
     #[prost(int64, tag = "2")]
     pub end_ts: i64,
+}
+impl ::prost::Name for TimeLimited {
+    const NAME: &'static str = "TimeLimited";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.TimeLimited".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.TimeLimited".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

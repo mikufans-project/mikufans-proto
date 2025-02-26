@@ -9,10 +9,30 @@ pub struct Exp {
     #[prost(int32, tag = "2")]
     pub bucket: i32,
 }
+impl ::prost::Name for Exp {
+    const NAME: &'static str = "Exp";
+    const PACKAGE: &'static str = "bilibili.metadata.parabox";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.parabox.Exp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.parabox.Exp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Exps {
     ///
     #[prost(message, repeated, tag = "1")]
     pub exps: ::prost::alloc::vec::Vec<Exp>,
+}
+impl ::prost::Name for Exps {
+    const NAME: &'static str = "Exps";
+    const PACKAGE: &'static str = "bilibili.metadata.parabox";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.parabox.Exps".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.parabox.Exps".into()
+    }
 }

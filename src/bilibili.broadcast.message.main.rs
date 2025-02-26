@@ -15,6 +15,16 @@ pub struct Animate {
     #[prost(int32, tag = "4")]
     pub r#loop: i32,
 }
+impl ::prost::Name for Animate {
+    const NAME: &'static str = "Animate";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.Animate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.Animate".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ArticleCard {
@@ -49,6 +59,16 @@ pub struct ArticleCard {
     #[prost(string, tag = "10")]
     pub badge: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ArticleCard {
+    const NAME: &'static str = "ArticleCard";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.ArticleCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.ArticleCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Bubble {
@@ -60,6 +80,16 @@ pub struct Bubble {
     ///
     #[prost(message, repeated, tag = "2")]
     pub item: ::prost::alloc::vec::Vec<CardItem>,
+}
+impl ::prost::Name for Bubble {
+    const NAME: &'static str = "Bubble";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.Bubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.Bubble".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -88,6 +118,16 @@ pub mod card_item {
         ///
         #[prost(message, tag = "5")]
         Av(super::VideoCard),
+    }
+}
+impl ::prost::Name for CardItem {
+    const NAME: &'static str = "CardItem";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.CardItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.CardItem".into()
     }
 }
 ///
@@ -120,6 +160,16 @@ pub struct ChatResult {
     ///
     #[prost(int64, tag = "9")]
     pub like_number: i64,
+}
+impl ::prost::Name for ChatResult {
+    const NAME: &'static str = "ChatResult";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.ChatResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.ChatResult".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -160,6 +210,16 @@ pub struct CommandDm {
     ///
     #[prost(string, tag = "12")]
     pub id_str: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CommandDm {
+    const NAME: &'static str = "CommandDm";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.CommandDm".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.CommandDm".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -207,12 +267,32 @@ pub struct DanmakuElem {
     #[prost(string, tag = "14")]
     pub animation: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DanmakuElem {
+    const NAME: &'static str = "DanmakuElem";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.DanmakuElem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.DanmakuElem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DanmukuEvent {
     ///
     #[prost(message, repeated, tag = "1")]
     pub elems: ::prost::alloc::vec::Vec<DanmakuElem>,
+}
+impl ::prost::Name for DanmukuEvent {
+    const NAME: &'static str = "DanmukuEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.DanmukuEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.DanmukuEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -235,6 +315,16 @@ pub struct EventItem {
     ///
     #[prost(int64, tag = "6")]
     pub dimension: i64,
+}
+impl ::prost::Name for EventItem {
+    const NAME: &'static str = "EventItem";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.EventItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.EventItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -294,6 +384,16 @@ pub struct HistoryReportEvent {
     #[prost(string, tag = "18")]
     pub scene: ::prost::alloc::string::String,
 }
+impl ::prost::Name for HistoryReportEvent {
+    const NAME: &'static str = "HistoryReportEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.HistoryReportEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.HistoryReportEvent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NativePageEvent {
@@ -303,6 +403,16 @@ pub struct NativePageEvent {
     ///
     #[prost(message, repeated, tag = "2")]
     pub items: ::prost::alloc::vec::Vec<EventItem>,
+}
+impl ::prost::Name for NativePageEvent {
+    const NAME: &'static str = "NativePageEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.NativePageEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.NativePageEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -332,6 +442,16 @@ pub struct ReasonStyle {
     #[prost(int32, tag = "8")]
     pub bg_style: i32,
 }
+impl ::prost::Name for ReasonStyle {
+    const NAME: &'static str = "ReasonStyle";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.ReasonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.ReasonStyle".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RedDot {
@@ -341,6 +461,16 @@ pub struct RedDot {
     ///
     #[prost(int32, tag = "2")]
     pub number: i32,
+}
+impl ::prost::Name for RedDot {
+    const NAME: &'static str = "RedDot";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.RedDot".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.RedDot".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -358,6 +488,16 @@ pub struct Stats {
     #[prost(int32, tag = "4")]
     pub share: i32,
 }
+impl ::prost::Name for Stats {
+    const NAME: &'static str = "Stats";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.Stats".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.Stats".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TopActivityReply {
@@ -367,6 +507,16 @@ pub struct TopActivityReply {
     ///
     #[prost(string, tag = "2")]
     pub hash: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TopActivityReply {
+    const NAME: &'static str = "TopActivityReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.TopActivityReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.TopActivityReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -395,6 +545,16 @@ pub struct TopOnline {
     ///
     #[prost(int64, tag = "8")]
     pub interval: i64,
+}
+impl ::prost::Name for TopOnline {
+    const NAME: &'static str = "TopOnline";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.TopOnline".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.TopOnline".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -430,6 +590,16 @@ pub struct VideoCard {
     #[prost(int32, tag = "10")]
     pub icon_type: i32,
 }
+impl ::prost::Name for VideoCard {
+    const NAME: &'static str = "VideoCard";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.VideoCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.VideoCard".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ViewPush {
@@ -442,6 +612,16 @@ pub struct ViewPush {
     ///
     #[prost(int64, tag = "3")]
     pub up_time: i64,
+}
+impl ::prost::Name for ViewPush {
+    const NAME: &'static str = "ViewPush";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.main";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.main.ViewPush".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.main.ViewPush".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -33,6 +33,16 @@ pub struct Arc {
     #[prost(bool, tag = "10")]
     pub is_oneself: bool,
 }
+impl ::prost::Name for Arc {
+    const NAME: &'static str = "Arc";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Arc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Arc".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Badge {
@@ -42,6 +52,16 @@ pub struct Badge {
     ///
     #[prost(string, tag = "2")]
     pub icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Badge {
+    const NAME: &'static str = "Badge";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Badge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Badge".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -100,6 +120,16 @@ pub struct BigItem {
     #[prost(bool, tag = "17")]
     pub is_fav: bool,
 }
+impl ::prost::Name for BigItem {
+    const NAME: &'static str = "BigItem";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.BigItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.BigItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Button {
@@ -125,6 +155,16 @@ pub struct Button {
     #[prost(string, tag = "7")]
     pub has_title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardArticle {
@@ -147,6 +187,16 @@ pub struct CardArticle {
     #[prost(message, optional, tag = "6")]
     pub relation: ::core::option::Option<Relation>,
 }
+impl ::prost::Name for CardArticle {
+    const NAME: &'static str = "CardArticle";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CardArticle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CardArticle".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardCheese {
@@ -165,6 +215,16 @@ pub struct CardCheese {
     ///
     #[prost(int64, tag = "5")]
     pub state: i64,
+}
+impl ::prost::Name for CardCheese {
+    const NAME: &'static str = "CardCheese";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CardCheese".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CardCheese".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -191,6 +251,16 @@ pub struct CardLive {
     #[prost(message, optional, tag = "7")]
     pub relation: ::core::option::Option<Relation>,
 }
+impl ::prost::Name for CardLive {
+    const NAME: &'static str = "CardLive";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CardLive".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CardLive".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardOgv {
@@ -212,6 +282,16 @@ pub struct CardOgv {
     ///
     #[prost(int64, tag = "6")]
     pub state: i64,
+}
+impl ::prost::Name for CardOgv {
+    const NAME: &'static str = "CardOGV";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CardOGV".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CardOGV".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -271,6 +351,16 @@ pub struct CardUgc {
     #[prost(message, optional, tag = "18")]
     pub badge_v2: ::core::option::Option<Badge>,
 }
+impl ::prost::Name for CardUgc {
+    const NAME: &'static str = "CardUGC";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CardUGC".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CardUGC".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Cast {
@@ -280,6 +370,16 @@ pub struct Cast {
     ///
     #[prost(string, tag = "2")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Cast {
+    const NAME: &'static str = "Cast";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Cast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Cast".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -291,12 +391,32 @@ pub struct ChannelInfo {
     #[prost(bool, tag = "2")]
     pub subscribed: bool,
 }
+impl ::prost::Name for ChannelInfo {
+    const NAME: &'static str = "ChannelInfo";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ChannelInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ChannelInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClearReq {
     ///
     #[prost(string, tag = "1")]
     pub business: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ClearReq {
+    const NAME: &'static str = "ClearReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ClearReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ClearReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -320,6 +440,16 @@ pub struct CommentItem {
     #[prost(string, tag = "6")]
     pub id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CommentItem {
+    const NAME: &'static str = "CommentItem";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CommentItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CommentItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Cursor {
@@ -329,6 +459,16 @@ pub struct Cursor {
     ///
     #[prost(int32, tag = "2")]
     pub max_tp: i32,
+}
+impl ::prost::Name for Cursor {
+    const NAME: &'static str = "Cursor";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Cursor".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Cursor".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -389,6 +529,16 @@ pub mod cursor_item {
         CardCheese(super::CardCheese),
     }
 }
+impl ::prost::Name for CursorItem {
+    const NAME: &'static str = "CursorItem";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CursorReply {
@@ -404,6 +554,16 @@ pub struct CursorReply {
     ///
     #[prost(bool, tag = "4")]
     pub has_more: bool,
+}
+impl ::prost::Name for CursorReply {
+    const NAME: &'static str = "CursorReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -421,6 +581,16 @@ pub struct CursorReq {
     #[prost(message, optional, tag = "4")]
     pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
+impl ::prost::Name for CursorReq {
+    const NAME: &'static str = "CursorReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CursorTab {
@@ -437,6 +607,16 @@ pub struct CursorTab {
     #[prost(bool, tag = "4")]
     pub focus: bool,
 }
+impl ::prost::Name for CursorTab {
+    const NAME: &'static str = "CursorTab";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorTab".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorTab".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CursorV2Reply {
@@ -452,6 +632,16 @@ pub struct CursorV2Reply {
     ///
     #[prost(string, tag = "4")]
     pub empty_link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CursorV2Reply {
+    const NAME: &'static str = "CursorV2Reply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorV2Reply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorV2Reply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -471,6 +661,16 @@ pub struct CursorV2Req {
     ///
     #[prost(bool, tag = "5")]
     pub is_local: bool,
+}
+impl ::prost::Name for CursorV2Req {
+    const NAME: &'static str = "CursorV2Req";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.CursorV2Req".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.CursorV2Req".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -514,6 +714,16 @@ pub struct DefaultWordsReply {
     ///
     #[prost(int64, tag = "13")]
     pub animation_time_milli: i64,
+}
+impl ::prost::Name for DefaultWordsReply {
+    const NAME: &'static str = "DefaultWordsReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.DefaultWordsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.DefaultWordsReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -564,6 +774,16 @@ pub struct DefaultWordsReq {
     #[prost(int32, tag = "15")]
     pub search_page_return: i32,
 }
+impl ::prost::Name for DefaultWordsReq {
+    const NAME: &'static str = "DefaultWordsReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.DefaultWordsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.DefaultWordsReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteReq {
@@ -573,6 +793,16 @@ pub struct DeleteReq {
     ///
     #[prost(string, tag = "2")]
     pub tab: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DeleteReq {
+    const NAME: &'static str = "DeleteReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.DeleteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.DeleteReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -584,6 +814,16 @@ pub struct DeviceType {
     #[prost(string, tag = "2")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DeviceType {
+    const NAME: &'static str = "DeviceType";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.DeviceType".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.DeviceType".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dynamic {
@@ -591,9 +831,29 @@ pub struct Dynamic {
     #[prost(message, optional, tag = "1")]
     pub dynamic: ::core::option::Option<super::super::dynamic::v2::DynamicItem>,
 }
+impl ::prost::Name for Dynamic {
+    const NAME: &'static str = "Dynamic";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Dynamic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Dynamic".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FacialRecognitionVerifyReply {}
+impl ::prost::Name for FacialRecognitionVerifyReply {
+    const NAME: &'static str = "FacialRecognitionVerifyReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.FacialRecognitionVerifyReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.FacialRecognitionVerifyReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FacialRecognitionVerifyReq {
@@ -603,6 +863,16 @@ pub struct FacialRecognitionVerifyReq {
     ///
     #[prost(string, tag = "2")]
     pub device_token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for FacialRecognitionVerifyReq {
+    const NAME: &'static str = "FacialRecognitionVerifyReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.FacialRecognitionVerifyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.FacialRecognitionVerifyReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -614,12 +884,32 @@ pub struct HisInfo {
     #[prost(int64, tag = "2")]
     pub kid: i64,
 }
+impl ::prost::Name for HisInfo {
+    const NAME: &'static str = "HisInfo";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.HisInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.HisInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HistoryTabReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub tab: ::prost::alloc::vec::Vec<CursorTab>,
+}
+impl ::prost::Name for HistoryTabReply {
+    const NAME: &'static str = "HistoryTabReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.HistoryTabReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.HistoryTabReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -633,6 +923,16 @@ pub struct HistoryTabReq {
     ///
     #[prost(string, tag = "3")]
     pub keyword: ::prost::alloc::string::String,
+}
+impl ::prost::Name for HistoryTabReq {
+    const NAME: &'static str = "HistoryTabReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.HistoryTabReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.HistoryTabReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -650,6 +950,16 @@ pub struct LatestHistoryReply {
     #[prost(string, tag = "4")]
     pub flag: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LatestHistoryReply {
+    const NAME: &'static str = "LatestHistoryReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.LatestHistoryReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.LatestHistoryReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LatestHistoryReq {
@@ -659,6 +969,16 @@ pub struct LatestHistoryReq {
     ///
     #[prost(message, optional, tag = "2")]
     pub player_preload: ::core::option::Option<PlayerPreloadParams>,
+}
+impl ::prost::Name for LatestHistoryReq {
+    const NAME: &'static str = "LatestHistoryReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.LatestHistoryReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.LatestHistoryReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -694,6 +1014,16 @@ pub struct LikeButton {
     #[prost(message, optional, tag = "10")]
     pub dis_like_night_resource: ::core::option::Option<LikeButtonResource>,
 }
+impl ::prost::Name for LikeButton {
+    const NAME: &'static str = "LikeButton";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.LikeButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.LikeButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LikeButtonResource {
@@ -704,6 +1034,16 @@ pub struct LikeButtonResource {
     #[prost(string, tag = "2")]
     pub hash: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LikeButtonResource {
+    const NAME: &'static str = "LikeButtonResource";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.LikeButtonResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.LikeButtonResource".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LikeCard {
@@ -713,6 +1053,16 @@ pub struct LikeCard {
     ///
     #[prost(bool, tag = "2")]
     pub is_follow: bool,
+}
+impl ::prost::Name for LikeCard {
+    const NAME: &'static str = "LikeCard";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.LikeCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.LikeCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -739,6 +1089,16 @@ pub struct MediaCard {
     #[prost(message, optional, tag = "7")]
     pub scores: ::core::option::Option<Scores>,
 }
+impl ::prost::Name for MediaCard {
+    const NAME: &'static str = "MediaCard";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaCommentReply {
@@ -746,12 +1106,32 @@ pub struct MediaCommentReply {
     #[prost(string, tag = "1")]
     pub err_msg: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MediaCommentReply {
+    const NAME: &'static str = "MediaCommentReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaCommentReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaCommentReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaCommentReq {
     ///
     #[prost(string, tag = "1")]
     pub id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MediaCommentReq {
+    const NAME: &'static str = "MediaCommentReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaCommentReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaCommentReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -766,6 +1146,16 @@ pub struct MediaDetailReply {
     #[prost(message, optional, tag = "3")]
     pub overview: ::core::option::Option<Overview>,
 }
+impl ::prost::Name for MediaDetailReply {
+    const NAME: &'static str = "MediaDetailReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaDetailReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaDetailReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MediaDetailReq {
@@ -776,9 +1166,29 @@ pub struct MediaDetailReq {
     #[prost(int64, tag = "2")]
     pub biz_type: i64,
 }
+impl ::prost::Name for MediaDetailReq {
+    const NAME: &'static str = "MediaDetailReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaDetailReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaDetailReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MediaFollowReply {}
+impl ::prost::Name for MediaFollowReply {
+    const NAME: &'static str = "MediaFollowReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaFollowReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaFollowReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaFollowReq {
@@ -788,6 +1198,16 @@ pub struct MediaFollowReq {
     ///
     #[prost(enumeration = "ButType", tag = "2")]
     pub r#type: i32,
+}
+impl ::prost::Name for MediaFollowReq {
+    const NAME: &'static str = "MediaFollowReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaFollowReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaFollowReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -808,6 +1228,16 @@ pub struct MediaPerson {
     #[prost(string, tag = "5")]
     pub r#type: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MediaPerson {
+    const NAME: &'static str = "MediaPerson";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaPerson".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaPerson".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaRelationReply {
@@ -820,6 +1250,16 @@ pub struct MediaRelationReply {
     ///
     #[prost(message, repeated, tag = "3")]
     pub list: ::prost::alloc::vec::Vec<SmallItem>,
+}
+impl ::prost::Name for MediaRelationReply {
+    const NAME: &'static str = "MediaRelationReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaRelationReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaRelationReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -840,6 +1280,16 @@ pub struct MediaRelationReq {
     #[prost(int32, tag = "6")]
     pub ps: i32,
 }
+impl ::prost::Name for MediaRelationReq {
+    const NAME: &'static str = "MediaRelationReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaRelationReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaRelationReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaTabReply {
@@ -855,6 +1305,16 @@ pub struct MediaTabReply {
     ///
     #[prost(message, optional, tag = "4")]
     pub channel_info: ::core::option::Option<ChannelInfo>,
+}
+impl ::prost::Name for MediaTabReply {
+    const NAME: &'static str = "MediaTabReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaTabReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaTabReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -878,6 +1338,16 @@ pub struct MediaTabReq {
         ::prost::alloc::string::String,
     >,
 }
+impl ::prost::Name for MediaTabReq {
+    const NAME: &'static str = "MediaTabReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaTabReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaTabReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MediaVideoReply {
@@ -890,6 +1360,16 @@ pub struct MediaVideoReply {
     ///
     #[prost(message, repeated, tag = "3")]
     pub list: ::prost::alloc::vec::Vec<BigItem>,
+}
+impl ::prost::Name for MediaVideoReply {
+    const NAME: &'static str = "MediaVideoReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaVideoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaVideoReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -913,12 +1393,32 @@ pub struct MediaVideoReq {
     #[prost(message, optional, tag = "7")]
     pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
+impl ::prost::Name for MediaVideoReq {
+    const NAME: &'static str = "MediaVideoReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.MediaVideoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.MediaVideoReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ModeStatusReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub user_models: ::prost::alloc::vec::Vec<UserModel>,
+}
+impl ::prost::Name for ModeStatusReply {
+    const NAME: &'static str = "ModeStatusReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ModeStatusReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ModeStatusReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -927,9 +1427,29 @@ pub struct ModeStatusReq {
     #[prost(string, tag = "1")]
     pub device_token: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ModeStatusReq {
+    const NAME: &'static str = "ModeStatusReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ModeStatusReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ModeStatusReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ModifyPwdReply {}
+impl ::prost::Name for ModifyPwdReply {
+    const NAME: &'static str = "ModifyPwdReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ModifyPwdReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ModifyPwdReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ModifyPwdReq {
@@ -942,6 +1462,16 @@ pub struct ModifyPwdReq {
     ///
     #[prost(string, tag = "3")]
     pub device_token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ModifyPwdReq {
+    const NAME: &'static str = "ModifyPwdReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ModifyPwdReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ModifyPwdReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -956,9 +1486,29 @@ pub struct NftFaceIcon {
     #[prost(int32, tag = "3")]
     pub show_status: i32,
 }
+impl ::prost::Name for NftFaceIcon {
+    const NAME: &'static str = "NftFaceIcon";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.NftFaceIcon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.NftFaceIcon".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NoReply {}
+impl ::prost::Name for NoReply {
+    const NAME: &'static str = "NoReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.NoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.NoReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OfficialVerify {
@@ -968,6 +1518,16 @@ pub struct OfficialVerify {
     ///
     #[prost(string, tag = "2")]
     pub desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OfficialVerify {
+    const NAME: &'static str = "OfficialVerify";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.OfficialVerify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.OfficialVerify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -979,6 +1539,16 @@ pub struct Overview {
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Overview {
+    const NAME: &'static str = "Overview";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Overview".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Overview".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Page {
@@ -988,6 +1558,16 @@ pub struct Page {
     ///
     #[prost(int64, tag = "2")]
     pub total: i64,
+}
+impl ::prost::Name for Page {
+    const NAME: &'static str = "Page";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Page".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Page".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1008,6 +1588,16 @@ pub struct PlayerPreloadParams {
     #[prost(int64, tag = "5")]
     pub fourk: i64,
 }
+impl ::prost::Name for PlayerPreloadParams {
+    const NAME: &'static str = "PlayerPreloadParams";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.PlayerPreloadParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.PlayerPreloadParams".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Policy {
@@ -1017,6 +1607,16 @@ pub struct Policy {
     ///
     #[prost(bool, tag = "2")]
     pub use_local_time: bool,
+}
+impl ::prost::Name for Policy {
+    const NAME: &'static str = "Policy";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Policy".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Policy".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1046,6 +1646,16 @@ pub struct ReasonStyle {
     #[prost(int32, tag = "8")]
     pub bg_style: i32,
 }
+impl ::prost::Name for ReasonStyle {
+    const NAME: &'static str = "ReasonStyle";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ReasonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ReasonStyle".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Relation {
@@ -1058,6 +1668,16 @@ pub struct Relation {
     ///
     #[prost(int32, tag = "3")]
     pub is_followed: i32,
+}
+impl ::prost::Name for Relation {
+    const NAME: &'static str = "Relation";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Relation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Relation".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1156,12 +1776,32 @@ pub struct ResultItem {
     #[prost(int32, tag = "31")]
     pub is_sug_style_exp: i32,
 }
+impl ::prost::Name for ResultItem {
+    const NAME: &'static str = "ResultItem";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ResultItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ResultItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Scores {
     ///
     #[prost(float, tag = "1")]
     pub score: f32,
+}
+impl ::prost::Name for Scores {
+    const NAME: &'static str = "Scores";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Scores".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Scores".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1172,6 +1812,16 @@ pub struct SearchArchiveReply {
     ///
     #[prost(int64, tag = "2")]
     pub total: i64,
+}
+impl ::prost::Name for SearchArchiveReply {
+    const NAME: &'static str = "SearchArchiveReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchArchiveReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchArchiveReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1192,6 +1842,16 @@ pub struct SearchArchiveReq {
     #[prost(message, optional, tag = "5")]
     pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
+impl ::prost::Name for SearchArchiveReq {
+    const NAME: &'static str = "SearchArchiveReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchArchiveReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchArchiveReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchDynamicReply {
@@ -1201,6 +1861,16 @@ pub struct SearchDynamicReply {
     ///
     #[prost(int64, tag = "2")]
     pub total: i64,
+}
+impl ::prost::Name for SearchDynamicReply {
+    const NAME: &'static str = "SearchDynamicReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchDynamicReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchDynamicReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1221,6 +1891,16 @@ pub struct SearchDynamicReq {
     #[prost(message, optional, tag = "5")]
     pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
 }
+impl ::prost::Name for SearchDynamicReq {
+    const NAME: &'static str = "SearchDynamicReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchDynamicReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchDynamicReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchReply {
@@ -1233,6 +1913,16 @@ pub struct SearchReply {
     ///
     #[prost(message, optional, tag = "3")]
     pub page: ::core::option::Option<Page>,
+}
+impl ::prost::Name for SearchReply {
+    const NAME: &'static str = "SearchReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1247,6 +1937,16 @@ pub struct SearchReq {
     #[prost(string, tag = "3")]
     pub business: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchReq {
+    const NAME: &'static str = "SearchReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchTabReply {
@@ -1256,6 +1956,16 @@ pub struct SearchTabReply {
     ///
     #[prost(message, repeated, tag = "2")]
     pub tabs: ::prost::alloc::vec::Vec<Tab>,
+}
+impl ::prost::Name for SearchTabReply {
+    const NAME: &'static str = "SearchTabReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchTabReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchTabReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1270,9 +1980,29 @@ pub struct SearchTabReq {
     #[prost(enumeration = "From", tag = "3")]
     pub from: i32,
 }
+impl ::prost::Name for SearchTabReq {
+    const NAME: &'static str = "SearchTabReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SearchTabReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SearchTabReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SetTeenagersModelAgeReply {}
+impl ::prost::Name for SetTeenagersModelAgeReply {
+    const NAME: &'static str = "SetTeenagersModelAgeReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SetTeenagersModelAgeReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SetTeenagersModelAgeReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetTeenagersModelAgeReq {
@@ -1292,6 +2022,16 @@ pub struct SetTeenagersModelAgeReq {
     #[prost(bool, tag = "5")]
     pub is_dynamic: bool,
 }
+impl ::prost::Name for SetTeenagersModelAgeReq {
+    const NAME: &'static str = "SetTeenagersModelAgeReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SetTeenagersModelAgeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SetTeenagersModelAgeReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShowTab {
@@ -1304,6 +2044,16 @@ pub struct ShowTab {
     ///
     #[prost(string, tag = "3")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShowTab {
+    const NAME: &'static str = "ShowTab";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.ShowTab".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.ShowTab".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1339,6 +2089,16 @@ pub struct SmallItem {
     #[prost(int64, tag = "10")]
     pub mid: i64,
 }
+impl ::prost::Name for SmallItem {
+    const NAME: &'static str = "SmallItem";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SmallItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SmallItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Staff {
@@ -1348,6 +2108,16 @@ pub struct Staff {
     ///
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Staff {
+    const NAME: &'static str = "Staff";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Staff".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Staff".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1361,6 +2131,16 @@ pub struct SuggestionResult3Reply {
     ///
     #[prost(string, tag = "3")]
     pub exp_str: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SuggestionResult3Reply {
+    const NAME: &'static str = "SuggestionResult3Reply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SuggestionResult3Reply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SuggestionResult3Reply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1378,6 +2158,16 @@ pub struct SuggestionResult3Req {
     #[prost(string, tag = "4")]
     pub user_act: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SuggestionResult3Req {
+    const NAME: &'static str = "SuggestionResult3Req";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.SuggestionResult3Req".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.SuggestionResult3Req".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Supernatant {
@@ -1387,6 +2177,16 @@ pub struct Supernatant {
     ///
     #[prost(message, repeated, tag = "2")]
     pub item: ::prost::alloc::vec::Vec<CommentItem>,
+}
+impl ::prost::Name for Supernatant {
+    const NAME: &'static str = "Supernatant";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Supernatant".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Supernatant".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1398,12 +2198,32 @@ pub struct Tab {
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Tab {
+    const NAME: &'static str = "Tab";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.Tab".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.Tab".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateReserveStartTimeReply {
     ///
     #[prost(string, tag = "1")]
     pub desc_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UpdateReserveStartTimeReply {
+    const NAME: &'static str = "UpdateReserveStartTimeReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UpdateReserveStartTimeReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UpdateReserveStartTimeReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1415,9 +2235,29 @@ pub struct UpdateReserveStartTimeReq {
     #[prost(int64, tag = "2")]
     pub new_live_plan_start_time: i64,
 }
+impl ::prost::Name for UpdateReserveStartTimeReq {
+    const NAME: &'static str = "UpdateReserveStartTimeReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UpdateReserveStartTimeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UpdateReserveStartTimeReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpdateStatusReply {}
+impl ::prost::Name for UpdateStatusReply {
+    const NAME: &'static str = "UpdateStatusReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UpdateStatusReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UpdateStatusReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateStatusReq {
@@ -1434,6 +2274,16 @@ pub struct UpdateStatusReq {
     #[prost(string, tag = "4")]
     pub device_token: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UpdateStatusReq {
+    const NAME: &'static str = "UpdateStatusReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UpdateStatusReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UpdateStatusReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserCard {
@@ -1449,6 +2299,16 @@ pub struct UserCard {
     ///
     #[prost(int64, tag = "4")]
     pub mid: i64,
+}
+impl ::prost::Name for UserCard {
+    const NAME: &'static str = "UserCard";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UserCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UserCard".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1484,9 +2344,29 @@ pub struct UserModel {
     #[prost(int32, tag = "10")]
     pub age: i32,
 }
+impl ::prost::Name for UserModel {
+    const NAME: &'static str = "UserModel";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.UserModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.UserModel".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct VerifyPwdReply {}
+impl ::prost::Name for VerifyPwdReply {
+    const NAME: &'static str = "VerifyPwdReply";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.VerifyPwdReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.VerifyPwdReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VerifyPwdReq {
@@ -1505,6 +2385,16 @@ pub struct VerifyPwdReq {
     ///
     #[prost(string, tag = "5")]
     pub device_token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for VerifyPwdReq {
+    const NAME: &'static str = "VerifyPwdReq";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.VerifyPwdReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.VerifyPwdReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

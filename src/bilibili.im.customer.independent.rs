@@ -30,6 +30,16 @@ pub struct EvaluationShowInfo {
     #[prost(string, tag = "9")]
     pub editor_input: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EvaluationShowInfo {
+    const NAME: &'static str = "EvaluationShowInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.independent";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.independent.EvaluationShowInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.independent.EvaluationShowInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EvaluationStepSelect {
@@ -40,6 +50,16 @@ pub struct EvaluationStepSelect {
     #[prost(enumeration = "Select", tag = "2")]
     pub select: i32,
 }
+impl ::prost::Name for EvaluationStepSelect {
+    const NAME: &'static str = "EvaluationStepSelect";
+    const PACKAGE: &'static str = "bilibili.im.customer.independent";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.independent.EvaluationStepSelect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.independent.EvaluationStepSelect".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FinishParagraphsRenderStopPos {
@@ -49,6 +69,16 @@ pub struct FinishParagraphsRenderStopPos {
     ///
     #[prost(int64, tag = "2")]
     pub node: i64,
+}
+impl ::prost::Name for FinishParagraphsRenderStopPos {
+    const NAME: &'static str = "FinishParagraphsRenderStopPos";
+    const PACKAGE: &'static str = "bilibili.im.customer.independent";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.independent.FinishParagraphsRenderStopPos".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.independent.FinishParagraphsRenderStopPos".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -64,6 +94,16 @@ pub struct MsgParagraphText {
     ///
     #[prost(message, optional, tag = "3")]
     pub stop_pos: ::core::option::Option<FinishParagraphsRenderStopPos>,
+}
+impl ::prost::Name for MsgParagraphText {
+    const NAME: &'static str = "MsgParagraphText";
+    const PACKAGE: &'static str = "bilibili.im.customer.independent";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.independent.MsgParagraphText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.independent.MsgParagraphText".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

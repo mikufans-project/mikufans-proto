@@ -33,6 +33,16 @@ pub struct AuthorInfo {
     #[prost(string, tag = "10")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AuthorInfo {
+    const NAME: &'static str = "AuthorInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.AuthorInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.AuthorInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Bottom {
@@ -47,6 +57,16 @@ pub struct Bottom {
         tag = "2"
     )]
     pub module_type: i32,
+}
+impl ::prost::Name for Bottom {
+    const NAME: &'static str = "Bottom";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.Bottom".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.Bottom".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -64,6 +84,16 @@ pub struct IconInfo {
     #[prost(int32, tag = "4")]
     pub icon_height: i32,
 }
+impl ::prost::Name for IconInfo {
+    const NAME: &'static str = "IconInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.IconInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.IconInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IpCity {
@@ -78,6 +108,16 @@ pub struct IpCity {
         tag = "2"
     )]
     pub module_type: i32,
+}
+impl ::prost::Name for IpCity {
+    const NAME: &'static str = "IpCity";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.IpCity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.IpCity".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -113,6 +153,16 @@ pub struct ItemInfoDescVo {
     #[prost(string, tag = "10")]
     pub guide_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ItemInfoDescVo {
+    const NAME: &'static str = "ItemInfoDescVO";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.ItemInfoDescVO".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.ItemInfoDescVO".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiveInfo {
@@ -129,12 +179,32 @@ pub struct LiveInfo {
     #[prost(string, tag = "4")]
     pub live_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LiveInfo {
+    const NAME: &'static str = "LiveInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.LiveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.LiveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MallBenefit {
     ///
     #[prost(message, repeated, tag = "1")]
     pub mall_tags: ::prost::alloc::vec::Vec<MallTagInfo>,
+}
+impl ::prost::Name for MallBenefit {
+    const NAME: &'static str = "MallBenefit";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.MallBenefit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.MallBenefit".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -158,6 +228,16 @@ pub struct MallTagInfo {
     #[prost(string, tag = "6")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MallTagInfo {
+    const NAME: &'static str = "MallTagInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.MallTagInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.MallTagInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OpusDetailReq {
@@ -170,6 +250,16 @@ pub struct OpusDetailReq {
     ///
     #[prost(int32, tag = "3")]
     pub local_time: i32,
+}
+impl ::prost::Name for OpusDetailReq {
+    const NAME: &'static str = "OpusDetailReq";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.OpusDetailReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.OpusDetailReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -228,6 +318,16 @@ pub struct OpusDetailResp {
     #[prost(string, tag = "16")]
     pub item_type: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OpusDetailResp {
+    const NAME: &'static str = "OpusDetailResp";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.OpusDetailResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.OpusDetailResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pic {
@@ -237,6 +337,16 @@ pub struct Pic {
     ///
     #[prost(string, tag = "2")]
     pub style: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Pic {
+    const NAME: &'static str = "Pic";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.Pic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.Pic".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -254,6 +364,16 @@ pub struct PicInfo {
     #[prost(double, tag = "4")]
     pub size: f64,
 }
+impl ::prost::Name for PicInfo {
+    const NAME: &'static str = "PicInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.PicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.PicInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RelationInfo {
@@ -266,6 +386,16 @@ pub struct RelationInfo {
     ///
     #[prost(string, tag = "3")]
     pub dark_icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RelationInfo {
+    const NAME: &'static str = "RelationInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.RelationInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.RelationInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -325,6 +455,16 @@ pub struct ReserveInfo {
     #[prost(int64, tag = "18")]
     pub room_id: i64,
 }
+impl ::prost::Name for ReserveInfo {
+    const NAME: &'static str = "ReserveInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.ReserveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.ReserveInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShareInfo {
@@ -356,6 +496,16 @@ pub struct ShareInfo {
     #[prost(string, tag = "9")]
     pub out_link_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ShareInfo {
+    const NAME: &'static str = "ShareInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.ShareInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.ShareInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TitleInfo {
@@ -364,6 +514,16 @@ pub struct TitleInfo {
     pub modules: ::prost::alloc::vec::Vec<
         super::super::super::super::app::dynamic::v2::Module,
     >,
+}
+impl ::prost::Name for TitleInfo {
+    const NAME: &'static str = "TitleInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.TitleInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.TitleInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -378,6 +538,16 @@ pub struct TopicInfo {
     #[prost(string, tag = "3")]
     pub jump_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for TopicInfo {
+    const NAME: &'static str = "TopicInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.TopicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.TopicInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpActReserveRelationPrizeInfo {
@@ -387,6 +557,16 @@ pub struct UpActReserveRelationPrizeInfo {
     ///
     #[prost(string, tag = "2")]
     pub jump_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UpActReserveRelationPrizeInfo {
+    const NAME: &'static str = "UpActReserveRelationPrizeInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.UpActReserveRelationPrizeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.UpActReserveRelationPrizeInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

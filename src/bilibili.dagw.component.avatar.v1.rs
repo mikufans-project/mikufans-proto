@@ -15,6 +15,16 @@ pub struct AvatarItem {
     #[prost(int64, tag = "4")]
     pub mid: i64,
 }
+impl ::prost::Name for AvatarItem {
+    const NAME: &'static str = "AvatarItem";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.AvatarItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.AvatarItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BasicLayerResource {
@@ -96,6 +106,16 @@ pub mod basic_layer_resource {
         ResNativeDraw(super::ResNativeDraw),
     }
 }
+impl ::prost::Name for BasicLayerResource {
+    const NAME: &'static str = "BasicLayerResource";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.BasicLayerResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.BasicLayerResource".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GeneralConfig {
@@ -105,6 +125,16 @@ pub struct GeneralConfig {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+}
+impl ::prost::Name for GeneralConfig {
+    const NAME: &'static str = "GeneralConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.GeneralConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.GeneralConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -125,6 +155,16 @@ pub struct Layer {
     #[prost(message, optional, tag = "5")]
     pub resource: ::core::option::Option<BasicLayerResource>,
 }
+impl ::prost::Name for Layer {
+    const NAME: &'static str = "Layer";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.Layer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.Layer".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LayerConfig {
@@ -144,6 +184,16 @@ pub struct LayerConfig {
     #[prost(message, optional, tag = "4")]
     pub layer_mask: ::core::option::Option<super::common::MaskProperty>,
 }
+impl ::prost::Name for LayerConfig {
+    const NAME: &'static str = "LayerConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.LayerConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.LayerConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LayerGroup {
@@ -159,6 +209,16 @@ pub struct LayerGroup {
     ///
     #[prost(bool, tag = "4")]
     pub is_critical_group: bool,
+}
+impl ::prost::Name for LayerGroup {
+    const NAME: &'static str = "LayerGroup";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.LayerGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.LayerGroup".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -261,12 +321,32 @@ pub mod layer_tag_config {
         FollowActionConfig(super::plugin::FollowActionConfig),
     }
 }
+impl ::prost::Name for LayerTagConfig {
+    const NAME: &'static str = "LayerTagConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.LayerTagConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.LayerTagConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResAnimation {
     ///
     #[prost(message, optional, tag = "1")]
     pub webp_src: ::core::option::Option<super::common::ResourceSource>,
+}
+impl ::prost::Name for ResAnimation {
+    const NAME: &'static str = "ResAnimation";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.ResAnimation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.ResAnimation".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -275,10 +355,30 @@ pub struct ResImage {
     #[prost(message, optional, tag = "1")]
     pub image_src: ::core::option::Option<super::common::ResourceSource>,
 }
+impl ::prost::Name for ResImage {
+    const NAME: &'static str = "ResImage";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.ResImage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.ResImage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResNativeDraw {
     ///
     #[prost(message, optional, tag = "1")]
     pub draw_src: ::core::option::Option<super::common::ResourceSource>,
+}
+impl ::prost::Name for ResNativeDraw {
+    const NAME: &'static str = "ResNativeDraw";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.ResNativeDraw".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.ResNativeDraw".into()
+    }
 }

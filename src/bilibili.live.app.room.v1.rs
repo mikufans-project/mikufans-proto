@@ -6,6 +6,16 @@ pub struct GetStudioListReq {
     #[prost(int64, tag = "1")]
     pub room_id: i64,
 }
+impl ::prost::Name for GetStudioListReq {
+    const NAME: &'static str = "GetStudioListReq";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.GetStudioListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.GetStudioListReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetStudioListResp {
@@ -46,6 +56,26 @@ pub mod get_studio_list_resp {
             #[prost(string, tag = "4")]
             pub desc: ::prost::alloc::string::String,
         }
+        impl ::prost::Name for Pendant {
+            const NAME: &'static str = "Pendant";
+            const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.live.app.room.v1.GetStudioListResp.Pendants.Pendant".into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.live.app.room.v1.GetStudioListResp.Pendants.Pendant".into()
+            }
+        }
+    }
+    impl ::prost::Name for Pendants {
+        const NAME: &'static str = "Pendants";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.GetStudioListResp.Pendants".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.GetStudioListResp.Pendants".into()
+        }
     }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -72,6 +102,26 @@ pub mod get_studio_list_resp {
         #[prost(int64, tag = "7")]
         pub tag_type: i64,
     }
+    impl ::prost::Name for StudioMaster {
+        const NAME: &'static str = "StudioMaster";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.GetStudioListResp.StudioMaster".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.GetStudioListResp.StudioMaster".into()
+        }
+    }
+}
+impl ::prost::Name for GetStudioListResp {
+    const NAME: &'static str = "GetStudioListResp";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.GetStudioListResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.GetStudioListResp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -94,6 +144,16 @@ pub struct InteractConnect {
     ///
     #[prost(int64, tag = "6")]
     pub connect_timeout: i64,
+}
+impl ::prost::Name for InteractConnect {
+    const NAME: &'static str = "InteractConnect";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.InteractConnect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.InteractConnect".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -120,6 +180,16 @@ pub struct InteractLayoutData {
     #[prost(message, optional, tag = "7")]
     pub rtc_resolution_simulcast: ::core::option::Option<RtcResolution>,
 }
+impl ::prost::Name for InteractLayoutData {
+    const NAME: &'static str = "InteractLayoutData";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.InteractLayoutData".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.InteractLayoutData".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InteractMode {
@@ -139,6 +209,16 @@ pub struct InteractMode {
     #[prost(enumeration = "InteractPositionMode", tag = "5")]
     pub position_mode: i32,
 }
+impl ::prost::Name for InteractMode {
+    const NAME: &'static str = "InteractMode";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.InteractMode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.InteractMode".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InteractSceneConfig {
@@ -157,6 +237,16 @@ pub struct InteractSceneConfig {
     ///
     #[prost(int64, tag = "5")]
     pub interact_max_users: i64,
+}
+impl ::prost::Name for InteractSceneConfig {
+    const NAME: &'static str = "InteractSceneConfig";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.InteractSceneConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.InteractSceneConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -194,6 +284,26 @@ pub mod interact_template {
         ///
         #[prost(int64, tag = "3")]
         pub max_users: i64,
+    }
+    impl ::prost::Name for Layout {
+        const NAME: &'static str = "Layout";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.InteractTemplate.Layout".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.InteractTemplate.Layout".into()
+        }
+    }
+}
+impl ::prost::Name for InteractTemplate {
+    const NAME: &'static str = "InteractTemplate";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.InteractTemplate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.InteractTemplate".into()
     }
 }
 ///
@@ -242,6 +352,16 @@ pub struct LayoutCell {
     #[prost(string, tag = "14")]
     pub position_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LayoutCell {
+    const NAME: &'static str = "LayoutCell";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.LayoutCell".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.LayoutCell".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Members {
@@ -273,6 +393,16 @@ pub struct Members {
     #[prost(int64, tag = "9")]
     pub room_id: i64,
 }
+impl ::prost::Name for Members {
+    const NAME: &'static str = "Members";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.Members".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.Members".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MultiConnInfo {
@@ -301,6 +431,26 @@ pub mod multi_conn_info {
         #[prost(string, tag = "3")]
         pub price_text: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for Score {
+        const NAME: &'static str = "Score";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.MultiConnInfo.Score".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.MultiConnInfo.Score".into()
+        }
+    }
+}
+impl ::prost::Name for MultiConnInfo {
+    const NAME: &'static str = "MultiConnInfo";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.MultiConnInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.MultiConnInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -314,6 +464,16 @@ pub struct MultiConnInfoReq {
     ///
     #[prost(string, tag = "3")]
     pub biz_session_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MultiConnInfoReq {
+    const NAME: &'static str = "MultiConnInfoReq";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.MultiConnInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.MultiConnInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -364,6 +524,26 @@ pub mod multi_conn_info_resp {
         #[prost(int64, tag = "7")]
         pub gender: i64,
     }
+    impl ::prost::Name for Info {
+        const NAME: &'static str = "info";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.MultiConnInfoResp.info".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.MultiConnInfoResp.info".into()
+        }
+    }
+}
+impl ::prost::Name for MultiConnInfoResp {
+    const NAME: &'static str = "MultiConnInfoResp";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.MultiConnInfoResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.MultiConnInfoResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -395,6 +575,16 @@ pub struct Operator {
     ///
     #[prost(string, tag = "9")]
     pub mobi_app: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Operator {
+    const NAME: &'static str = "Operator";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.Operator".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.Operator".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -439,6 +629,16 @@ pub struct RtcResolution {
     #[prost(bool, tag = "13")]
     pub small_bitrate_active: bool,
 }
+impl ::prost::Name for RtcResolution {
+    const NAME: &'static str = "RtcResolution";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.RtcResolution".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.RtcResolution".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UniversalInfoReq {
@@ -451,6 +651,16 @@ pub struct UniversalInfoReq {
     ///
     #[prost(int64, tag = "3")]
     pub room_id: i64,
+}
+impl ::prost::Name for UniversalInfoReq {
+    const NAME: &'static str = "UniversalInfoReq";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.UniversalInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.UniversalInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -519,6 +729,16 @@ pub struct UniversalInfoResp {
     #[prost(string, tag = "21")]
     pub trace_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UniversalInfoResp {
+    const NAME: &'static str = "UniversalInfoResp";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.UniversalInfoResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.UniversalInfoResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserStreamControl {
@@ -548,6 +768,16 @@ pub mod user_stream_control {
         #[prost(enumeration = "super::SubMode", tag = "2")]
         pub sub_mode: i32,
     }
+    impl ::prost::Name for ExplicitSubMode {
+        const NAME: &'static str = "ExplicitSubMode";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.UserStreamControl.ExplicitSubMode".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.UserStreamControl.ExplicitSubMode".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct PubSubControl {
@@ -570,6 +800,16 @@ pub mod user_stream_control {
         #[prost(message, optional, tag = "6")]
         pub rtc_resolution_simulcast: ::core::option::Option<super::RtcResolution>,
     }
+    impl ::prost::Name for PubSubControl {
+        const NAME: &'static str = "PubSubControl";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.UserStreamControl.PubSubControl".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.UserStreamControl.PubSubControl".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct UserStreamControlItem {
@@ -585,6 +825,26 @@ pub mod user_stream_control {
         ///
         #[prost(int64, tag = "4")]
         pub version: i64,
+    }
+    impl ::prost::Name for UserStreamControlItem {
+        const NAME: &'static str = "UserStreamControlItem";
+        const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.app.room.v1.UserStreamControl.UserStreamControlItem".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.app.room.v1.UserStreamControl.UserStreamControlItem".into()
+        }
+    }
+}
+impl ::prost::Name for UserStreamControl {
+    const NAME: &'static str = "UserStreamControl";
+    const PACKAGE: &'static str = "bilibili.live.app.room.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.room.v1.UserStreamControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.room.v1.UserStreamControl".into()
     }
 }
 ///

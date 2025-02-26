@@ -84,12 +84,32 @@ pub struct PlayAbilityConf {
     #[prost(string, tag = "29")]
     pub cast_disable_reason_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PlayAbilityConf {
+    const NAME: &'static str = "PlayAbilityConf";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.PlayAbilityConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.PlayAbilityConf".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayViewBusinessInfo {
     ///
     #[prost(enumeration = "DrmTechType", tag = "1")]
     pub drm_tech_type: i32,
+}
+impl ::prost::Name for PlayViewBusinessInfo {
+    const NAME: &'static str = "PlayViewBusinessInfo";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.PlayViewBusinessInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.PlayViewBusinessInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -108,6 +128,16 @@ pub struct PlayViewReply {
     ///
     #[prost(message, optional, tag = "4")]
     pub risk_control: ::core::option::Option<RiskControl>,
+}
+impl ::prost::Name for PlayViewReply {
+    const NAME: &'static str = "PlayViewReply";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.PlayViewReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.PlayViewReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -161,6 +191,16 @@ pub struct PlayViewReq {
     #[prost(enumeration = "SecurityLevel", tag = "15")]
     pub security_level: i32,
 }
+impl ::prost::Name for PlayViewReq {
+    const NAME: &'static str = "PlayViewReq";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.PlayViewReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.PlayViewReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProjectReply {
@@ -169,6 +209,16 @@ pub struct ProjectReply {
     pub project: ::core::option::Option<
         super::super::super::super::app::playurl::v1::PlayUrlReply,
     >,
+}
+impl ::prost::Name for ProjectReply {
+    const NAME: &'static str = "ProjectReply";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.ProjectReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.ProjectReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -216,6 +266,16 @@ pub struct ProjectReq {
     #[prost(int64, tag = "14")]
     pub aid: i64,
 }
+impl ::prost::Name for ProjectReq {
+    const NAME: &'static str = "ProjectReq";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.ProjectReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.ProjectReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RiskControl {
@@ -237,6 +297,16 @@ pub struct RiskControl {
     ///
     #[prost(string, tag = "6")]
     pub buvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RiskControl {
+    const NAME: &'static str = "RiskControl";
+    const PACKAGE: &'static str = "bilibili.cheese.gateway.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.cheese.gateway.player.v1.RiskControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.cheese.gateway.player.v1.RiskControl".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

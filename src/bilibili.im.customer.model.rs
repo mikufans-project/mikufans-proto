@@ -12,6 +12,16 @@ pub struct BindNote {
     #[prost(string, tag = "3")]
     pub color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BindNote {
+    const NAME: &'static str = "BindNote";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.BindNote".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.BindNote".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Business {
@@ -25,6 +35,16 @@ pub struct Business {
     #[prost(enumeration = "Select", tag = "3")]
     pub select: i32,
 }
+impl ::prost::Name for Business {
+    const NAME: &'static str = "Business";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.Business".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.Business".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ComplianceDescribe {
@@ -37,6 +57,16 @@ pub struct ComplianceDescribe {
     ///
     #[prost(string, tag = "3")]
     pub link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ComplianceDescribe {
+    const NAME: &'static str = "ComplianceDescribe";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.ComplianceDescribe".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.ComplianceDescribe".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -56,6 +86,16 @@ pub struct ComplianceModel {
     ///
     #[prost(string, tag = "5")]
     pub cancel_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ComplianceModel {
+    const NAME: &'static str = "ComplianceModel";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.ComplianceModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.ComplianceModel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -82,6 +122,16 @@ pub struct CustomerInfo {
     #[prost(string, tag = "7")]
     pub customer_state_desc: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CustomerInfo {
+    const NAME: &'static str = "CustomerInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.CustomerInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.CustomerInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EmotionInfo {
@@ -97,6 +147,16 @@ pub struct EmotionInfo {
     ///
     #[prost(string, tag = "4")]
     pub gif_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EmotionInfo {
+    const NAME: &'static str = "EmotionInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.EmotionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.EmotionInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -135,6 +195,16 @@ pub struct EvaluationShowInfo {
     #[prost(int64, tag = "11")]
     pub machine_sess_id: i64,
 }
+impl ::prost::Name for EvaluationShowInfo {
+    const NAME: &'static str = "EvaluationShowInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.EvaluationShowInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.EvaluationShowInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EvaluationStepSelect {
@@ -144,6 +214,16 @@ pub struct EvaluationStepSelect {
     ///
     #[prost(enumeration = "Select", tag = "2")]
     pub select: i32,
+}
+impl ::prost::Name for EvaluationStepSelect {
+    const NAME: &'static str = "EvaluationStepSelect";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.EvaluationStepSelect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.EvaluationStepSelect".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -157,6 +237,16 @@ pub struct Group {
     ///
     #[prost(enumeration = "Select", tag = "3")]
     pub select: i32,
+}
+impl ::prost::Name for Group {
+    const NAME: &'static str = "Group";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.Group".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.Group".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -204,6 +294,16 @@ pub struct Msg {
     #[prost(int64, repeated, tag = "14")]
     pub ai_link_msg: ::prost::alloc::vec::Vec<i64>,
 }
+impl ::prost::Name for Msg {
+    const NAME: &'static str = "Msg";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.Msg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.Msg".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSpLitA {
@@ -220,6 +320,16 @@ pub struct MsgSpLitA {
     #[prost(message, optional, tag = "4")]
     pub customer_info: ::core::option::Option<CustomerInfo>,
 }
+impl ::prost::Name for MsgSpLitA {
+    const NAME: &'static str = "MsgSpLitA";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.MsgSpLitA".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.MsgSpLitA".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSpLitAnsCustomer {
@@ -229,6 +339,16 @@ pub struct MsgSpLitAnsCustomer {
     ///
     #[prost(string, tag = "2")]
     pub customer_name: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MsgSpLitAnsCustomer {
+    const NAME: &'static str = "MsgSpLitAnsCustomer";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.MsgSpLitAnsCustomer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.MsgSpLitAnsCustomer".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -285,6 +405,16 @@ pub struct SessionInfo {
     #[prost(bool, tag = "17")]
     pub is_hide_edit: bool,
 }
+impl ::prost::Name for SessionInfo {
+    const NAME: &'static str = "SessionInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.SessionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.SessionInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TalkerInfo {
@@ -319,6 +449,16 @@ pub struct TalkerInfo {
     #[prost(string, repeated, tag = "10")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
+impl ::prost::Name for TalkerInfo {
+    const NAME: &'static str = "TalkerInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.TalkerInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.TalkerInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnreadInfo {
@@ -337,6 +477,16 @@ pub struct UnreadInfo {
     ///
     #[prost(int64, tag = "5")]
     pub notice_unread_count: i64,
+}
+impl ::prost::Name for UnreadInfo {
+    const NAME: &'static str = "UnreadInfo";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.UnreadInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.UnreadInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -357,6 +507,16 @@ pub struct WindowOptionEvaluation {
     #[prost(int64, tag = "5")]
     pub im_stat: i64,
 }
+impl ::prost::Name for WindowOptionEvaluation {
+    const NAME: &'static str = "WindowOptionEvaluation";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.WindowOptionEvaluation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.WindowOptionEvaluation".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WindowOptionGoods {
@@ -373,6 +533,16 @@ pub struct WindowOptionGoods {
     #[prost(string, tag = "4")]
     pub title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for WindowOptionGoods {
+    const NAME: &'static str = "WindowOptionGoods";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.WindowOptionGoods".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.WindowOptionGoods".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WindowOptionHistory {
@@ -388,6 +558,16 @@ pub struct WindowOptionHistory {
     ///
     #[prost(string, tag = "4")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for WindowOptionHistory {
+    const NAME: &'static str = "WindowOptionHistory";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.WindowOptionHistory".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.WindowOptionHistory".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -414,6 +594,16 @@ pub struct WindowOptionMessage {
     #[prost(string, tag = "7")]
     pub new_ticket_jump_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for WindowOptionMessage {
+    const NAME: &'static str = "WindowOptionMessage";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.WindowOptionMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.WindowOptionMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WindowOptionOrder {
@@ -429,6 +619,16 @@ pub struct WindowOptionOrder {
     ///
     #[prost(string, tag = "4")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for WindowOptionOrder {
+    const NAME: &'static str = "WindowOptionOrder";
+    const PACKAGE: &'static str = "bilibili.im.customer.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.model.WindowOptionOrder".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.model.WindowOptionOrder".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

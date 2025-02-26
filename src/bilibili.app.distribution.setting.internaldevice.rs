@@ -6,3 +6,13 @@ pub struct InternalDeviceConfig {
     #[prost(message, optional, tag = "1")]
     pub fts: ::core::option::Option<super::super::Int64Value>,
 }
+impl ::prost::Name for InternalDeviceConfig {
+    const NAME: &'static str = "InternalDeviceConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.internaldevice";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.internaldevice.InternalDeviceConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.internaldevice.InternalDeviceConfig".into()
+    }
+}

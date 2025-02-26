@@ -15,6 +15,16 @@ pub struct ButtonStyle {
     #[prost(string, tag = "4")]
     pub jump_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ButtonStyle {
+    const NAME: &'static str = "ButtonStyle";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.ButtonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.ButtonStyle".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ClipInfo {
@@ -30,6 +40,16 @@ pub struct ClipInfo {
     ///
     #[prost(int32, tag = "4")]
     pub end: i32,
+}
+impl ::prost::Name for ClipInfo {
+    const NAME: &'static str = "ClipInfo";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.ClipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.ClipInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -56,6 +76,16 @@ pub struct PugvAnyModel {
     #[prost(message, optional, tag = "7")]
     pub play_limit: ::core::option::Option<PlayLimit>,
 }
+impl ::prost::Name for PugvAnyModel {
+    const NAME: &'static str = "PUGVAnyModel";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.PUGVAnyModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.PUGVAnyModel".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayLimit {
@@ -72,6 +102,16 @@ pub struct PlayLimit {
     #[prost(message, optional, tag = "4")]
     pub button: ::core::option::Option<ButtonStyle>,
 }
+impl ::prost::Name for PlayLimit {
+    const NAME: &'static str = "PlayLimit";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.PlayLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.PlayLimit".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayerMask {
@@ -84,6 +124,16 @@ pub struct PlayerMask {
     ///
     #[prost(string, tag = "3")]
     pub suffix: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PlayerMask {
+    const NAME: &'static str = "PlayerMask";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.PlayerMask".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.PlayerMask".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -106,6 +156,16 @@ pub struct RiskControl {
     ///
     #[prost(string, tag = "6")]
     pub buvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RiskControl {
+    const NAME: &'static str = "RiskControl";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.pugvanymodel.RiskControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.pugvanymodel.RiskControl".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

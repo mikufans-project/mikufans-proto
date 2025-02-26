@@ -15,6 +15,16 @@ pub struct AirDropShareUserInfo {
     #[prost(string, tag = "4")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AirDropShareUserInfo {
+    const NAME: &'static str = "AirDropShareUserInfo";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.AirDropShareUserInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.AirDropShareUserInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AirDropToImReply {
@@ -22,12 +32,32 @@ pub struct AirDropToImReply {
     #[prost(message, repeated, tag = "1")]
     pub user_infos: ::prost::alloc::vec::Vec<AirDropShareUserInfo>,
 }
+impl ::prost::Name for AirDropToImReply {
+    const NAME: &'static str = "AirDropToImReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.AirDropToImReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.AirDropToImReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AirDropToImReq {
     ///
     #[prost(enumeration = "AirDropFrom", tag = "1")]
     pub adf: i32,
+}
+impl ::prost::Name for AirDropToImReq {
+    const NAME: &'static str = "AirDropToImReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.AirDropToImReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.AirDropToImReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -39,6 +69,42 @@ pub struct AutoReplyToast {
     #[prost(string, tag = "2")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AutoReplyToast {
+    const NAME: &'static str = "AutoReplyToast";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.AutoReplyToast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.AutoReplyToast".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct BehaviorAlertToast {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub content: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub type_str: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "AlertToastType", tag = "4")]
+    pub r#type: i32,
+}
+impl ::prost::Name for BehaviorAlertToast {
+    const NAME: &'static str = "BehaviorAlertToast";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.BehaviorAlertToast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.BehaviorAlertToast".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BorderedLabel {
@@ -49,9 +115,29 @@ pub struct BorderedLabel {
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BorderedLabel {
+    const NAME: &'static str = "BorderedLabel";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.BorderedLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.BorderedLabel".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CancelInterceptInDustbinReply {}
+impl ::prost::Name for CancelInterceptInDustbinReply {
+    const NAME: &'static str = "CancelInterceptInDustbinReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.CancelInterceptInDustbinReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.CancelInterceptInDustbinReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CancelInterceptInDustbinReq {
@@ -59,9 +145,59 @@ pub struct CancelInterceptInDustbinReq {
     #[prost(message, optional, tag = "1")]
     pub session_id: ::core::option::Option<SessionId>,
 }
+impl ::prost::Name for CancelInterceptInDustbinReq {
+    const NAME: &'static str = "CancelInterceptInDustbinReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.CancelInterceptInDustbinReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.CancelInterceptInDustbinReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ClearAlertReply {}
+impl ::prost::Name for ClearAlertReply {
+    const NAME: &'static str = "ClearAlertReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ClearAlertReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ClearAlertReply".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ClearAlertReq {
+    ///
+    #[prost(enumeration = "AlertToastType", tag = "1")]
+    pub r#type: i32,
+}
+impl ::prost::Name for ClearAlertReq {
+    const NAME: &'static str = "ClearAlertReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ClearAlertReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ClearAlertReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ClearUnreadReply {}
+impl ::prost::Name for ClearUnreadReply {
+    const NAME: &'static str = "ClearUnreadReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ClearUnreadReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ClearUnreadReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ClearUnreadReq {
@@ -71,6 +207,16 @@ pub struct ClearUnreadReq {
     ///
     #[prost(message, optional, tag = "2")]
     pub session_id: ::core::option::Option<SessionId>,
+}
+impl ::prost::Name for ClearUnreadReq {
+    const NAME: &'static str = "ClearUnreadReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ClearUnreadReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ClearUnreadReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -107,6 +253,16 @@ pub struct Contact {
     #[prost(int32, tag = "9")]
     pub official_type: i32,
 }
+impl ::prost::Name for Contact {
+    const NAME: &'static str = "Contact";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Contact".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Contact".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ContactTab {
@@ -116,6 +272,16 @@ pub struct ContactTab {
     ///
     #[prost(string, tag = "2")]
     pub name: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ContactTab {
+    const NAME: &'static str = "ContactTab";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ContactTab".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ContactTab".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -133,6 +299,16 @@ pub struct ContactsReply {
     #[prost(message, optional, tag = "4")]
     pub pagination_params: ::core::option::Option<PaginationParams>,
 }
+impl ::prost::Name for ContactsReply {
+    const NAME: &'static str = "ContactsReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ContactsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ContactsReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ContactsReq {
@@ -143,6 +319,16 @@ pub struct ContactsReq {
     #[prost(message, optional, tag = "2")]
     pub pagination_params: ::core::option::Option<PaginationParams>,
 }
+impl ::prost::Name for ContactsReq {
+    const NAME: &'static str = "ContactsReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ContactsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ContactsReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ContactsSearchReply {
@@ -152,6 +338,16 @@ pub struct ContactsSearchReply {
     ///
     #[prost(message, optional, tag = "2")]
     pub pagination_params: ::core::option::Option<PaginationParams>,
+}
+impl ::prost::Name for ContactsSearchReply {
+    const NAME: &'static str = "ContactsSearchReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ContactsSearchReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ContactsSearchReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -166,6 +362,16 @@ pub struct ContactsSearchReq {
     #[prost(message, optional, tag = "3")]
     pub pagination_params: ::core::option::Option<PaginationParams>,
 }
+impl ::prost::Name for ContactsSearchReq {
+    const NAME: &'static str = "ContactsSearchReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ContactsSearchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ContactsSearchReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CustomerId {
@@ -176,9 +382,29 @@ pub struct CustomerId {
     #[prost(int64, tag = "2")]
     pub shop_type: i64,
 }
+impl ::prost::Name for CustomerId {
+    const NAME: &'static str = "CustomerId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.CustomerId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.CustomerId".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DeleteSessionListReply {}
+impl ::prost::Name for DeleteSessionListReply {
+    const NAME: &'static str = "DeleteSessionListReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.DeleteSessionListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.DeleteSessionListReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DeleteSessionListReq {
@@ -186,9 +412,29 @@ pub struct DeleteSessionListReq {
     #[prost(enumeration = "SessionPageType", tag = "1")]
     pub page_type: i32,
 }
+impl ::prost::Name for DeleteSessionListReq {
+    const NAME: &'static str = "DeleteSessionListReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.DeleteSessionListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.DeleteSessionListReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DeleteSessionReply {}
+impl ::prost::Name for DeleteSessionReply {
+    const NAME: &'static str = "DeleteSessionReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.DeleteSessionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.DeleteSessionReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DeleteSessionReq {
@@ -196,12 +442,32 @@ pub struct DeleteSessionReq {
     #[prost(message, optional, tag = "1")]
     pub session_id: ::core::option::Option<SessionId>,
 }
+impl ::prost::Name for DeleteSessionReq {
+    const NAME: &'static str = "DeleteSessionReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.DeleteSessionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.DeleteSessionReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FilledLabel {
     ///
     #[prost(string, tag = "1")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for FilledLabel {
+    const NAME: &'static str = "FilledLabel";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.FilledLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.FilledLabel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -213,12 +479,32 @@ pub struct FilterConfig {
     #[prost(enumeration = "SessionFilterType", tag = "2")]
     pub current_filter: i32,
 }
+impl ::prost::Name for FilterConfig {
+    const NAME: &'static str = "FilterConfig";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.FilterConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.FilterConfig".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FoldId {
     ///
     #[prost(enumeration = "SessionType", tag = "1")]
     pub r#type: i32,
+}
+impl ::prost::Name for FoldId {
+    const NAME: &'static str = "FoldId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.FoldId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.FoldId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -230,12 +516,32 @@ pub struct GetImSettingsReply {
     #[prost(map = "int32, message", tag = "2")]
     pub settings: ::std::collections::HashMap<i32, Setting>,
 }
+impl ::prost::Name for GetImSettingsReply {
+    const NAME: &'static str = "GetImSettingsReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetImSettingsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetImSettingsReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetImSettingsReq {
     ///
     #[prost(enumeration = "ImSettingType", tag = "1")]
     pub r#type: i32,
+}
+impl ::prost::Name for GetImSettingsReq {
+    const NAME: &'static str = "GetImSettingsReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetImSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetImSettingsReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -244,9 +550,29 @@ pub struct GetQuickLinkUnreadReply {
     #[prost(message, repeated, tag = "1")]
     pub items: ::prost::alloc::vec::Vec<QuickLinkUnreadItem>,
 }
+impl ::prost::Name for GetQuickLinkUnreadReply {
+    const NAME: &'static str = "GetQuickLinkUnreadReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetQuickLinkUnreadReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetQuickLinkUnreadReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetQuickLinkUnreadReq {}
+impl ::prost::Name for GetQuickLinkUnreadReq {
+    const NAME: &'static str = "GetQuickLinkUnreadReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetQuickLinkUnreadReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetQuickLinkUnreadReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTotalUnreadReply {
@@ -254,15 +580,45 @@ pub struct GetTotalUnreadReply {
     #[prost(message, optional, tag = "1")]
     pub total: ::core::option::Option<Unread>,
 }
+impl ::prost::Name for GetTotalUnreadReply {
+    const NAME: &'static str = "GetTotalUnreadReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetTotalUnreadReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetTotalUnreadReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetTotalUnreadReq {}
+impl ::prost::Name for GetTotalUnreadReq {
+    const NAME: &'static str = "GetTotalUnreadReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GetTotalUnreadReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GetTotalUnreadReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GroupId {
     ///
     #[prost(int64, tag = "1")]
     pub group_id: i64,
+}
+impl ::prost::Name for GroupId {
+    const NAME: &'static str = "GroupId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.GroupId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.GroupId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -276,6 +632,143 @@ pub struct ImageLabel {
     ///
     #[prost(int32, tag = "3")]
     pub height: i32,
+}
+impl ::prost::Name for ImageLabel {
+    const NAME: &'static str = "ImageLabel";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ImageLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ImageLabel".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingAddReply {
+    ///
+    #[prost(string, tag = "1")]
+    pub toast: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub item: ::core::option::Option<KeywordBlockingItem>,
+}
+impl ::prost::Name for KeywordBlockingAddReply {
+    const NAME: &'static str = "KeywordBlockingAddReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingAddReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingAddReply".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingAddReq {
+    ///
+    #[prost(string, tag = "1")]
+    pub keyword: ::prost::alloc::string::String,
+}
+impl ::prost::Name for KeywordBlockingAddReq {
+    const NAME: &'static str = "KeywordBlockingAddReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingAddReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingAddReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingDeleteReply {
+    ///
+    #[prost(string, tag = "1")]
+    pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for KeywordBlockingDeleteReply {
+    const NAME: &'static str = "KeywordBlockingDeleteReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingDeleteReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingDeleteReply".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingDeleteReq {
+    ///
+    #[prost(string, tag = "1")]
+    pub keyword: ::prost::alloc::string::String,
+}
+impl ::prost::Name for KeywordBlockingDeleteReq {
+    const NAME: &'static str = "KeywordBlockingDeleteReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingDeleteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingDeleteReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingItem {
+    ///
+    #[prost(string, tag = "1")]
+    pub keyword: ::prost::alloc::string::String,
+}
+impl ::prost::Name for KeywordBlockingItem {
+    const NAME: &'static str = "KeywordBlockingItem";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingListReply {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub items: ::prost::alloc::vec::Vec<KeywordBlockingItem>,
+    ///
+    #[prost(int32, tag = "2")]
+    pub list_limit: i32,
+    ///
+    #[prost(int32, tag = "3")]
+    pub char_limit: i32,
+    ///
+    #[prost(string, tag = "4")]
+    pub list_limit_text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for KeywordBlockingListReply {
+    const NAME: &'static str = "KeywordBlockingListReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingListReply".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct KeywordBlockingListReq {}
+impl ::prost::Name for KeywordBlockingListReq {
+    const NAME: &'static str = "KeywordBlockingListReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.KeywordBlockingListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.KeywordBlockingListReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -323,6 +816,16 @@ pub struct Medal {
     #[prost(int64, tag = "14")]
     pub guard_level: i64,
 }
+impl ::prost::Name for Medal {
+    const NAME: &'static str = "Medal";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Medal".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Medal".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MsgSummary {
@@ -339,6 +842,16 @@ pub struct MsgSummary {
     #[prost(bool, tag = "4")]
     pub is_group_owner: bool,
 }
+impl ::prost::Name for MsgSummary {
+    const NAME: &'static str = "MsgSummary";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.MsgSummary".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.MsgSummary".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Offset {
@@ -348,6 +861,16 @@ pub struct Offset {
     ///
     #[prost(int64, tag = "2")]
     pub top_offset: i64,
+}
+impl ::prost::Name for Offset {
+    const NAME: &'static str = "Offset";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Offset".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Offset".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -359,6 +882,16 @@ pub struct OperationContent {
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for OperationContent {
+    const NAME: &'static str = "OperationContent";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.OperationContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.OperationContent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PaginationParams {
@@ -368,6 +901,16 @@ pub struct PaginationParams {
     ///
     #[prost(bool, tag = "2")]
     pub has_more: bool,
+}
+impl ::prost::Name for PaginationParams {
+    const NAME: &'static str = "PaginationParams";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.PaginationParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.PaginationParams".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -382,6 +925,16 @@ pub struct PinSessionReply {
     #[prost(string, tag = "3")]
     pub message: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PinSessionReply {
+    const NAME: &'static str = "PinSessionReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.PinSessionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.PinSessionReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PinSessionReq {
@@ -392,12 +945,32 @@ pub struct PinSessionReq {
     #[prost(int64, tag = "2")]
     pub top_time_micros: i64,
 }
+impl ::prost::Name for PinSessionReq {
+    const NAME: &'static str = "PinSessionReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.PinSessionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.PinSessionReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PrivateId {
     ///
     #[prost(int64, tag = "1")]
     pub talker_uid: i64,
+}
+impl ::prost::Name for PrivateId {
+    const NAME: &'static str = "PrivateId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.PrivateId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.PrivateId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -421,6 +994,16 @@ pub struct QuickLinkBubble {
     #[prost(enumeration = "QuickLinkMsgType", tag = "6")]
     pub msg_type: i32,
 }
+impl ::prost::Name for QuickLinkBubble {
+    const NAME: &'static str = "QuickLinkBubble";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.QuickLinkBubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.QuickLinkBubble".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuickLinkConfig {
@@ -433,6 +1016,16 @@ pub struct QuickLinkConfig {
     ///
     #[prost(bool, tag = "3")]
     pub is_legacy_style: bool,
+}
+impl ::prost::Name for QuickLinkConfig {
+    const NAME: &'static str = "QuickLinkConfig";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.QuickLinkConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.QuickLinkConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -456,6 +1049,16 @@ pub struct QuickLinkItem {
     #[prost(enumeration = "QuickLinkItemType", tag = "6")]
     pub item_type: i32,
 }
+impl ::prost::Name for QuickLinkItem {
+    const NAME: &'static str = "QuickLinkItem";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.QuickLinkItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.QuickLinkItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuickLinkUnreadItem {
@@ -466,6 +1069,16 @@ pub struct QuickLinkUnreadItem {
     #[prost(message, optional, tag = "2")]
     pub unread: ::core::option::Option<Unread>,
 }
+impl ::prost::Name for QuickLinkUnreadItem {
+    const NAME: &'static str = "QuickLinkUnreadItem";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.QuickLinkUnreadItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.QuickLinkUnreadItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RestrictedMode {
@@ -475,6 +1088,16 @@ pub struct RestrictedMode {
     ///
     #[prost(bool, tag = "2")]
     pub lessons: bool,
+}
+impl ::prost::Name for RestrictedMode {
+    const NAME: &'static str = "RestrictedMode";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.RestrictedMode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.RestrictedMode".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -488,6 +1111,16 @@ pub struct SelectItem {
     ///
     #[prost(bool, tag = "3")]
     pub selected: bool,
+}
+impl ::prost::Name for SelectItem {
+    const NAME: &'static str = "SelectItem";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SelectItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SelectItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -529,6 +1162,16 @@ pub struct Session {
         ::prost::alloc::string::String,
     >,
 }
+impl ::prost::Name for Session {
+    const NAME: &'static str = "Session";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Session".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Session".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SessionId {
@@ -558,6 +1201,16 @@ pub mod session_id {
         CustomerId(super::CustomerId),
     }
 }
+impl ::prost::Name for SessionId {
+    const NAME: &'static str = "SessionId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionId".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionInfo {
@@ -584,6 +1237,16 @@ pub struct SessionInfo {
     #[prost(bool, tag = "6")]
     pub is_live: bool,
 }
+impl ::prost::Name for SessionInfo {
+    const NAME: &'static str = "SessionInfo";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionListExtraInfo {
@@ -596,6 +1259,19 @@ pub struct SessionListExtraInfo {
     ///
     #[prost(string, tag = "3")]
     pub customer_hint_title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub behavior_alert_toast: ::core::option::Option<BehaviorAlertToast>,
+}
+impl ::prost::Name for SessionListExtraInfo {
+    const NAME: &'static str = "SessionListExtraInfo";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionListExtraInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionListExtraInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -606,6 +1282,16 @@ pub struct SessionListUpdateReply {
     ///
     #[prost(message, optional, tag = "2")]
     pub update_session_params: ::core::option::Option<UpdateSessionParams>,
+}
+impl ::prost::Name for SessionListUpdateReply {
+    const NAME: &'static str = "SessionListUpdateReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionListUpdateReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionListUpdateReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -622,6 +1308,16 @@ pub struct SessionListUpdateReq {
     ///
     #[prost(enumeration = "SessionFilterType", tag = "4")]
     pub filter_type: i32,
+}
+impl ::prost::Name for SessionListUpdateReq {
+    const NAME: &'static str = "SessionListUpdateReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionListUpdateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionListUpdateReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -651,6 +1347,16 @@ pub struct SessionMainReply {
     #[prost(message, optional, tag = "8")]
     pub extra_info: ::core::option::Option<SessionListExtraInfo>,
 }
+impl ::prost::Name for SessionMainReply {
+    const NAME: &'static str = "SessionMainReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionMainReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionMainReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionMainReq {
@@ -663,6 +1369,16 @@ pub struct SessionMainReq {
     ///
     #[prost(enumeration = "SessionFilterType", tag = "3")]
     pub filter_type: i32,
+}
+impl ::prost::Name for SessionMainReq {
+    const NAME: &'static str = "SessionMainReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionMainReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionMainReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -683,6 +1399,16 @@ pub struct SessionOperation {
     #[prost(message, optional, tag = "5")]
     pub unblock: ::core::option::Option<OperationContent>,
 }
+impl ::prost::Name for SessionOperation {
+    const NAME: &'static str = "SessionOperation";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionOperation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionOperation".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionSecondaryReply {
@@ -702,6 +1428,16 @@ pub struct SessionSecondaryReply {
     #[prost(message, repeated, tag = "5")]
     pub outside_item: ::prost::alloc::vec::Vec<ThreeDotItem>,
 }
+impl ::prost::Name for SessionSecondaryReply {
+    const NAME: &'static str = "SessionSecondaryReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionSecondaryReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionSecondaryReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionSecondaryReq {
@@ -715,12 +1451,32 @@ pub struct SessionSecondaryReq {
     #[prost(enumeration = "SessionPageType", tag = "3")]
     pub page_type: i32,
 }
+impl ::prost::Name for SessionSecondaryReq {
+    const NAME: &'static str = "SessionSecondaryReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionSecondaryReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionSecondaryReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionUpdateReply {
     ///
     #[prost(message, optional, tag = "1")]
     pub session: ::core::option::Option<Session>,
+}
+impl ::prost::Name for SessionUpdateReply {
+    const NAME: &'static str = "SessionUpdateReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionUpdateReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionUpdateReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -732,6 +1488,16 @@ pub struct SessionUpdateReq {
     #[prost(enumeration = "SessionPageType", tag = "2")]
     pub page_type: i32,
 }
+impl ::prost::Name for SessionUpdateReq {
+    const NAME: &'static str = "SessionUpdateReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionUpdateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionUpdateReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SessionsFilter {
@@ -742,6 +1508,16 @@ pub struct SessionsFilter {
     #[prost(string, tag = "2")]
     pub title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SessionsFilter {
+    const NAME: &'static str = "SessionsFilter";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SessionsFilter".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SessionsFilter".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetImSettingsReply {
@@ -749,12 +1525,32 @@ pub struct SetImSettingsReply {
     #[prost(string, tag = "1")]
     pub toast: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SetImSettingsReply {
+    const NAME: &'static str = "SetImSettingsReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SetImSettingsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SetImSettingsReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetImSettingsReq {
     ///
     #[prost(map = "int32, message", tag = "1")]
     pub settings: ::std::collections::HashMap<i32, Setting>,
+}
+impl ::prost::Name for SetImSettingsReq {
+    const NAME: &'static str = "SetImSettingsReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SetImSettingsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SetImSettingsReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -780,6 +1576,16 @@ pub mod setting {
         ///
         #[prost(message, tag = "4")]
         Text(super::SettingText),
+    }
+}
+impl ::prost::Name for Setting {
+    const NAME: &'static str = "Setting";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Setting".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Setting".into()
     }
 }
 ///
@@ -817,12 +1623,32 @@ pub mod setting_redirect {
         WindowSelect(super::RedirectWindowSelect),
     }
 }
+impl ::prost::Name for SettingRedirect {
+    const NAME: &'static str = "SettingRedirect";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SettingRedirect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SettingRedirect".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SettingSelect {
     ///
     #[prost(message, repeated, tag = "1")]
     pub item: ::prost::alloc::vec::Vec<SelectItem>,
+}
+impl ::prost::Name for SettingSelect {
+    const NAME: &'static str = "SettingSelect";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SettingSelect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SettingSelect".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -837,6 +1663,16 @@ pub struct SettingSwitch {
     #[prost(string, tag = "3")]
     pub subtitle: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SettingSwitch {
+    const NAME: &'static str = "SettingSwitch";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SettingSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SettingSwitch".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SettingText {
@@ -844,12 +1680,32 @@ pub struct SettingText {
     #[prost(string, tag = "1")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SettingText {
+    const NAME: &'static str = "SettingText";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SettingText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SettingText".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SystemId {
     ///
     #[prost(enumeration = "SessionType", tag = "1")]
     pub r#type: i32,
+}
+impl ::prost::Name for SystemId {
+    const NAME: &'static str = "SystemId";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.SystemId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.SystemId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -870,6 +1726,16 @@ pub struct ThreeDotItem {
     #[prost(bool, tag = "5")]
     pub has_red_dot: bool,
 }
+impl ::prost::Name for ThreeDotItem {
+    const NAME: &'static str = "ThreeDotItem";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.ThreeDotItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.ThreeDotItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnPinSessionReply {
@@ -877,12 +1743,32 @@ pub struct UnPinSessionReply {
     #[prost(int64, tag = "1")]
     pub sequence_number: i64,
 }
+impl ::prost::Name for UnPinSessionReply {
+    const NAME: &'static str = "UnPinSessionReply";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.UnPinSessionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.UnPinSessionReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnPinSessionReq {
     ///
     #[prost(message, optional, tag = "1")]
     pub session_id: ::core::option::Option<SessionId>,
+}
+impl ::prost::Name for UnPinSessionReq {
+    const NAME: &'static str = "UnPinSessionReq";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.UnPinSessionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.UnPinSessionReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -897,12 +1783,32 @@ pub struct Unread {
     #[prost(string, tag = "3")]
     pub number_show: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Unread {
+    const NAME: &'static str = "Unread";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.Unread".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.Unread".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateSessionParams {
     ///
     #[prost(map = "int32, message", tag = "1")]
     pub max_session_ts: ::std::collections::HashMap<i32, Offset>,
+}
+impl ::prost::Name for UpdateSessionParams {
+    const NAME: &'static str = "UpdateSessionParams";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.UpdateSessionParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.UpdateSessionParams".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -913,6 +1819,16 @@ pub struct UserLabel {
     ///
     #[prost(message, optional, tag = "2")]
     pub style: ::core::option::Option<UserLabelStyle>,
+}
+impl ::prost::Name for UserLabel {
+    const NAME: &'static str = "UserLabel";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.UserLabel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.UserLabel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -940,12 +1856,32 @@ pub mod user_label_style {
         MedalLabel(super::Medal),
     }
 }
+impl ::prost::Name for UserLabelStyle {
+    const NAME: &'static str = "UserLabelStyle";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.UserLabelStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.UserLabelStyle".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Redirect2OtherPage {
     ///
     #[prost(string, tag = "1")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Redirect2OtherPage {
+    const NAME: &'static str = "redirect2OtherPage";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.redirect2OtherPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.redirect2OtherPage".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -959,6 +1895,16 @@ pub struct Redirect2Popup {
     ///
     #[prost(string, tag = "3")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Redirect2Popup {
+    const NAME: &'static str = "redirect2Popup";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.redirect2Popup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.redirect2Popup".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -976,6 +1922,16 @@ pub struct Redirect2SettingPage {
     #[prost(enumeration = "ImSettingType", tag = "4")]
     pub parent_setting_type: i32,
 }
+impl ::prost::Name for Redirect2SettingPage {
+    const NAME: &'static str = "redirect2SettingPage";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.redirect2SettingPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.redirect2SettingPage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RedirectWindowSelect {
@@ -985,6 +1941,16 @@ pub struct RedirectWindowSelect {
     ///
     #[prost(message, repeated, tag = "2")]
     pub item: ::prost::alloc::vec::Vec<SelectItem>,
+}
+impl ::prost::Name for RedirectWindowSelect {
+    const NAME: &'static str = "redirectWindowSelect";
+    const PACKAGE: &'static str = "bilibili.app.im.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.im.v1.redirectWindowSelect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.im.v1.redirectWindowSelect".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
@@ -1015,6 +1981,39 @@ impl AirDropFrom {
             "ADF_UNKNOWN" => Some(Self::AdfUnknown),
             "ADF_INSIDE_APP" => Some(Self::AdfInsideApp),
             "ADF_OUTSIDE_APP" => Some(Self::AdfOutsideApp),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum AlertToastType {
+    ///
+    Unspecified = 0,
+    ///
+    Banned = 1,
+    ///
+    Report = 2,
+}
+impl AlertToastType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unspecified => "ALERT_TOAST_TYPE_UNSPECIFIED",
+            Self::Banned => "ALERT_TOAST_TYPE_BANNED",
+            Self::Report => "ALERT_TOAST_TYPE_REPORT",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "ALERT_TOAST_TYPE_UNSPECIFIED" => Some(Self::Unspecified),
+            "ALERT_TOAST_TYPE_BANNED" => Some(Self::Banned),
+            "ALERT_TOAST_TYPE_REPORT" => Some(Self::Report),
             _ => None,
         }
     }
@@ -1112,6 +2111,8 @@ pub enum ImSettingType {
     SettingTypeUnfollowedMsgReceive = 24,
     ///
     SettingTypeAntiHarassmentImLimits = 25,
+    ///
+    SettingTypeKeywordBlocking = 26,
 }
 impl ImSettingType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -1164,6 +2165,7 @@ impl ImSettingType {
             Self::SettingTypeAntiHarassmentImLimits => {
                 "SETTING_TYPE_ANTI_HARASSMENT_IM_LIMITS"
             }
+            Self::SettingTypeKeywordBlocking => "SETTING_TYPE_KEYWORD_BLOCKING",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -1217,6 +2219,7 @@ impl ImSettingType {
             "SETTING_TYPE_ANTI_HARASSMENT_IM_LIMITS" => {
                 Some(Self::SettingTypeAntiHarassmentImLimits)
             }
+            "SETTING_TYPE_KEYWORD_BLOCKING" => Some(Self::SettingTypeKeywordBlocking),
             _ => None,
         }
     }

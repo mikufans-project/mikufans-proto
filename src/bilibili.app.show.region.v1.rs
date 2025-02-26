@@ -9,6 +9,16 @@ pub struct RegionConfig {
     #[prost(string, tag = "2")]
     pub scenes_type: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RegionConfig {
+    const NAME: &'static str = "RegionConfig";
+    const PACKAGE: &'static str = "bilibili.app.show.region.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.region.v1.RegionConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.region.v1.RegionConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionInfo {
@@ -46,6 +56,16 @@ pub struct RegionInfo {
     #[prost(message, repeated, tag = "11")]
     pub config: ::prost::alloc::vec::Vec<RegionConfig>,
 }
+impl ::prost::Name for RegionInfo {
+    const NAME: &'static str = "RegionInfo";
+    const PACKAGE: &'static str = "bilibili.app.show.region.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.region.v1.RegionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.region.v1.RegionInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionReply {
@@ -53,12 +73,32 @@ pub struct RegionReply {
     #[prost(message, repeated, tag = "1")]
     pub regions: ::prost::alloc::vec::Vec<RegionInfo>,
 }
+impl ::prost::Name for RegionReply {
+    const NAME: &'static str = "RegionReply";
+    const PACKAGE: &'static str = "bilibili.app.show.region.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.region.v1.RegionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.region.v1.RegionReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegionReq {
     ///
     #[prost(string, tag = "1")]
     pub lang: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RegionReq {
+    const NAME: &'static str = "RegionReq";
+    const PACKAGE: &'static str = "bilibili.app.show.region.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.region.v1.RegionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.region.v1.RegionReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod region_client {

@@ -30,6 +30,16 @@ pub struct Emote {
     #[prost(string, tag = "9")]
     pub webp_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Emote {
+    const NAME: &'static str = "Emote";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.Emote".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.Emote".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EmptyPage {
@@ -58,6 +68,16 @@ pub mod empty_page {
         #[prost(enumeration = "Action", tag = "2")]
         pub action: i32,
     }
+    impl ::prost::Name for Button {
+        const NAME: &'static str = "Button";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.EmptyPage.Button".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.EmptyPage.Button".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Text {
@@ -70,6 +90,16 @@ pub mod empty_page {
         ///
         #[prost(enumeration = "Action", tag = "3")]
         pub action: i32,
+    }
+    impl ::prost::Name for Text {
+        const NAME: &'static str = "Text";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.EmptyPage.Text".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.EmptyPage.Text".into()
+        }
     }
     ///
     #[derive(
@@ -115,6 +145,16 @@ pub mod empty_page {
         }
     }
 }
+impl ::prost::Name for EmptyPage {
+    const NAME: &'static str = "EmptyPage";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.EmptyPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.EmptyPage".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerParams {
@@ -124,6 +164,16 @@ pub struct PlayerParams {
     ///
     #[prost(bool, tag = "2")]
     pub disable_filter_tag: bool,
+}
+impl ::prost::Name for PlayerParams {
+    const NAME: &'static str = "PlayerParams";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.PlayerParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.PlayerParams".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -185,6 +235,16 @@ pub mod resource {
         }
     }
 }
+impl ::prost::Name for Resource {
+    const NAME: &'static str = "Resource";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.Resource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.Resource".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubjectDescriptionReply {
@@ -233,6 +293,17 @@ pub mod subject_description_reply {
         #[prost(message, repeated, tag = "2")]
         pub suggest_emotes: ::prost::alloc::vec::Vec<super::Emote>,
     }
+    impl ::prost::Name for EmoteConfig {
+        const NAME: &'static str = "EmoteConfig";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.SubjectDescriptionReply.EmoteConfig".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.SubjectDescriptionReply.EmoteConfig"
+                .into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct FilterTag {
@@ -248,6 +319,16 @@ pub mod subject_description_reply {
         ///
         #[prost(bool, tag = "4")]
         pub support_pic_list: bool,
+    }
+    impl ::prost::Name for FilterTag {
+        const NAME: &'static str = "FilterTag";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.SubjectDescriptionReply.FilterTag".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.SubjectDescriptionReply.FilterTag".into()
+        }
     }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -304,6 +385,18 @@ pub mod subject_description_reply {
             #[prost(enumeration = "super::super::EditorIconState", tag = "8")]
             pub cm_biz_helper_icon_state: i32,
         }
+        impl ::prost::Name for EditorIconConfig {
+            const NAME: &'static str = "EditorIconConfig";
+            const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.EditorIconConfig"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.EditorIconConfig"
+                    .into()
+            }
+        }
         ///
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct FunctionButton {
@@ -320,12 +413,36 @@ pub mod subject_description_reply {
             #[prost(string, tag = "4")]
             pub link: ::prost::alloc::string::String,
         }
+        impl ::prost::Name for FunctionButton {
+            const NAME: &'static str = "FunctionButton";
+            const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.FunctionButton"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.FunctionButton"
+                    .into()
+            }
+        }
         ///
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct FunctionButtonGroup {
             ///
             #[prost(message, repeated, tag = "1")]
             pub buttons: ::prost::alloc::vec::Vec<FunctionButton>,
+        }
+        impl ::prost::Name for FunctionButtonGroup {
+            const NAME: &'static str = "FunctionButtonGroup";
+            const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.FunctionButtonGroup"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.FunctionButtonGroup"
+                    .into()
+            }
         }
         ///
         #[derive(Clone, PartialEq, ::prost::Message)]
@@ -355,6 +472,18 @@ pub mod subject_description_reply {
                 #[prost(message, repeated, tag = "3")]
                 pub grades: ::prost::alloc::vec::Vec<Grade>,
             }
+            impl ::prost::Name for CidGradeGroup {
+                const NAME: &'static str = "CidGradeGroup";
+                const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+                fn full_name() -> ::prost::alloc::string::String {
+                    "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel.CidGradeGroup"
+                        .into()
+                }
+                fn type_url() -> ::prost::alloc::string::String {
+                    "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel.CidGradeGroup"
+                        .into()
+                }
+            }
             ///
             #[derive(Clone, PartialEq, ::prost::Message)]
             pub struct Grade {
@@ -368,7 +497,52 @@ pub mod subject_description_reply {
                 #[prost(string, tag = "3")]
                 pub title: ::prost::alloc::string::String,
             }
+            impl ::prost::Name for Grade {
+                const NAME: &'static str = "Grade";
+                const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+                fn full_name() -> ::prost::alloc::string::String {
+                    "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel.Grade"
+                        .into()
+                }
+                fn type_url() -> ::prost::alloc::string::String {
+                    "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel.Grade"
+                        .into()
+                }
+            }
         }
+        impl ::prost::Name for GradePanel {
+            const NAME: &'static str = "GradePanel";
+            const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig.GradePanel"
+                    .into()
+            }
+        }
+    }
+    impl ::prost::Name for InputConfig {
+        const NAME: &'static str = "InputConfig";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.SubjectDescriptionReply.InputConfig"
+                .into()
+        }
+    }
+}
+impl ::prost::Name for SubjectDescriptionReply {
+    const NAME: &'static str = "SubjectDescriptionReply";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.SubjectDescriptionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.SubjectDescriptionReply".into()
     }
 }
 ///
@@ -381,6 +555,16 @@ pub struct SubjectDescriptionReq {
     #[prost(message, optional, tag = "2")]
     pub player_params: ::core::option::Option<PlayerParams>,
 }
+impl ::prost::Name for SubjectDescriptionReq {
+    const NAME: &'static str = "SubjectDescriptionReq";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.SubjectDescriptionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.SubjectDescriptionReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SubjectId {
@@ -390,6 +574,16 @@ pub struct SubjectId {
     ///
     #[prost(int64, tag = "2")]
     pub r#type: i64,
+}
+impl ::prost::Name for SubjectId {
+    const NAME: &'static str = "SubjectID";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.SubjectID".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.SubjectID".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -449,6 +643,16 @@ pub mod text_style {
         }
     }
 }
+impl ::prost::Name for TextStyle {
+    const NAME: &'static str = "TextStyle";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.TextStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.TextStyle".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UserCallback {
@@ -458,6 +662,16 @@ pub struct UserCallback {
     ///
     #[prost(enumeration = "UserCallbackAction", tag = "2")]
     pub action: i32,
+}
+impl ::prost::Name for UserCallback {
+    const NAME: &'static str = "UserCallback";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.UserCallback".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.UserCallback".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

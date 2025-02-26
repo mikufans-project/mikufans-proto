@@ -9,9 +9,29 @@ pub struct FieldCertPopActionReq {
     #[prost(enumeration = "Action", tag = "2")]
     pub action: i32,
 }
+impl ::prost::Name for FieldCertPopActionReq {
+    const NAME: &'static str = "FieldCertPopActionReq";
+    const PACKAGE: &'static str = "bilibili.community.service.cert.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.cert.v1.FieldCertPopActionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.cert.v1.FieldCertPopActionReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FieldCertPopActionRsp {}
+impl ::prost::Name for FieldCertPopActionRsp {
+    const NAME: &'static str = "FieldCertPopActionRsp";
+    const PACKAGE: &'static str = "bilibili.community.service.cert.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.cert.v1.FieldCertPopActionRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.cert.v1.FieldCertPopActionRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FieldCertPopRecordReq {
@@ -19,9 +39,29 @@ pub struct FieldCertPopRecordReq {
     #[prost(int64, tag = "1")]
     pub avid: i64,
 }
+impl ::prost::Name for FieldCertPopRecordReq {
+    const NAME: &'static str = "FieldCertPopRecordReq";
+    const PACKAGE: &'static str = "bilibili.community.service.cert.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.cert.v1.FieldCertPopRecordReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.cert.v1.FieldCertPopRecordReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FieldCertPopRecordRsp {}
+impl ::prost::Name for FieldCertPopRecordRsp {
+    const NAME: &'static str = "FieldCertPopRecordRsp";
+    const PACKAGE: &'static str = "bilibili.community.service.cert.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.cert.v1.FieldCertPopRecordRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.cert.v1.FieldCertPopRecordRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

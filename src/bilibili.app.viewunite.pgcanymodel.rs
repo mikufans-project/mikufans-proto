@@ -15,12 +15,32 @@ pub struct Earphone {
     #[prost(string, tag = "4")]
     pub like_toast_voice: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Earphone {
+    const NAME: &'static str = "Earphone";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Earphone".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Earphone".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EarphoneConf {
     ///
     #[prost(message, repeated, tag = "1")]
     pub sp_phones: ::prost::alloc::vec::Vec<Earphone>,
+}
+impl ::prost::Name for EarphoneConf {
+    const NAME: &'static str = "EarphoneConf";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.EarphoneConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.EarphoneConf".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -31,6 +51,16 @@ pub struct MultiViewInfo {
     ///
     #[prost(string, tag = "2")]
     pub changing_dance: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MultiViewInfo {
+    const NAME: &'static str = "MultiViewInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.MultiViewInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.MultiViewInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -120,6 +150,16 @@ pub struct OgvData {
     #[prost(message, optional, tag = "28")]
     pub skin: ::core::option::Option<Skin>,
 }
+impl ::prost::Name for OgvData {
+    const NAME: &'static str = "OgvData";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.OgvData".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.OgvData".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct OgvSwitch {
@@ -141,6 +181,16 @@ pub struct OgvSwitch {
     ///
     #[prost(int32, tag = "6")]
     pub follow_guide: i32,
+}
+impl ::prost::Name for OgvSwitch {
+    const NAME: &'static str = "OgvSwitch";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.OgvSwitch".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.OgvSwitch".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -173,6 +223,16 @@ pub struct PlayFloatLayerActivity {
     #[prost(int64, tag = "9")]
     pub show_rate_time: i64,
 }
+impl ::prost::Name for PlayFloatLayerActivity {
+    const NAME: &'static str = "PlayFloatLayerActivity";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.PlayFloatLayerActivity".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.PlayFloatLayerActivity".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayStrategy {
@@ -185,6 +245,16 @@ pub struct PlayStrategy {
     ///
     #[prost(string, tag = "3")]
     pub auto_play_toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PlayStrategy {
+    const NAME: &'static str = "PlayStrategy";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.PlayStrategy".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.PlayStrategy".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -217,6 +287,16 @@ pub struct Publish {
     #[prost(string, tag = "9")]
     pub update_info_desc: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Publish {
+    const NAME: &'static str = "Publish";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Publish".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Publish".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Reserve {
@@ -226,6 +306,16 @@ pub struct Reserve {
     ///
     #[prost(string, tag = "2")]
     pub tip: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Reserve {
+    const NAME: &'static str = "Reserve";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Reserve".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Reserve".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -279,6 +369,16 @@ pub struct Rights {
     #[prost(int32, tag = "16")]
     pub new_allow_download: i32,
 }
+impl ::prost::Name for Rights {
+    const NAME: &'static str = "Rights";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Rights".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Rights".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Skin {
@@ -325,6 +425,16 @@ pub struct Skin {
     #[prost(string, tag = "14")]
     pub dm_input_text_night_color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Skin {
+    const NAME: &'static str = "Skin";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Skin".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Skin".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Stat {
@@ -334,6 +444,16 @@ pub struct Stat {
     ///
     #[prost(message, optional, tag = "2")]
     pub play_data: ::core::option::Option<super::common::StatInfo>,
+}
+impl ::prost::Name for Stat {
+    const NAME: &'static str = "Stat";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.Stat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.Stat".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -363,6 +483,16 @@ pub struct UserStatus {
     #[prost(message, optional, tag = "8")]
     pub watch_progress: ::core::option::Option<WatchProgress>,
 }
+impl ::prost::Name for UserStatus {
+    const NAME: &'static str = "UserStatus";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.UserStatus".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.UserStatus".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ViewPgcAny {
@@ -372,6 +502,16 @@ pub struct ViewPgcAny {
     ///
     #[prost(map = "int64, message", tag = "2")]
     pub all_up_info: ::std::collections::HashMap<i64, super::common::Staff>,
+}
+impl ::prost::Name for ViewPgcAny {
+    const NAME: &'static str = "ViewPgcAny";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.ViewPgcAny".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.ViewPgcAny".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -385,4 +525,14 @@ pub struct WatchProgress {
     ///
     #[prost(int64, tag = "3")]
     pub last_time: i64,
+}
+impl ::prost::Name for WatchProgress {
+    const NAME: &'static str = "WatchProgress";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pgcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pgcanymodel.WatchProgress".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pgcanymodel.WatchProgress".into()
+    }
 }

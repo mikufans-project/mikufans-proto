@@ -12,6 +12,16 @@ pub struct ShowStrategy {
     #[prost(int64, tag = "3")]
     pub etime: i64,
 }
+impl ::prost::Name for ShowStrategy {
+    const NAME: &'static str = "ShowStrategy";
+    const PACKAGE: &'static str = "bilibili.app.splash.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.splash.v1.ShowStrategy".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.splash.v1.ShowStrategy".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SplashItem {
@@ -135,6 +145,16 @@ pub struct SplashItem {
     #[prost(bool, tag = "39")]
     pub enable_background_download: bool,
 }
+impl ::prost::Name for SplashItem {
+    const NAME: &'static str = "SplashItem";
+    const PACKAGE: &'static str = "bilibili.app.splash.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.splash.v1.SplashItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.splash.v1.SplashItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SplashReply {
@@ -154,6 +174,16 @@ pub struct SplashReply {
     #[prost(message, repeated, tag = "5")]
     pub show: ::prost::alloc::vec::Vec<ShowStrategy>,
 }
+impl ::prost::Name for SplashReply {
+    const NAME: &'static str = "SplashReply";
+    const PACKAGE: &'static str = "bilibili.app.splash.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.splash.v1.SplashReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.splash.v1.SplashReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SplashReq {
@@ -172,6 +202,16 @@ pub struct SplashReq {
     ///
     #[prost(string, tag = "5")]
     pub network: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SplashReq {
+    const NAME: &'static str = "SplashReq";
+    const PACKAGE: &'static str = "bilibili.app.splash.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.splash.v1.SplashReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.splash.v1.SplashReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod splash_client {

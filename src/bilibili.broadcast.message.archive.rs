@@ -9,6 +9,16 @@ pub struct VideoDataReply {
     #[prost(string, tag = "2")]
     pub data: ::prost::alloc::string::String,
 }
+impl ::prost::Name for VideoDataReply {
+    const NAME: &'static str = "VideoDataReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.archive";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.archive.VideoDataReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.archive.VideoDataReply".into()
+    }
+}
 /// Generated client implementations.
 pub mod video_up_client {
     #![allow(

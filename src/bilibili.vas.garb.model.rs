@@ -15,6 +15,16 @@ pub struct FanNumColorFormat {
     #[prost(int64, repeated, tag = "4")]
     pub gradients: ::prost::alloc::vec::Vec<i64>,
 }
+impl ::prost::Name for FanNumColorFormat {
+    const NAME: &'static str = "FanNumColorFormat";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.FanNumColorFormat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.FanNumColorFormat".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ImageGroup {
@@ -36,6 +46,26 @@ pub mod image_group {
         ///
         #[prost(string, tag = "2")]
         pub color_theme: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for VisualEffect {
+        const NAME: &'static str = "VisualEffect";
+        const PACKAGE: &'static str = "bilibili.vas.garb.model";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.vas.garb.model.ImageGroup.VisualEffect".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.vas.garb.model.ImageGroup.VisualEffect".into()
+        }
+    }
+}
+impl ::prost::Name for ImageGroup {
+    const NAME: &'static str = "ImageGroup";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.ImageGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.ImageGroup".into()
     }
 }
 ///
@@ -63,6 +93,16 @@ pub struct UserCardBg {
     #[prost(message, optional, tag = "7")]
     pub image_group: ::core::option::Option<ImageGroup>,
 }
+impl ::prost::Name for UserCardBg {
+    const NAME: &'static str = "UserCardBG";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.UserCardBG".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.UserCardBG".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserFanShow {
@@ -87,6 +127,16 @@ pub struct UserFanShow {
     ///
     #[prost(message, optional, tag = "7")]
     pub color_format: ::core::option::Option<FanNumColorFormat>,
+}
+impl ::prost::Name for UserFanShow {
+    const NAME: &'static str = "UserFanShow";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.UserFanShow".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.UserFanShow".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -113,6 +163,16 @@ pub struct UserPendant {
     #[prost(string, tag = "7")]
     pub image_enhance_frame: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UserPendant {
+    const NAME: &'static str = "UserPendant";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.UserPendant".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.UserPendant".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserSailing {
@@ -125,4 +185,14 @@ pub struct UserSailing {
     ///
     #[prost(message, optional, tag = "3")]
     pub card_bg_with_focus: ::core::option::Option<UserCardBg>,
+}
+impl ::prost::Name for UserSailing {
+    const NAME: &'static str = "UserSailing";
+    const PACKAGE: &'static str = "bilibili.vas.garb.model";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.model.UserSailing".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.model.UserSailing".into()
+    }
 }

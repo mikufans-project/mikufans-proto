@@ -2,6 +2,16 @@
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AgreePolicyReply {}
+impl ::prost::Name for AgreePolicyReply {
+    const NAME: &'static str = "AgreePolicyReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.AgreePolicyReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.AgreePolicyReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AgreePolicyReq {
@@ -11,6 +21,16 @@ pub struct AgreePolicyReq {
     ///
     #[prost(string, tag = "2")]
     pub version: ::prost::alloc::string::String,
+}
+impl ::prost::Name for AgreePolicyReq {
+    const NAME: &'static str = "AgreePolicyReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.AgreePolicyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.AgreePolicyReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -24,6 +44,16 @@ pub struct BannerInfo {
     ///
     #[prost(string, tag = "3")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for BannerInfo {
+    const NAME: &'static str = "BannerInfo";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.BannerInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.BannerInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -41,12 +71,32 @@ pub struct BasicInfoReply {
     #[prost(message, repeated, tag = "4")]
     pub links: ::prost::alloc::vec::Vec<Link>,
 }
+impl ::prost::Name for BasicInfoReply {
+    const NAME: &'static str = "BasicInfoReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.BasicInfoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.BasicInfoReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct BasicInfoReq {
     ///
     #[prost(int64, tag = "1")]
     pub mid: i64,
+}
+impl ::prost::Name for BasicInfoReq {
+    const NAME: &'static str = "BasicInfoReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.BasicInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.BasicInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -64,6 +114,16 @@ pub struct Display {
     #[prost(string, tag = "4")]
     pub nft_raw: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Display {
+    const NAME: &'static str = "Display";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.Display".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.Display".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBannersReply {
@@ -71,12 +131,32 @@ pub struct GetBannersReply {
     #[prost(message, repeated, tag = "1")]
     pub banner_list: ::prost::alloc::vec::Vec<BannerInfo>,
 }
+impl ::prost::Name for GetBannersReply {
+    const NAME: &'static str = "GetBannersReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetBannersReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetBannersReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetBannersReq {
     ///
     #[prost(int64, tag = "1")]
     pub uid: i64,
+}
+impl ::prost::Name for GetBannersReq {
+    const NAME: &'static str = "GetBannersReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetBannersReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetBannersReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -91,12 +171,32 @@ pub struct GetLastPolicyReply {
     #[prost(string, tag = "3")]
     pub version: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GetLastPolicyReply {
+    const NAME: &'static str = "GetLastPolicyReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetLastPolicyReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetLastPolicyReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetLastPolicyReq {
     ///
     #[prost(enumeration = "PolicyType", tag = "1")]
     pub policy_type: i32,
+}
+impl ::prost::Name for GetLastPolicyReq {
+    const NAME: &'static str = "GetLastPolicyReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetLastPolicyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetLastPolicyReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -117,12 +217,32 @@ pub struct GetUserInfoReply {
     #[prost(string, tag = "5")]
     pub help_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GetUserInfoReply {
+    const NAME: &'static str = "GetUserInfoReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetUserInfoReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetUserInfoReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetUserInfoReq {
     ///
     #[prost(int64, tag = "1")]
     pub mid: i64,
+}
+impl ::prost::Name for GetUserInfoReq {
+    const NAME: &'static str = "GetUserInfoReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.GetUserInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.GetUserInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -137,6 +257,16 @@ pub struct Link {
     #[prost(string, tag = "3")]
     pub track_event_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Link {
+    const NAME: &'static str = "Link";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.Link".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.Link".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListNftByMidReply {
@@ -149,6 +279,16 @@ pub struct ListNftByMidReply {
     ///
     #[prost(bool, tag = "3")]
     pub end: bool,
+}
+impl ::prost::Name for ListNftByMidReply {
+    const NAME: &'static str = "ListNFTByMidReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.ListNFTByMidReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.ListNFTByMidReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -169,6 +309,16 @@ pub struct ListNftByMidReq {
     #[prost(int64, tag = "5")]
     pub page_size: i64,
 }
+impl ::prost::Name for ListNftByMidReq {
+    const NAME: &'static str = "ListNFTByMidReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.ListNFTByMidReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.ListNFTByMidReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListOrderByMidReply {
@@ -181,6 +331,16 @@ pub struct ListOrderByMidReply {
     ///
     #[prost(bool, tag = "3")]
     pub end: bool,
+}
+impl ::prost::Name for ListOrderByMidReply {
+    const NAME: &'static str = "ListOrderByMidReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.ListOrderByMidReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.ListOrderByMidReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -197,6 +357,16 @@ pub struct ListOrderByMidReq {
     ///
     #[prost(enumeration = "RecordType", tag = "4")]
     pub rc_type: i32,
+}
+impl ::prost::Name for ListOrderByMidReq {
+    const NAME: &'static str = "ListOrderByMidReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.ListOrderByMidReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.ListOrderByMidReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -220,12 +390,32 @@ pub struct MinePageReply {
     #[prost(string, tag = "6")]
     pub about_us_jump: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MinePageReply {
+    const NAME: &'static str = "MinePageReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.MinePageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.MinePageReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MinePageReq {
     ///
     #[prost(int64, tag = "1")]
     pub uid: i64,
+}
+impl ::prost::Name for MinePageReq {
+    const NAME: &'static str = "MinePageReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.MinePageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.MinePageReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -254,6 +444,16 @@ pub struct Nft {
     ///
     #[prost(int64, tag = "8")]
     pub item_id: i64,
+}
+impl ::prost::Name for Nft {
+    const NAME: &'static str = "NFT";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.NFT".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.NFT".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -295,6 +495,16 @@ pub struct Order {
     #[prost(bool, tag = "12")]
     pub disable_browser_jump: bool,
 }
+impl ::prost::Name for Order {
+    const NAME: &'static str = "Order";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.Order".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.Order".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UserCheckReply {
@@ -305,6 +515,16 @@ pub struct UserCheckReply {
     #[prost(enumeration = "Gt14Status", tag = "2")]
     pub gt14: i32,
 }
+impl ::prost::Name for UserCheckReply {
+    const NAME: &'static str = "UserCheckReply";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.UserCheckReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.UserCheckReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UserCheckReq {
@@ -314,6 +534,16 @@ pub struct UserCheckReq {
     ///
     #[prost(enumeration = "PolicyType", tag = "2")]
     pub policy_type: i32,
+}
+impl ::prost::Name for UserCheckReq {
+    const NAME: &'static str = "UserCheckReq";
+    const PACKAGE: &'static str = "bilibili.pangu.gallery.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pangu.gallery.v1.UserCheckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pangu.gallery.v1.UserCheckReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

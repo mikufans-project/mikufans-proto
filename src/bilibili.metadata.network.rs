@@ -12,6 +12,16 @@ pub struct Network {
     #[prost(string, tag = "3")]
     pub oid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Network {
+    const NAME: &'static str = "Network";
+    const PACKAGE: &'static str = "bilibili.metadata.network";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.metadata.network.Network".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.metadata.network.Network".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

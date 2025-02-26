@@ -36,15 +36,35 @@ pub mod client_stats_req {
         #[prost(string, tag = "5")]
         pub network: ::prost::alloc::string::String,
     }
+    impl ::prost::Name for App {
+        const NAME: &'static str = "App";
+        const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.datachannel.ClientStatsReq.App".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.datachannel.ClientStatsReq.App".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Payload {
         ///
         #[prost(bytes, tag = "6")]
-        RawPayload(::prost::alloc::vec::Vec<u8>),
+        RawPayload(::prost::bytes::Bytes),
         ///
         #[prost(message, tag = "7")]
-        PbStatsPayload(super::report::ClientStatsPayload),
+        PbStatsPayload(::prost::alloc::boxed::Box<super::report::ClientStatsPayload>),
+    }
+}
+impl ::prost::Name for ClientStatsReq {
+    const NAME: &'static str = "ClientStatsReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.ClientStatsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.ClientStatsReq".into()
     }
 }
 ///
@@ -75,6 +95,26 @@ pub mod client_stats_resp {
         #[prost(int32, tag = "4")]
         pub server_down_score: i32,
     }
+    impl ::prost::Name for Score {
+        const NAME: &'static str = "Score";
+        const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.datachannel.ClientStatsResp.Score".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.datachannel.ClientStatsResp.Score".into()
+        }
+    }
+}
+impl ::prost::Name for ClientStatsResp {
+    const NAME: &'static str = "ClientStatsResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.ClientStatsResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.ClientStatsResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -82,6 +122,16 @@ pub struct JoinNotify {
     ///
     #[prost(message, optional, tag = "1")]
     pub user: ::core::option::Option<super::bapi_live_rtc_user_proto::User>,
+}
+impl ::prost::Name for JoinNotify {
+    const NAME: &'static str = "JoinNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.JoinNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.JoinNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -95,6 +145,16 @@ pub struct JoinReq {
     ///
     #[prost(string, tag = "3")]
     pub token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for JoinReq {
+    const NAME: &'static str = "JoinReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.JoinReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.JoinReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -111,6 +171,16 @@ pub struct JoinResp {
         super::bapi_live_rtc_user_proto::CodecCapability,
     >,
 }
+impl ::prost::Name for JoinResp {
+    const NAME: &'static str = "JoinResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.JoinResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.JoinResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LeaveNotify {
@@ -121,12 +191,42 @@ pub struct LeaveNotify {
     #[prost(enumeration = "super::bapi_live_rtc_user_proto::UserLeaveReason", tag = "2")]
     pub reason: i32,
 }
+impl ::prost::Name for LeaveNotify {
+    const NAME: &'static str = "LeaveNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.LeaveNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.LeaveNotify".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LeaveReq {}
+impl ::prost::Name for LeaveReq {
+    const NAME: &'static str = "LeaveReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.LeaveReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.LeaveReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LeaveResp {}
+impl ::prost::Name for LeaveResp {
+    const NAME: &'static str = "LeaveResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.LeaveResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.LeaveResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MembersReq {
@@ -140,12 +240,32 @@ pub struct MembersReq {
     #[prost(int32, tag = "3")]
     pub call_id: i32,
 }
+impl ::prost::Name for MembersReq {
+    const NAME: &'static str = "MembersReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.MembersReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.MembersReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MembersResp {
     ///
     #[prost(message, repeated, tag = "1")]
     pub users: ::prost::alloc::vec::Vec<super::bapi_live_rtc_user_proto::User>,
+}
+impl ::prost::Name for MembersResp {
+    const NAME: &'static str = "MembersResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.MembersResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.MembersResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -162,6 +282,16 @@ pub struct MessageNotify {
     ///
     #[prost(bool, tag = "4")]
     pub last: bool,
+}
+impl ::prost::Name for MessageNotify {
+    const NAME: &'static str = "MessageNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.MessageNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.MessageNotify".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -189,6 +319,16 @@ pub mod mute_notify {
         MuteVideo(bool),
     }
 }
+impl ::prost::Name for MuteNotify {
+    const NAME: &'static str = "MuteNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.MuteNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.MuteNotify".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MuteReq {
@@ -209,6 +349,16 @@ pub mod mute_req {
         MuteVideo(bool),
     }
 }
+impl ::prost::Name for MuteReq {
+    const NAME: &'static str = "MuteReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.MuteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.MuteReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PubNotify {
@@ -218,6 +368,16 @@ pub struct PubNotify {
     ///
     #[prost(message, optional, tag = "2")]
     pub stream: ::core::option::Option<super::bapi_live_rtc_user_proto::Stream>,
+}
+impl ::prost::Name for PubNotify {
+    const NAME: &'static str = "PubNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.PubNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.PubNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -229,12 +389,32 @@ pub struct PubReq {
     #[prost(message, optional, tag = "2")]
     pub stream: ::core::option::Option<super::bapi_live_rtc_user_proto::Stream>,
 }
+impl ::prost::Name for PubReq {
+    const NAME: &'static str = "PubReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.PubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.PubReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PubResp {
     ///
     #[prost(string, tag = "1")]
     pub sdp: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PubResp {
+    const NAME: &'static str = "PubResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.PubResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.PubResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -262,40 +442,50 @@ pub mod request_message {
     pub enum Req {
         ///
         #[prost(message, tag = "4")]
-        Join(super::JoinReq),
+        Join(::prost::alloc::boxed::Box<super::JoinReq>),
         ///
         #[prost(message, tag = "5")]
-        Leave(super::LeaveReq),
+        Leave(::prost::alloc::boxed::Box<super::LeaveReq>),
         ///
         #[prost(message, tag = "6")]
-        Pub(super::PubReq),
+        Pub(::prost::alloc::boxed::Box<super::PubReq>),
         ///
         #[prost(message, tag = "7")]
-        Sub(super::SubReq),
+        Sub(::prost::alloc::boxed::Box<super::SubReq>),
         ///
         #[prost(message, tag = "8")]
-        UnSub(super::UnSubReq),
+        UnSub(::prost::alloc::boxed::Box<super::UnSubReq>),
         ///
         #[prost(message, tag = "9")]
-        Mute(super::MuteReq),
+        Mute(::prost::alloc::boxed::Box<super::MuteReq>),
         ///
         #[prost(message, tag = "10")]
-        Message(super::UserMsgReq),
+        Message(::prost::alloc::boxed::Box<super::UserMsgReq>),
         ///
         #[prost(message, tag = "11")]
-        Members(super::MembersReq),
+        Members(::prost::alloc::boxed::Box<super::MembersReq>),
         ///
         #[prost(message, tag = "12")]
-        UnPub(super::UnPubReq),
+        UnPub(::prost::alloc::boxed::Box<super::UnPubReq>),
         ///
         #[prost(message, tag = "13")]
-        UpdateSub(super::UpdateSubReq),
+        UpdateSub(::prost::alloc::boxed::Box<super::UpdateSubReq>),
         ///
         #[prost(message, tag = "14")]
-        ClientStats(super::ClientStatsReq),
+        ClientStats(::prost::alloc::boxed::Box<super::ClientStatsReq>),
         ///
         #[prost(message, tag = "15")]
-        UpdateCodec(super::UpdateCodecReq),
+        UpdateCodec(::prost::alloc::boxed::Box<super::UpdateCodecReq>),
+    }
+}
+impl ::prost::Name for RequestMessage {
+    const NAME: &'static str = "RequestMessage";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.RequestMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.RequestMessage".into()
     }
 }
 ///
@@ -384,6 +574,16 @@ pub mod response_message {
         UpdateCodecNotify(super::UpdateCodecNotify),
     }
 }
+impl ::prost::Name for ResponseMessage {
+    const NAME: &'static str = "ResponseMessage";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.ResponseMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.ResponseMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubReq {
@@ -415,12 +615,32 @@ pub mod sub_req {
         #[prost(int32, tag = "4")]
         pub video_index: i32,
     }
+    impl ::prost::Name for SubUser {
+        const NAME: &'static str = "SubUser";
+        const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.datachannel.SubReq.SubUser".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.datachannel.SubReq.SubUser".into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum SubOffer {
         ///
         #[prost(string, tag = "1")]
         Sdp(::prost::alloc::string::String),
+    }
+}
+impl ::prost::Name for SubReq {
+    const NAME: &'static str = "SubReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.SubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.SubReq".into()
     }
 }
 ///
@@ -433,12 +653,32 @@ pub struct SubResp {
     #[prost(string, tag = "2")]
     pub sdp: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SubResp {
+    const NAME: &'static str = "SubResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.SubResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.SubResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TokenNotify {
     ///
     #[prost(string, tag = "1")]
     pub token: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TokenNotify {
+    const NAME: &'static str = "TokenNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.TokenNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.TokenNotify".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -450,12 +690,42 @@ pub struct UnPubNotify {
     #[prost(message, optional, tag = "2")]
     pub stream: ::core::option::Option<super::bapi_live_rtc_user_proto::Stream>,
 }
+impl ::prost::Name for UnPubNotify {
+    const NAME: &'static str = "UnPubNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UnPubNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UnPubNotify".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnPubReq {}
+impl ::prost::Name for UnPubReq {
+    const NAME: &'static str = "UnPubReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UnPubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UnPubReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnPubResp {}
+impl ::prost::Name for UnPubResp {
+    const NAME: &'static str = "UnPubResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UnPubResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UnPubResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnSubReq {
@@ -463,9 +733,29 @@ pub struct UnSubReq {
     #[prost(int64, tag = "1")]
     pub uid: i64,
 }
+impl ::prost::Name for UnSubReq {
+    const NAME: &'static str = "UnSubReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UnSubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UnSubReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnSubResp {}
+impl ::prost::Name for UnSubResp {
+    const NAME: &'static str = "UnSubResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UnSubResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UnSubResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpdateCodecNotify {
@@ -474,6 +764,16 @@ pub struct UpdateCodecNotify {
     pub encode_capability: ::core::option::Option<
         super::bapi_live_rtc_user_proto::CodecCapability,
     >,
+}
+impl ::prost::Name for UpdateCodecNotify {
+    const NAME: &'static str = "UpdateCodecNotify";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UpdateCodecNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UpdateCodecNotify".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -484,9 +784,29 @@ pub struct UpdateCodecReq {
         super::bapi_live_rtc_user_proto::CodecCapability,
     >,
 }
+impl ::prost::Name for UpdateCodecReq {
+    const NAME: &'static str = "UpdateCodecReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UpdateCodecReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UpdateCodecReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpdateCodecResp {}
+impl ::prost::Name for UpdateCodecResp {
+    const NAME: &'static str = "UpdateCodecResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UpdateCodecResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UpdateCodecResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpdateSubReq {
@@ -521,6 +841,16 @@ pub mod update_sub_req {
             TemporalIndex(i32),
         }
     }
+    impl ::prost::Name for VideoPreferLayer {
+        const NAME: &'static str = "video_prefer_layer";
+        const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.datachannel.UpdateSubReq.video_prefer_layer".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.datachannel.UpdateSubReq.video_prefer_layer".into()
+        }
+    }
     ///
     #[derive(Clone, Copy, PartialEq, ::prost::Oneof)]
     pub enum AudioOption {
@@ -529,9 +859,29 @@ pub mod update_sub_req {
         SubAudio(bool),
     }
 }
+impl ::prost::Name for UpdateSubReq {
+    const NAME: &'static str = "UpdateSubReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UpdateSubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UpdateSubReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpdateSubResp {}
+impl ::prost::Name for UpdateSubResp {
+    const NAME: &'static str = "UpdateSubResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UpdateSubResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UpdateSubResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserMsgReq {
@@ -548,6 +898,16 @@ pub struct UserMsgReq {
     #[prost(int64, repeated, tag = "4")]
     pub receivers: ::prost::alloc::vec::Vec<i64>,
 }
+impl ::prost::Name for UserMsgReq {
+    const NAME: &'static str = "UserMsgReq";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UserMsgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UserMsgReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserMsgResp {
@@ -555,9 +915,29 @@ pub struct UserMsgResp {
     #[prost(int64, repeated, tag = "1")]
     pub sent_uids: ::prost::alloc::vec::Vec<i64>,
 }
+impl ::prost::Name for UserMsgResp {
+    const NAME: &'static str = "UserMsgResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UserMsgResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UserMsgResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UserMuteResp {}
+impl ::prost::Name for UserMuteResp {
+    const NAME: &'static str = "UserMuteResp";
+    const PACKAGE: &'static str = "bilibili.live.rtc.datachannel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.rtc.datachannel.UserMuteResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.rtc.datachannel.UserMuteResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

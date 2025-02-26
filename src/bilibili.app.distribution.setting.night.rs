@@ -6,3 +6,13 @@ pub struct NightSettingsConfig {
     #[prost(message, optional, tag = "1")]
     pub is_night_follow_system: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for NightSettingsConfig {
+    const NAME: &'static str = "NightSettingsConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.night";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.night.NightSettingsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.night.NightSettingsConfig".into()
+    }
+}

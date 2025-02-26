@@ -6,6 +6,16 @@ pub struct BasicRenderSpec {
     #[prost(double, tag = "1")]
     pub opacity: f64,
 }
+impl ::prost::Name for BasicRenderSpec {
+    const NAME: &'static str = "BasicRenderSpec";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.BasicRenderSpec".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.BasicRenderSpec".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ColorConfig {
@@ -19,12 +29,32 @@ pub struct ColorConfig {
     #[prost(message, optional, tag = "3")]
     pub night: ::core::option::Option<ColorSpec>,
 }
+impl ::prost::Name for ColorConfig {
+    const NAME: &'static str = "ColorConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.ColorConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.ColorConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ColorSpec {
     ///
     #[prost(string, tag = "1")]
     pub argb: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ColorSpec {
+    const NAME: &'static str = "ColorSpec";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.ColorSpec".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.ColorSpec".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -39,6 +69,16 @@ pub struct LayerGeneralSpec {
     #[prost(message, optional, tag = "3")]
     pub render_spec: ::core::option::Option<BasicRenderSpec>,
 }
+impl ::prost::Name for LayerGeneralSpec {
+    const NAME: &'static str = "LayerGeneralSpec";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.LayerGeneralSpec".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.LayerGeneralSpec".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MaskProperty {
@@ -48,6 +88,16 @@ pub struct MaskProperty {
     ///
     #[prost(message, optional, tag = "2")]
     pub mask_src: ::core::option::Option<ResourceSource>,
+}
+impl ::prost::Name for MaskProperty {
+    const NAME: &'static str = "MaskProperty";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.MaskProperty".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.MaskProperty".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -154,6 +204,16 @@ pub mod native_draw_res {
         }
     }
 }
+impl ::prost::Name for NativeDrawRes {
+    const NAME: &'static str = "NativeDrawRes";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.NativeDrawRes".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.NativeDrawRes".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PositionSpec {
@@ -213,6 +273,16 @@ pub mod position_spec {
         }
     }
 }
+impl ::prost::Name for PositionSpec {
+    const NAME: &'static str = "PositionSpec";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.PositionSpec".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.PositionSpec".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RemoteRes {
@@ -222,6 +292,16 @@ pub struct RemoteRes {
     ///
     #[prost(string, tag = "2")]
     pub bfs_style: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RemoteRes {
+    const NAME: &'static str = "RemoteRes";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.RemoteRes".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.RemoteRes".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -366,6 +446,16 @@ pub mod resource_source {
         Draw(super::NativeDrawRes),
     }
 }
+impl ::prost::Name for ResourceSource {
+    const NAME: &'static str = "ResourceSource";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.ResourceSource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.ResourceSource".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SizeSpec {
@@ -375,4 +465,14 @@ pub struct SizeSpec {
     ///
     #[prost(double, tag = "2")]
     pub height: f64,
+}
+impl ::prost::Name for SizeSpec {
+    const NAME: &'static str = "SizeSpec";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.common.SizeSpec".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.common.SizeSpec".into()
+    }
 }

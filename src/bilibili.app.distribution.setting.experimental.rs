@@ -6,6 +6,16 @@ pub struct DynamicSelect {
     #[prost(message, optional, tag = "1")]
     pub fold: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for DynamicSelect {
+    const NAME: &'static str = "DynamicSelect";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.experimental";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.experimental.DynamicSelect".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.experimental.DynamicSelect".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Exp {
@@ -15,6 +25,16 @@ pub struct Exp {
     ///
     #[prost(message, optional, tag = "2")]
     pub bucket: ::core::option::Option<super::super::Int32Value>,
+}
+impl ::prost::Name for Exp {
+    const NAME: &'static str = "Exp";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.experimental";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.experimental.Exp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.experimental.Exp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -26,6 +46,16 @@ pub struct ExperimentalConfig {
     #[prost(message, repeated, tag = "2")]
     pub exps: ::prost::alloc::vec::Vec<Exp>,
 }
+impl ::prost::Name for ExperimentalConfig {
+    const NAME: &'static str = "ExperimentalConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.experimental";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.experimental.ExperimentalConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.experimental.ExperimentalConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MultipleTusConfig {
@@ -35,6 +65,16 @@ pub struct MultipleTusConfig {
     ///
     #[prost(message, optional, tag = "2")]
     pub dynamic_select: ::core::option::Option<DynamicSelect>,
+}
+impl ::prost::Name for MultipleTusConfig {
+    const NAME: &'static str = "MultipleTusConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.experimental";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.experimental.MultipleTusConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.experimental.MultipleTusConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -78,4 +118,14 @@ pub struct TopLeft {
     ///
     #[prost(message, optional, tag = "13")]
     pub badge: ::core::option::Option<super::super::StringValue>,
+}
+impl ::prost::Name for TopLeft {
+    const NAME: &'static str = "TopLeft";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.experimental";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.experimental.TopLeft".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.experimental.TopLeft".into()
+    }
 }

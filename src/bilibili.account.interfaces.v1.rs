@@ -6,12 +6,32 @@ pub struct MidByNameReply {
     #[prost(map = "string, int64", tag = "1")]
     pub name_map: ::std::collections::HashMap<::prost::alloc::string::String, i64>,
 }
+impl ::prost::Name for MidByNameReply {
+    const NAME: &'static str = "MidByNameReply";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.MidByNameReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.MidByNameReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MidByNameReq {
     ///
     #[prost(string, repeated, tag = "1")]
     pub names: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for MidByNameReq {
+    const NAME: &'static str = "MidByNameReq";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.MidByNameReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.MidByNameReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -35,9 +55,29 @@ pub struct UnameMessageReply {
     #[prost(string, tag = "6")]
     pub bind_tel: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UnameMessageReply {
+    const NAME: &'static str = "UnameMessageReply";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.UnameMessageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.UnameMessageReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UnameMessageReq {}
+impl ::prost::Name for UnameMessageReq {
+    const NAME: &'static str = "UnameMessageReq";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.UnameMessageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.UnameMessageReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateNameReply {
@@ -54,6 +94,16 @@ pub struct UpdateNameReply {
     #[prost(string, tag = "4")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UpdateNameReply {
+    const NAME: &'static str = "UpdateNameReply";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.UpdateNameReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.UpdateNameReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateNameReq {
@@ -63,6 +113,16 @@ pub struct UpdateNameReq {
     ///
     #[prost(string, tag = "2")]
     pub source: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UpdateNameReq {
+    const NAME: &'static str = "UpdateNameReq";
+    const PACKAGE: &'static str = "bilibili.account.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.interfaces.v1.UpdateNameReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.interfaces.v1.UpdateNameReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod account_interface_v1_client {

@@ -12,6 +12,16 @@ pub struct Dislike {
     #[prost(message, repeated, tag = "3")]
     pub reasons: ::prost::alloc::vec::Vec<DislikeReason>,
 }
+impl ::prost::Name for Dislike {
+    const NAME: &'static str = "Dislike";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.Dislike".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.Dislike".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DislikeReason {
@@ -31,6 +41,16 @@ pub struct DislikeReason {
     #[prost(string, tag = "5")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DislikeReason {
+    const NAME: &'static str = "DislikeReason";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.DislikeReason".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.DislikeReason".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ElecRank {
@@ -43,6 +63,16 @@ pub struct ElecRank {
     ///
     #[prost(string, tag = "3")]
     pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ElecRank {
+    const NAME: &'static str = "ElecRank";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.ElecRank".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.ElecRank".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -60,6 +90,16 @@ pub struct ElecRankItem {
     #[prost(int64, tag = "4")]
     pub mid: i64,
 }
+impl ::prost::Name for ElecRankItem {
+    const NAME: &'static str = "ElecRankItem";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.ElecRankItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.ElecRankItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Premiere {
@@ -76,6 +116,16 @@ pub struct Premiere {
     #[prost(int64, tag = "4")]
     pub room_id: i64,
 }
+impl ::prost::Name for Premiere {
+    const NAME: &'static str = "Premiere";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.Premiere".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.Premiere".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PremiereReserve {
@@ -89,6 +139,16 @@ pub struct PremiereReserve {
     #[prost(bool, tag = "3")]
     pub is_follow: bool,
 }
+impl ::prost::Name for PremiereReserve {
+    const NAME: &'static str = "PremiereReserve";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.PremiereReserve".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.PremiereReserve".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PremiereResource {
@@ -101,6 +161,16 @@ pub struct PremiereResource {
     ///
     #[prost(message, optional, tag = "3")]
     pub text: ::core::option::Option<PremiereText>,
+}
+impl ::prost::Name for PremiereResource {
+    const NAME: &'static str = "PremiereResource";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.PremiereResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.PremiereResource".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -136,6 +206,16 @@ pub struct PremiereText {
     #[prost(string, tag = "10")]
     pub intro_icon_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PremiereText {
+    const NAME: &'static str = "PremiereText";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.PremiereText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.PremiereText".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ViewUgcAny {
@@ -157,6 +237,16 @@ pub struct ViewUgcAny {
     ///
     #[prost(message, optional, tag = "6")]
     pub elec_rank: ::core::option::Option<ElecRank>,
+}
+impl ::prost::Name for ViewUgcAny {
+    const NAME: &'static str = "ViewUgcAny";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.viewunite.ugcanymodel.ViewUgcAny".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.viewunite.ugcanymodel.ViewUgcAny".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

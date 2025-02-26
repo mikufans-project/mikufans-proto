@@ -48,4 +48,24 @@ pub mod score_event {
         #[prost(int64, tag = "7")]
         pub gender: i64,
     }
+    impl ::prost::Name for Info {
+        const NAME: &'static str = "info";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.multi_conn";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.multi_conn.ScoreEvent.info".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.multi_conn.ScoreEvent.info".into()
+        }
+    }
+}
+impl ::prost::Name for ScoreEvent {
+    const NAME: &'static str = "ScoreEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.multi_conn";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.multi_conn.ScoreEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.multi_conn.ScoreEvent".into()
+    }
 }

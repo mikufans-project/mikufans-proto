@@ -9,6 +9,16 @@ pub struct MidPrivacySettingsConfig {
     #[prost(message, repeated, tag = "2")]
     pub blocked_words: ::prost::alloc::vec::Vec<super::super::StringValue>,
 }
+impl ::prost::Name for MidPrivacySettingsConfig {
+    const NAME: &'static str = "MidPrivacySettingsConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.privacy";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.privacy.MidPrivacySettingsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.privacy.MidPrivacySettingsConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PrivacySettingsConfig {
@@ -18,4 +28,14 @@ pub struct PrivacySettingsConfig {
     ///
     #[prost(message, optional, tag = "2")]
     pub sensor_access: ::core::option::Option<super::super::BoolValue>,
+}
+impl ::prost::Name for PrivacySettingsConfig {
+    const NAME: &'static str = "PrivacySettingsConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.privacy";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.privacy.PrivacySettingsConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.privacy.PrivacySettingsConfig".into()
+    }
 }

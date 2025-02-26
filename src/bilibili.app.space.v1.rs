@@ -15,6 +15,16 @@ pub struct ArchiveReply {
     #[prost(message, repeated, tag = "4")]
     pub order: ::prost::alloc::vec::Vec<OrderConfig>,
 }
+impl ::prost::Name for ArchiveReply {
+    const NAME: &'static str = "ArchiveReply";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.ArchiveReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.ArchiveReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ArchiveReq {
@@ -30,6 +40,16 @@ pub struct ArchiveReq {
     ///
     #[prost(string, tag = "4")]
     pub order: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ArchiveReq {
+    const NAME: &'static str = "ArchiveReq";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.ArchiveReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.ArchiveReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -58,6 +78,16 @@ pub struct Badge {
     ///
     #[prost(int32, tag = "8")]
     pub bg_style: i32,
+}
+impl ::prost::Name for Badge {
+    const NAME: &'static str = "Badge";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.Badge".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.Badge".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -114,6 +144,16 @@ pub struct BiliSpaceVideo {
     #[prost(bool, tag = "17")]
     pub is_cooperation: bool,
 }
+impl ::prost::Name for BiliSpaceVideo {
+    const NAME: &'static str = "BiliSpaceVideo";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.BiliSpaceVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.BiliSpaceVideo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EpisodicButton {
@@ -124,6 +164,16 @@ pub struct EpisodicButton {
     #[prost(string, tag = "2")]
     pub uri: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EpisodicButton {
+    const NAME: &'static str = "EpisodicButton";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.EpisodicButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.EpisodicButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OrderConfig {
@@ -133,6 +183,16 @@ pub struct OrderConfig {
     ///
     #[prost(string, tag = "2")]
     pub value: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OrderConfig {
+    const NAME: &'static str = "OrderConfig";
+    const PACKAGE: &'static str = "bilibili.app.space.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.space.v1.OrderConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.space.v1.OrderConfig".into()
+    }
 }
 /// Generated client implementations.
 pub mod space_client {

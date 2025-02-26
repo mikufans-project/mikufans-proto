@@ -18,6 +18,16 @@ pub struct SendReportInfoReq {
     #[prost(string, tag = "5")]
     pub play_stream: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SendReportInfoReq {
+    const NAME: &'static str = "SendReportInfoReq";
+    const PACKAGE: &'static str = "bilibili.live.xroom_extend.api.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.xroom_extend.api.v1.SendReportInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.xroom_extend.api.v1.SendReportInfoReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SendReportInfoResp {
@@ -27,6 +37,16 @@ pub struct SendReportInfoResp {
     ///
     #[prost(string, tag = "2")]
     pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SendReportInfoResp {
+    const NAME: &'static str = "SendReportInfoResp";
+    const PACKAGE: &'static str = "bilibili.live.xroom_extend.api.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.xroom_extend.api.v1.SendReportInfoResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.xroom_extend.api.v1.SendReportInfoResp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

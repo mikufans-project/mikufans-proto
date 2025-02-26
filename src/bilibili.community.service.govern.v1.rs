@@ -27,6 +27,16 @@ pub struct DeviceInfo {
     #[prost(string, tag = "8")]
     pub user_agent: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DeviceInfo {
+    const NAME: &'static str = "DeviceInfo";
+    const PACKAGE: &'static str = "bilibili.community.service.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.govern.v1.DeviceInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.govern.v1.DeviceInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QoeReportReq {
@@ -61,6 +71,16 @@ pub struct QoeReportReq {
     #[prost(message, optional, tag = "10")]
     pub device_info: ::core::option::Option<DeviceInfo>,
 }
+impl ::prost::Name for QoeReportReq {
+    const NAME: &'static str = "QoeReportReq";
+    const PACKAGE: &'static str = "bilibili.community.service.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.govern.v1.QoeReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.govern.v1.QoeReportReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QoeResult {
@@ -77,12 +97,32 @@ pub struct QoeResult {
     #[prost(string, tag = "4")]
     pub option_custom_feedback: ::prost::alloc::string::String,
 }
+impl ::prost::Name for QoeResult {
+    const NAME: &'static str = "QoeResult";
+    const PACKAGE: &'static str = "bilibili.community.service.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.govern.v1.QoeResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.govern.v1.QoeResult".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct QoeScoreResult {
     ///
     #[prost(float, tag = "1")]
     pub score: f32,
+}
+impl ::prost::Name for QoeScoreResult {
+    const NAME: &'static str = "QoeScoreResult";
+    const PACKAGE: &'static str = "bilibili.community.service.govern.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.govern.v1.QoeScoreResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.govern.v1.QoeScoreResult".into()
+    }
 }
 /// Generated client implementations.
 pub mod qoe_client {

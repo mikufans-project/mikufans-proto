@@ -15,9 +15,29 @@ pub struct DoComboReq {
     #[prost(string, tag = "4")]
     pub msg: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DoComboReq {
+    const NAME: &'static str = "DoComboReq";
+    const PACKAGE: &'static str = "bilibili.live.approom.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.approom.api.grpc.v1.DoComboReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.approom.api.grpc.v1.DoComboReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DoComboResp {}
+impl ::prost::Name for DoComboResp {
+    const NAME: &'static str = "DoComboResp";
+    const PACKAGE: &'static str = "bilibili.live.approom.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.approom.api.grpc.v1.DoComboResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.approom.api.grpc.v1.DoComboResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SendComboMsgReq {
@@ -31,6 +51,26 @@ pub struct SendComboMsgReq {
     #[prost(string, tag = "3")]
     pub rnd: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SendComboMsgReq {
+    const NAME: &'static str = "SendComboMsgReq";
+    const PACKAGE: &'static str = "bilibili.live.approom.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.approom.api.grpc.v1.SendComboMsgReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.approom.api.grpc.v1.SendComboMsgReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SendComboMsgResp {}
+impl ::prost::Name for SendComboMsgResp {
+    const NAME: &'static str = "SendComboMsgResp";
+    const PACKAGE: &'static str = "bilibili.live.approom.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.approom.api.grpc.v1.SendComboMsgResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.approom.api.grpc.v1.SendComboMsgResp".into()
+    }
+}

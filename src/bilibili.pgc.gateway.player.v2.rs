@@ -9,6 +9,16 @@ pub struct Animation {
         ::prost::alloc::string::String,
     >,
 }
+impl ::prost::Name for Animation {
+    const NAME: &'static str = "Animation";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Animation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Animation".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AudioMaterialProto {
@@ -34,6 +44,16 @@ pub struct AudioMaterialProto {
     #[prost(message, repeated, tag = "7")]
     pub audio: ::prost::alloc::vec::Vec<DashItem>,
 }
+impl ::prost::Name for AudioMaterialProto {
+    const NAME: &'static str = "AudioMaterialProto";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.AudioMaterialProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.AudioMaterialProto".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BadgeInfo {
@@ -56,6 +76,16 @@ pub struct BadgeInfo {
     #[prost(string, tag = "6")]
     pub img: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BadgeInfo {
+    const NAME: &'static str = "BadgeInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.BadgeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.BadgeInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BottomDisplay {
@@ -66,12 +96,32 @@ pub struct BottomDisplay {
     #[prost(string, tag = "2")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for BottomDisplay {
+    const NAME: &'static str = "BottomDisplay";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.BottomDisplay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.BottomDisplay".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BrandReport {
     ///
     #[prost(string, tag = "1")]
     pub brand_list: ::prost::alloc::string::String,
+}
+impl ::prost::Name for BrandReport {
+    const NAME: &'static str = "BrandReport";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.BrandReport".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.BrandReport".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -134,6 +184,16 @@ pub struct ButtonInfo {
     #[prost(int64, tag = "18")]
     pub jump_type: i64,
 }
+impl ::prost::Name for ButtonInfo {
+    const NAME: &'static str = "ButtonInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ButtonInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ButtonInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CastTips {
@@ -143,6 +203,16 @@ pub struct CastTips {
     ///
     #[prost(string, tag = "2")]
     pub message: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CastTips {
+    const NAME: &'static str = "CastTips";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.CastTips".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.CastTips".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -166,12 +236,32 @@ pub struct ClipInfo {
     #[prost(message, optional, tag = "6")]
     pub multi_view: ::core::option::Option<MultiView>,
 }
+impl ::prost::Name for ClipInfo {
+    const NAME: &'static str = "ClipInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ClipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ClipInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ContinuePlayInfo {
     ///
     #[prost(int64, tag = "1")]
     pub continue_play_ep_id: i64,
+}
+impl ::prost::Name for ContinuePlayInfo {
+    const NAME: &'static str = "ContinuePlayInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ContinuePlayInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ContinuePlayInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -213,6 +303,16 @@ pub struct Coupon {
     #[prost(string, tag = "12")]
     pub amount: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Coupon {
+    const NAME: &'static str = "Coupon";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Coupon".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Coupon".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CouponInfo {
@@ -222,6 +322,16 @@ pub struct CouponInfo {
     ///
     #[prost(message, optional, tag = "2")]
     pub pop_win: ::core::option::Option<PopWin>,
+}
+impl ::prost::Name for CouponInfo {
+    const NAME: &'static str = "CouponInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.CouponInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.CouponInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -233,6 +343,16 @@ pub struct CouponTextInfo {
     #[prost(string, tag = "2")]
     pub section: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CouponTextInfo {
+    const NAME: &'static str = "CouponTextInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.CouponTextInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.CouponTextInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CouponToast {
@@ -242,6 +362,16 @@ pub struct CouponToast {
     ///
     #[prost(message, optional, tag = "2")]
     pub button: ::core::option::Option<ButtonInfo>,
+}
+impl ::prost::Name for CouponToast {
+    const NAME: &'static str = "CouponToast";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.CouponToast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.CouponToast".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -273,6 +403,16 @@ pub struct DashItem {
     ///
     #[prost(string, tag = "9")]
     pub widevine_pssh: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DashItem {
+    const NAME: &'static str = "DashItem";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.DashItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.DashItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -314,12 +454,32 @@ pub struct DashVideo {
     #[prost(string, tag = "12")]
     pub widevine_pssh: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DashVideo {
+    const NAME: &'static str = "DashVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.DashVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.DashVideo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DataControl {
     ///
     #[prost(bool, tag = "1")]
     pub need_watch_progress: bool,
+}
+impl ::prost::Name for DataControl {
+    const NAME: &'static str = "DataControl";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.DataControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.DataControl".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -382,6 +542,16 @@ pub struct Dialog {
     #[prost(string, tag = "19")]
     pub link_desc: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Dialog {
+    const NAME: &'static str = "Dialog";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Dialog".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Dialog".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DialogConfig {
@@ -401,6 +571,16 @@ pub struct DialogConfig {
     #[prost(bool, tag = "5")]
     pub is_background_translucent_enable: bool,
 }
+impl ::prost::Name for DialogConfig {
+    const NAME: &'static str = "DialogConfig";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.DialogConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.DialogConfig".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Dimension {
@@ -413,6 +593,16 @@ pub struct Dimension {
     ///
     #[prost(int32, tag = "3")]
     pub rotate: i32,
+}
+impl ::prost::Name for Dimension {
+    const NAME: &'static str = "Dimension";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Dimension".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Dimension".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -470,6 +660,16 @@ pub mod dolby_item {
         }
     }
 }
+impl ::prost::Name for DolbyItem {
+    const NAME: &'static str = "DolbyItem";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.DolbyItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.DolbyItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EndPage {
@@ -479,6 +679,16 @@ pub struct EndPage {
     ///
     #[prost(bool, tag = "2")]
     pub hide: bool,
+}
+impl ::prost::Name for EndPage {
+    const NAME: &'static str = "EndPage";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EndPage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EndPage".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -493,6 +703,16 @@ pub struct EpInlineVideo {
     #[prost(int64, tag = "3")]
     pub cid: i64,
 }
+impl ::prost::Name for EpInlineVideo {
+    const NAME: &'static str = "EpInlineVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EpInlineVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EpInlineVideo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct EpPreVideo {
@@ -502,6 +722,16 @@ pub struct EpPreVideo {
     ///
     #[prost(int64, tag = "2")]
     pub cid: i64,
+}
+impl ::prost::Name for EpPreVideo {
+    const NAME: &'static str = "EpPreVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EpPreVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EpPreVideo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -524,6 +754,16 @@ pub mod ep_publicity_video {
         ///
         #[prost(message, tag = "3")]
         EpInline(super::EpInlineVideo),
+    }
+}
+impl ::prost::Name for EpPublicityVideo {
+    const NAME: &'static str = "EpPublicityVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EpPublicityVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EpPublicityVideo".into()
     }
 }
 ///
@@ -557,6 +797,16 @@ pub struct EpisodeAdvertisementInfo {
     #[prost(int32, tag = "9")]
     pub follow: i32,
 }
+impl ::prost::Name for EpisodeAdvertisementInfo {
+    const NAME: &'static str = "EpisodeAdvertisementInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EpisodeAdvertisementInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EpisodeAdvertisementInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EpisodeInfo {
@@ -588,6 +838,16 @@ pub struct EpisodeInfo {
     #[prost(string, tag = "9")]
     pub long_title: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EpisodeInfo {
+    const NAME: &'static str = "EpisodeInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.EpisodeInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.EpisodeInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Event {
@@ -595,12 +855,32 @@ pub struct Event {
     #[prost(message, optional, tag = "1")]
     pub shake: ::core::option::Option<Shake>,
 }
+impl ::prost::Name for Event {
+    const NAME: &'static str = "Event";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Event".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Event".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExtraData {
     ///
     #[prost(string, tag = "1")]
     pub harmony_dialog_pay_link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ExtraData {
+    const NAME: &'static str = "ExtraData";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ExtraData".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ExtraData".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -624,6 +904,16 @@ pub struct FreyaConfig {
     #[prost(int32, tag = "6")]
     pub full_screen_number: i32,
 }
+impl ::prost::Name for FreyaConfig {
+    const NAME: &'static str = "FreyaConfig";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.FreyaConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.FreyaConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GradientColor {
@@ -634,6 +924,16 @@ pub struct GradientColor {
     #[prost(string, tag = "2")]
     pub end_color: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GradientColor {
+    const NAME: &'static str = "GradientColor";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.GradientColor".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.GradientColor".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HideField {
@@ -643,6 +943,16 @@ pub struct HideField {
     ///
     #[prost(int32, tag = "2")]
     pub vip_status: i32,
+}
+impl ::prost::Name for HideField {
+    const NAME: &'static str = "HideField";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.HideField".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.HideField".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -678,6 +988,16 @@ pub struct HighDefinitionTrialInfo {
     #[prost(int32, tag = "10")]
     pub trial_quality_type: i32,
 }
+impl ::prost::Name for HighDefinitionTrialInfo {
+    const NAME: &'static str = "HighDefinitionTrialInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.HighDefinitionTrialInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.HighDefinitionTrialInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HistoryNode {
@@ -691,12 +1011,32 @@ pub struct HistoryNode {
     #[prost(int64, tag = "3")]
     pub cid: i64,
 }
+impl ::prost::Name for HistoryNode {
+    const NAME: &'static str = "HistoryNode";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.HistoryNode".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.HistoryNode".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ImageInfo {
     ///
     #[prost(string, tag = "1")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ImageInfo {
+    const NAME: &'static str = "ImageInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ImageInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ImageInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -714,6 +1054,16 @@ pub struct Interaction {
     #[prost(bool, tag = "4")]
     pub is_interaction: bool,
 }
+impl ::prost::Name for Interaction {
+    const NAME: &'static str = "Interaction";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Interaction".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Interaction".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MaterialInfo {
@@ -726,6 +1076,16 @@ pub struct MaterialInfo {
     ///
     #[prost(string, tag = "3")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MaterialInfo {
+    const NAME: &'static str = "MaterialInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.MaterialInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.MaterialInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -742,6 +1102,16 @@ pub struct MultiView {
     ///
     #[prost(int64, tag = "4")]
     pub avid: i64,
+}
+impl ::prost::Name for MultiView {
+    const NAME: &'static str = "MultiView";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.MultiView".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.MultiView".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -809,6 +1179,16 @@ pub struct PayTip {
     ///
     #[prost(string, tag = "20")]
     pub giant_screen_img: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PayTip {
+    const NAME: &'static str = "PayTip";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PayTip".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PayTip".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -913,6 +1293,16 @@ pub struct PlayAbilityConf {
     #[prost(bool, tag = "33")]
     pub dubbing_disable: bool,
 }
+impl ::prost::Name for PlayAbilityConf {
+    const NAME: &'static str = "PlayAbilityConf";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayAbilityConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayAbilityConf".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayAbilityExtConf {
@@ -925,6 +1315,16 @@ pub struct PlayAbilityExtConf {
     ///
     #[prost(message, optional, tag = "3")]
     pub cast_tips: ::core::option::Option<CastTips>,
+}
+impl ::prost::Name for PlayAbilityExtConf {
+    const NAME: &'static str = "PlayAbilityExtConf";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayAbilityExtConf".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayAbilityExtConf".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -939,12 +1339,32 @@ pub struct PlayDubbingInfo {
     #[prost(string, tag = "3")]
     pub guide_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PlayDubbingInfo {
+    const NAME: &'static str = "PlayDubbingInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayDubbingInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayDubbingInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayExtInfo {
     ///
     #[prost(message, optional, tag = "1")]
     pub play_dubbing_info: ::core::option::Option<PlayDubbingInfo>,
+}
+impl ::prost::Name for PlayExtInfo {
+    const NAME: &'static str = "PlayExtInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayExtInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayExtInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1019,6 +1439,16 @@ pub struct PlayViewBusinessInfo {
     #[prost(message, optional, tag = "23")]
     pub brand_report: ::core::option::Option<BrandReport>,
 }
+impl ::prost::Name for PlayViewBusinessInfo {
+    const NAME: &'static str = "PlayViewBusinessInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayViewBusinessInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayViewBusinessInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayViewReply {
@@ -1046,6 +1476,16 @@ pub struct PlayViewReply {
     ///
     #[prost(message, optional, tag = "8")]
     pub hide_field: ::core::option::Option<HideField>,
+}
+impl ::prost::Name for PlayViewReply {
+    const NAME: &'static str = "PlayViewReply";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayViewReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayViewReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1117,6 +1557,16 @@ pub struct PlayViewReq {
     #[prost(bool, tag = "22")]
     pub is_close_drm: bool,
 }
+impl ::prost::Name for PlayViewReq {
+    const NAME: &'static str = "PlayViewReq";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PlayViewReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PlayViewReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Playlist {
@@ -1135,6 +1585,16 @@ pub struct Playlist {
     ///
     #[prost(message, optional, tag = "5")]
     pub badge_info: ::core::option::Option<BadgeInfo>,
+}
+impl ::prost::Name for Playlist {
+    const NAME: &'static str = "Playlist";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Playlist".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Playlist".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1166,6 +1626,16 @@ pub struct PopWin {
     ///
     #[prost(string, tag = "9")]
     pub pop_type: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PopWin {
+    const NAME: &'static str = "PopWin";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PopWin".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PopWin".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1216,12 +1686,32 @@ pub struct PromptBar {
     #[prost(int32, tag = "15")]
     pub show_on_paywall: i32,
 }
+impl ::prost::Name for PromptBar {
+    const NAME: &'static str = "PromptBar";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.PromptBar".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.PromptBar".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct QualityExtInfo {
     ///
     #[prost(bool, tag = "1")]
     pub trial_support: bool,
+}
+impl ::prost::Name for QualityExtInfo {
+    const NAME: &'static str = "QualityExtInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.QualityExtInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.QualityExtInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1232,6 +1722,16 @@ pub struct RecordInfo {
     ///
     #[prost(string, tag = "2")]
     pub record_icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RecordInfo {
+    const NAME: &'static str = "RecordInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.RecordInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.RecordInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1245,6 +1745,16 @@ pub struct Report {
     ///
     #[prost(string, tag = "3")]
     pub extends: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Report {
+    const NAME: &'static str = "Report";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Report".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Report".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1268,12 +1778,32 @@ pub struct ResponseUrl {
     #[prost(string, tag = "6")]
     pub md5: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ResponseUrl {
+    const NAME: &'static str = "ResponseUrl";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ResponseUrl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ResponseUrl".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Rights {
     ///
     #[prost(int32, tag = "1")]
     pub can_watch: i32,
+}
+impl ::prost::Name for Rights {
+    const NAME: &'static str = "Rights";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Rights".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Rights".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1290,6 +1820,16 @@ pub struct RoleAudioProto {
     ///
     #[prost(message, repeated, tag = "4")]
     pub audio_material_list: ::prost::alloc::vec::Vec<AudioMaterialProto>,
+}
+impl ::prost::Name for RoleAudioProto {
+    const NAME: &'static str = "RoleAudioProto";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.RoleAudioProto".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.RoleAudioProto".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1309,6 +1849,16 @@ pub struct SceneControl {
     ///
     #[prost(bool, tag = "5")]
     pub is_need_trial: bool,
+}
+impl ::prost::Name for SceneControl {
+    const NAME: &'static str = "SceneControl";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.SceneControl".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.SceneControl".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1362,6 +1912,16 @@ pub mod scheme {
         }
     }
 }
+impl ::prost::Name for Scheme {
+    const NAME: &'static str = "Scheme";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Scheme".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Scheme".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SeasonInfo {
@@ -1393,6 +1953,16 @@ pub struct SeasonInfo {
     #[prost(string, tag = "9")]
     pub horizontal_cover1610: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SeasonInfo {
+    const NAME: &'static str = "SeasonInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.SeasonInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.SeasonInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SegmentVideo {
@@ -1400,12 +1970,32 @@ pub struct SegmentVideo {
     #[prost(message, repeated, tag = "1")]
     pub segment: ::prost::alloc::vec::Vec<ResponseUrl>,
 }
+impl ::prost::Name for SegmentVideo {
+    const NAME: &'static str = "SegmentVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.SegmentVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.SegmentVideo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Shake {
     ///
     #[prost(string, tag = "1")]
     pub file: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Shake {
+    const NAME: &'static str = "Shake";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Shake".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Shake".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1428,6 +2018,16 @@ pub mod stream {
         ///
         #[prost(message, tag = "3")]
         SegmentVideo(super::SegmentVideo),
+    }
+}
+impl ::prost::Name for Stream {
+    const NAME: &'static str = "Stream";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Stream".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Stream".into()
     }
 }
 ///
@@ -1482,6 +2082,16 @@ pub struct StreamInfo {
     #[prost(string, tag = "16")]
     pub subtitle: ::prost::alloc::string::String,
 }
+impl ::prost::Name for StreamInfo {
+    const NAME: &'static str = "StreamInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.StreamInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.StreamInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct StreamLimit {
@@ -1494,6 +2104,16 @@ pub struct StreamLimit {
     ///
     #[prost(string, tag = "3")]
     pub msg: ::prost::alloc::string::String,
+}
+impl ::prost::Name for StreamLimit {
+    const NAME: &'static str = "StreamLimit";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.StreamLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.StreamLimit".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1508,6 +2128,16 @@ pub struct TaskParam {
     #[prost(int64, tag = "3")]
     pub tips_id: i64,
 }
+impl ::prost::Name for TaskParam {
+    const NAME: &'static str = "TaskParam";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.TaskParam".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.TaskParam".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TextInfo {
@@ -1520,6 +2150,16 @@ pub struct TextInfo {
     ///
     #[prost(string, tag = "3")]
     pub text_color_night: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TextInfo {
+    const NAME: &'static str = "TextInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.TextInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.TextInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1549,6 +2189,16 @@ pub struct Toast {
         ::prost::alloc::string::String,
     >,
 }
+impl ::prost::Name for Toast {
+    const NAME: &'static str = "Toast";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.Toast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.Toast".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserStatus {
@@ -1564,6 +2214,16 @@ pub struct UserStatus {
     ///
     #[prost(message, optional, tag = "4")]
     pub aid_watch_progress: ::core::option::Option<WatchProgress>,
+}
+impl ::prost::Name for UserStatus {
+    const NAME: &'static str = "UserStatus";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.UserStatus".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.UserStatus".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1592,6 +2252,16 @@ pub struct VideoInfo {
     ///
     #[prost(int64, tag = "8")]
     pub main_timelength: i64,
+}
+impl ::prost::Name for VideoInfo {
+    const NAME: &'static str = "VideoInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.VideoInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.VideoInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1639,6 +2309,16 @@ pub struct ViewInfo {
     #[prost(message, optional, tag = "14")]
     pub extra_data: ::core::option::Option<ExtraData>,
 }
+impl ::prost::Name for ViewInfo {
+    const NAME: &'static str = "ViewInfo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.ViewInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.ViewInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WatchProgress {
@@ -1663,6 +2343,16 @@ pub struct WatchProgress {
     ///
     #[prost(int64, tag = "7")]
     pub last_play_aid: i64,
+}
+impl ::prost::Name for WatchProgress {
+    const NAME: &'static str = "WatchProgress";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.WatchProgress".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.WatchProgress".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

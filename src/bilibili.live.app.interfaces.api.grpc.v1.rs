@@ -19,6 +19,16 @@ pub struct GetMoreLiveRoomsReq {
     #[prost(int64, tag = "4")]
     pub uid: i64,
 }
+impl ::prost::Name for GetMoreLiveRoomsReq {
+    const NAME: &'static str = "GetMoreLiveRoomsReq";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.GetMoreLiveRoomsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.GetMoreLiveRoomsReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetMoreLiveRoomsResp {
@@ -45,6 +55,16 @@ pub struct GetMoreLiveRoomsResp {
     #[prost(message, repeated, tag = "6")]
     pub view_history: ::prost::alloc::vec::Vec<ViewHistory>,
 }
+impl ::prost::Name for GetMoreLiveRoomsResp {
+    const NAME: &'static str = "GetMoreLiveRoomsResp";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.GetMoreLiveRoomsResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.GetMoreLiveRoomsResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetViewHistoryReq {
@@ -57,6 +77,16 @@ pub struct GetViewHistoryReq {
         super::super::super::super::super::super::pagination::Pagination,
     >,
 }
+impl ::prost::Name for GetViewHistoryReq {
+    const NAME: &'static str = "GetViewHistoryReq";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.GetViewHistoryReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.GetViewHistoryReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetViewHistoryResp {
@@ -68,6 +98,16 @@ pub struct GetViewHistoryResp {
     pub pagination_reply: ::core::option::Option<
         super::super::super::super::super::super::pagination::PaginationReply,
     >,
+}
+impl ::prost::Name for GetViewHistoryResp {
+    const NAME: &'static str = "GetViewHistoryResp";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.GetViewHistoryResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.GetViewHistoryResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -103,6 +143,16 @@ pub struct MoreLiveRoomInfo {
     #[prost(string, tag = "10")]
     pub face: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MoreLiveRoomInfo {
+    const NAME: &'static str = "MoreLiveRoomInfo";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.MoreLiveRoomInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.MoreLiveRoomInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MyIdolInfo {
@@ -125,6 +175,16 @@ pub struct MyIdolInfo {
     #[prost(string, tag = "6")]
     pub link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MyIdolInfo {
+    const NAME: &'static str = "MyIdolInfo";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.MyIdolInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.MyIdolInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RemoveViewHistoryReq {
@@ -138,9 +198,29 @@ pub struct RemoveViewHistoryReq {
     #[prost(string, tag = "3")]
     pub buvid: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RemoveViewHistoryReq {
+    const NAME: &'static str = "RemoveViewHistoryReq";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.RemoveViewHistoryReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.RemoveViewHistoryReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RemoveViewHistoryResp {}
+impl ::prost::Name for RemoveViewHistoryResp {
+    const NAME: &'static str = "RemoveViewHistoryResp";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.RemoveViewHistoryResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.RemoveViewHistoryResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ViewHistory {
@@ -192,6 +272,16 @@ pub struct ViewHistory {
     ///
     #[prost(string, tag = "16")]
     pub link: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ViewHistory {
+    const NAME: &'static str = "ViewHistory";
+    const PACKAGE: &'static str = "bilibili.live.app.interfaces.api.grpc.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.live.app.interfaces.api.grpc.v1.ViewHistory".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.live.app.interfaces.api.grpc.v1.ViewHistory".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

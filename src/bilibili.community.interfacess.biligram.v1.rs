@@ -9,6 +9,16 @@ pub struct ActionButton {
     #[prost(string, tag = "2")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ActionButton {
+    const NAME: &'static str = "ActionButton";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ActionButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ActionButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Button {
@@ -22,6 +32,16 @@ pub struct Button {
     #[prost(string, tag = "3")]
     pub icon: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Category {
@@ -34,6 +54,16 @@ pub struct Category {
     ///
     #[prost(message, repeated, tag = "3")]
     pub topic: ::prost::alloc::vec::Vec<Topic>,
+}
+impl ::prost::Name for Category {
+    const NAME: &'static str = "Category";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Category".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Category".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -51,6 +81,16 @@ pub struct CreateTopicReply {
     #[prost(int64, tag = "4")]
     pub category_id: i64,
 }
+impl ::prost::Name for CreateTopicReply {
+    const NAME: &'static str = "CreateTopicReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.CreateTopicReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.CreateTopicReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateTopicReq {
@@ -64,9 +104,29 @@ pub struct CreateTopicReq {
     #[prost(int64, tag = "3")]
     pub up_mid: i64,
 }
+impl ::prost::Name for CreateTopicReq {
+    const NAME: &'static str = "CreateTopicReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.CreateTopicReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.CreateTopicReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DelMessageReply {}
+impl ::prost::Name for DelMessageReply {
+    const NAME: &'static str = "DelMessageReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.DelMessageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.DelMessageReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DelMessageReq {
@@ -77,15 +137,45 @@ pub struct DelMessageReq {
     #[prost(int64, tag = "2")]
     pub topic_id: i64,
 }
+impl ::prost::Name for DelMessageReq {
+    const NAME: &'static str = "DelMessageReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.DelMessageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.DelMessageReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DelTopicReply {}
+impl ::prost::Name for DelTopicReply {
+    const NAME: &'static str = "DelTopicReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.DelTopicReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.DelTopicReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DelTopicReq {
     ///
     #[prost(int64, tag = "1")]
     pub id: i64,
+}
+impl ::prost::Name for DelTopicReq {
+    const NAME: &'static str = "DelTopicReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.DelTopicReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.DelTopicReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -106,6 +196,16 @@ pub struct DialogButton {
     #[prost(string, tag = "5")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DialogButton {
+    const NAME: &'static str = "DialogButton";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.DialogButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.DialogButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EditTopicReply {
@@ -122,6 +222,16 @@ pub struct EditTopicReply {
     #[prost(int64, tag = "4")]
     pub category_id: i64,
 }
+impl ::prost::Name for EditTopicReply {
+    const NAME: &'static str = "EditTopicReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.EditTopicReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.EditTopicReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EditTopicReq {
@@ -134,6 +244,16 @@ pub struct EditTopicReq {
     ///
     #[prost(int64, tag = "3")]
     pub category_id: i64,
+}
+impl ::prost::Name for EditTopicReq {
+    const NAME: &'static str = "EditTopicReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.EditTopicReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.EditTopicReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -151,12 +271,32 @@ pub struct GetManagePageReply {
     #[prost(message, optional, tag = "4")]
     pub offline: ::core::option::Option<DialogButton>,
 }
+impl ::prost::Name for GetManagePageReply {
+    const NAME: &'static str = "GetManagePageReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.GetManagePageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.GetManagePageReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct GetManagePageReq {
     ///
     #[prost(int64, tag = "1")]
     pub up_mid: i64,
+}
+impl ::prost::Name for GetManagePageReq {
+    const NAME: &'static str = "GetManagePageReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.GetManagePageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.GetManagePageReq".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -165,12 +305,32 @@ pub struct HasServerReply {
     #[prost(bool, tag = "1")]
     pub hit_server: bool,
 }
+impl ::prost::Name for HasServerReply {
+    const NAME: &'static str = "HasServerReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.HasServerReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.HasServerReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HasServerReq {
     ///
     #[prost(int64, tag = "1")]
     pub mid: i64,
+}
+impl ::prost::Name for HasServerReq {
+    const NAME: &'static str = "HasServerReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.HasServerReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.HasServerReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -179,12 +339,32 @@ pub struct Input {
     #[prost(string, tag = "1")]
     pub placeholder: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Input {
+    const NAME: &'static str = "Input";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Input".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Input".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ItemContentEmoji {
     ///
     #[prost(string, tag = "1")]
     pub uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ItemContentEmoji {
+    const NAME: &'static str = "ItemContentEmoji";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ItemContentEmoji".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ItemContentEmoji".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -201,6 +381,16 @@ pub struct ItemContentHighlight {
     ///
     #[prost(string, tag = "4")]
     pub jump_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ItemContentHighlight {
+    const NAME: &'static str = "ItemContentHighlight";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ItemContentHighlight".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ItemContentHighlight".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -221,6 +411,16 @@ pub struct ItemContentItem {
     #[prost(string, tag = "5")]
     pub raw_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ItemContentItem {
+    const NAME: &'static str = "ItemContentItem";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ItemContentItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ItemContentItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ItemContentText {
@@ -228,9 +428,29 @@ pub struct ItemContentText {
     #[prost(string, tag = "1")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ItemContentText {
+    const NAME: &'static str = "ItemContentText";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ItemContentText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ItemContentText".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LikeMessageReply {}
+impl ::prost::Name for LikeMessageReply {
+    const NAME: &'static str = "LikeMessageReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.LikeMessageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.LikeMessageReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LikeMessageReq {
@@ -243,6 +463,16 @@ pub struct LikeMessageReq {
     ///
     #[prost(enumeration = "MessageActionType", tag = "3")]
     pub action: i32,
+}
+impl ::prost::Name for LikeMessageReq {
+    const NAME: &'static str = "LikeMessageReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.LikeMessageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.LikeMessageReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -266,6 +496,16 @@ pub struct Message {
     #[prost(int64, tag = "6")]
     pub order: i64,
 }
+impl ::prost::Name for Message {
+    const NAME: &'static str = "Message";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Message".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Message".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessageItem {
@@ -287,6 +527,16 @@ pub struct MessageItem {
     ///
     #[prost(message, optional, tag = "6")]
     pub addition: ::core::option::Option<MessageItemAddition>,
+}
+impl ::prost::Name for MessageItem {
+    const NAME: &'static str = "MessageItem";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -310,6 +560,16 @@ pub struct MessageItemAddition {
     #[prost(message, optional, tag = "6")]
     pub blacklist: ::core::option::Option<DialogButton>,
 }
+impl ::prost::Name for MessageItemAddition {
+    const NAME: &'static str = "MessageItemAddition";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItemAddition".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItemAddition".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessageItemAuthor {
@@ -322,6 +582,16 @@ pub struct MessageItemAuthor {
     ///
     #[prost(string, tag = "3")]
     pub location: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MessageItemAuthor {
+    const NAME: &'static str = "MessageItemAuthor";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItemAuthor".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItemAuthor".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -339,12 +609,32 @@ pub struct MessageItemContent {
     #[prost(int32, tag = "4")]
     pub threshold_lines: i32,
 }
+impl ::prost::Name for MessageItemContent {
+    const NAME: &'static str = "MessageItemContent";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItemContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItemContent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessageItemNotice {
     ///
     #[prost(string, tag = "1")]
     pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MessageItemNotice {
+    const NAME: &'static str = "MessageItemNotice";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItemNotice".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItemNotice".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -353,9 +643,29 @@ pub struct MessageItemPicture {
     #[prost(message, repeated, tag = "1")]
     pub pictures: ::prost::alloc::vec::Vec<Picture>,
 }
+impl ::prost::Name for MessageItemPicture {
+    const NAME: &'static str = "MessageItemPicture";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessageItemPicture".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessageItemPicture".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MessagePositionReply {}
+impl ::prost::Name for MessagePositionReply {
+    const NAME: &'static str = "MessagePositionReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessagePositionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessagePositionReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessagePositionReq {
@@ -368,6 +678,16 @@ pub struct MessagePositionReq {
     ///
     #[prost(string, tag = "3")]
     pub next: ::prost::alloc::string::String,
+}
+impl ::prost::Name for MessagePositionReq {
+    const NAME: &'static str = "MessagePositionReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessagePositionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessagePositionReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -396,6 +716,16 @@ pub struct MessagesReply {
     #[prost(message, optional, tag = "7")]
     pub input: ::core::option::Option<Input>,
 }
+impl ::prost::Name for MessagesReply {
+    const NAME: &'static str = "MessagesReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessagesReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessagesReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessagesReq {
@@ -407,6 +737,16 @@ pub struct MessagesReq {
     pub page: ::core::option::Option<
         super::super::super::super::pagination::FeedPagination,
     >,
+}
+impl ::prost::Name for MessagesReq {
+    const NAME: &'static str = "MessagesReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.MessagesReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.MessagesReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -424,12 +764,32 @@ pub struct Picture {
     #[prost(double, tag = "4")]
     pub size: f64,
 }
+impl ::prost::Name for Picture {
+    const NAME: &'static str = "Picture";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Picture".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Picture".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SendMessageReply {
     ///
     #[prost(message, optional, tag = "1")]
     pub message: ::core::option::Option<Message>,
+}
+impl ::prost::Name for SendMessageReply {
+    const NAME: &'static str = "SendMessageReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.SendMessageReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.SendMessageReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -446,6 +806,16 @@ pub struct SendMessageReq {
     ///
     #[prost(message, repeated, tag = "4")]
     pub picture: ::prost::alloc::vec::Vec<Picture>,
+}
+impl ::prost::Name for SendMessageReq {
+    const NAME: &'static str = "SendMessageReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.SendMessageReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.SendMessageReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -487,6 +857,16 @@ pub struct ServerReply {
     #[prost(string, tag = "12")]
     pub night_top_photo: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ServerReply {
+    const NAME: &'static str = "ServerReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ServerReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ServerReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ServerReq {
@@ -494,15 +874,45 @@ pub struct ServerReq {
     #[prost(int64, tag = "1")]
     pub up_mid: i64,
 }
+impl ::prost::Name for ServerReq {
+    const NAME: &'static str = "ServerReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ServerReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ServerReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ServerStatusReply {}
+impl ::prost::Name for ServerStatusReply {
+    const NAME: &'static str = "ServerStatusReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ServerStatusReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ServerStatusReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ServerStatusReq {
     ///
     #[prost(enumeration = "ServerStatus", tag = "1")]
     pub status: i32,
+}
+impl ::prost::Name for ServerStatusReq {
+    const NAME: &'static str = "ServerStatusReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.ServerStatusReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.ServerStatusReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -538,6 +948,16 @@ pub struct Topic {
     #[prost(string, tag = "10")]
     pub route: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Topic {
+    const NAME: &'static str = "Topic";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.Topic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.Topic".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TopicReply {
@@ -554,12 +974,32 @@ pub struct TopicReply {
     #[prost(bool, tag = "4")]
     pub name_editable: bool,
 }
+impl ::prost::Name for TopicReply {
+    const NAME: &'static str = "TopicReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.TopicReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.TopicReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct TopicReq {
     ///
     #[prost(int64, tag = "1")]
     pub id: i64,
+}
+impl ::prost::Name for TopicReq {
+    const NAME: &'static str = "TopicReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.TopicReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.TopicReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -583,6 +1023,16 @@ pub struct UpServer {
     #[prost(string, tag = "6")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for UpServer {
+    const NAME: &'static str = "UpServer";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.UpServer".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.UpServer".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpServerListReply {
@@ -590,12 +1040,32 @@ pub struct UpServerListReply {
     #[prost(message, repeated, tag = "1")]
     pub server: ::prost::alloc::vec::Vec<UpServer>,
 }
+impl ::prost::Name for UpServerListReply {
+    const NAME: &'static str = "UpServerListReply";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.UpServerListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.UpServerListReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpServerListReq {
     ///
     #[prost(int64, tag = "1")]
     pub mid: i64,
+}
+impl ::prost::Name for UpServerListReq {
+    const NAME: &'static str = "UpServerListReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.UpServerListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.UpServerListReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -612,6 +1082,16 @@ pub struct UserInfo {
     ///
     #[prost(string, tag = "4")]
     pub route: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UserInfo {
+    const NAME: &'static str = "UserInfo";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.biligram.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.biligram.v1.UserInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.biligram.v1.UserInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

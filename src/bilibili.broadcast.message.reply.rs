@@ -63,6 +63,16 @@ pub mod subject_interaction_resp {
         }
     }
 }
+impl ::prost::Name for SubjectInteractionResp {
+    const NAME: &'static str = "SubjectInteractionResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.reply";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.reply.SubjectInteractionResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.reply.SubjectInteractionResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubjectNoticeResp {
@@ -97,6 +107,16 @@ pub struct SubjectNoticeResp {
     #[prost(string, tag = "10")]
     pub interaction_scene: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SubjectNoticeResp {
+    const NAME: &'static str = "SubjectNoticeResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.reply";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.reply.SubjectNoticeResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.reply.SubjectNoticeResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubjectReplyInsertionResp {
@@ -127,4 +147,14 @@ pub struct SubjectReplyInsertionResp {
     ///
     #[prost(string, repeated, tag = "9")]
     pub support_tag: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for SubjectReplyInsertionResp {
+    const NAME: &'static str = "SubjectReplyInsertionResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.reply";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.reply.SubjectReplyInsertionResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.reply.SubjectReplyInsertionResp".into()
+    }
 }

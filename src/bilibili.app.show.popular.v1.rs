@@ -12,6 +12,16 @@ pub struct Bubble {
     #[prost(int64, tag = "3")]
     pub stime: i64,
 }
+impl ::prost::Name for Bubble {
+    const NAME: &'static str = "Bubble";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.Bubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.Bubble".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Config {
@@ -43,6 +53,16 @@ pub struct Config {
     #[prost(string, tag = "9")]
     pub toast: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Config {
+    const NAME: &'static str = "Config";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.Config".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.Config".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EntranceShow {
@@ -71,12 +91,32 @@ pub struct EntranceShow {
     #[prost(int32, tag = "8")]
     pub entrance_type: i32,
 }
+impl ::prost::Name for EntranceShow {
+    const NAME: &'static str = "EntranceShow";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.EntranceShow".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.EntranceShow".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PopularAd {
     ///
     #[prost(string, tag = "1")]
     pub extra: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PopularAd {
+    const NAME: &'static str = "PopularAd";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.PopularAd".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.PopularAd".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -90,6 +130,16 @@ pub struct PopularReply {
     ///
     #[prost(string, tag = "3")]
     pub ver: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PopularReply {
+    const NAME: &'static str = "PopularReply";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.PopularReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.PopularReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -144,6 +194,16 @@ pub struct PopularResultReq {
     ///
     #[prost(message, optional, tag = "16")]
     pub popular_ad: ::core::option::Option<PopularAd>,
+}
+impl ::prost::Name for PopularResultReq {
+    const NAME: &'static str = "PopularResultReq";
+    const PACKAGE: &'static str = "bilibili.app.show.popular.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.popular.v1.PopularResultReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.popular.v1.PopularResultReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod popular_client {

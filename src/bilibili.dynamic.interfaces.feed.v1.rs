@@ -55,6 +55,16 @@ pub mod active_report_message {
         }
     }
 }
+impl ::prost::Name for ActiveReportMessage {
+    const NAME: &'static str = "ActiveReportMessage";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ActiveReportMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ActiveReportMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AdInfoDetail {
@@ -70,6 +80,16 @@ pub struct AdInfoDetail {
     ///
     #[prost(string, tag = "4")]
     pub district: ::prost::alloc::string::String,
+}
+impl ::prost::Name for AdInfoDetail {
+    const NAME: &'static str = "AdInfoDetail";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.AdInfoDetail".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.AdInfoDetail".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -87,18 +107,58 @@ pub struct AddDynamicReportReq {
     #[prost(string, tag = "4")]
     pub reason_desc: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AddDynamicReportReq {
+    const NAME: &'static str = "AddDynamicReportReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.AddDynamicReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.AddDynamicReportReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AddDynamicReportRsp {}
+impl ::prost::Name for AddDynamicReportRsp {
+    const NAME: &'static str = "AddDynamicReportRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.AddDynamicReportRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.AddDynamicReportRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ArticleHomePageCategoriesReq {}
+impl ::prost::Name for ArticleHomePageCategoriesReq {
+    const NAME: &'static str = "ArticleHomePageCategoriesReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ArticleHomePageCategoriesReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ArticleHomePageCategoriesReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ArticleHomePageCategoriesRsp {
     ///
     #[prost(message, repeated, tag = "1")]
     pub categories: ::prost::alloc::vec::Vec<Category>,
+}
+impl ::prost::Name for ArticleHomePageCategoriesRsp {
+    const NAME: &'static str = "ArticleHomePageCategoriesRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ArticleHomePageCategoriesRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ArticleHomePageCategoriesRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -131,6 +191,16 @@ pub struct AttachCardButtonReq {
     #[prost(enumeration = "super::super::super::common::OpusBizType", tag = "9")]
     pub opus_biz_type: i32,
 }
+impl ::prost::Name for AttachCardButtonReq {
+    const NAME: &'static str = "AttachCardButtonReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.AttachCardButtonReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.AttachCardButtonReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AttachCardButtonRsp {
@@ -146,6 +216,16 @@ pub struct AttachCardButtonRsp {
     ///
     #[prost(int64, tag = "4")]
     pub reserve_update: i64,
+}
+impl ::prost::Name for AttachCardButtonRsp {
+    const NAME: &'static str = "AttachCardButtonRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.AttachCardButtonRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.AttachCardButtonRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -169,6 +249,16 @@ pub struct Category {
     #[prost(string, tag = "6")]
     pub banner_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Category {
+    const NAME: &'static str = "Category";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.Category".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.Category".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ConfigAb {
@@ -179,9 +269,29 @@ pub struct ConfigAb {
     #[prost(int64, tag = "2")]
     pub value: i64,
 }
+impl ::prost::Name for ConfigAb {
+    const NAME: &'static str = "ConfigAB";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ConfigAB".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ConfigAB".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ConfigReq {}
+impl ::prost::Name for ConfigReq {
+    const NAME: &'static str = "ConfigReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ConfigReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ConfigReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConfigRsp {
@@ -194,6 +304,16 @@ pub struct ConfigRsp {
     ///
     #[prost(string, tag = "3")]
     pub article_loading_address: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ConfigRsp {
+    const NAME: &'static str = "ConfigRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ConfigRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ConfigRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -246,6 +366,16 @@ pub struct CreateDynReq {
     #[prost(message, optional, tag = "15")]
     pub extra_info: ::core::option::Option<super::super::super::common::CreateExtraInfo>,
 }
+impl ::prost::Name for CreateDynReq {
+    const NAME: &'static str = "CreateDynReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreateDynReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreateDynReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateInitCheckReq {
@@ -261,6 +391,16 @@ pub struct CreateInitCheckReq {
     ///
     #[prost(message, optional, tag = "3")]
     pub repost: ::core::option::Option<super::super::super::common::RepostInitCheck>,
+}
+impl ::prost::Name for CreateInitCheckReq {
+    const NAME: &'static str = "CreateInitCheckReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreateInitCheckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreateInitCheckReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -284,6 +424,16 @@ pub struct CreateOpusReq {
     #[prost(message, optional, tag = "8")]
     pub repost_src: ::core::option::Option<super::super::super::common::DynIdentity>,
 }
+impl ::prost::Name for CreateOpusReq {
+    const NAME: &'static str = "CreateOpusReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreateOpusReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreateOpusReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreatePageCommercialInfo {
@@ -306,6 +456,16 @@ pub struct CreatePageCommercialInfo {
     #[prost(bool, tag = "6")]
     pub editable: bool,
 }
+impl ::prost::Name for CreatePageCommercialInfo {
+    const NAME: &'static str = "CreatePageCommercialInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePageCommercialInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePageCommercialInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreatePageInfosReq {
@@ -325,6 +485,16 @@ pub struct CreatePageInfosReq {
     #[prost(message, repeated, tag = "5")]
     pub goods: ::prost::alloc::vec::Vec<super::super::super::common::GoodsContent>,
 }
+impl ::prost::Name for CreatePageInfosReq {
+    const NAME: &'static str = "CreatePageInfosReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePageInfosReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePageInfosReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreatePageInfosRsp {
@@ -337,6 +507,16 @@ pub struct CreatePageInfosRsp {
     ///
     #[prost(message, repeated, tag = "3")]
     pub goods: ::prost::alloc::vec::Vec<GoodsItem>,
+}
+impl ::prost::Name for CreatePageInfosRsp {
+    const NAME: &'static str = "CreatePageInfosRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePageInfosRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePageInfosRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -351,6 +531,16 @@ pub struct CreatePageTopicInfo {
     #[prost(string, tag = "3")]
     pub hint: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CreatePageTopicInfo {
+    const NAME: &'static str = "CreatePageTopicInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePageTopicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePageTopicInfo".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreatePermissionButtonClickReq {
@@ -358,15 +548,55 @@ pub struct CreatePermissionButtonClickReq {
     #[prost(enumeration = "super::super::super::common::UpPermissionType", tag = "1")]
     pub r#type: i32,
 }
+impl ::prost::Name for CreatePermissionButtonClickReq {
+    const NAME: &'static str = "CreatePermissionButtonClickReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePermissionButtonClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePermissionButtonClickReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreatePermissionButtonClickRsp {}
+impl ::prost::Name for CreatePermissionButtonClickRsp {
+    const NAME: &'static str = "CreatePermissionButtonClickRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePermissionButtonClickRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePermissionButtonClickRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreatePlusButtonClickReq {}
+impl ::prost::Name for CreatePlusButtonClickReq {
+    const NAME: &'static str = "CreatePlusButtonClickReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePlusButtonClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePlusButtonClickReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreatePlusButtonClickRsp {}
+impl ::prost::Name for CreatePlusButtonClickRsp {
+    const NAME: &'static str = "CreatePlusButtonClickRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreatePlusButtonClickRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreatePlusButtonClickRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynMetricsActiveReportReq {
@@ -374,9 +604,29 @@ pub struct DynMetricsActiveReportReq {
     #[prost(message, repeated, tag = "1")]
     pub report_metrics: ::prost::alloc::vec::Vec<ActiveReportMessage>,
 }
+impl ::prost::Name for DynMetricsActiveReportReq {
+    const NAME: &'static str = "DynMetricsActiveReportReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynMetricsActiveReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynMetricsActiveReportReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynMetricsActiveReportRsp {}
+impl ::prost::Name for DynMetricsActiveReportRsp {
+    const NAME: &'static str = "DynMetricsActiveReportRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynMetricsActiveReportRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynMetricsActiveReportRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynPrivatePubSettingReq {
@@ -387,12 +637,32 @@ pub struct DynPrivatePubSettingReq {
     #[prost(string, tag = "2")]
     pub action: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DynPrivatePubSettingReq {
+    const NAME: &'static str = "DynPrivatePubSettingReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynPrivatePubSettingReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynPrivatePubSettingReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynPrivatePubSettingRsp {
     ///
     #[prost(string, tag = "1")]
     pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DynPrivatePubSettingRsp {
+    const NAME: &'static str = "DynPrivatePubSettingRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynPrivatePubSettingRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynPrivatePubSettingRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -401,9 +671,29 @@ pub struct DynamicButtonClickReq {
     #[prost(int32, repeated, tag = "1")]
     pub biz_type: ::prost::alloc::vec::Vec<i32>,
 }
+impl ::prost::Name for DynamicButtonClickReq {
+    const NAME: &'static str = "DynamicButtonClickReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynamicButtonClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynamicButtonClickReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynamicButtonClickRsp {}
+impl ::prost::Name for DynamicButtonClickRsp {
+    const NAME: &'static str = "DynamicButtonClickRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynamicButtonClickRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynamicButtonClickRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynamicRepostReq {
@@ -425,6 +715,16 @@ pub struct DynamicRepostReq {
     ///
     #[prost(string, tag = "6")]
     pub upload_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DynamicRepostReq {
+    const NAME: &'static str = "DynamicRepostReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynamicRepostReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynamicRepostReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -463,9 +763,29 @@ pub struct DynamicThumbReq {
     #[prost(string, tag = "11")]
     pub action_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for DynamicThumbReq {
+    const NAME: &'static str = "DynamicThumbReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynamicThumbReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynamicThumbReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DynamicThumbRsp {}
+impl ::prost::Name for DynamicThumbRsp {
+    const NAME: &'static str = "DynamicThumbRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.DynamicThumbRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.DynamicThumbRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EditDynReq {
@@ -505,6 +825,16 @@ pub struct EditDynReq {
     #[prost(string, tag = "11")]
     pub upload_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for EditDynReq {
+    const NAME: &'static str = "EditDynReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.EditDynReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.EditDynReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EditDynRsp {
@@ -514,6 +844,16 @@ pub struct EditDynRsp {
     ///
     #[prost(string, tag = "2")]
     pub totast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EditDynRsp {
+    const NAME: &'static str = "EditDynRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.EditDynRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.EditDynRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -533,6 +873,16 @@ pub struct GetEditDynInfoReq {
     ///
     #[prost(message, optional, tag = "4")]
     pub repost: ::core::option::Option<super::super::super::common::RepostInitCheck>,
+}
+impl ::prost::Name for GetEditDynInfoReq {
+    const NAME: &'static str = "GetEditDynInfoReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -584,6 +934,16 @@ pub struct GetEditDynInfoRsp {
     #[prost(message, optional, tag = "14")]
     pub commercial: ::core::option::Option<CreatePageCommercialInfo>,
 }
+impl ::prost::Name for GetEditDynInfoRsp {
+    const NAME: &'static str = "GetEditDynInfoRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetEditDynInfoWebReq {
@@ -599,6 +959,16 @@ pub struct GetEditDynInfoWebReq {
     ///
     #[prost(message, optional, tag = "3")]
     pub meta: ::core::option::Option<super::super::super::common::MetaDataCtrl>,
+}
+impl ::prost::Name for GetEditDynInfoWebReq {
+    const NAME: &'static str = "GetEditDynInfoWebReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoWebReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoWebReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -635,6 +1005,16 @@ pub struct GetEditDynInfoWebRsp {
     #[prost(string, tag = "9")]
     pub pre_dyn_id_str: ::prost::alloc::string::String,
 }
+impl ::prost::Name for GetEditDynInfoWebRsp {
+    const NAME: &'static str = "GetEditDynInfoWebRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoWebRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GetEditDynInfoWebRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GoodsAttachCardPreviewReq {
@@ -651,12 +1031,32 @@ pub struct GoodsAttachCardPreviewReq {
     #[prost(message, optional, tag = "4")]
     pub meta: ::core::option::Option<super::super::super::common::MetaDataCtrl>,
 }
+impl ::prost::Name for GoodsAttachCardPreviewReq {
+    const NAME: &'static str = "GoodsAttachCardPreviewReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GoodsAttachCardPreviewReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GoodsAttachCardPreviewReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GoodsAttachCardPreviewRsp {
     ///
     #[prost(map = "int64, message", tag = "1")]
     pub goods: ::std::collections::HashMap<i64, GoodsItem>,
+}
+impl ::prost::Name for GoodsAttachCardPreviewRsp {
+    const NAME: &'static str = "GoodsAttachCardPreviewRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GoodsAttachCardPreviewRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GoodsAttachCardPreviewRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -698,6 +1098,16 @@ pub struct GoodsItem {
     #[prost(int64, tag = "12")]
     pub act_mid: i64,
 }
+impl ::prost::Name for GoodsItem {
+    const NAME: &'static str = "GoodsItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.GoodsItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.GoodsItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HomeBubbleReportReq {
@@ -705,12 +1115,42 @@ pub struct HomeBubbleReportReq {
     #[prost(string, tag = "1")]
     pub track_id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for HomeBubbleReportReq {
+    const NAME: &'static str = "HomeBubbleReportReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.HomeBubbleReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.HomeBubbleReportReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HomeBubbleReportRsp {}
+impl ::prost::Name for HomeBubbleReportRsp {
+    const NAME: &'static str = "HomeBubbleReportRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.HomeBubbleReportRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.HomeBubbleReportRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HotSearchReq {}
+impl ::prost::Name for HotSearchReq {
+    const NAME: &'static str = "HotSearchReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.HotSearchReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.HotSearchReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HotSearchRsp {
@@ -729,6 +1169,26 @@ pub mod hot_search_rsp {
         ///
         #[prost(string, tag = "1")]
         pub words: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Item {
+        const NAME: &'static str = "Item";
+        const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.dynamic.interfaces.feed.v1.HotSearchRsp.Item".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.dynamic.interfaces.feed.v1.HotSearchRsp.Item".into()
+        }
+    }
+}
+impl ::prost::Name for HotSearchRsp {
+    const NAME: &'static str = "HotSearchRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.HotSearchRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.HotSearchRsp".into()
     }
 }
 ///
@@ -750,6 +1210,16 @@ pub struct ICreateGoodsReplySyncReq {
     #[prost(message, repeated, tag = "5")]
     pub pics: ::prost::alloc::vec::Vec<super::super::super::common::CreatePic>,
 }
+impl ::prost::Name for ICreateGoodsReplySyncReq {
+    const NAME: &'static str = "ICreateGoodsReplySyncReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ICreateGoodsReplySyncReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ICreateGoodsReplySyncReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ICreateResp {
@@ -763,6 +1233,16 @@ pub struct ICreateResp {
     #[prost(int64, tag = "3")]
     pub dyn_rid: i64,
 }
+impl ::prost::Name for ICreateResp {
+    const NAME: &'static str = "ICreateResp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ICreateResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ICreateResp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LbsLocation {
@@ -772,6 +1252,16 @@ pub struct LbsLocation {
     ///
     #[prost(double, tag = "2")]
     pub lng: f64,
+}
+impl ::prost::Name for LbsLocation {
+    const NAME: &'static str = "LbsLocation";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.LbsLocation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.LbsLocation".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -807,6 +1297,16 @@ pub struct NearbyPoiDetail {
     #[prost(message, repeated, tag = "10")]
     pub ancestors: ::prost::alloc::vec::Vec<PoiId>,
 }
+impl ::prost::Name for NearbyPoiDetail {
+    const NAME: &'static str = "NearbyPoiDetail";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.NearbyPoiDetail".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.NearbyPoiDetail".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NearbyPoiListItem {
@@ -816,6 +1316,16 @@ pub struct NearbyPoiListItem {
     ///
     #[prost(int32, tag = "2")]
     pub user_count: i32,
+}
+impl ::prost::Name for NearbyPoiListItem {
+    const NAME: &'static str = "NearbyPoiListItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.NearbyPoiListItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.NearbyPoiListItem".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -833,6 +1343,16 @@ pub struct NearbyPoiListReq {
     #[prost(int32, tag = "4")]
     pub page_size: i32,
 }
+impl ::prost::Name for NearbyPoiListReq {
+    const NAME: &'static str = "NearbyPoiListReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.NearbyPoiListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.NearbyPoiListReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NearbyPoiListRsp {
@@ -842,6 +1362,16 @@ pub struct NearbyPoiListRsp {
     ///
     #[prost(message, repeated, tag = "2")]
     pub pois: ::prost::alloc::vec::Vec<NearbyPoiListItem>,
+}
+impl ::prost::Name for NearbyPoiListRsp {
+    const NAME: &'static str = "NearbyPoiListRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.NearbyPoiListRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.NearbyPoiListRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -877,6 +1407,16 @@ pub struct PoiDetail {
     #[prost(message, optional, tag = "10")]
     pub ancestors: ::core::option::Option<PoiId>,
 }
+impl ::prost::Name for PoiDetail {
+    const NAME: &'static str = "PoiDetail";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.PoiDetail".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.PoiDetail".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PoiId {
@@ -886,6 +1426,16 @@ pub struct PoiId {
     ///
     #[prost(int32, tag = "2")]
     pub r#type: i32,
+}
+impl ::prost::Name for PoiId {
+    const NAME: &'static str = "PoiId";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.PoiId".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.PoiId".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -897,6 +1447,16 @@ pub struct PoiListItem {
     #[prost(int32, tag = "2")]
     pub user_count: i32,
 }
+impl ::prost::Name for PoiListItem {
+    const NAME: &'static str = "PoiListItem";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.PoiListItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.PoiListItem".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RecommendPoiReq {
@@ -907,6 +1467,16 @@ pub struct RecommendPoiReq {
     #[prost(double, tag = "2")]
     pub lng: f64,
 }
+impl ::prost::Name for RecommendPoiReq {
+    const NAME: &'static str = "RecommendPoiReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RecommendPoiReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RecommendPoiReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RecommendPoiRsp {
@@ -916,6 +1486,16 @@ pub struct RecommendPoiRsp {
     ///
     #[prost(message, optional, tag = "2")]
     pub parent_poi: ::core::option::Option<NearbyPoiDetail>,
+}
+impl ::prost::Name for RecommendPoiRsp {
+    const NAME: &'static str = "RecommendPoiRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RecommendPoiRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RecommendPoiRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -941,6 +1521,16 @@ pub struct ReserveButtonClickReq {
     ///
     #[prost(int64, tag = "7")]
     pub dyn_type: i64,
+}
+impl ::prost::Name for ReserveButtonClickReq {
+    const NAME: &'static str = "ReserveButtonClickReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ReserveButtonClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ReserveButtonClickReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -970,6 +1560,16 @@ pub struct ReserveButtonClickResp {
     #[prost(message, optional, tag = "8")]
     pub reserve_calendar_info: ::core::option::Option<ReserveCalendarInfo>,
 }
+impl ::prost::Name for ReserveButtonClickResp {
+    const NAME: &'static str = "ReserveButtonClickResp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ReserveButtonClickResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ReserveButtonClickResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReserveCalendarInfo {
@@ -992,6 +1592,16 @@ pub struct ReserveCalendarInfo {
     #[prost(string, tag = "6")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ReserveCalendarInfo {
+    const NAME: &'static str = "ReserveCalendarInfo";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.ReserveCalendarInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.ReserveCalendarInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RmDynReq {
@@ -1008,9 +1618,29 @@ pub struct RmDynReq {
     #[prost(string, tag = "4")]
     pub rid_str: ::prost::alloc::string::String,
 }
+impl ::prost::Name for RmDynReq {
+    const NAME: &'static str = "RmDynReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RmDynReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RmDynReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RmDynRsp {}
+impl ::prost::Name for RmDynRsp {
+    const NAME: &'static str = "RmDynRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RmDynRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RmDynRsp".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RmSpaceTopReq {
@@ -1021,9 +1651,29 @@ pub struct RmSpaceTopReq {
     #[prost(int32, tag = "2")]
     pub teenagers_mode: i32,
 }
+impl ::prost::Name for RmSpaceTopReq {
+    const NAME: &'static str = "RmSpaceTopReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RmSpaceTopReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RmSpaceTopReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RmSpaceTopRsp {}
+impl ::prost::Name for RmSpaceTopRsp {
+    const NAME: &'static str = "RmSpaceTopRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.RmSpaceTopRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.RmSpaceTopRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchPoiListReq {
@@ -1043,6 +1693,16 @@ pub struct SearchPoiListReq {
     #[prost(string, tag = "5")]
     pub keyword: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SearchPoiListReq {
+    const NAME: &'static str = "SearchPoiListReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SearchPoiListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SearchPoiListReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchPoiListRsp {
@@ -1052,6 +1712,16 @@ pub struct SearchPoiListRsp {
     ///
     #[prost(message, repeated, tag = "2")]
     pub pois: ::prost::alloc::vec::Vec<PoiListItem>,
+}
+impl ::prost::Name for SearchPoiListRsp {
+    const NAME: &'static str = "SearchPoiListRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SearchPoiListRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SearchPoiListRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -1063,9 +1733,29 @@ pub struct SetSpaceTopReq {
     #[prost(int32, tag = "2")]
     pub teenagers_mode: i32,
 }
+impl ::prost::Name for SetSpaceTopReq {
+    const NAME: &'static str = "SetSpaceTopReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SetSpaceTopReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SetSpaceTopReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SetSpaceTopRsp {}
+impl ::prost::Name for SetSpaceTopRsp {
+    const NAME: &'static str = "SetSpaceTopRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SetSpaceTopRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SetSpaceTopRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubmitCheckReq {
@@ -1093,9 +1783,29 @@ pub struct SubmitCheckReq {
     #[prost(string, tag = "7")]
     pub dyn_id_str: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SubmitCheckReq {
+    const NAME: &'static str = "SubmitCheckReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SubmitCheckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SubmitCheckReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct SubmitCheckRsp {}
+impl ::prost::Name for SubmitCheckRsp {
+    const NAME: &'static str = "SubmitCheckRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SubmitCheckRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SubmitCheckRsp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestReq {
@@ -1105,6 +1815,16 @@ pub struct SuggestReq {
     ///
     #[prost(int32, tag = "2")]
     pub r#type: i32,
+}
+impl ::prost::Name for SuggestReq {
+    const NAME: &'static str = "SuggestReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SuggestReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SuggestReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1118,6 +1838,16 @@ pub struct SuggestRsp {
     ///
     #[prost(string, tag = "3")]
     pub version: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SuggestRsp {
+    const NAME: &'static str = "SuggestRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.SuggestRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.SuggestRsp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

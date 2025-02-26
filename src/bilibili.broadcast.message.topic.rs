@@ -9,6 +9,16 @@ pub struct DetailEventMessage {
     #[prost(message, repeated, tag = "2")]
     pub pub_data: ::prost::alloc::vec::Vec<PubEvent>,
 }
+impl ::prost::Name for DetailEventMessage {
+    const NAME: &'static str = "DetailEventMessage";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.topic";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.topic.DetailEventMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.topic.DetailEventMessage".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PubEvent {
@@ -18,4 +28,14 @@ pub struct PubEvent {
     ///
     #[prost(int64, tag = "2")]
     pub mid: i64,
+}
+impl ::prost::Name for PubEvent {
+    const NAME: &'static str = "PubEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.topic";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.topic.PubEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.topic.PubEvent".into()
+    }
 }

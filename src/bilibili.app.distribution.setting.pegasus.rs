@@ -6,6 +6,16 @@ pub struct FeedModeValue {
     #[prost(message, optional, tag = "1")]
     pub value: ::core::option::Option<super::super::Int64Value>,
 }
+impl ::prost::Name for FeedModeValue {
+    const NAME: &'static str = "FeedModeValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.FeedModeValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.FeedModeValue".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PegasusAutoPlay {
@@ -22,6 +32,16 @@ pub struct PegasusAutoPlay {
     #[prost(message, optional, tag = "4")]
     pub double_affected_by_server_side: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for PegasusAutoPlay {
+    const NAME: &'static str = "PegasusAutoPlay";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.PegasusAutoPlay".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.PegasusAutoPlay".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PegasusColumnValue {
@@ -31,6 +51,16 @@ pub struct PegasusColumnValue {
     ///
     #[prost(message, optional, tag = "2")]
     pub affected_by_server_side: ::core::option::Option<super::super::BoolValue>,
+}
+impl ::prost::Name for PegasusColumnValue {
+    const NAME: &'static str = "PegasusColumnValue";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.PegasusColumnValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.PegasusColumnValue".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -45,12 +75,34 @@ pub struct PegasusDeviceConfig {
     #[prost(message, optional, tag = "3")]
     pub auto_play: ::core::option::Option<PegasusAutoPlay>,
 }
+impl ::prost::Name for PegasusDeviceConfig {
+    const NAME: &'static str = "PegasusDeviceConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.PegasusDeviceConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.PegasusDeviceConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PegasusDeviceWithoutFplocalConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub auto_refresh_state: ::core::option::Option<super::super::Int64Value>,
+}
+impl ::prost::Name for PegasusDeviceWithoutFplocalConfig {
+    const NAME: &'static str = "PegasusDeviceWithoutFplocalConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.PegasusDeviceWithoutFplocalConfig"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.PegasusDeviceWithoutFplocalConfig"
+            .into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -61,4 +113,14 @@ pub struct PegasusMidConfig {
     ///
     #[prost(message, optional, tag = "2")]
     pub play_mode: ::core::option::Option<super::super::Int64Value>,
+}
+impl ::prost::Name for PegasusMidConfig {
+    const NAME: &'static str = "PegasusMidConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.pegasus";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.pegasus.PegasusMidConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.pegasus.PegasusMidConfig".into()
+    }
 }

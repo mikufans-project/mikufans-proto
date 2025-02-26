@@ -87,6 +87,16 @@ pub struct Item {
     #[prost(int32, tag = "28")]
     pub play_icon: i32,
 }
+impl ::prost::Name for Item {
+    const NAME: &'static str = "Item";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.Item".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.Item".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OfficialVerify {
@@ -96,6 +106,16 @@ pub struct OfficialVerify {
     ///
     #[prost(string, tag = "2")]
     pub desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OfficialVerify {
+    const NAME: &'static str = "OfficialVerify";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.OfficialVerify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.OfficialVerify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -110,12 +130,32 @@ pub struct RankAllResultReq {
     #[prost(int32, tag = "3")]
     pub ps: i32,
 }
+impl ::prost::Name for RankAllResultReq {
+    const NAME: &'static str = "RankAllResultReq";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankAllResultReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankAllResultReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RankListReply {
     ///
     #[prost(message, repeated, tag = "1")]
     pub items: ::prost::alloc::vec::Vec<Item>,
+}
+impl ::prost::Name for RankListReply {
+    const NAME: &'static str = "RankListReply";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankListReply".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -130,6 +170,16 @@ pub struct RankRegionResultReq {
     #[prost(int32, tag = "3")]
     pub ps: i32,
 }
+impl ::prost::Name for RankRegionResultReq {
+    const NAME: &'static str = "RankRegionResultReq";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankRegionResultReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankRegionResultReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Relation {
@@ -142,6 +192,16 @@ pub struct Relation {
     ///
     #[prost(int32, tag = "3")]
     pub is_followed: i32,
+}
+impl ::prost::Name for Relation {
+    const NAME: &'static str = "Relation";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.Relation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.Relation".into()
+    }
 }
 /// Generated client implementations.
 pub mod rank_client {

@@ -75,6 +75,16 @@ pub mod up_stream_message {
         }
     }
 }
+impl ::prost::Name for UpStreamMessage {
+    const NAME: &'static str = "UpStreamMessage";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.push";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.push.UpStreamMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.push.UpStreamMessage".into()
+    }
+}
 /// Generated client implementations.
 pub mod push_up_stream_client {
     #![allow(

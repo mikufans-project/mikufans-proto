@@ -15,6 +15,16 @@ pub struct NotifyReq {
     #[prost(string, tag = "4")]
     pub jump_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for NotifyReq {
+    const NAME: &'static str = "NotifyReq";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.mall";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.mall.NotifyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.mall.NotifyReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

@@ -44,6 +44,16 @@ pub struct PlayViewUniteReply {
         super::super::super::super::playershared::ViewInfo,
     >,
 }
+impl ::prost::Name for PlayViewUniteReply {
+    const NAME: &'static str = "PlayViewUniteReply";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.playerunite.v1.PlayViewUniteReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.playerunite.v1.PlayViewUniteReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayViewUniteReq {
@@ -65,6 +75,16 @@ pub struct PlayViewUniteReq {
     ///
     #[prost(string, tag = "5")]
     pub bvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PlayViewUniteReq {
+    const NAME: &'static str = "PlayViewUniteReq";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.playerunite.v1.PlayViewUniteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.playerunite.v1.PlayViewUniteReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod player_client {

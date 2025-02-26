@@ -24,6 +24,16 @@ pub struct InteractLayoutData {
     #[prost(message, optional, tag = "7")]
     pub rtc_resolution_simulcast: ::core::option::Option<RtcResolution>,
 }
+impl ::prost::Name for InteractLayoutData {
+    const NAME: &'static str = "InteractLayoutData";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.InteractLayoutData".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.InteractLayoutData".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InteractSceneConfiguration {
@@ -81,6 +91,30 @@ pub mod interact_scene_configuration {
             #[prost(int64, tag = "3")]
             pub max_users: i64,
         }
+        impl ::prost::Name for Layout {
+            const NAME: &'static str = "Layout";
+            const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.broadcast.live.universal_interact.InteractSceneConfiguration.InteractTemplate.Layout"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.broadcast.live.universal_interact.InteractSceneConfiguration.InteractTemplate.Layout"
+                    .into()
+            }
+        }
+    }
+    impl ::prost::Name for InteractTemplate {
+        const NAME: &'static str = "InteractTemplate";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.universal_interact.InteractSceneConfiguration.InteractTemplate"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.universal_interact.InteractSceneConfiguration.InteractTemplate"
+                .into()
+        }
     }
     ///
     #[derive(
@@ -120,6 +154,16 @@ pub mod interact_scene_configuration {
                 _ => None,
             }
         }
+    }
+}
+impl ::prost::Name for InteractSceneConfiguration {
+    const NAME: &'static str = "InteractSceneConfiguration";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.InteractSceneConfiguration".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.InteractSceneConfiguration".into()
     }
 }
 ///
@@ -168,6 +212,16 @@ pub struct LayoutCell {
     #[prost(string, tag = "14")]
     pub position_text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LayoutCell {
+    const NAME: &'static str = "LayoutCell";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.LayoutCell".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.LayoutCell".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PeerUserInfo {
@@ -186,6 +240,16 @@ pub struct PeerUserInfo {
     ///
     #[prost(enumeration = "Gender", tag = "5")]
     pub gender: i32,
+}
+impl ::prost::Name for PeerUserInfo {
+    const NAME: &'static str = "PeerUserInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.PeerUserInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.PeerUserInfo".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -230,6 +294,16 @@ pub struct RtcResolution {
     #[prost(bool, tag = "13")]
     pub small_bitrate_active: bool,
 }
+impl ::prost::Name for RtcResolution {
+    const NAME: &'static str = "RtcResolution";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.RtcResolution".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.RtcResolution".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UniversalBizExtra {
@@ -245,6 +319,16 @@ pub struct UniversalBizExtra {
     ///
     #[prost(int64, tag = "4")]
     pub source: i64,
+}
+impl ::prost::Name for UniversalBizExtra {
+    const NAME: &'static str = "UniversalBizExtra";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalBizExtra".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalBizExtra".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -277,6 +361,16 @@ pub struct UniversalInteractApplyEvent {
     #[prost(int64, tag = "9")]
     pub peer_uid: i64,
 }
+impl ::prost::Name for UniversalInteractApplyEvent {
+    const NAME: &'static str = "UniversalInteractApplyEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractApplyEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractApplyEvent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UniversalInteractEventGift {
@@ -291,6 +385,16 @@ pub struct UniversalInteractEventGift {
     pub info: ::core::option::Option<
         super::super::super::live::app::room::v1::UniversalInfoResp,
     >,
+}
+impl ::prost::Name for UniversalInteractEventGift {
+    const NAME: &'static str = "UniversalInteractEventGift";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractEventGift".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractEventGift".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -343,6 +447,18 @@ pub struct UniversalInteractInvitationEvent {
     ///
     #[prost(int64, tag = "16")]
     pub want_position: i64,
+}
+impl ::prost::Name for UniversalInteractInvitationEvent {
+    const NAME: &'static str = "UniversalInteractInvitationEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractInvitationEvent"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractInvitationEvent"
+            .into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -417,6 +533,28 @@ pub mod universal_interact_join_event {
         #[prost(enumeration = "super::SubMode", tag = "15")]
         pub default_sub_mode: i32,
     }
+    impl ::prost::Name for Config {
+        const NAME: &'static str = "Config";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.universal_interact.UniversalInteractJoinEvent.Config"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.universal_interact.UniversalInteractJoinEvent.Config"
+                .into()
+        }
+    }
+}
+impl ::prost::Name for UniversalInteractJoinEvent {
+    const NAME: &'static str = "UniversalInteractJoinEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractJoinEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractJoinEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -442,6 +580,16 @@ pub struct UniversalInteractLeaveEvent {
     ///
     #[prost(string, tag = "7")]
     pub toast: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UniversalInteractLeaveEvent {
+    const NAME: &'static str = "UniversalInteractLeaveEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractLeaveEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractLeaveEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -495,6 +643,18 @@ pub struct UniversalInteractOperationEvent {
     #[prost(bool, tag = "16")]
     pub own_side: bool,
 }
+impl ::prost::Name for UniversalInteractOperationEvent {
+    const NAME: &'static str = "UniversalInteractOperationEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractOperationEvent"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractOperationEvent"
+            .into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UniversalInteractStreamControl {
@@ -526,6 +686,18 @@ pub mod universal_interact_stream_control {
         #[prost(enumeration = "super::SubMode", tag = "2")]
         pub sub_mode: i32,
     }
+    impl ::prost::Name for ExplicitSubMode {
+        const NAME: &'static str = "ExplicitSubMode";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.ExplicitSubMode"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.ExplicitSubMode"
+                .into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct PubSubControl {
@@ -548,6 +720,18 @@ pub mod universal_interact_stream_control {
         #[prost(message, optional, tag = "6")]
         pub rtc_resolution_simulcast: ::core::option::Option<super::RtcResolution>,
     }
+    impl ::prost::Name for PubSubControl {
+        const NAME: &'static str = "PubSubControl";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.PubSubControl"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.PubSubControl"
+                .into()
+        }
+    }
     ///
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct UserStreamControlItem {
@@ -566,6 +750,18 @@ pub mod universal_interact_stream_control {
         ///
         #[prost(int64, tag = "5")]
         pub operator_uid: i64,
+    }
+    impl ::prost::Name for UserStreamControlItem {
+        const NAME: &'static str = "UserStreamControlItem";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.UserStreamControlItem"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl.UserStreamControlItem"
+                .into()
+        }
     }
     ///
     #[derive(
@@ -658,6 +854,18 @@ pub mod universal_interact_stream_control {
         }
     }
 }
+impl ::prost::Name for UniversalInteractStreamControl {
+    const NAME: &'static str = "UniversalInteractStreamControl";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractStreamControl"
+            .into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UniversalInteractStreamControlEvent {
@@ -682,6 +890,18 @@ pub struct UniversalInteractStreamControlEvent {
     ///
     #[prost(int64, repeated, tag = "7")]
     pub channel_users: ::prost::alloc::vec::Vec<i64>,
+}
+impl ::prost::Name for UniversalInteractStreamControlEvent {
+    const NAME: &'static str = "UniversalInteractStreamControlEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.universal_interact";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.universal_interact.UniversalInteractStreamControlEvent"
+            .into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.universal_interact.UniversalInteractStreamControlEvent"
+            .into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

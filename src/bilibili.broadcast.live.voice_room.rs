@@ -33,6 +33,26 @@ pub mod battle_info {
         #[prost(int64, tag = "2")]
         pub votes: i64,
     }
+    impl ::prost::Name for RoomInfo {
+        const NAME: &'static str = "roomInfo";
+        const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.broadcast.live.voice_room.BattleInfo.roomInfo".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.broadcast.live.voice_room.BattleInfo.roomInfo".into()
+        }
+    }
+}
+impl ::prost::Name for BattleInfo {
+    const NAME: &'static str = "BattleInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.BattleInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.BattleInfo".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -89,6 +109,16 @@ pub struct LiveBaseOperateEvent {
     #[prost(int64, tag = "17")]
     pub pos_room_id: i64,
 }
+impl ::prost::Name for LiveBaseOperateEvent {
+    const NAME: &'static str = "LiveBaseOperateEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.LiveBaseOperateEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.LiveBaseOperateEvent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiveMultiChatHatLevel {
@@ -122,6 +152,16 @@ pub struct LiveMultiChatHatLevel {
     ///
     #[prost(int64, tag = "10")]
     pub price: i64,
+}
+impl ::prost::Name for LiveMultiChatHatLevel {
+    const NAME: &'static str = "LiveMultiChatHatLevel";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.LiveMultiChatHatLevel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.LiveMultiChatHatLevel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -159,6 +199,16 @@ pub struct LiveMultiVoiceApplicationUserModel {
     ///
     #[prost(string, tag = "12")]
     pub trace_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LiveMultiVoiceApplicationUserModel {
+    const NAME: &'static str = "LiveMultiVoiceApplicationUserModel";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.LiveMultiVoiceApplicationUserModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.LiveMultiVoiceApplicationUserModel".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -208,6 +258,16 @@ pub struct LiveMultiVoiceInvitaionEvent {
     ///
     #[prost(string, tag = "15")]
     pub trace_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LiveMultiVoiceInvitaionEvent {
+    const NAME: &'static str = "LiveMultiVoiceInvitaionEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.LiveMultiVoiceInvitaionEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.LiveMultiVoiceInvitaionEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -260,6 +320,16 @@ pub struct LiveMultiVoiceJoinEvent {
     ///
     #[prost(bool, tag = "16")]
     pub reconnect: bool,
+}
+impl ::prost::Name for LiveMultiVoiceJoinEvent {
+    const NAME: &'static str = "LiveMultiVoiceJoinEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.live.voice_room";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.live.voice_room.LiveMultiVoiceJoinEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.live.voice_room.LiveMultiVoiceJoinEvent".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

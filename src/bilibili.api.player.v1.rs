@@ -6,6 +6,16 @@ pub struct HeartbeatReply {
     #[prost(int64, tag = "1")]
     pub ts: i64,
 }
+impl ::prost::Name for HeartbeatReply {
+    const NAME: &'static str = "HeartbeatReply";
+    const PACKAGE: &'static str = "bilibili.api.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.player.v1.HeartbeatReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.player.v1.HeartbeatReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HeartbeatReq {
@@ -93,6 +103,16 @@ pub struct HeartbeatReq {
     ///
     #[prost(int64, tag = "28")]
     pub detail_play_time: i64,
+}
+impl ::prost::Name for HeartbeatReq {
+    const NAME: &'static str = "HeartbeatReq";
+    const PACKAGE: &'static str = "bilibili.api.player.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.player.v1.HeartbeatReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.player.v1.HeartbeatReq".into()
+    }
 }
 /// Generated client implementations.
 pub mod heartbeat_client {

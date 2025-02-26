@@ -6,9 +6,29 @@ pub struct PlayAdditionReply {
     #[prost(message, optional, tag = "1")]
     pub ugc_view_info_material: ::core::option::Option<UgcViewInfoMaterial>,
 }
+impl ::prost::Name for PlayAdditionReply {
+    const NAME: &'static str = "PlayAdditionReply";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayAdditionReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayAdditionReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayAdditionReq {}
+impl ::prost::Name for PlayAdditionReq {
+    const NAME: &'static str = "PlayAdditionReq";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayAdditionReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayAdditionReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayHalfChannelsReply {
@@ -17,6 +37,16 @@ pub struct PlayHalfChannelsReply {
     pub groups: ::prost::alloc::vec::Vec<
         super::super::super::playershared::SettingGroup,
     >,
+}
+impl ::prost::Name for PlayHalfChannelsReply {
+    const NAME: &'static str = "PlayHalfChannelsReply";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayHalfChannelsReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayHalfChannelsReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -39,6 +69,16 @@ pub struct PlayHalfChannelsReq {
     ///
     #[prost(enumeration = "ResourceType", tag = "5")]
     pub resource_type: i32,
+}
+impl ::prost::Name for PlayHalfChannelsReq {
+    const NAME: &'static str = "PlayHalfChannelsReq";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayHalfChannelsReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayHalfChannelsReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -85,6 +125,16 @@ pub struct PlayViewUniteReply {
     #[prost(message, optional, tag = "11")]
     pub video_ctrl: ::core::option::Option<super::super::super::playershared::VideoCtrl>,
 }
+impl ::prost::Name for PlayViewUniteReply {
+    const NAME: &'static str = "PlayViewUniteReply";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayViewUniteReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayViewUniteReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayViewUniteReq {
@@ -119,6 +169,16 @@ pub struct PlayViewUniteReq {
     #[prost(enumeration = "super::super::super::playershared::PlayCtrl", tag = "9")]
     pub play_ctrl: i32,
 }
+impl ::prost::Name for PlayViewUniteReq {
+    const NAME: &'static str = "PlayViewUniteReq";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.PlayViewUniteReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.PlayViewUniteReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UgcViewInfoMaterial {
@@ -146,6 +206,16 @@ pub struct UgcViewInfoMaterial {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+}
+impl ::prost::Name for UgcViewInfoMaterial {
+    const NAME: &'static str = "UgcViewInfoMaterial";
+    const PACKAGE: &'static str = "bilibili.app.playerunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playerunite.v1.UgcViewInfoMaterial".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playerunite.v1.UgcViewInfoMaterial".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -9,12 +9,32 @@ pub struct AddParams {
     #[prost(int32, tag = "2")]
     pub b: i32,
 }
+impl ::prost::Name for AddParams {
+    const NAME: &'static str = "AddParams";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.AddParams".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.AddParams".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AddResult {
     ///
     #[prost(int32, tag = "1")]
     pub r: i32,
+}
+impl ::prost::Name for AddResult {
+    const NAME: &'static str = "AddResult";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.AddResult".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.AddResult".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -29,9 +49,29 @@ pub struct AuthReq {
     #[prost(int64, tag = "3")]
     pub last_msg_id: i64,
 }
+impl ::prost::Name for AuthReq {
+    const NAME: &'static str = "AuthReq";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.AuthReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.AuthReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AuthResp {}
+impl ::prost::Name for AuthResp {
+    const NAME: &'static str = "AuthResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.AuthResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.AuthResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BroadcastFrame {
@@ -44,6 +84,16 @@ pub struct BroadcastFrame {
     ///
     #[prost(message, optional, tag = "3")]
     pub body: ::core::option::Option<::prost_types::Any>,
+}
+impl ::prost::Name for BroadcastFrame {
+    const NAME: &'static str = "BroadcastFrame";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.BroadcastFrame".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.BroadcastFrame".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -70,9 +120,29 @@ pub struct FrameOption {
     #[prost(int64, tag = "7")]
     pub msg_type: i64,
 }
+impl ::prost::Name for FrameOption {
+    const NAME: &'static str = "FrameOption";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.FrameOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.FrameOption".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HeartbeatReq {}
+impl ::prost::Name for HeartbeatReq {
+    const NAME: &'static str = "HeartbeatReq";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.HeartbeatReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.HeartbeatReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HeartbeatResp {
@@ -138,6 +208,16 @@ pub mod heartbeat_resp {
         }
     }
 }
+impl ::prost::Name for HeartbeatResp {
+    const NAME: &'static str = "HeartbeatResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.HeartbeatResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.HeartbeatResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LaserLogUploadResp {
@@ -147,6 +227,16 @@ pub struct LaserLogUploadResp {
     ///
     #[prost(string, tag = "2")]
     pub date: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LaserLogUploadResp {
+    const NAME: &'static str = "LaserLogUploadResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.LaserLogUploadResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.LaserLogUploadResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -163,6 +253,16 @@ pub struct MessageAckReq {
     ///
     #[prost(int64, tag = "4")]
     pub msg_type: i64,
+}
+impl ::prost::Name for MessageAckReq {
+    const NAME: &'static str = "MessageAckReq";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.MessageAckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.MessageAckReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -186,6 +286,16 @@ pub struct ModResourceResp {
     #[prost(int64, tag = "6")]
     pub list_version: i64,
 }
+impl ::prost::Name for ModResourceResp {
+    const NAME: &'static str = "ModResourceResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.ModResourceResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.ModResourceResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PageBlackList {
@@ -193,12 +303,32 @@ pub struct PageBlackList {
     #[prost(string, tag = "1")]
     pub id: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PageBlackList {
+    const NAME: &'static str = "PageBlackList";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.PageBlackList".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.PageBlackList".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PageView {
     ///
     #[prost(string, tag = "1")]
     pub id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PageView {
+    const NAME: &'static str = "PageView";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.PageView".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.PageView".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -634,6 +764,16 @@ pub mod push_message_resp {
         }
     }
 }
+impl ::prost::Name for PushMessageResp {
+    const NAME: &'static str = "PushMessageResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.PushMessageResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.PushMessageResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RoomErrorEvent {
@@ -641,12 +781,42 @@ pub struct RoomErrorEvent {
     #[prost(message, optional, tag = "1")]
     pub status: ::core::option::Option<super::super::rpc::Status>,
 }
+impl ::prost::Name for RoomErrorEvent {
+    const NAME: &'static str = "RoomErrorEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomErrorEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomErrorEvent".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RoomJoinEvent {}
+impl ::prost::Name for RoomJoinEvent {
+    const NAME: &'static str = "RoomJoinEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomJoinEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomJoinEvent".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RoomLeaveEvent {}
+impl ::prost::Name for RoomLeaveEvent {
+    const NAME: &'static str = "RoomLeaveEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomLeaveEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomLeaveEvent".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RoomMessageEvent {
@@ -657,6 +827,16 @@ pub struct RoomMessageEvent {
     #[prost(message, optional, tag = "2")]
     pub body: ::core::option::Option<::prost_types::Any>,
 }
+impl ::prost::Name for RoomMessageEvent {
+    const NAME: &'static str = "RoomMessageEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomMessageEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomMessageEvent".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RoomOnlineEvent {
@@ -666,6 +846,16 @@ pub struct RoomOnlineEvent {
     ///
     #[prost(int32, tag = "2")]
     pub all_online: i32,
+}
+impl ::prost::Name for RoomOnlineEvent {
+    const NAME: &'static str = "RoomOnlineEvent";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomOnlineEvent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomOnlineEvent".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -694,6 +884,16 @@ pub mod room_req {
         ///
         #[prost(message, tag = "5")]
         Msg(super::RoomMessageEvent),
+    }
+}
+impl ::prost::Name for RoomReq {
+    const NAME: &'static str = "RoomReq";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomReq".into()
     }
 }
 ///
@@ -728,12 +928,32 @@ pub mod room_resp {
         Err(super::RoomErrorEvent),
     }
 }
+impl ::prost::Name for RoomResp {
+    const NAME: &'static str = "RoomResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.RoomResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.RoomResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TargetPath {
     ///
     #[prost(string, repeated, tag = "1")]
     pub target_paths: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for TargetPath {
+    const NAME: &'static str = "TargetPath";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.TargetPath".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.TargetPath".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -747,6 +967,16 @@ pub struct TargetResource {
         ::prost::alloc::string::String,
         ::prost::alloc::string::String,
     >,
+}
+impl ::prost::Name for TargetResource {
+    const NAME: &'static str = "TargetResource";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.TargetResource".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.TargetResource".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -763,6 +993,16 @@ pub struct TestResp {
     ///
     #[prost(message, optional, tag = "4")]
     pub extra: ::core::option::Option<::prost_types::Any>,
+}
+impl ::prost::Name for TestResp {
+    const NAME: &'static str = "TestResp";
+    const PACKAGE: &'static str = "bilibili.broadcast.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.v1.TestResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.v1.TestResp".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

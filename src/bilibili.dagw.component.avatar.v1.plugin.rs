@@ -12,6 +12,16 @@ pub struct BorderConfig {
     #[prost(double, tag = "3")]
     pub ratio: f64,
 }
+impl ::prost::Name for BorderConfig {
+    const NAME: &'static str = "BorderConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.BorderConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.BorderConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CommentDoubleClickConfig {
@@ -21,6 +31,16 @@ pub struct CommentDoubleClickConfig {
     ///
     #[prost(double, tag = "2")]
     pub animation_scale: f64,
+}
+impl ::prost::Name for CommentDoubleClickConfig {
+    const NAME: &'static str = "CommentDoubleClickConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.CommentDoubleClickConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.CommentDoubleClickConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -47,6 +67,16 @@ pub struct FollowActionConfig {
     #[prost(double, tag = "7")]
     pub icon_size_offset: f64,
 }
+impl ::prost::Name for FollowActionConfig {
+    const NAME: &'static str = "FollowActionConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.FollowActionConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.FollowActionConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FollowIconConfig {
@@ -66,12 +96,32 @@ pub struct FollowIconConfig {
     #[prost(int64, tag = "5")]
     pub mid: i64,
 }
+impl ::prost::Name for FollowIconConfig {
+    const NAME: &'static str = "FollowIconConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.FollowIconConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.FollowIconConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GyroConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub gyroscope: ::core::option::Option<NftImageV2>,
+}
+impl ::prost::Name for GyroConfig {
+    const NAME: &'static str = "GyroConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.GyroConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.GyroConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -86,6 +136,16 @@ pub struct GyroscopeContentV2 {
     #[prost(message, repeated, tag = "3")]
     pub physical_orientation: ::prost::alloc::vec::Vec<PhysicalOrientationV2>,
 }
+impl ::prost::Name for GyroscopeContentV2 {
+    const NAME: &'static str = "GyroscopeContentV2";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.GyroscopeContentV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.GyroscopeContentV2".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GyroscopeEntityV2 {
@@ -95,6 +155,16 @@ pub struct GyroscopeEntityV2 {
     ///
     #[prost(message, repeated, tag = "2")]
     pub contents: ::prost::alloc::vec::Vec<GyroscopeContentV2>,
+}
+impl ::prost::Name for GyroscopeEntityV2 {
+    const NAME: &'static str = "GyroscopeEntityV2";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.GyroscopeEntityV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.GyroscopeEntityV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -112,6 +182,16 @@ pub struct Interaction {
     #[prost(string, tag = "4")]
     pub metadata_url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Interaction {
+    const NAME: &'static str = "Interaction";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.Interaction".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.Interaction".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiveAnimeConfig {
@@ -127,6 +207,16 @@ pub struct LiveAnimeConfig {
     ///
     #[prost(message, repeated, tag = "4")]
     pub border_config: ::prost::alloc::vec::Vec<BorderConfig>,
+}
+impl ::prost::Name for LiveAnimeConfig {
+    const NAME: &'static str = "LiveAnimeConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.LiveAnimeConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.LiveAnimeConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -149,6 +239,16 @@ pub struct LiveAnimeItem {
     ///
     #[prost(int64, tag = "6")]
     pub phase: i64,
+}
+impl ::prost::Name for LiveAnimeItem {
+    const NAME: &'static str = "LiveAnimeItem";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.LiveAnimeItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.LiveAnimeItem".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -175,12 +275,32 @@ pub struct LiveTextConfig {
     #[prost(message, optional, tag = "8")]
     pub background: ::core::option::Option<super::super::common::ColorConfig>,
 }
+impl ::prost::Name for LiveTextConfig {
+    const NAME: &'static str = "LiveTextConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.LiveTextConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.LiveTextConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NftImageV2 {
     ///
     #[prost(message, repeated, tag = "1")]
     pub gyroscope: ::prost::alloc::vec::Vec<GyroscopeEntityV2>,
+}
+impl ::prost::Name for NftImageV2 {
+    const NAME: &'static str = "NFTImageV2";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.NFTImageV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.NFTImageV2".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -195,6 +315,16 @@ pub struct PhysicalOrientationAnimation {
     #[prost(string, tag = "3")]
     pub bezier: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PhysicalOrientationAnimation {
+    const NAME: &'static str = "PhysicalOrientationAnimation";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.PhysicalOrientationAnimation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.PhysicalOrientationAnimation".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PhysicalOrientationV2 {
@@ -207,6 +337,16 @@ pub struct PhysicalOrientationV2 {
     ///
     #[prost(message, repeated, tag = "3")]
     pub animations: ::prost::alloc::vec::Vec<PhysicalOrientationAnimation>,
+}
+impl ::prost::Name for PhysicalOrientationV2 {
+    const NAME: &'static str = "PhysicalOrientationV2";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.PhysicalOrientationV2".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.PhysicalOrientationV2".into()
+    }
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
@@ -229,4 +369,14 @@ pub struct WebLiveAnimeConfig {
     ///
     #[prost(double, tag = "6")]
     pub live_label_border_width: f64,
+}
+impl ::prost::Name for WebLiveAnimeConfig {
+    const NAME: &'static str = "WebLiveAnimeConfig";
+    const PACKAGE: &'static str = "bilibili.dagw.component.avatar.v1.plugin";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dagw.component.avatar.v1.plugin.WebLiveAnimeConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dagw.component.avatar.v1.plugin.WebLiveAnimeConfig".into()
+    }
 }

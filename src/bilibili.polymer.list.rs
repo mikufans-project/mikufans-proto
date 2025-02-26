@@ -6,6 +6,16 @@ pub struct CheckAccountReply {
     #[prost(bool, tag = "1")]
     pub is_new: bool,
 }
+impl ::prost::Name for CheckAccountReply {
+    const NAME: &'static str = "CheckAccountReply";
+    const PACKAGE: &'static str = "bilibili.polymer.list";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.list.CheckAccountReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.list.CheckAccountReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CheckAccountReq {
@@ -15,6 +25,16 @@ pub struct CheckAccountReq {
     ///
     #[prost(string, tag = "2")]
     pub periods: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CheckAccountReq {
+    const NAME: &'static str = "CheckAccountReq";
+    const PACKAGE: &'static str = "bilibili.polymer.list";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.list.CheckAccountReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.list.CheckAccountReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -29,6 +49,16 @@ pub struct FavoriteTabItem {
     #[prost(string, tag = "3")]
     pub r#type: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FavoriteTabItem {
+    const NAME: &'static str = "FavoriteTabItem";
+    const PACKAGE: &'static str = "bilibili.polymer.list";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.list.FavoriteTabItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.list.FavoriteTabItem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FavoriteTabReply {
@@ -36,9 +66,29 @@ pub struct FavoriteTabReply {
     #[prost(message, repeated, tag = "1")]
     pub items: ::prost::alloc::vec::Vec<FavoriteTabItem>,
 }
+impl ::prost::Name for FavoriteTabReply {
+    const NAME: &'static str = "FavoriteTabReply";
+    const PACKAGE: &'static str = "bilibili.polymer.list";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.list.FavoriteTabReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.list.FavoriteTabReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FavoriteTabReq {}
+impl ::prost::Name for FavoriteTabReq {
+    const NAME: &'static str = "FavoriteTabReq";
+    const PACKAGE: &'static str = "bilibili.polymer.list";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.list.FavoriteTabReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.list.FavoriteTabReq".into()
+    }
+}
 /// Generated client implementations.
 pub mod list_client {
     #![allow(

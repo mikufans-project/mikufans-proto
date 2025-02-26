@@ -18,12 +18,32 @@ pub struct CloudPlayConfig {
     #[prost(message, optional, tag = "5")]
     pub enable_loss_less: ::core::option::Option<super::super::BoolValue>,
 }
+impl ::prost::Name for CloudPlayConfig {
+    const NAME: &'static str = "CloudPlayConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.play";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.play.CloudPlayConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.play.CloudPlayConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MidPlayConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub dynamic_to_playlist: ::core::option::Option<super::super::BoolValue>,
+}
+impl ::prost::Name for MidPlayConfig {
+    const NAME: &'static str = "MidPlayConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.play";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.play.MidPlayConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.play.MidPlayConfig".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -74,10 +94,30 @@ pub struct PlayConfig {
     #[prost(message, optional, tag = "15")]
     pub volume_balance_mode: ::core::option::Option<super::super::Int64Value>,
 }
+impl ::prost::Name for PlayConfig {
+    const NAME: &'static str = "PlayConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.play";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.play.PlayConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.play.PlayConfig".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SpecificPlayConfig {
     ///
     #[prost(message, optional, tag = "1")]
     pub enable_segmented_section: ::core::option::Option<super::super::BoolValue>,
+}
+impl ::prost::Name for SpecificPlayConfig {
+    const NAME: &'static str = "SpecificPlayConfig";
+    const PACKAGE: &'static str = "bilibili.app.distribution.setting.play";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.distribution.setting.play.SpecificPlayConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.distribution.setting.play.SpecificPlayConfig".into()
+    }
 }

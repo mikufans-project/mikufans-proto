@@ -9,6 +9,16 @@ pub struct Color {
     #[prost(string, tag = "2")]
     pub color_night: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Color {
+    const NAME: &'static str = "Color";
+    const PACKAGE: &'static str = "bilibili.account.service.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.service.v1.Color".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.service.v1.Color".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ColorsInfo {
@@ -19,6 +29,16 @@ pub struct ColorsInfo {
     #[prost(message, repeated, tag = "2")]
     pub color: ::prost::alloc::vec::Vec<Color>,
 }
+impl ::prost::Name for ColorsInfo {
+    const NAME: &'static str = "ColorsInfo";
+    const PACKAGE: &'static str = "bilibili.account.service.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.service.v1.ColorsInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.service.v1.ColorsInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NameRender {
@@ -28,6 +48,16 @@ pub struct NameRender {
     ///
     #[prost(message, optional, tag = "2")]
     pub colors_info: ::core::option::Option<ColorsInfo>,
+}
+impl ::prost::Name for NameRender {
+    const NAME: &'static str = "NameRender";
+    const PACKAGE: &'static str = "bilibili.account.service.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.account.service.v1.NameRender".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.account.service.v1.NameRender".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

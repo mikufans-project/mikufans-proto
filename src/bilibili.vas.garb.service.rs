@@ -6,6 +6,16 @@ pub struct SailingEquipMultiReply {
     #[prost(map = "int64, message", tag = "1")]
     pub data: ::std::collections::HashMap<i64, super::model::UserSailing>,
 }
+impl ::prost::Name for SailingEquipMultiReply {
+    const NAME: &'static str = "SailingEquipMultiReply";
+    const PACKAGE: &'static str = "bilibili.vas.garb.service";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.service.SailingEquipMultiReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.service.SailingEquipMultiReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SailingEquipMultiReq {
@@ -27,6 +37,16 @@ pub struct SailingEquipMultiReq {
     ///
     #[prost(message, optional, tag = "6")]
     pub device: ::core::option::Option<super::super::super::metadata::device::Device>,
+}
+impl ::prost::Name for SailingEquipMultiReq {
+    const NAME: &'static str = "SailingEquipMultiReq";
+    const PACKAGE: &'static str = "bilibili.vas.garb.service";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.service.SailingEquipMultiReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.service.SailingEquipMultiReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -68,12 +88,32 @@ pub struct UserCard {
     #[prost(message, optional, tag = "13")]
     pub image_group: ::core::option::Option<super::model::ImageGroup>,
 }
+impl ::prost::Name for UserCard {
+    const NAME: &'static str = "UserCard";
+    const PACKAGE: &'static str = "bilibili.vas.garb.service";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.service.UserCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.service.UserCard".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserCardMultiReply {
     ///
     #[prost(map = "int64, message", tag = "1")]
     pub cards: ::std::collections::HashMap<i64, UserCard>,
+}
+impl ::prost::Name for UserCardMultiReply {
+    const NAME: &'static str = "UserCardMultiReply";
+    const PACKAGE: &'static str = "bilibili.vas.garb.service";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.service.UserCardMultiReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.service.UserCardMultiReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -84,4 +124,14 @@ pub struct UserCardMultiReq {
     ///
     #[prost(message, optional, tag = "2")]
     pub device: ::core::option::Option<super::super::super::metadata::device::Device>,
+}
+impl ::prost::Name for UserCardMultiReq {
+    const NAME: &'static str = "UserCardMultiReq";
+    const PACKAGE: &'static str = "bilibili.vas.garb.service";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.vas.garb.service.UserCardMultiReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.vas.garb.service.UserCardMultiReq".into()
+    }
 }

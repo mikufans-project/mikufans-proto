@@ -54,6 +54,16 @@ pub struct Msg {
     #[prost(int32, tag = "17")]
     pub msg_source: i32,
 }
+impl ::prost::Name for Msg {
+    const NAME: &'static str = "Msg";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.im";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.im.Msg".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.im.Msg".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct NotifyInfo {
@@ -67,6 +77,16 @@ pub struct NotifyInfo {
     #[prost(int32, tag = "3")]
     pub session_type: i32,
 }
+impl ::prost::Name for NotifyInfo {
+    const NAME: &'static str = "NotifyInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.im";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.im.NotifyInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.im.NotifyInfo".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NotifyRsp {
@@ -77,11 +97,21 @@ pub struct NotifyRsp {
     #[prost(int64, tag = "2")]
     pub cmd: i64,
     ///
-    #[prost(bytes = "vec", tag = "3")]
-    pub payload: ::prost::alloc::vec::Vec<u8>,
+    #[prost(bytes = "bytes", tag = "3")]
+    pub payload: ::prost::bytes::Bytes,
     ///
     #[prost(enumeration = "PlType", tag = "4")]
     pub payload_type: i32,
+}
+impl ::prost::Name for NotifyRsp {
+    const NAME: &'static str = "NotifyRsp";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.im";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.im.NotifyRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.im.NotifyRsp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -95,6 +125,16 @@ pub struct ReqServerNotify {
     ///
     #[prost(message, optional, tag = "3")]
     pub notify_info: ::core::option::Option<NotifyInfo>,
+}
+impl ::prost::Name for ReqServerNotify {
+    const NAME: &'static str = "ReqServerNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.im";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.im.ReqServerNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.im.ReqServerNotify".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

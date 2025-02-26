@@ -2,9 +2,29 @@
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AuthReq {}
+impl ::prost::Name for AuthReq {
+    const NAME: &'static str = "AuthReq";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.AuthReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.AuthReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct AuthResp {}
+impl ::prost::Name for AuthResp {
+    const NAME: &'static str = "AuthResp";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.AuthResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.AuthResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FrameOption {
@@ -32,12 +52,42 @@ pub struct FrameOption {
     #[prost(int64, tag = "7")]
     pub mid: i64,
 }
+impl ::prost::Name for FrameOption {
+    const NAME: &'static str = "FrameOption";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.FrameOption".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.FrameOption".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HeartbeatReq {}
+impl ::prost::Name for HeartbeatReq {
+    const NAME: &'static str = "HeartbeatReq";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.HeartbeatReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.HeartbeatReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct HeartbeatResp {}
+impl ::prost::Name for HeartbeatResp {
+    const NAME: &'static str = "HeartbeatResp";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.HeartbeatResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.HeartbeatResp".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MessageAckReq {
@@ -54,12 +104,32 @@ pub struct MessageAckReq {
     #[prost(string, tag = "4")]
     pub target_path: ::prost::alloc::string::String,
 }
+impl ::prost::Name for MessageAckReq {
+    const NAME: &'static str = "MessageAckReq";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.MessageAckReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.MessageAckReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscribeReq {
     ///
     #[prost(message, repeated, tag = "1")]
     pub target_paths: ::prost::alloc::vec::Vec<TargetPath>,
+}
+impl ::prost::Name for SubscribeReq {
+    const NAME: &'static str = "SubscribeReq";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.SubscribeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.SubscribeReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -70,6 +140,16 @@ pub struct TargetPath {
     ///
     #[prost(message, optional, tag = "2")]
     pub subs: ::core::option::Option<::prost_types::Any>,
+}
+impl ::prost::Name for TargetPath {
+    const NAME: &'static str = "TargetPath";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.TargetPath".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.TargetPath".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -86,4 +166,14 @@ pub struct VegaFrame {
     ///
     #[prost(message, optional, tag = "4")]
     pub sub_biz: ::core::option::Option<::prost_types::Any>,
+}
+impl ::prost::Name for VegaFrame {
+    const NAME: &'static str = "VegaFrame";
+    const PACKAGE: &'static str = "pgc.gateway.vega.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "pgc.gateway.vega.v1.VegaFrame".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/pgc.gateway.vega.v1.VegaFrame".into()
+    }
 }

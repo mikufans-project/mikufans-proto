@@ -21,6 +21,16 @@ pub struct PlayerArgs {
     #[prost(enumeration = "QnPolicy", tag = "6")]
     pub qn_policy: i32,
 }
+impl ::prost::Name for PlayerArgs {
+    const NAME: &'static str = "PlayerArgs";
+    const PACKAGE: &'static str = "bilibili.app.archive.middleware.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.archive.middleware.v1.PlayerArgs".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.archive.middleware.v1.PlayerArgs".into()
+    }
+}
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

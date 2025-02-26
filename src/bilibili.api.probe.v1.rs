@@ -15,12 +15,32 @@ pub struct CodeReply {
     #[prost(string, tag = "4")]
     pub message_s: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CodeReply {
+    const NAME: &'static str = "CodeReply";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.CodeReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.CodeReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CodeReq {
     ///
     #[prost(int64, tag = "1")]
     pub code: i64,
+}
+impl ::prost::Name for CodeReq {
+    const NAME: &'static str = "CodeReq";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.CodeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.CodeReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -29,6 +49,16 @@ pub struct CreatTask {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
+impl ::prost::Name for CreatTask {
+    const NAME: &'static str = "CreatTask";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.CreatTask".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.CreatTask".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct CreateTopic {
@@ -36,12 +66,32 @@ pub struct CreateTopic {
     #[prost(int64, tag = "1")]
     pub id: i64,
 }
+impl ::prost::Name for CreateTopic {
+    const NAME: &'static str = "CreateTopic";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.CreateTopic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.CreateTopic".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynamicMessageUpdate {
     ///
     #[prost(message, optional, tag = "1")]
     pub body: ::core::option::Option<SimpleMessage>,
+}
+impl ::prost::Name for DynamicMessageUpdate {
+    const NAME: &'static str = "DynamicMessageUpdate";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.DynamicMessageUpdate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.DynamicMessageUpdate".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -95,6 +145,16 @@ pub struct Embedded {
         ErrorMessage,
     >,
 }
+impl ::prost::Name for Embedded {
+    const NAME: &'static str = "Embedded";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.Embedded".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.Embedded".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ErrorMessage {
@@ -108,6 +168,16 @@ pub struct ErrorMessage {
     #[prost(string, tag = "3")]
     pub message: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ErrorMessage {
+    const NAME: &'static str = "ErrorMessage";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ErrorMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ErrorMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProbeReply {
@@ -118,6 +188,16 @@ pub struct ProbeReply {
     #[prost(int64, tag = "2")]
     pub timestamp: i64,
 }
+impl ::prost::Name for ProbeReply {
+    const NAME: &'static str = "ProbeReply";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProbeReq {
@@ -127,6 +207,16 @@ pub struct ProbeReq {
     ///
     #[prost(string, tag = "2")]
     pub buvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ProbeReq {
+    const NAME: &'static str = "ProbeReq";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -141,6 +231,16 @@ pub struct ProbeStreamReply {
     #[prost(string, tag = "3")]
     pub content: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ProbeStreamReply {
+    const NAME: &'static str = "ProbeStreamReply";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeStreamReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeStreamReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ProbeStreamReq {
@@ -151,6 +251,16 @@ pub struct ProbeStreamReq {
     #[prost(int64, tag = "2")]
     pub sequence: i64,
 }
+impl ::prost::Name for ProbeStreamReq {
+    const NAME: &'static str = "ProbeStreamReq";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeStreamReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeStreamReq".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct ProbeSubReply {
@@ -158,12 +268,32 @@ pub struct ProbeSubReply {
     #[prost(int64, tag = "1")]
     pub message_id: i64,
 }
+impl ::prost::Name for ProbeSubReply {
+    const NAME: &'static str = "ProbeSubReply";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeSubReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeSubReply".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProbeSubReq {
     ///
     #[prost(string, tag = "1")]
     pub buvid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ProbeSubReq {
+    const NAME: &'static str = "ProbeSubReq";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.ProbeSubReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.ProbeSubReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -184,6 +314,16 @@ pub struct SimpleMessage {
     #[prost(message, optional, tag = "5")]
     pub embedded: ::core::option::Option<Embedded>,
 }
+impl ::prost::Name for SimpleMessage {
+    const NAME: &'static str = "SimpleMessage";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.SimpleMessage".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.SimpleMessage".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Task {
@@ -196,6 +336,16 @@ pub struct Task {
     ///
     #[prost(bool, tag = "3")]
     pub cache: bool,
+}
+impl ::prost::Name for Task {
+    const NAME: &'static str = "Task";
+    const PACKAGE: &'static str = "bilibili.api.probe.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.api.probe.v1.Task".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.api.probe.v1.Task".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

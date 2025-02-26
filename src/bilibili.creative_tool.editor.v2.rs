@@ -15,6 +15,16 @@ pub struct EditorBody {
     #[prost(message, optional, tag = "4")]
     pub metadata: ::core::option::Option<Metadata>,
 }
+impl ::prost::Name for EditorBody {
+    const NAME: &'static str = "EditorBody";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.EditorBody".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.EditorBody".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Feature {
@@ -25,12 +35,32 @@ pub struct Feature {
     #[prost(string, tag = "2")]
     pub ext: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Feature {
+    const NAME: &'static str = "Feature";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.Feature".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.Feature".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct FeatureHighlightExt {
     ///
     #[prost(int32, tag = "1")]
     pub count: i32,
+}
+impl ::prost::Name for FeatureHighlightExt {
+    const NAME: &'static str = "FeatureHighlightExt";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.FeatureHighlightExt".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.FeatureHighlightExt".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -44,6 +74,16 @@ pub struct FeatureVtuberExt {
     ///
     #[prost(int32, repeated, tag = "3")]
     pub combine: ::prost::alloc::vec::Vec<i32>,
+}
+impl ::prost::Name for FeatureVtuberExt {
+    const NAME: &'static str = "FeatureVtuberExt";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.FeatureVtuberExt".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.FeatureVtuberExt".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -63,6 +103,16 @@ pub struct Material {
     ///
     #[prost(string, tag = "5")]
     pub ext: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Material {
+    const NAME: &'static str = "Material";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.Material".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.Material".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -97,6 +147,16 @@ pub struct Metadata {
     ///
     #[prost(string, tag = "23")]
     pub sdk_type: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Metadata {
+    const NAME: &'static str = "Metadata";
+    const PACKAGE: &'static str = "bilibili.creative_tool.editor.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.creative_tool.editor.v2.Metadata".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.creative_tool.editor.v2.Metadata".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

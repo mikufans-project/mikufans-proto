@@ -15,6 +15,16 @@ pub struct ButtonStyle {
     #[prost(string, tag = "4")]
     pub jump_link: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ButtonStyle {
+    const NAME: &'static str = "ButtonStyle";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.playerunite.ugcanymodel.ButtonStyle".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.playerunite.ugcanymodel.ButtonStyle".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlayLimit {
@@ -31,12 +41,32 @@ pub struct PlayLimit {
     #[prost(message, optional, tag = "4")]
     pub button: ::core::option::Option<ButtonStyle>,
 }
+impl ::prost::Name for PlayLimit {
+    const NAME: &'static str = "PlayLimit";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.playerunite.ugcanymodel.PlayLimit".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.playerunite.ugcanymodel.PlayLimit".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UgcAnyModel {
     ///
     #[prost(message, optional, tag = "1")]
     pub play_limit: ::core::option::Option<PlayLimit>,
+}
+impl ::prost::Name for UgcAnyModel {
+    const NAME: &'static str = "UGCAnyModel";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.playerunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.playerunite.ugcanymodel.UGCAnyModel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.playerunite.ugcanymodel.UGCAnyModel".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]

@@ -9,6 +9,16 @@ pub struct AccountNotify {
     #[prost(string, tag = "2")]
     pub data: ::prost::alloc::string::String,
 }
+impl ::prost::Name for AccountNotify {
+    const NAME: &'static str = "AccountNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.AccountNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.AccountNotify".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CommonPushNotify {
@@ -18,6 +28,16 @@ pub struct CommonPushNotify {
     ///
     #[prost(string, tag = "2")]
     pub data: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CommonPushNotify {
+    const NAME: &'static str = "CommonPushNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.CommonPushNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.CommonPushNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -62,6 +82,16 @@ pub struct DanmakuElem {
     #[prost(int32, tag = "13")]
     pub attr: i32,
 }
+impl ::prost::Name for DanmakuElem {
+    const NAME: &'static str = "DanmakuElem";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.DanmakuElem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.DanmakuElem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmLiveElem {
@@ -102,6 +132,16 @@ pub struct DmLiveElem {
     #[prost(int32, tag = "12")]
     pub parent_area_id: i32,
 }
+impl ::prost::Name for DmLiveElem {
+    const NAME: &'static str = "DmLiveElem";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.DmLiveElem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.DmLiveElem".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DmLiveReply {
@@ -115,12 +155,32 @@ pub struct DmLiveReply {
     #[prost(int32, tag = "3")]
     pub source: i32,
 }
+impl ::prost::Name for DmLiveReply {
+    const NAME: &'static str = "DmLiveReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.DmLiveReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.DmLiveReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DmLiveSwitchReload {
     ///
     #[prost(bool, tag = "1")]
     pub reload: bool,
+}
+impl ::prost::Name for DmLiveSwitchReload {
+    const NAME: &'static str = "DmLiveSwitchReload";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.DmLiveSwitchReload".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.DmLiveSwitchReload".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -132,12 +192,32 @@ pub struct DmSegLiveReply {
     #[prost(int32, tag = "2")]
     pub state: i32,
 }
+impl ::prost::Name for DmSegLiveReply {
+    const NAME: &'static str = "DmSegLiveReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.DmSegLiveReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.DmSegLiveReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct EsportsNotify {
     ///
     #[prost(int64, tag = "1")]
     pub cid: i64,
+}
+impl ::prost::Name for EsportsNotify {
+    const NAME: &'static str = "EsportsNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.EsportsNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.EsportsNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -149,6 +229,16 @@ pub struct FeedClientSmartNotify {
     #[prost(string, tag = "2")]
     pub cards: ::prost::alloc::string::String,
 }
+impl ::prost::Name for FeedClientSmartNotify {
+    const NAME: &'static str = "FeedClientSmartNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.FeedClientSmartNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.FeedClientSmartNotify".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiveBottomConfNotify {
@@ -158,6 +248,16 @@ pub struct LiveBottomConfNotify {
     ///
     #[prost(string, tag = "2")]
     pub bottom_msg: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LiveBottomConfNotify {
+    const NAME: &'static str = "LiveBottomConfNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.LiveBottomConfNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.LiveBottomConfNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -169,12 +269,32 @@ pub struct LiveCommonNotify {
     #[prost(string, tag = "2")]
     pub data: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LiveCommonNotify {
+    const NAME: &'static str = "LiveCommonNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.LiveCommonNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.LiveCommonNotify".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct LiveSkipNotify {
     ///
     #[prost(int64, tag = "1")]
     pub live_id: i64,
+}
+impl ::prost::Name for LiveSkipNotify {
+    const NAME: &'static str = "LiveSkipNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.LiveSkipNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.LiveSkipNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -189,6 +309,16 @@ pub struct LiveStatusNotify {
     #[prost(int64, tag = "3")]
     pub cid: i64,
 }
+impl ::prost::Name for LiveStatusNotify {
+    const NAME: &'static str = "LiveStatusNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.LiveStatusNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.LiveStatusNotify".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LiveViewerMsgNotify {
@@ -199,6 +329,16 @@ pub struct LiveViewerMsgNotify {
     #[prost(string, tag = "2")]
     pub viewer_msg: ::prost::alloc::string::String,
 }
+impl ::prost::Name for LiveViewerMsgNotify {
+    const NAME: &'static str = "LiveViewerMsgNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.LiveViewerMsgNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.LiveViewerMsgNotify".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MainRedDotReply {
@@ -208,6 +348,16 @@ pub struct MainRedDotReply {
     ///
     #[prost(int64, tag = "2")]
     pub reddot: i64,
+}
+impl ::prost::Name for MainRedDotReply {
+    const NAME: &'static str = "MainRedDotReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.MainRedDotReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.MainRedDotReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -237,6 +387,16 @@ pub struct NotifyPop {
     #[prost(message, repeated, tag = "8")]
     pub notify_btn_list: ::prost::alloc::vec::Vec<NotifyPopBtn>,
 }
+impl ::prost::Name for NotifyPop {
+    const NAME: &'static str = "NotifyPop";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.NotifyPop".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.NotifyPop".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NotifyPopBtn {
@@ -246,6 +406,16 @@ pub struct NotifyPopBtn {
     ///
     #[prost(string, tag = "2")]
     pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for NotifyPopBtn {
+    const NAME: &'static str = "NotifyPopBtn";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.NotifyPopBtn".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.NotifyPopBtn".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -257,6 +427,16 @@ pub struct NotifyPopReply {
     #[prost(message, optional, tag = "2")]
     pub notify: ::core::option::Option<NotifyPop>,
 }
+impl ::prost::Name for NotifyPopReply {
+    const NAME: &'static str = "NotifyPopReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.NotifyPopReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.NotifyPopReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct OgvPayOrderReply {
@@ -266,6 +446,16 @@ pub struct OgvPayOrderReply {
     ///
     #[prost(int64, tag = "2")]
     pub season_id: i64,
+}
+impl ::prost::Name for OgvPayOrderReply {
+    const NAME: &'static str = "OgvPayOrderReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.OgvPayOrderReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.OgvPayOrderReply".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -279,6 +469,16 @@ pub struct ProjLiveEventNotify {
     ///
     #[prost(string, tag = "3")]
     pub event_msg: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ProjLiveEventNotify {
+    const NAME: &'static str = "ProjLiveEventNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.ProjLiveEventNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.ProjLiveEventNotify".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -317,6 +517,16 @@ pub struct ProjReply {
     #[prost(string, tag = "11")]
     pub device_info: ::prost::alloc::string::String,
 }
+impl ::prost::Name for ProjReply {
+    const NAME: &'static str = "ProjReply";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.ProjReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.ProjReply".into()
+    }
+}
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PublicityNotify {
@@ -329,6 +539,16 @@ pub struct PublicityNotify {
     ///
     #[prost(int64, tag = "3")]
     pub status: i64,
+}
+impl ::prost::Name for PublicityNotify {
+    const NAME: &'static str = "PublicityNotify";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.tv";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.tv.PublicityNotify".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.tv.PublicityNotify".into()
+    }
 }
 /// Generated client implementations.
 pub mod tv_client {

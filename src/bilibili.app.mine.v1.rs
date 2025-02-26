@@ -24,6 +24,16 @@ pub struct Arc {
     #[prost(enumeration = "ArcState", tag = "7")]
     pub state: i32,
 }
+impl ::prost::Name for Arc {
+    const NAME: &'static str = "Arc";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.Arc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.Arc".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Button {
@@ -40,12 +50,32 @@ pub struct Button {
     #[prost(string, tag = "4")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for Button {
+    const NAME: &'static str = "Button";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.Button".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.Button".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardMore {
     ///
     #[prost(message, optional, tag = "1")]
     pub button: ::core::option::Option<Button>,
+}
+impl ::prost::Name for CardMore {
+    const NAME: &'static str = "CardMore";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.CardMore".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.CardMore".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -78,6 +108,16 @@ pub struct CardOpus {
     #[prost(enumeration = "OpusState", tag = "9")]
     pub state: i32,
 }
+impl ::prost::Name for CardOpus {
+    const NAME: &'static str = "CardOpus";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.CardOpus".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.CardOpus".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CardPubGuide {
@@ -93,6 +133,16 @@ pub struct CardPubGuide {
     ///
     #[prost(message, optional, tag = "4")]
     pub more_button: ::core::option::Option<Button>,
+}
+impl ::prost::Name for CardPubGuide {
+    const NAME: &'static str = "CardPubGuide";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.CardPubGuide".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.CardPubGuide".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -132,6 +182,16 @@ pub mod card_ugc {
         StatTitle(super::SubTitleWithStat),
     }
 }
+impl ::prost::Name for CardUgc {
+    const NAME: &'static str = "CardUGC";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.CardUGC".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.CardUGC".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Color {
@@ -141,6 +201,16 @@ pub struct Color {
     ///
     #[prost(string, tag = "2")]
     pub dark_color: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Color {
+    const NAME: &'static str = "Color";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.Color".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.Color".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -161,6 +231,26 @@ pub mod display_report_req {
         #[prost(enumeration = "super::DisplayPos", tag = "2")]
         pub pos: i32,
     }
+    impl ::prost::Name for ReportContent {
+        const NAME: &'static str = "ReportContent";
+        const PACKAGE: &'static str = "bilibili.app.mine.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.app.mine.v1.DisplayReportReq.ReportContent".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.app.mine.v1.DisplayReportReq.ReportContent".into()
+        }
+    }
+}
+impl ::prost::Name for DisplayReportReq {
+    const NAME: &'static str = "DisplayReportReq";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.DisplayReportReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.DisplayReportReq".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -179,16 +269,26 @@ pub mod pub_card {
     pub enum Card {
         ///
         #[prost(message, tag = "1")]
-        PubGuide(super::CardPubGuide),
+        PubGuide(::prost::alloc::boxed::Box<super::CardPubGuide>),
         ///
         #[prost(message, tag = "2")]
-        Ugc(super::CardUgc),
+        Ugc(::prost::alloc::boxed::Box<super::CardUgc>),
         ///
         #[prost(message, tag = "3")]
-        Opus(super::CardOpus),
+        Opus(::prost::alloc::boxed::Box<super::CardOpus>),
         ///
         #[prost(message, tag = "4")]
-        More(super::CardMore),
+        More(::prost::alloc::boxed::Box<super::CardMore>),
+    }
+}
+impl ::prost::Name for PubCard {
+    const NAME: &'static str = "PubCard";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.PubCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.PubCard".into()
     }
 }
 ///
@@ -207,6 +307,16 @@ pub struct PubGuideMaterial {
     #[prost(string, tag = "4")]
     pub url: ::prost::alloc::string::String,
 }
+impl ::prost::Name for PubGuideMaterial {
+    const NAME: &'static str = "PubGuideMaterial";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.PubGuideMaterial".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.PubGuideMaterial".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PubModuleReq {
@@ -220,12 +330,32 @@ pub struct PubModuleReq {
     #[prost(int64, tag = "3")]
     pub card_num: i64,
 }
+impl ::prost::Name for PubModuleReq {
+    const NAME: &'static str = "PubModuleReq";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.PubModuleReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.PubModuleReq".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PubModuleResp {
     ///
     #[prost(message, repeated, tag = "1")]
     pub pub_card: ::prost::alloc::vec::Vec<PubCard>,
+}
+impl ::prost::Name for PubModuleResp {
+    const NAME: &'static str = "PubModuleResp";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.PubModuleResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.PubModuleResp".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -242,6 +372,16 @@ pub struct Stat {
     ///
     #[prost(string, tag = "4")]
     pub like: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Stat {
+    const NAME: &'static str = "Stat";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.Stat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.Stat".into()
+    }
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -262,6 +402,16 @@ pub struct SubTitleWithButton {
     #[prost(message, optional, tag = "5")]
     pub text_color: ::core::option::Option<Color>,
 }
+impl ::prost::Name for SubTitleWithButton {
+    const NAME: &'static str = "SubTitleWithButton";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.SubTitleWithButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.SubTitleWithButton".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubTitleWithStat {
@@ -272,6 +422,16 @@ pub struct SubTitleWithStat {
     #[prost(string, tag = "2")]
     pub text: ::prost::alloc::string::String,
 }
+impl ::prost::Name for SubTitleWithStat {
+    const NAME: &'static str = "SubTitleWithStat";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.SubTitleWithStat".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.SubTitleWithStat".into()
+    }
+}
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Title {
@@ -281,6 +441,16 @@ pub struct Title {
     ///
     #[prost(string, tag = "2")]
     pub sub: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Title {
+    const NAME: &'static str = "Title";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.Title".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.Title".into()
+    }
 }
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
