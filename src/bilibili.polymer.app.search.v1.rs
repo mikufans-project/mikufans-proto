@@ -760,6 +760,50 @@ impl ::prost::Name for DisplayOption {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct DoubleOpusItem {
+    ///
+    #[prost(enumeration = "OpusType", tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(int64, tag = "2")]
+    pub id: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub cover_count: i64,
+    ///
+    #[prost(string, tag = "4")]
+    pub cover: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "5")]
+    pub mid: i64,
+    ///
+    #[prost(string, tag = "6")]
+    pub uname: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "7")]
+    pub jump_url: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "8")]
+    pub img_w: i64,
+    ///
+    #[prost(int64, tag = "9")]
+    pub img_h: i64,
+    ///
+    #[prost(string, tag = "10")]
+    pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DoubleOpusItem {
+    const NAME: &'static str = "DoubleOpusItem";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.DoubleOpusItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.DoubleOpusItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DyTopic {
     ///
     #[prost(string, tag = "1")]
@@ -1275,7 +1319,7 @@ pub struct Item {
     ///
     #[prost(
         oneof = "item::CardItem",
-        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62"
+        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64"
     )]
     pub card_item: ::core::option::Option<item::CardItem>,
 }
@@ -1449,6 +1493,9 @@ pub mod item {
         ///
         #[prost(message, tag = "62")]
         TimeLine(super::SearchTimeLineCard),
+        ///
+        #[prost(message, tag = "64")]
+        DoubleOpus(super::SearchDoubleOpusCard),
     }
 }
 impl ::prost::Name for Item {
@@ -3451,6 +3498,29 @@ impl ::prost::Name for SearchDoubleColumnCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchDoubleColumnCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchDoubleOpusCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub item: ::prost::alloc::vec::Vec<DoubleOpusItem>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub watch_button: ::core::option::Option<WatchButton>,
+}
+impl ::prost::Name for SearchDoubleOpusCard {
+    const NAME: &'static str = "SearchDoubleOpusCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchDoubleOpusCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchDoubleOpusCard".into()
     }
 }
 ///
@@ -6565,6 +6635,39 @@ impl CategorySort {
             "CATEGORY_SORT_CLICK_COUNT" => Some(Self::ClickCount),
             "CATEGORY_SORT_COMMENT_COUNT" => Some(Self::CommentCount),
             "CATEGORY_SORT_LIKE_COUNT" => Some(Self::LikeCount),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum OpusType {
+    ///
+    Unknown = 0,
+    ///
+    Article = 1,
+    ///
+    Twitter = 2,
+}
+impl OpusType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unknown => "OPUS_TYPE_UNKNOWN",
+            Self::Article => "OPUS_TYPE_ARTICLE",
+            Self::Twitter => "OPUS_TYPE_TWITTER",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "OPUS_TYPE_UNKNOWN" => Some(Self::Unknown),
+            "OPUS_TYPE_ARTICLE" => Some(Self::Article),
+            "OPUS_TYPE_TWITTER" => Some(Self::Twitter),
             _ => None,
         }
     }

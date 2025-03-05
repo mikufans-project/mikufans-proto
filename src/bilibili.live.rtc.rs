@@ -91,6 +91,9 @@ pub mod bapi_live_rtc_health_proto {
         ///
         #[prost(bool, tag = "9")]
         pub network_available: bool,
+        ///
+        #[prost(message, optional, tag = "10")]
+        pub transbandwidth: ::core::option::Option<TransportBandwidth>,
     }
     impl ::prost::Name for HealthInfo {
         const NAME: &'static str = "HealthInfo";
@@ -143,6 +146,38 @@ pub mod bapi_live_rtc_health_proto {
         }
         fn type_url() -> ::prost::alloc::string::String {
             "/bilibili.live.rtc.BAPILiveRTCHealthProto.ServiceQuality".into()
+        }
+    }
+    ///
+    #[derive(Clone, Copy, PartialEq, ::prost::Message)]
+    pub struct TransportBandwidth {
+        ///
+        #[prost(float, tag = "1")]
+        pub total_tx_byterate: f32,
+        ///
+        #[prost(float, tag = "2")]
+        pub total_rx_byterate: f32,
+        ///
+        #[prost(float, tag = "3")]
+        pub wan_tx_byterate: f32,
+        ///
+        #[prost(float, tag = "4")]
+        pub wan_rx_byterate: f32,
+        ///
+        #[prost(float, tag = "5")]
+        pub lan_tx_byterate: f32,
+        ///
+        #[prost(float, tag = "6")]
+        pub lan_rx_byterate: f32,
+    }
+    impl ::prost::Name for TransportBandwidth {
+        const NAME: &'static str = "TransportBandwidth";
+        const PACKAGE: &'static str = "bilibili.live.rtc";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.live.rtc.BAPILiveRTCHealthProto.TransportBandwidth".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.live.rtc.BAPILiveRTCHealthProto.TransportBandwidth".into()
         }
     }
 }

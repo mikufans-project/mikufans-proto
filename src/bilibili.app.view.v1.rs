@@ -455,6 +455,9 @@ pub struct BadgeStyle {
     ///
     #[prost(int32, tag = "8")]
     pub bg_style: i32,
+    ///
+    #[prost(string, tag = "9")]
+    pub img: ::prost::alloc::string::String,
 }
 impl ::prost::Name for BadgeStyle {
     const NAME: &'static str = "BadgeStyle";

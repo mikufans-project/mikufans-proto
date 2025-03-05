@@ -14,6 +14,12 @@ pub struct Locale {
     ///
     #[prost(string, tag = "4")]
     pub timezone: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub utc_offset: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "6")]
+    pub is_daylight_time: bool,
 }
 impl ::prost::Name for Locale {
     const NAME: &'static str = "Locale";

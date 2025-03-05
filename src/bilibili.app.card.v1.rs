@@ -209,6 +209,9 @@ pub struct Base {
     ///
     #[prost(message, optional, tag = "19")]
     pub up_args: ::core::option::Option<UpArgs>,
+    ///
+    #[prost(string, tag = "20")]
+    pub track_id: ::prost::alloc::string::String,
 }
 impl ::prost::Name for Base {
     const NAME: &'static str = "Base";

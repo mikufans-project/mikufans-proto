@@ -38,6 +38,69 @@ impl ::prost::Name for ChannelRedirectReq {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct GuideCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub image: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub subtitle: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GuideCard {
+    const NAME: &'static str = "GuideCard";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.GuideCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.GuideCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct GuideItem {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub card: ::prost::alloc::vec::Vec<GuideCard>,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GuideItem {
+    const NAME: &'static str = "GuideItem";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.GuideItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.GuideItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct GuideTip {
+    ///
+    #[prost(string, tag = "1")]
+    pub image: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub subtitle: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for GuideTip {
+    const NAME: &'static str = "GuideTip";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.GuideTip".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.GuideTip".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RcmdReason {
     ///
     #[prost(string, tag = "1")]
@@ -374,6 +437,49 @@ impl ::prost::Name for ThreePoint {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct WidgetGuideReply {
+    ///
+    #[prost(int32, tag = "1")]
+    pub code: i32,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub guide_item: ::core::option::Option<GuideItem>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub tip: ::core::option::Option<GuideTip>,
+}
+impl ::prost::Name for WidgetGuideReply {
+    const NAME: &'static str = "WidgetGuideReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.WidgetGuideReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.WidgetGuideReply".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct WidgetGuideReq {
+    ///
+    #[prost(string, tag = "1")]
+    pub from_spmid: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "GuideType", tag = "2")]
+    pub guide_type: i32,
+}
+impl ::prost::Name for WidgetGuideReq {
+    const NAME: &'static str = "WidgetGuideReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.WidgetGuideReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.WidgetGuideReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WidgetItem {
     ///
     #[prost(string, tag = "1")]
@@ -448,6 +554,35 @@ impl ::prost::Name for WidgetReq {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.show.mixture.v1.WidgetReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum GuideType {
+    ///
+    Default = 0,
+    ///
+    Func = 1,
+}
+impl GuideType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "GUIDE_TYPE_DEFAULT",
+            Self::Func => "GUIDE_TYPE_FUNC",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "GUIDE_TYPE_DEFAULT" => Some(Self::Default),
+            "GUIDE_TYPE_FUNC" => Some(Self::Func),
+            _ => None,
+        }
     }
 }
 ///
@@ -738,6 +873,36 @@ pub mod mixture_client {
                 );
             self.inner.unary(req, path, codec).await
         }
+        ///
+        pub async fn widget_guide(
+            &mut self,
+            request: impl tonic::IntoRequest<super::WidgetGuideReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::WidgetGuideReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.mixture.v1.Mixture/WidgetGuide",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.app.show.mixture.v1.Mixture",
+                        "WidgetGuide",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
     }
 }
 /// Generated server implementations.
@@ -787,6 +952,14 @@ pub mod mixture_server {
             &self,
             request: tonic::Request<super::WidgetReq>,
         ) -> std::result::Result<tonic::Response<super::WidgetReply>, tonic::Status>;
+        ///
+        async fn widget_guide(
+            &self,
+            request: tonic::Request<super::WidgetGuideReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::WidgetGuideReply>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -1069,6 +1242,49 @@ pub mod mixture_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = WidgetSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.mixture.v1.Mixture/WidgetGuide" => {
+                    #[allow(non_camel_case_types)]
+                    struct WidgetGuideSvc<T: Mixture>(pub Arc<T>);
+                    impl<T: Mixture> tonic::server::UnaryService<super::WidgetGuideReq>
+                    for WidgetGuideSvc<T> {
+                        type Response = super::WidgetGuideReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::WidgetGuideReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mixture>::widget_guide(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = WidgetGuideSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
