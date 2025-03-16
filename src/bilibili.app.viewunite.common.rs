@@ -765,6 +765,9 @@ pub struct CardBasicInfo {
     ///
     #[prost(string, tag = "16")]
     pub cover_right_text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "17")]
+    pub dimension: ::core::option::Option<CoverDimension>,
 }
 impl ::prost::Name for CardBasicInfo {
     const NAME: &'static str = "CardBasicInfo";
@@ -1055,6 +1058,26 @@ impl ::prost::Name for Covenanter {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.Covenanter".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct CoverDimension {
+    ///
+    #[prost(float, tag = "1")]
+    pub width: f32,
+    ///
+    #[prost(float, tag = "2")]
+    pub height: f32,
+}
+impl ::prost::Name for CoverDimension {
+    const NAME: &'static str = "CoverDimension";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.CoverDimension".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.CoverDimension".into()
     }
 }
 ///
@@ -2924,6 +2947,9 @@ pub struct PugvSeasonPrimaryBadge {
     ///
     #[prost(string, tag = "2")]
     pub link: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub night_icon: ::prost::alloc::string::String,
 }
 impl ::prost::Name for PugvSeasonPrimaryBadge {
     const NAME: &'static str = "PugvSeasonPrimaryBadge";
@@ -3492,6 +3518,12 @@ pub struct RelateAvCard {
     ///
     #[prost(message, optional, tag = "7")]
     pub rcmd_reason: ::core::option::Option<BadgeInfo>,
+    ///
+    #[prost(string, tag = "8")]
+    pub duration_text: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "9")]
+    pub show_rcmd_style: bool,
 }
 impl ::prost::Name for RelateAvCard {
     const NAME: &'static str = "RelateAVCard";
@@ -3518,6 +3550,9 @@ pub struct RelateBangumiAvCard {
     ///
     #[prost(string, tag = "4")]
     pub cover_right_text: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "5")]
+    pub show_rcmd_style: bool,
 }
 impl ::prost::Name for RelateBangumiAvCard {
     const NAME: &'static str = "RelateBangumiAvCard";
@@ -3791,6 +3826,9 @@ pub struct RelateCourseCard {
     ///
     #[prost(int32, tag = "5")]
     pub style: i32,
+    ///
+    #[prost(bool, tag = "6")]
+    pub show_rcmd_style: bool,
 }
 impl ::prost::Name for RelateCourseCard {
     const NAME: &'static str = "RelateCourseCard";
@@ -3937,6 +3975,9 @@ pub struct RelateLiveCard {
     ///
     #[prost(message, optional, tag = "7")]
     pub stat_info: ::core::option::Option<StatInfo>,
+    ///
+    #[prost(bool, tag = "8")]
+    pub show_rcmd_style: bool,
 }
 impl ::prost::Name for RelateLiveCard {
     const NAME: &'static str = "RelateLiveCard";
@@ -3957,6 +3998,9 @@ pub struct RelateSpecial {
     ///
     #[prost(message, optional, tag = "2")]
     pub rcmd_reason: ::core::option::Option<BadgeInfo>,
+    ///
+    #[prost(bool, tag = "3")]
+    pub show_rcmd_style: bool,
 }
 impl ::prost::Name for RelateSpecial {
     const NAME: &'static str = "RelateSpecial";

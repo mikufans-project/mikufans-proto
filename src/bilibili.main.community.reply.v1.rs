@@ -458,6 +458,9 @@ pub struct DetailListReq {
     ///
     #[prost(string, tag = "9")]
     pub extra: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "10")]
+    pub ad_extra: ::prost::alloc::string::String,
 }
 impl ::prost::Name for DetailListReq {
     const NAME: &'static str = "DetailListReq";
@@ -529,6 +532,9 @@ pub struct DialogListReq {
     ///
     #[prost(string, tag = "7")]
     pub extra: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "8")]
+    pub ad_extra: ::prost::alloc::string::String,
 }
 impl ::prost::Name for DialogListReq {
     const NAME: &'static str = "DialogListReq";
@@ -2982,6 +2988,9 @@ pub struct ReplyExtra {
     ///
     #[prost(bool, tag = "10")]
     pub is_activity_mode: bool,
+    ///
+    #[prost(string, tag = "11")]
+    pub track_id: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ReplyExtra {
     const NAME: &'static str = "ReplyExtra";

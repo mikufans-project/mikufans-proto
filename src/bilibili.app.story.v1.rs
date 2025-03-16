@@ -33,6 +33,120 @@ impl ::prost::Name for BgmPlayReq {
         "/bilibili.app.story.v1.BgmPlayReq".into()
     }
 }
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RerankAdInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub request_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RerankAdInfo {
+    const NAME: &'static str = "RerankAdInfo";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.RerankAdInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.RerankAdInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RerankCardInfo {
+    ///
+    #[prost(int32, tag = "1")]
+    pub display_id: i32,
+    ///
+    #[prost(int32, tag = "2")]
+    pub display_pos: i32,
+    ///
+    #[prost(string, tag = "3")]
+    pub card_goto: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub param: ::prost::alloc::string::String,
+    ///
+    #[prost(map = "string, string", tag = "5")]
+    pub player_args: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
+    ///
+    #[prost(oneof = "rerank_card_info::Info", tags = "6")]
+    pub info: ::core::option::Option<rerank_card_info::Info>,
+}
+/// Nested message and enum types in `RerankCardInfo`.
+pub mod rerank_card_info {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Info {
+        ///
+        #[prost(message, tag = "6")]
+        AdInfo(super::RerankAdInfo),
+    }
+}
+impl ::prost::Name for RerankCardInfo {
+    const NAME: &'static str = "RerankCardInfo";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.RerankCardInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.RerankCardInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RerankReply {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub card: ::prost::alloc::vec::Vec<RerankCardInfo>,
+}
+impl ::prost::Name for RerankReply {
+    const NAME: &'static str = "RerankReply";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.RerankReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.RerankReply".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RerankReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub pre_ad_start_ts: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub pre_ad_end_ts: i64,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub pre_ad_card: ::core::option::Option<RerankCardInfo>,
+    ///
+    #[prost(int64, tag = "4")]
+    pub last_card_ts: i64,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub last_card: ::core::option::Option<RerankCardInfo>,
+    ///
+    #[prost(message, repeated, tag = "6")]
+    pub unexposed_card: ::prost::alloc::vec::Vec<RerankCardInfo>,
+    ///
+    #[prost(int32, tag = "7")]
+    pub last_ad_gap: i32,
+}
+impl ::prost::Name for RerankReq {
+    const NAME: &'static str = "RerankReq";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.RerankReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.RerankReq".into()
+    }
+}
 /// Generated client implementations.
 pub mod story_client {
     #![allow(
@@ -136,6 +250,28 @@ pub mod story_client {
                 .insert(GrpcMethod::new("bilibili.app.story.v1.Story", "BgmPlay"));
             self.inner.unary(req, path, codec).await
         }
+        ///
+        pub async fn rerank(
+            &mut self,
+            request: impl tonic::IntoRequest<super::RerankReq>,
+        ) -> std::result::Result<tonic::Response<super::RerankReply>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.story.v1.Story/Rerank",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("bilibili.app.story.v1.Story", "Rerank"));
+            self.inner.unary(req, path, codec).await
+        }
     }
 }
 /// Generated server implementations.
@@ -156,6 +292,11 @@ pub mod story_server {
             &self,
             request: tonic::Request<super::BgmPlayReq>,
         ) -> std::result::Result<tonic::Response<super::BgmPlayReply>, tonic::Status>;
+        ///
+        async fn rerank(
+            &self,
+            request: tonic::Request<super::RerankReq>,
+        ) -> std::result::Result<tonic::Response<super::RerankReply>, tonic::Status>;
     }
     ///
     #[derive(Debug)]
@@ -262,6 +403,49 @@ pub mod story_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = BgmPlaySvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.story.v1.Story/Rerank" => {
+                    #[allow(non_camel_case_types)]
+                    struct RerankSvc<T: Story>(pub Arc<T>);
+                    impl<T: Story> tonic::server::UnaryService<super::RerankReq>
+                    for RerankSvc<T> {
+                        type Response = super::RerankReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::RerankReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Story>::rerank(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = RerankSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

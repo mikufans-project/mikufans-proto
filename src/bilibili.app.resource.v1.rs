@@ -288,6 +288,9 @@ pub struct ModuleReply {
     ///
     #[prost(string, tag = "24")]
     pub password: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "25")]
+    pub weight: i64,
 }
 impl ::prost::Name for ModuleReply {
     const NAME: &'static str = "ModuleReply";

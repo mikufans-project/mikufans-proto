@@ -747,6 +747,18 @@ pub struct DisplayOption {
     ///
     #[prost(int32, tag = "6")]
     pub tag_highlight_opti: i32,
+    ///
+    #[prost(int32, tag = "7")]
+    pub cover_exp: i32,
+    ///
+    #[prost(double, tag = "8")]
+    pub cover_exp_small: f64,
+    ///
+    #[prost(double, tag = "9")]
+    pub cover_exp_normal: f64,
+    ///
+    #[prost(double, tag = "10")]
+    pub cover_exp_large: f64,
 }
 impl ::prost::Name for DisplayOption {
     const NAME: &'static str = "DisplayOption";
