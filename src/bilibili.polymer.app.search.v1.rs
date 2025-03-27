@@ -979,6 +979,26 @@ impl ::prost::Name for ExtraLink {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ExtraWord {
+    ///
+    #[prost(string, tag = "1")]
+    pub first_word: ::prost::alloc::string::String,
+    ///
+    #[prost(string, repeated, tag = "2")]
+    pub second_word: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for ExtraWord {
+    const NAME: &'static str = "ExtraWord";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ExtraWord".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ExtraWord".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Feedback {
     ///
     #[prost(message, repeated, tag = "1")]
@@ -1331,7 +1351,7 @@ pub struct Item {
     ///
     #[prost(
         oneof = "item::CardItem",
-        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64"
+        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64, 65"
     )]
     pub card_item: ::core::option::Option<item::CardItem>,
 }
@@ -1508,6 +1528,9 @@ pub mod item {
         ///
         #[prost(message, tag = "64")]
         DoubleOpus(super::SearchDoubleOpusCard),
+        ///
+        #[prost(message, tag = "65")]
+        OgvClusterCard(::prost::alloc::boxed::Box<super::SearchOgvClusterCard>),
     }
 }
 impl ::prost::Name for Item {
@@ -1956,6 +1979,38 @@ impl ::prost::Name for OgvClipInfo {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.OgvClipInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct OgvClusterCardRelate {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub extra_word_list: ::prost::alloc::vec::Vec<ExtraWord>,
+    ///
+    #[prost(int32, tag = "3")]
+    pub need_order: i32,
+    ///
+    #[prost(int64, tag = "4")]
+    pub show_lines: i64,
+    ///
+    #[prost(message, repeated, tag = "5")]
+    pub items: ::prost::alloc::vec::Vec<DetailsRelationItem>,
+    ///
+    #[prost(string, tag = "6")]
+    pub more_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OgvClusterCardRelate {
+    const NAME: &'static str = "OgvClusterCardRelate";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.OgvClusterCardRelate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.OgvClusterCardRelate".into()
     }
 }
 ///
@@ -2591,6 +2646,9 @@ pub struct SearchAllRequest {
     ///
     #[prost(string, tag = "20")]
     pub user_act: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "21")]
+    pub need_ogv_extra_word: bool,
 }
 impl ::prost::Name for SearchAllRequest {
     const NAME: &'static str = "SearchAllRequest";
@@ -2963,6 +3021,12 @@ pub struct SearchBangumiCard {
     ///
     #[prost(message, optional, tag = "35")]
     pub sale_info: ::core::option::Option<SaleInfo>,
+    ///
+    #[prost(string, tag = "36")]
+    pub view_content: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "37")]
+    pub icon_type: i32,
 }
 impl ::prost::Name for SearchBangumiCard {
     const NAME: &'static str = "SearchBangumiCard";
@@ -4296,6 +4360,97 @@ impl ::prost::Name for SearchNoResultSuggestWordCard {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchOgvReply {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub extra_word_list: ::prost::alloc::vec::Vec<ExtraWord>,
+    ///
+    #[prost(int32, tag = "2")]
+    pub need_order: i32,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub items: ::prost::alloc::vec::Vec<Item>,
+    ///
+    #[prost(message, repeated, tag = "4")]
+    pub relation_items: ::prost::alloc::vec::Vec<DetailsRelationItem>,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub pagination: ::core::option::Option<
+        super::super::super::super::pagination::PaginationReply,
+    >,
+    ///
+    #[prost(int64, tag = "6")]
+    pub page: i64,
+    ///
+    #[prost(map = "string, string", tag = "7")]
+    pub annotation: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
+    ///
+    #[prost(string, tag = "8")]
+    pub query: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub trackid: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SearchOgvReply {
+    const NAME: &'static str = "SearchOGVReply";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOGVReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOGVReply".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchOgvReq {
+    ///
+    #[prost(enumeration = "Sort", tag = "1")]
+    pub order: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub first_extra_word: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub second_extra_word: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub from_source: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub keyword: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub pagination: ::core::option::Option<
+        super::super::super::super::pagination::Pagination,
+    >,
+    ///
+    #[prost(message, optional, tag = "7")]
+    pub player_args: ::core::option::Option<
+        super::super::super::super::app::archive::middleware::v1::PlayerArgs,
+    >,
+    ///
+    #[prost(string, tag = "8")]
+    pub user_act: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "9")]
+    pub need_ogv_extra_word: bool,
+}
+impl ::prost::Name for SearchOgvReq {
+    const NAME: &'static str = "SearchOGVReq";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOGVReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOGVReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchOgvCard {
     ///
     #[prost(string, tag = "1")]
@@ -4386,6 +4541,32 @@ impl ::prost::Name for SearchOgvChannelCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchOgvChannelCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchOgvClusterCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, boxed, tag = "2")]
+    pub single_card: ::core::option::Option<::prost::alloc::boxed::Box<Item>>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub relate: ::core::option::Option<OgvClusterCardRelate>,
+    ///
+    #[prost(int32, tag = "4")]
+    pub inline_title_style: i32,
+}
+impl ::prost::Name for SearchOgvClusterCard {
+    const NAME: &'static str = "SearchOgvClusterCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchOgvClusterCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchOgvClusterCard".into()
     }
 }
 ///
@@ -6968,6 +7149,30 @@ pub mod search_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn search_ogv(
+            &mut self,
+            request: impl tonic::IntoRequest<super::SearchOgvReq>,
+        ) -> std::result::Result<tonic::Response<super::SearchOgvReply>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.polymer.app.search.v1.Search/SearchOGV",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.polymer.app.search.v1.Search", "SearchOGV"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn search_reserve(
             &mut self,
             request: impl tonic::IntoRequest<super::SearchReserveRequest>,
@@ -7066,6 +7271,11 @@ pub mod search_server {
             tonic::Response<super::SearchComicResponse>,
             tonic::Status,
         >;
+        ///
+        async fn search_ogv(
+            &self,
+            request: tonic::Request<super::SearchOgvReq>,
+        ) -> std::result::Result<tonic::Response<super::SearchOgvReply>, tonic::Status>;
         ///
         async fn search_reserve(
             &self,
@@ -7278,6 +7488,49 @@ pub mod search_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = SearchComicSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.polymer.app.search.v1.Search/SearchOGV" => {
+                    #[allow(non_camel_case_types)]
+                    struct SearchOGVSvc<T: Search>(pub Arc<T>);
+                    impl<T: Search> tonic::server::UnaryService<super::SearchOgvReq>
+                    for SearchOGVSvc<T> {
+                        type Response = super::SearchOgvReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::SearchOgvReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Search>::search_ogv(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = SearchOGVSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
