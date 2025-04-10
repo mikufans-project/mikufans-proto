@@ -164,15 +164,6 @@ pub mod bilibili {
                 include!("bilibili.app.playurl.v1.rs");
             }
         }
-        #[deprecated(since = "8.35.0", note = "Upstream removed.")]
-        pub mod project {
-            pub mod cny {
-                include!("bilibili.app.project.cny.rs");
-                pub mod v2 {
-                    include!("bilibili.app.project.cny.v2.rs");
-                }
-            }
-        }
         pub mod resource {
             pub mod privacy {
                 pub mod v1 {
@@ -271,10 +262,6 @@ pub mod bilibili {
             }
             pub mod pk {
                 include!("bilibili.broadcast.live.pk.rs");
-            }
-            #[deprecated(since = "8.35.0", note = "Upstream removed.")]
-            pub mod pmms {
-                include!("bilibili.broadcast.live.pmms.rs");
             }
             pub mod universal_interact {
                 include!("bilibili.broadcast.live.universal_interact.rs");
@@ -567,12 +554,6 @@ pub mod bilibili {
     }
     pub mod playershared {
         include!("bilibili.playershared.rs");
-    }
-    #[deprecated(since = "8.35.0", note = "Upstream removed.")]
-    pub mod pmms {
-        pub mod v1 {
-            include!("bilibili.pmms.v1.rs");
-        }
     }
     pub mod polymer {
         pub mod app {
