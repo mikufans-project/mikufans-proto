@@ -448,6 +448,9 @@ pub struct TalkerInfo {
     ///
     #[prost(string, repeated, tag = "10")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    ///
+    #[prost(string, tag = "11")]
+    pub shop_homepage: ::prost::alloc::string::String,
 }
 impl ::prost::Name for TalkerInfo {
     const NAME: &'static str = "TalkerInfo";

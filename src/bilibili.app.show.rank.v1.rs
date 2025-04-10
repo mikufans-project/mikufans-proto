@@ -158,6 +158,62 @@ impl ::prost::Name for RankListReply {
     }
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RankRegionInfo {
+    ///
+    #[prost(int32, tag = "1")]
+    pub tid: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub name: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "3")]
+    pub region_type: i32,
+    ///
+    #[prost(string, tag = "4")]
+    pub uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RankRegionInfo {
+    const NAME: &'static str = "RankRegionInfo";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankRegionInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankRegionInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RankRegionListReply {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub regions: ::prost::alloc::vec::Vec<RankRegionInfo>,
+}
+impl ::prost::Name for RankRegionListReply {
+    const NAME: &'static str = "RankRegionListReply";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankRegionListReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankRegionListReply".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct RankRegionListReq {}
+impl ::prost::Name for RankRegionListReq {
+    const NAME: &'static str = "RankRegionListReq";
+    const PACKAGE: &'static str = "bilibili.app.show.rank.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.rank.v1.RankRegionListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.rank.v1.RankRegionListReq".into()
+    }
+}
+///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct RankRegionResultReq {
     ///
@@ -328,6 +384,33 @@ pub mod rank_client {
                 .insert(GrpcMethod::new("bilibili.app.show.rank.v1.Rank", "RankRegion"));
             self.inner.unary(req, path, codec).await
         }
+        ///
+        pub async fn rank_region_list(
+            &mut self,
+            request: impl tonic::IntoRequest<super::RankRegionListReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RankRegionListReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.rank.v1.Rank/RankRegionList",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.show.rank.v1.Rank", "RankRegionList"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
     }
 }
 /// Generated server implementations.
@@ -353,6 +436,14 @@ pub mod rank_server {
             &self,
             request: tonic::Request<super::RankRegionResultReq>,
         ) -> std::result::Result<tonic::Response<super::RankListReply>, tonic::Status>;
+        ///
+        async fn rank_region_list(
+            &self,
+            request: tonic::Request<super::RankRegionListReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::RankRegionListReply>,
+            tonic::Status,
+        >;
     }
     ///
     #[derive(Debug)]
@@ -502,6 +593,49 @@ pub mod rank_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = RankRegionSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.rank.v1.Rank/RankRegionList" => {
+                    #[allow(non_camel_case_types)]
+                    struct RankRegionListSvc<T: Rank>(pub Arc<T>);
+                    impl<T: Rank> tonic::server::UnaryService<super::RankRegionListReq>
+                    for RankRegionListSvc<T> {
+                        type Response = super::RankRegionListReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::RankRegionListReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Rank>::rank_region_list(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = RankRegionListSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

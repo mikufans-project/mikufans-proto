@@ -555,6 +555,23 @@ impl ::prost::Name for LossLessItem {
     }
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MultiDashVideo {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub dash_videos: ::prost::alloc::vec::Vec<DashVideo>,
+}
+impl ::prost::Name for MultiDashVideo {
+    const NAME: &'static str = "MultiDashVideo";
+    const PACKAGE: &'static str = "bilibili.app.playurl.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.playurl.v1.MultiDashVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.playurl.v1.MultiDashVideo".into()
+    }
+}
+///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayAbilityConf {
     ///
@@ -771,6 +788,9 @@ pub struct PlayArcConf {
     ///
     #[prost(message, optional, tag = "31")]
     pub loss_less_conf: ::core::option::Option<ArcConf>,
+    ///
+    #[prost(message, optional, tag = "32")]
+    pub system_record_conf: ::core::option::Option<ArcConf>,
 }
 impl ::prost::Name for PlayArcConf {
     const NAME: &'static str = "PlayArcConf";
@@ -1374,7 +1394,7 @@ pub struct Stream {
     #[prost(message, optional, tag = "1")]
     pub stream_info: ::core::option::Option<StreamInfo>,
     ///
-    #[prost(oneof = "stream::Content", tags = "2, 3")]
+    #[prost(oneof = "stream::Content", tags = "2, 3, 4")]
     pub content: ::core::option::Option<stream::Content>,
 }
 /// Nested message and enum types in `Stream`.
@@ -1388,6 +1408,9 @@ pub mod stream {
         ///
         #[prost(message, tag = "3")]
         SegmentVideo(super::SegmentVideo),
+        ///
+        #[prost(message, tag = "4")]
+        MultiDashVideo(super::MultiDashVideo),
     }
 }
 impl ::prost::Name for Stream {

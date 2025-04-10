@@ -2002,6 +2002,9 @@ pub struct OgvClusterCardRelate {
     ///
     #[prost(string, tag = "6")]
     pub more_url: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "7")]
+    pub more_search_type: i32,
 }
 impl ::prost::Name for OgvClusterCardRelate {
     const NAME: &'static str = "OgvClusterCardRelate";

@@ -1089,6 +1089,23 @@ impl ::prost::Name for MaterialInfo {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MultiDashVideo {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub dash_videos: ::prost::alloc::vec::Vec<DashVideo>,
+}
+impl ::prost::Name for MultiDashVideo {
+    const NAME: &'static str = "MultiDashVideo";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.MultiDashVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.MultiDashVideo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MultiView {
     ///
     #[prost(string, tag = "1")]
@@ -1292,6 +1309,9 @@ pub struct PlayAbilityConf {
     ///
     #[prost(bool, tag = "33")]
     pub dubbing_disable: bool,
+    ///
+    #[prost(bool, tag = "34")]
+    pub system_record_screen_disable: bool,
 }
 impl ::prost::Name for PlayAbilityConf {
     const NAME: &'static str = "PlayAbilityConf";
@@ -2004,7 +2024,7 @@ pub struct Stream {
     #[prost(message, optional, tag = "1")]
     pub stream_info: ::core::option::Option<StreamInfo>,
     ///
-    #[prost(oneof = "stream::Content", tags = "2, 3")]
+    #[prost(oneof = "stream::Content", tags = "2, 3, 4")]
     pub content: ::core::option::Option<stream::Content>,
 }
 /// Nested message and enum types in `Stream`.
@@ -2018,6 +2038,9 @@ pub mod stream {
         ///
         #[prost(message, tag = "3")]
         SegmentVideo(super::SegmentVideo),
+        ///
+        #[prost(message, tag = "4")]
+        MultiDashVideo(super::MultiDashVideo),
     }
 }
 impl ::prost::Name for Stream {

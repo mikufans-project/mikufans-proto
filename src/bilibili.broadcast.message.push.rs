@@ -20,6 +20,9 @@ pub struct UpStreamMessage {
     ///
     #[prost(string, tag = "6")]
     pub msg_source: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "7")]
+    pub bid: i64,
 }
 /// Nested message and enum types in `UpStreamMessage`.
 pub mod up_stream_message {

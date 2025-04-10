@@ -3729,7 +3729,10 @@ pub struct RelateCard {
     #[prost(message, optional, tag = "12")]
     pub basic_info: ::core::option::Option<CardBasicInfo>,
     ///
-    #[prost(oneof = "relate_card::Card", tags = "2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15")]
+    #[prost(
+        oneof = "relate_card::Card",
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16"
+    )]
     pub card: ::core::option::Option<relate_card::Card>,
 }
 /// Nested message and enum types in `RelateCard`.
@@ -3770,6 +3773,9 @@ pub mod relate_card {
         ///
         #[prost(message, tag = "15")]
         Course(::prost::alloc::boxed::Box<super::RelateCourseCard>),
+        ///
+        #[prost(message, tag = "16")]
+        MiniProgram(::prost::alloc::boxed::Box<super::RelateMiniProgramCard>),
     }
 }
 impl ::prost::Name for RelateCard {
@@ -3987,6 +3993,23 @@ impl ::prost::Name for RelateLiveCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.RelateLiveCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RelateMiniProgramCard {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub stat: ::core::option::Option<Stat>,
+}
+impl ::prost::Name for RelateMiniProgramCard {
+    const NAME: &'static str = "RelateMiniProgramCard";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.RelateMiniProgramCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.RelateMiniProgramCard".into()
     }
 }
 ///
@@ -6392,6 +6415,8 @@ pub enum RelateCardType {
     Special = 10,
     ///
     Course = 11,
+    ///
+    MiniProgram = 12,
 }
 impl RelateCardType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -6412,6 +6437,7 @@ impl RelateCardType {
             Self::BangumiUgc => "BANGUMI_UGC",
             Self::Special => "SPECIAL",
             Self::Course => "COURSE",
+            Self::MiniProgram => "MINI_PROGRAM",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -6429,6 +6455,7 @@ impl RelateCardType {
             "BANGUMI_UGC" => Some(Self::BangumiUgc),
             "SPECIAL" => Some(Self::Special),
             "COURSE" => Some(Self::Course),
+            "MINI_PROGRAM" => Some(Self::MiniProgram),
             _ => None,
         }
     }

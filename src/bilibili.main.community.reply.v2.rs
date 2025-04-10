@@ -456,6 +456,9 @@ pub mod subject_description_reply {
             ///
             #[prost(message, repeated, tag = "3")]
             pub cid_grade_groups: ::prost::alloc::vec::Vec<grade_panel::CidGradeGroup>,
+            ///
+            #[prost(message, optional, tag = "4")]
+            pub single_grade: ::core::option::Option<grade_panel::Grade>,
         }
         /// Nested message and enum types in `GradePanel`.
         pub mod grade_panel {
@@ -496,6 +499,15 @@ pub mod subject_description_reply {
                 ///
                 #[prost(string, tag = "3")]
                 pub title: ::prost::alloc::string::String,
+                ///
+                #[prost(message, optional, tag = "4")]
+                pub default_score: ::core::option::Option<i32>,
+                ///
+                #[prost(bool, tag = "5")]
+                pub disable_zero: bool,
+                ///
+                #[prost(string, tag = "6")]
+                pub grade_prompt: ::prost::alloc::string::String,
             }
             impl ::prost::Name for Grade {
                 const NAME: &'static str = "Grade";

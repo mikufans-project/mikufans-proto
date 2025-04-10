@@ -939,6 +939,9 @@ pub struct AdsControlDto {
     ///
     #[prost(bool, tag = "6")]
     pub has_live_booking_ad: bool,
+    ///
+    #[prost(int32, tag = "7")]
+    pub under_player_banner_mode: i32,
 }
 impl ::prost::Name for AdsControlDto {
     const NAME: &'static str = "AdsControlDto";

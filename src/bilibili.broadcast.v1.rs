@@ -420,6 +420,9 @@ pub struct PushMessageResp {
     ///
     #[prost(int32, tag = "28")]
     pub bid: i32,
+    ///
+    #[prost(string, tag = "30")]
+    pub extra: ::prost::alloc::string::String,
 }
 /// Nested message and enum types in `PushMessageResp`.
 pub mod push_message_resp {
@@ -736,6 +739,8 @@ pub mod push_message_resp {
         Realtime = 3,
         ///
         Recommend = 4,
+        ///
+        Reply = 5,
     }
     impl Type {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -749,6 +754,7 @@ pub mod push_message_resp {
                 Self::Hot => "TYPE_HOT",
                 Self::Realtime => "TYPE_REALTIME",
                 Self::Recommend => "TYPE_RECOMMEND",
+                Self::Reply => "TYPE_REPLY",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -759,6 +765,7 @@ pub mod push_message_resp {
                 "TYPE_HOT" => Some(Self::Hot),
                 "TYPE_REALTIME" => Some(Self::Realtime),
                 "TYPE_RECOMMEND" => Some(Self::Recommend),
+                "TYPE_REPLY" => Some(Self::Reply),
                 _ => None,
             }
         }

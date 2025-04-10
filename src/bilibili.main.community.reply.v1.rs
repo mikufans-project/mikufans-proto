@@ -1006,6 +1006,9 @@ pub struct MainListReply {
     ///
     #[prost(message, repeated, tag = "27")]
     pub mixed_cards: ::prost::alloc::vec::Vec<MixedCard>,
+    ///
+    #[prost(message, repeated, tag = "28")]
+    pub subject_top_cards: ::prost::alloc::vec::Vec<SubjectTopCards>,
 }
 impl ::prost::Name for MainListReply {
     const NAME: &'static str = "MainListReply";
@@ -1942,6 +1945,32 @@ impl ::prost::Name for Notice {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.main.community.reply.v1.Notice".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct OgvGradeCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub sub_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub button_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub goto_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for OgvGradeCard {
+    const NAME: &'static str = "OgvGradeCard";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.OgvGradeCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.OgvGradeCard".into()
     }
 }
 ///
@@ -3878,6 +3907,78 @@ impl ::prost::Name for SubjectControl {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.main.community.reply.v1.SubjectControl".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SubjectTopCards {
+    ///
+    #[prost(enumeration = "subject_top_cards::Type", tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub oid: ::prost::alloc::string::String,
+    ///
+    #[prost(oneof = "subject_top_cards::Item", tags = "3")]
+    pub item: ::core::option::Option<subject_top_cards::Item>,
+}
+/// Nested message and enum types in `SubjectTopCards`.
+pub mod subject_top_cards {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum Type {
+        ///
+        UnknownType = 0,
+        ///
+        OgvGrade = 1,
+    }
+    impl Type {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::UnknownType => "UNKNOWN_Type",
+                Self::OgvGrade => "OGV_GRADE",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "UNKNOWN_Type" => Some(Self::UnknownType),
+                "OGV_GRADE" => Some(Self::OgvGrade),
+                _ => None,
+            }
+        }
+    }
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Item {
+        ///
+        #[prost(message, tag = "3")]
+        OgvGrade(super::OgvGradeCard),
+    }
+}
+impl ::prost::Name for SubjectTopCards {
+    const NAME: &'static str = "SubjectTopCards";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.SubjectTopCards".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.SubjectTopCards".into()
     }
 }
 ///

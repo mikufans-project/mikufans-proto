@@ -78,6 +78,9 @@ pub struct ArcConf {
     ///
     #[prost(int32, repeated, tag = "4")]
     pub unsupport_scene: ::prost::alloc::vec::Vec<i32>,
+    ///
+    #[prost(enumeration = "UnsupportState", tag = "5")]
+    pub unsupport_state: i32,
 }
 impl ::prost::Name for ArcConf {
     const NAME: &'static str = "ArcConf";
@@ -1254,6 +1257,23 @@ impl ::prost::Name for LossLessItem {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MultiDashVideo {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub dash_videos: ::prost::alloc::vec::Vec<DashVideo>,
+}
+impl ::prost::Name for MultiDashVideo {
+    const NAME: &'static str = "MultiDashVideo";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.MultiDashVideo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.MultiDashVideo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Node {
     ///
     #[prost(int64, tag = "1")]
@@ -1981,7 +2001,7 @@ pub struct Stream {
     #[prost(message, optional, tag = "1")]
     pub stream_info: ::core::option::Option<StreamInfo>,
     ///
-    #[prost(oneof = "stream::Content", tags = "2, 3")]
+    #[prost(oneof = "stream::Content", tags = "2, 3, 4")]
     pub content: ::core::option::Option<stream::Content>,
 }
 /// Nested message and enum types in `Stream`.
@@ -1995,6 +2015,9 @@ pub mod stream {
         ///
         #[prost(message, tag = "3")]
         SegmentVideo(super::SegmentVideo),
+        ///
+        #[prost(message, tag = "4")]
+        MultiDashVideo(super::MultiDashVideo),
     }
 }
 impl ::prost::Name for Stream {
@@ -2223,6 +2246,9 @@ pub struct VideoVod {
     ///
     #[prost(enumeration = "QnPolicy", tag = "12")]
     pub qn_policy: i32,
+    ///
+    #[prost(int64, tag = "13")]
+    pub soft_fnval: i64,
 }
 impl ::prost::Name for VideoVod {
     const NAME: &'static str = "VideoVod";
@@ -2641,6 +2667,8 @@ pub enum ConfType {
     Listen = 36,
     ///
     WatchLater = 37,
+    ///
+    SystemRecord = 38,
 }
 impl ConfType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -2687,6 +2715,7 @@ impl ConfType {
             Self::Dubbing => "DUBBING",
             Self::Listen => "LISTEN",
             Self::WatchLater => "WATCH_LATER",
+            Self::SystemRecord => "SYSTEM_RECORD",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -2730,6 +2759,7 @@ impl ConfType {
             "DUBBING" => Some(Self::Dubbing),
             "LISTEN" => Some(Self::Listen),
             "WATCH_LATER" => Some(Self::WatchLater),
+            "SYSTEM_RECORD" => Some(Self::SystemRecord),
             _ => None,
         }
     }
@@ -3596,6 +3626,39 @@ impl UnsupportScene {
         match value {
             "UNKNOWN_SCENE" => Some(Self::UnknownScene),
             "PREMIERE" => Some(Self::Premiere),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum UnsupportState {
+    ///
+    NoneUnsupportState = 0,
+    ///
+    Half = 1,
+    ///
+    Full = 2,
+}
+impl UnsupportState {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::NoneUnsupportState => "NONE_UnsupportState",
+            Self::Half => "HALF",
+            Self::Full => "FULL",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "NONE_UnsupportState" => Some(Self::NoneUnsupportState),
+            "HALF" => Some(Self::Half),
+            "FULL" => Some(Self::Full),
             _ => None,
         }
     }

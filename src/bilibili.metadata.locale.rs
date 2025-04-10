@@ -20,6 +20,9 @@ pub struct Locale {
     ///
     #[prost(bool, tag = "6")]
     pub is_daylight_time: bool,
+    ///
+    #[prost(bool, tag = "7")]
+    pub always_translate: bool,
 }
 impl ::prost::Name for Locale {
     const NAME: &'static str = "Locale";
