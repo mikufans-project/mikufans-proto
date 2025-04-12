@@ -55,6 +55,7 @@ impl ::prost::Name for MessagePullsReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod vega_deneb_rpc_client {
     #![allow(
         unused_variables,
@@ -168,6 +169,7 @@ pub mod vega_deneb_rpc_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod vega_deneb_rpc_server {
     #![allow(
         unused_variables,

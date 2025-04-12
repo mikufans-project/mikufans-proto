@@ -90,6 +90,7 @@ impl ::prost::Name for FavoriteTabReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod list_client {
     #![allow(
         unused_variables,
@@ -223,6 +224,7 @@ pub mod list_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod list_server {
     #![allow(
         unused_variables,

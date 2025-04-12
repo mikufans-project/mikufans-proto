@@ -1759,6 +1759,7 @@ impl ToastType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod im_gateway_api_client {
     #![allow(
         unused_variables,
@@ -2465,6 +2466,7 @@ pub mod im_gateway_api_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod im_gateway_api_server {
     #![allow(
         unused_variables,

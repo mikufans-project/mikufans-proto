@@ -250,6 +250,7 @@ impl ::prost::Name for ContractConfigReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod contract_client {
     #![allow(
         unused_variables,
@@ -417,6 +418,7 @@ pub mod contract_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod contract_server {
     #![allow(
         unused_variables,

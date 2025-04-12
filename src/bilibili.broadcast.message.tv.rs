@@ -551,6 +551,7 @@ impl ::prost::Name for PublicityNotify {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod tv_client {
     #![allow(
         unused_variables,
@@ -1059,6 +1060,7 @@ pub mod tv_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod tv_server {
     #![allow(
         unused_variables,

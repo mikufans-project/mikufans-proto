@@ -711,6 +711,7 @@ impl RecordType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod gallery_interface_client {
     #![allow(
         unused_variables,
@@ -1079,6 +1080,7 @@ pub mod gallery_interface_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod gallery_interface_server {
     #![allow(
         unused_variables,

@@ -199,6 +199,7 @@ impl PlType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod notify_client {
     #![allow(
         unused_variables,
@@ -312,6 +313,7 @@ pub mod notify_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod notify_server {
     #![allow(
         unused_variables,

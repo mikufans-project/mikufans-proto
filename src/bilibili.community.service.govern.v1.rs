@@ -125,6 +125,7 @@ impl ::prost::Name for QoeScoreResult {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod qoe_client {
     #![allow(
         unused_variables,
@@ -235,6 +236,7 @@ pub mod qoe_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod qoe_server {
     #![allow(
         unused_variables,

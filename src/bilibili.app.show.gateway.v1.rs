@@ -39,6 +39,7 @@ impl ::prost::Name for GetActProgressReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod app_show_client {
     #![allow(
         unused_variables,
@@ -152,6 +153,7 @@ pub mod app_show_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod app_show_server {
     #![allow(
         unused_variables,

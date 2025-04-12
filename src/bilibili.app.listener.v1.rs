@@ -3489,6 +3489,7 @@ impl TopCardType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod listener_client {
     #![allow(
         unused_variables,
@@ -4240,6 +4241,7 @@ pub mod listener_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod music_client {
     #![allow(
         unused_variables,
@@ -4498,6 +4500,7 @@ pub mod music_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod listener_server {
     #![allow(
         unused_variables,
@@ -5919,6 +5922,7 @@ pub mod listener_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod music_server {
     #![allow(
         unused_variables,

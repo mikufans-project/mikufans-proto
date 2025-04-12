@@ -567,6 +567,7 @@ impl LevelType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod legacy_resource_client {
     #![allow(
         unused_variables,
@@ -677,6 +678,7 @@ pub mod legacy_resource_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod module_client {
     #![allow(
         unused_variables,
@@ -782,6 +784,7 @@ pub mod module_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod legacy_resource_server {
     #![allow(
         unused_variables,
@@ -963,6 +966,7 @@ pub mod legacy_resource_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod module_server {
     #![allow(
         unused_variables,

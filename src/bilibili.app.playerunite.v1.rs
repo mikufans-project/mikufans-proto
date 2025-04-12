@@ -247,6 +247,7 @@ impl ResourceType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod player_client {
     #![allow(
         unused_variables,
@@ -417,6 +418,7 @@ pub mod player_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod player_server {
     #![allow(
         unused_variables,

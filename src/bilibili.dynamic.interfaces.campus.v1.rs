@@ -65,6 +65,7 @@ impl ActionType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod campus_client {
     #![allow(
         unused_variables,
@@ -178,6 +179,7 @@ pub mod campus_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod campus_server {
     #![allow(
         unused_variables,

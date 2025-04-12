@@ -61,6 +61,7 @@ impl AppEvent {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod b_group_client {
     #![allow(
         unused_variables,
@@ -171,6 +172,7 @@ pub mod b_group_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod b_group_server {
     #![allow(
         unused_variables,

@@ -193,6 +193,7 @@ impl ::prost::Name for VoteOptionInfo {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod vote_client {
     #![allow(
         unused_variables,
@@ -303,6 +304,7 @@ pub mod vote_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod vote_server {
     #![allow(
         unused_variables,

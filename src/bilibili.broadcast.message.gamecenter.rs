@@ -63,6 +63,7 @@ impl PushEvent {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod game_center_push_client {
     #![allow(
         unused_variables,
@@ -176,6 +177,7 @@ pub mod game_center_push_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod game_center_push_server {
     #![allow(
         unused_variables,

@@ -289,6 +289,7 @@ impl Stage {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod click_client {
     #![allow(
         unused_variables,
@@ -394,6 +395,7 @@ pub mod click_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod click_server {
     #![allow(
         unused_variables,

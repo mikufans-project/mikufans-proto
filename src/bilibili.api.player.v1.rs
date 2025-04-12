@@ -115,6 +115,7 @@ impl ::prost::Name for HeartbeatReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod heartbeat_client {
     #![allow(
         unused_variables,
@@ -220,6 +221,7 @@ pub mod heartbeat_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod heartbeat_server {
     #![allow(
         unused_variables,

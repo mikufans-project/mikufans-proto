@@ -2736,6 +2736,7 @@ impl SecurityLevel {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod play_url_client {
     #![allow(
         unused_variables,
@@ -2870,6 +2871,7 @@ pub mod play_url_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod play_url_server {
     #![allow(
         unused_variables,

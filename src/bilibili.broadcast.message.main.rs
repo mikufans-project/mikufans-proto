@@ -657,6 +657,7 @@ impl LikeState {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod native_page_client {
     #![allow(
         unused_variables,
@@ -770,6 +771,7 @@ pub mod native_page_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod resource_client {
     #![allow(
         unused_variables,
@@ -883,6 +885,7 @@ pub mod resource_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod search_client {
     #![allow(
         unused_variables,
@@ -996,6 +999,7 @@ pub mod search_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod native_page_server {
     #![allow(
         unused_variables,
@@ -1182,6 +1186,7 @@ pub mod native_page_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod resource_server {
     #![allow(
         unused_variables,
@@ -1368,6 +1373,7 @@ pub mod resource_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod search_server {
     #![allow(
         unused_variables,

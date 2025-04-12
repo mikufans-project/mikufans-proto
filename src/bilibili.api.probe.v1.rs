@@ -389,6 +389,7 @@ impl Category {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod probe_client {
     #![allow(
         unused_variables,
@@ -566,6 +567,7 @@ pub mod probe_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod probe_service_client {
     #![allow(
         unused_variables,
@@ -770,6 +772,7 @@ pub mod probe_service_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod probe_server {
     #![allow(
         unused_variables,
@@ -1111,6 +1114,7 @@ pub mod probe_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod probe_service_server {
     #![allow(
         unused_variables,

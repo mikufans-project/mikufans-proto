@@ -206,6 +206,7 @@ impl ::prost::Name for PopularResultReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod popular_client {
     #![allow(
         unused_variables,
@@ -313,6 +314,7 @@ pub mod popular_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod popular_server {
     #![allow(
         unused_variables,

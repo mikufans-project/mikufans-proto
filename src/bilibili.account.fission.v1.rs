@@ -129,6 +129,7 @@ impl ::prost::Name for WindowReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod fission_client {
     #![allow(
         unused_variables,
@@ -284,6 +285,7 @@ pub mod fission_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod fission_server {
     #![allow(
         unused_variables,

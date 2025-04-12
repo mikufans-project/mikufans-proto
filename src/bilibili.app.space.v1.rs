@@ -195,6 +195,7 @@ impl ::prost::Name for OrderConfig {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod space_client {
     #![allow(
         unused_variables,
@@ -300,6 +301,7 @@ pub mod space_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod space_server {
     #![allow(
         unused_variables,

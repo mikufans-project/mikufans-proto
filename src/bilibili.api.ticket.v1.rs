@@ -173,6 +173,7 @@ impl ::prost::Name for GetTicketResponse {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod ticket_client {
     #![allow(
         unused_variables,
@@ -308,6 +309,7 @@ pub mod ticket_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod ticket_server {
     #![allow(
         unused_variables,

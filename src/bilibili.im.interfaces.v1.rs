@@ -1531,6 +1531,7 @@ impl UpdateUnreadScope {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod im_interface_client {
     #![allow(
         unused_variables,
@@ -2577,6 +2578,7 @@ pub mod im_interface_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod im_interface_server {
     #![allow(
         unused_variables,

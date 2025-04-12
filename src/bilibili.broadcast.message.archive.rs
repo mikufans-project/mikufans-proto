@@ -20,6 +20,7 @@ impl ::prost::Name for VideoDataReply {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod video_up_client {
     #![allow(
         unused_variables,
@@ -133,6 +134,7 @@ pub mod video_up_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod video_up_server {
     #![allow(
         unused_variables,

@@ -819,6 +819,7 @@ impl ::prost::Name for WindowOptionsRsp {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod customer_interface_client {
     #![allow(
         unused_variables,
@@ -1406,6 +1407,7 @@ pub mod customer_interface_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod customer_interface_server {
     #![allow(
         unused_variables,

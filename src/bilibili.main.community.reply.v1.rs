@@ -4735,6 +4735,7 @@ impl UserCallbackScene {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod reply_client {
     #![allow(
         unused_variables,
@@ -5247,6 +5248,7 @@ pub mod reply_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod reply_server {
     #![allow(
         unused_variables,

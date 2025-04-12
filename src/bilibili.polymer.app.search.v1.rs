@@ -6984,6 +6984,7 @@ impl UserType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod search_client {
     #![allow(
         unused_variables,
@@ -7238,6 +7239,7 @@ pub mod search_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod search_server {
     #![allow(
         unused_variables,

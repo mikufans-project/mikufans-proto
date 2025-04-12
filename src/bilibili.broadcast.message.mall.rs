@@ -75,6 +75,7 @@ impl MsgType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod merchant_notify_client {
     #![allow(
         unused_variables,
@@ -188,6 +189,7 @@ pub mod merchant_notify_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod merchant_notify_server {
     #![allow(
         unused_variables,

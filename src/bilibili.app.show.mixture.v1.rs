@@ -652,6 +652,7 @@ impl RegionLimitCode {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod mixture_client {
     #![allow(
         unused_variables,
@@ -906,6 +907,7 @@ pub mod mixture_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod mixture_server {
     #![allow(
         unused_variables,

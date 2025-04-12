@@ -2530,6 +2530,7 @@ impl TopicTopCardType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod topic_client {
     #![allow(
         unused_variables,
@@ -2832,6 +2833,7 @@ pub mod topic_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod topic_server {
     #![allow(
         unused_variables,

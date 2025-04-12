@@ -125,6 +125,7 @@ impl ::prost::Name for UpdateNameReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod account_interface_v1_client {
     #![allow(
         unused_variables,
@@ -295,6 +296,7 @@ pub mod account_interface_v1_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod account_interface_v1_server {
     #![allow(
         unused_variables,

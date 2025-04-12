@@ -150,6 +150,7 @@ impl PrivacyConfigType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod privacy_client {
     #![allow(
         unused_variables,
@@ -290,6 +291,7 @@ pub mod privacy_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod privacy_server {
     #![allow(
         unused_variables,

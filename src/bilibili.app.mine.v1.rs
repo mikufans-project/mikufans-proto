@@ -629,6 +629,7 @@ impl OpusState {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod mine_client {
     #![allow(
         unused_variables,
@@ -756,6 +757,7 @@ pub mod mine_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod mine_server {
     #![allow(
         unused_variables,

@@ -1082,6 +1082,7 @@ impl LinkType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod broadcast_room_client {
     #![allow(
         unused_variables,
@@ -1190,6 +1191,7 @@ pub mod broadcast_room_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod laser_client {
     #![allow(
         unused_variables,
@@ -1300,6 +1302,7 @@ pub mod laser_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod mod_manager_client {
     #![allow(
         unused_variables,
@@ -1410,6 +1413,7 @@ pub mod mod_manager_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod push_client {
     #![allow(
         unused_variables,
@@ -1518,6 +1522,7 @@ pub mod push_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod test2_client {
     #![allow(
         unused_variables,
@@ -1623,6 +1628,7 @@ pub mod test2_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod broadcast_room_server {
     #![allow(
         unused_variables,
@@ -1810,6 +1816,7 @@ pub mod broadcast_room_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod laser_server {
     #![allow(
         unused_variables,
@@ -1996,6 +2003,7 @@ pub mod laser_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod mod_manager_server {
     #![allow(
         unused_variables,
@@ -2182,6 +2190,7 @@ pub mod mod_manager_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod push_server {
     #![allow(
         unused_variables,
@@ -2368,6 +2377,7 @@ pub mod push_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod test2_server {
     #![allow(
         unused_variables,

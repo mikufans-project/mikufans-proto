@@ -16423,6 +16423,7 @@ impl WeightType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod campus_client {
     #![allow(
         unused_variables,
@@ -16533,6 +16534,7 @@ pub mod campus_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod dynamic_client {
     #![allow(
         unused_variables,
@@ -18225,6 +18227,7 @@ pub mod dynamic_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod opus_client {
     #![allow(
         unused_variables,
@@ -18461,6 +18464,7 @@ pub mod opus_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod campus_server {
     #![allow(
         unused_variables,
@@ -18643,6 +18647,7 @@ pub mod campus_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod dynamic_server {
     #![allow(
         unused_variables,
@@ -21888,6 +21893,7 @@ pub mod dynamic_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod opus_server {
     #![allow(
         unused_variables,

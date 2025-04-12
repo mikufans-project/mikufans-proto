@@ -1,6 +1,9 @@
 #[allow(clippy::empty_docs)]
+#[cfg(feature = "datacenter")]
 pub mod datacenter {
+    #[cfg(feature = "datacenter_hakase")]
     pub mod hakase {
+        #[cfg(feature = "datacenter_hakase_protobuf")]
         pub mod protobuf {
             include!("datacenter.hakase.protobuf.rs");
         }
@@ -11,6 +14,7 @@ pub mod datacenter {
 #[allow(clippy::empty_docs)]
 mod generated;
 
+#[allow(unused_imports)]
 // re-export generated types
 pub use generated::*;
 

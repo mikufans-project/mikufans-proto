@@ -2766,6 +2766,7 @@ impl TabType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod history_client {
     #![allow(
         unused_variables,
@@ -3045,6 +3046,7 @@ pub mod history_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod media_client {
     #![allow(
         unused_variables,
@@ -3285,6 +3287,7 @@ pub mod media_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod search_client {
     #![allow(
         unused_variables,
@@ -3422,6 +3425,7 @@ pub mod search_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod search_test_client {
     #![allow(
         unused_variables,
@@ -3532,6 +3536,7 @@ pub mod search_test_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod space_client {
     #![allow(
         unused_variables,
@@ -3723,6 +3728,7 @@ pub mod space_client {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod teenagers_client {
     #![allow(
         unused_variables,
@@ -3971,6 +3977,7 @@ pub mod teenagers_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod history_server {
     #![allow(
         unused_variables,
@@ -4489,6 +4496,7 @@ pub mod history_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod media_server {
     #![allow(
         unused_variables,
@@ -4920,6 +4928,7 @@ pub mod media_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod search_server {
     #![allow(
         unused_variables,
@@ -5155,6 +5164,7 @@ pub mod search_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod search_test_server {
     #![allow(
         unused_variables,
@@ -5339,6 +5349,7 @@ pub mod search_test_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod space_server {
     #![allow(
         unused_variables,
@@ -5674,6 +5685,7 @@ pub mod space_server {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod teenagers_server {
     #![allow(
         unused_variables,

@@ -255,6 +255,7 @@ impl Act {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod relation_interface_client {
     #![allow(
         unused_variables,
@@ -395,6 +396,7 @@ pub mod relation_interface_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod relation_interface_server {
     #![allow(
         unused_variables,

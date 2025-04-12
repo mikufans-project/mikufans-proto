@@ -82,6 +82,7 @@ impl ::prost::Name for RulesReply {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod wall_client {
     #![allow(
         unused_variables,
@@ -187,6 +188,7 @@ pub mod wall_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod wall_server {
     #![allow(
         unused_variables,

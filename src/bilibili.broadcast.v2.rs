@@ -23,6 +23,7 @@ impl ::prost::Name for LaserEventResp {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod laser_client {
     #![allow(
         unused_variables,
@@ -131,6 +132,7 @@ pub mod laser_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod laser_server {
     #![allow(
         unused_variables,

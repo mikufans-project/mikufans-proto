@@ -1904,6 +1904,7 @@ impl UnionType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod view_client {
     #![allow(
         unused_variables,
@@ -2096,6 +2097,7 @@ pub mod view_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod view_server {
     #![allow(
         unused_variables,

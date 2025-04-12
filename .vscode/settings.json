@@ -1,0 +1,7 @@
+{
+    "rust-analyzer.cargo.features": [
+        "feat-all-proto",
+        "feat-enable-generated-server",
+        "feat-enable-generated-client",
+    ]
+}

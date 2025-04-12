@@ -89,6 +89,7 @@ impl ::prost::Name for UpStreamMessage {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod push_up_stream_client {
     #![allow(
         unused_variables,
@@ -199,6 +200,7 @@ pub mod push_up_stream_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod push_up_stream_server {
     #![allow(
         unused_variables,

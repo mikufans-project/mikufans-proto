@@ -2968,6 +2968,7 @@ impl ToastFunctionType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod dm_client {
     #![allow(
         unused_variables,
@@ -3207,6 +3208,7 @@ pub mod dm_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod dm_server {
     #![allow(
         unused_variables,

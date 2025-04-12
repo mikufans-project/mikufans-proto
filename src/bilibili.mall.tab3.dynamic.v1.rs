@@ -659,6 +659,7 @@ impl UpActReserveRelationLotteryType {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod opus_client {
     #![allow(
         unused_variables,
@@ -766,6 +767,7 @@ pub mod opus_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod opus_server {
     #![allow(
         unused_variables,

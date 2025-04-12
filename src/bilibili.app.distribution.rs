@@ -391,6 +391,7 @@ impl ::prost::Name for DefaultValue {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod distribution_client {
     #![allow(
         unused_variables,
@@ -564,6 +565,7 @@ pub mod distribution_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod distribution_server {
     #![allow(
         unused_variables,

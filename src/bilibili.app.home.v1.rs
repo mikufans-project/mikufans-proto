@@ -1176,6 +1176,7 @@ impl TopLeftGoto {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod home_client {
     #![allow(
         unused_variables,
@@ -1461,6 +1462,7 @@ pub mod home_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod home_server {
     #![allow(
         unused_variables,

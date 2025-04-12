@@ -2056,6 +2056,7 @@ impl ReserveButtonStatus {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod feed_client {
     #![allow(
         unused_variables,
@@ -3129,6 +3130,7 @@ pub mod feed_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod feed_server {
     #![allow(
         unused_variables,

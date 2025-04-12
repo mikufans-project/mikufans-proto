@@ -134,6 +134,7 @@ impl ::prost::Name for ReportWatchReq {
     }
 }
 /// Generated client implementations.
+#[cfg(feature = "feat-enable-generated-client")]
 pub mod player_online_client {
     #![allow(
         unused_variables,
@@ -304,6 +305,7 @@ pub mod player_online_client {
     }
 }
 /// Generated server implementations.
+#[cfg(feature = "feat-enable-generated-server")]
 pub mod player_online_server {
     #![allow(
         unused_variables,
