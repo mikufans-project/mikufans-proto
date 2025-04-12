@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.41.3+build.18365411"
+version = "8.41.0-rc.1+build.18365411"
 edition = "2021"
 rust-version = "1.75"             # same with tonic
 
@@ -12,6 +12,9 @@ keywords = ["mikufans"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/mikufans-project/mikufans-proto"
+
+[package.metadata.docs.rs]
+features = ["feat-all-proto", "feat-enable-generated-server", "feat-enable-generated-client"]
 
 [dependencies]
 prost = "0.13"
