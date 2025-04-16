@@ -629,6 +629,10 @@ pub mod bilibili {
                 }
             }
         }
+        #[cfg(feature = "bilibili_live_play_gateway")]
+        pub mod play_gateway {
+            include!("bilibili.live.play_gateway.rs");
+        }
         #[cfg(feature = "bilibili_live_rtc")]
         pub mod rtc {
             include!("bilibili.live.rtc.rs");

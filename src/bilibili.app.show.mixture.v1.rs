@@ -37,6 +37,42 @@ impl ::prost::Name for ChannelRedirectReq {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ClarityReply {
+    ///
+    #[prost(bool, tag = "1")]
+    pub is_play_story: bool,
+    ///
+    #[prost(bool, tag = "2")]
+    pub is_set_play_qn: bool,
+    ///
+    #[prost(int64, tag = "3")]
+    pub last_play_qn_value: i64,
+}
+impl ::prost::Name for ClarityReply {
+    const NAME: &'static str = "ClarityReply";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.ClarityReply".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.ClarityReply".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ClarityReq {}
+impl ::prost::Name for ClarityReq {
+    const NAME: &'static str = "ClarityReq";
+    const PACKAGE: &'static str = "bilibili.app.show.mixture.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.show.mixture.v1.ClarityReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.show.mixture.v1.ClarityReq".into()
+    }
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GuideCard {
     ///
@@ -764,6 +800,30 @@ pub mod mixture_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn clarity(
+            &mut self,
+            request: impl tonic::IntoRequest<super::ClarityReq>,
+        ) -> std::result::Result<tonic::Response<super::ClarityReply>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.show.mixture.v1.Mixture/Clarity",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.show.mixture.v1.Mixture", "Clarity"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn region_index(
             &mut self,
             request: impl tonic::IntoRequest<super::RegionIndexReq>,
@@ -929,6 +989,11 @@ pub mod mixture_server {
             tonic::Status,
         >;
         ///
+        async fn clarity(
+            &self,
+            request: tonic::Request<super::ClarityReq>,
+        ) -> std::result::Result<tonic::Response<super::ClarityReply>, tonic::Status>;
+        ///
         async fn region_index(
             &self,
             request: tonic::Request<super::RegionIndexReq>,
@@ -1070,6 +1135,49 @@ pub mod mixture_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = ChannelRedirectSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.show.mixture.v1.Mixture/Clarity" => {
+                    #[allow(non_camel_case_types)]
+                    struct ClaritySvc<T: Mixture>(pub Arc<T>);
+                    impl<T: Mixture> tonic::server::UnaryService<super::ClarityReq>
+                    for ClaritySvc<T> {
+                        type Response = super::ClarityReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::ClarityReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mixture>::clarity(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = ClaritySvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

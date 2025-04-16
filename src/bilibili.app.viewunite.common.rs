@@ -2773,6 +2773,9 @@ pub struct PugvPackageItem {
     ///
     #[prost(int64, tag = "8")]
     pub season_count: i64,
+    ///
+    #[prost(message, optional, tag = "9")]
+    pub sale_info: ::core::option::Option<PugvPackageSaleInfo>,
 }
 impl ::prost::Name for PugvPackageItem {
     const NAME: &'static str = "PugvPackageItem";
@@ -2782,6 +2785,26 @@ impl ::prost::Name for PugvPackageItem {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.PugvPackageItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PugvPackageSaleInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub icon_dark: ::prost::alloc::string::String,
+}
+impl ::prost::Name for PugvPackageSaleInfo {
+    const NAME: &'static str = "PugvPackageSaleInfo";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.PugvPackageSaleInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.PugvPackageSaleInfo".into()
     }
 }
 ///

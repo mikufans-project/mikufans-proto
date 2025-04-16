@@ -427,6 +427,9 @@ pub struct VersionReq {
     ///
     #[prost(int64, tag = "3")]
     pub r#type: i64,
+    ///
+    #[prost(bool, tag = "4")]
+    pub need_full: bool,
 }
 impl ::prost::Name for VersionReq {
     const NAME: &'static str = "VersionReq";

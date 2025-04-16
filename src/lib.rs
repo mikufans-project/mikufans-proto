@@ -19,10 +19,10 @@ mod generated;
 pub use generated::*;
 
 /// The version code.
-pub const TARGET_VERSION: &str = "8.41.0";
+pub const TARGET_VERSION: &str = "8.42.0";
 
 /// The version code number.
-pub const TARGET_VERSION_CODE: i32 = 8410300;
+pub const TARGET_VERSION_CODE: i32 = 8420400;
 
 /// The build serial number.
-pub const TARGET_BUILD_SN: i32 = 18365411;
+pub const TARGET_BUILD_SN: i32 = 18468623;

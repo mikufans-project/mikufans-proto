@@ -407,6 +407,9 @@ pub struct SendMsgExt {
     ///
     #[prost(string, tag = "4")]
     pub from_spmid: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub client_token: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SendMsgExt {
     const NAME: &'static str = "SendMsgExt";

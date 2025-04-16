@@ -358,6 +358,8 @@ pub enum FeatureFlag {
     FastPublish = 122,
     ///
     TextToAudio = 123,
+    ///
+    CloudDraft = 124,
 }
 impl FeatureFlag {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -464,6 +466,7 @@ impl FeatureFlag {
             Self::VideoClipCut => "VideoClipCut",
             Self::FastPublish => "FastPublish",
             Self::TextToAudio => "TextToAudio",
+            Self::CloudDraft => "CloudDraft",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -567,6 +570,7 @@ impl FeatureFlag {
             "VideoClipCut" => Some(Self::VideoClipCut),
             "FastPublish" => Some(Self::FastPublish),
             "TextToAudio" => Some(Self::TextToAudio),
+            "CloudDraft" => Some(Self::CloudDraft),
             _ => None,
         }
     }

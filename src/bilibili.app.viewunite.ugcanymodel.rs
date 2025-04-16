@@ -126,6 +126,9 @@ pub struct Experiment {
     ///
     #[prost(message, optional, tag = "2")]
     pub follow_guide: ::core::option::Option<FollowGuide>,
+    ///
+    #[prost(bool, tag = "3")]
+    pub tag_fold: bool,
 }
 impl ::prost::Name for Experiment {
     const NAME: &'static str = "Experiment";

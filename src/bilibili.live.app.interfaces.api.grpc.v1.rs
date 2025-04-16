@@ -18,6 +18,9 @@ pub struct GetMoreLiveRoomsReq {
     ///
     #[prost(int64, tag = "4")]
     pub uid: i64,
+    ///
+    #[prost(int64, tag = "5")]
+    pub fnval: i64,
 }
 impl ::prost::Name for GetMoreLiveRoomsReq {
     const NAME: &'static str = "GetMoreLiveRoomsReq";
@@ -76,6 +79,9 @@ pub struct GetViewHistoryReq {
     pub pagination: ::core::option::Option<
         super::super::super::super::super::super::pagination::Pagination,
     >,
+    ///
+    #[prost(int64, tag = "3")]
+    pub fnval: i64,
 }
 impl ::prost::Name for GetViewHistoryReq {
     const NAME: &'static str = "GetViewHistoryReq";

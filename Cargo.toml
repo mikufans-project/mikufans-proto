@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.41.0+build.18365411"
+version = "8.42.0-rc.1+build.18468623"
 edition = "2021"
 rust-version = "1.75"             # same with tonic
 
@@ -122,6 +122,7 @@ feat-all-proto = [
     "bilibili_live_app_interfaces_api_grpc_v1",
     "bilibili_live_app_room_v1",
     "bilibili_live_approom_api_grpc_v1",
+    "bilibili_live_play_gateway",
     "bilibili_live_rtc",
     "bilibili_live_rtc_datachannel",
     "bilibili_live_rtc_datachannel_report",
@@ -402,6 +403,7 @@ bilibili_live_approom = ["bilibili_live"]
 bilibili_live_approom_api = ["bilibili_live_approom"]
 bilibili_live_approom_api_grpc = ["bilibili_live_approom_api"]
 bilibili_live_approom_api_grpc_v1 = ["bilibili_live_approom_api_grpc"]
+bilibili_live_play_gateway = ["bilibili_live"]
 bilibili_live_rtc = ["bilibili_live"]
 bilibili_live_rtc_datachannel = ["bilibili_live_rtc", "bilibili_live_rtc_datachannel_report"]
 bilibili_live_rtc_datachannel_report = ["bilibili_live_rtc_datachannel"]
