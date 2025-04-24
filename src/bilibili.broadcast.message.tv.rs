@@ -131,6 +131,12 @@ pub struct DmLiveElem {
     ///
     #[prost(int32, tag = "12")]
     pub parent_area_id: i32,
+    ///
+    #[prost(int32, tag = "13")]
+    pub dm_type: i32,
+    ///
+    #[prost(string, tag = "14")]
+    pub id_str: ::prost::alloc::string::String,
 }
 impl ::prost::Name for DmLiveElem {
     const NAME: &'static str = "DmLiveElem";

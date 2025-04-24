@@ -1316,6 +1316,12 @@ pub struct RelatesFeedReq {
     ///
     #[prost(string, tag = "12")]
     pub ad_extra: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "13")]
+    pub tab_category: i64,
+    ///
+    #[prost(string, tag = "14")]
+    pub tab_category_name: ::prost::alloc::string::String,
 }
 impl ::prost::Name for RelatesFeedReq {
     const NAME: &'static str = "RelatesFeedReq";

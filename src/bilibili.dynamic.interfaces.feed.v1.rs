@@ -933,6 +933,9 @@ pub struct GetEditDynInfoRsp {
     ///
     #[prost(message, optional, tag = "14")]
     pub commercial: ::core::option::Option<CreatePageCommercialInfo>,
+    ///
+    #[prost(int64, tag = "17")]
+    pub dyn_type: i64,
 }
 impl ::prost::Name for GetEditDynInfoRsp {
     const NAME: &'static str = "GetEditDynInfoRsp";

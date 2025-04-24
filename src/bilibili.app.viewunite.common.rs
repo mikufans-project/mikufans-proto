@@ -3754,7 +3754,7 @@ pub struct RelateCard {
     ///
     #[prost(
         oneof = "relate_card::Card",
-        tags = "2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16"
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16, 17"
     )]
     pub card: ::core::option::Option<relate_card::Card>,
 }
@@ -3799,6 +3799,9 @@ pub mod relate_card {
         ///
         #[prost(message, tag = "16")]
         MiniProgram(::prost::alloc::boxed::Box<super::RelateMiniProgramCard>),
+        ///
+        #[prost(message, tag = "17")]
+        HistoryAv(::prost::alloc::boxed::Box<super::RelateHistoryAvCard>),
     }
 }
 impl ::prost::Name for RelateCard {
@@ -3826,6 +3829,9 @@ pub struct RelateConfig {
     ///
     #[prost(bool, tag = "4")]
     pub can_load_more: bool,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub dimension: ::core::option::Option<CoverDimension>,
 }
 impl ::prost::Name for RelateConfig {
     const NAME: &'static str = "RelateConfig";
@@ -3959,6 +3965,32 @@ impl ::prost::Name for RelateGameCard {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RelateHistoryAvCard {
+    ///
+    #[prost(int64, tag = "1")]
+    pub duration: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub progress: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub unix: i64,
+    ///
+    #[prost(string, tag = "4")]
+    pub icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RelateHistoryAvCard {
+    const NAME: &'static str = "RelateHistoryAVCard";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.RelateHistoryAVCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.RelateHistoryAVCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RelateItem {
     ///
     #[prost(string, tag = "1")]
@@ -4060,6 +4092,26 @@ impl ::prost::Name for RelateSpecial {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RelateTab {
+    ///
+    #[prost(int64, tag = "1")]
+    pub tab_category: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for RelateTab {
+    const NAME: &'static str = "RelateTab";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.RelateTab".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.RelateTab".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RelateThreePoint {
     ///
     #[prost(message, optional, tag = "1")]
@@ -4128,6 +4180,9 @@ pub struct Relates {
     ///
     #[prost(message, optional, tag = "2")]
     pub config: ::core::option::Option<RelateConfig>,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub tab: ::prost::alloc::vec::Vec<RelateTab>,
 }
 impl ::prost::Name for Relates {
     const NAME: &'static str = "Relates";
@@ -6440,6 +6495,8 @@ pub enum RelateCardType {
     Course = 11,
     ///
     MiniProgram = 12,
+    ///
+    HistoryAv = 13,
 }
 impl RelateCardType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -6461,6 +6518,7 @@ impl RelateCardType {
             Self::Special => "SPECIAL",
             Self::Course => "COURSE",
             Self::MiniProgram => "MINI_PROGRAM",
+            Self::HistoryAv => "HISTORY_AV",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -6479,6 +6537,7 @@ impl RelateCardType {
             "SPECIAL" => Some(Self::Special),
             "COURSE" => Some(Self::Course),
             "MINI_PROGRAM" => Some(Self::MiniProgram),
+            "HISTORY_AV" => Some(Self::HistoryAv),
             _ => None,
         }
     }

@@ -1022,6 +1022,29 @@ impl ::prost::Name for DmPlayerConfigReq {
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct DmSegCacheReq {
+    ///
+    #[prost(int32, tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(int64, tag = "2")]
+    pub oid: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub pid: i64,
+}
+impl ::prost::Name for DmSegCacheReq {
+    const NAME: &'static str = "DmSegCacheReq";
+    const PACKAGE: &'static str = "bilibili.community.service.dm.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.service.dm.v1.DmSegCacheReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.service.dm.v1.DmSegCacheReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct DmSegConfig {
     ///
     #[prost(int64, tag = "1")]
@@ -3107,6 +3130,33 @@ pub mod dm_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn dm_seg_cache(
+            &mut self,
+            request: impl tonic::IntoRequest<super::DmSegCacheReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DmSegMobileReply>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.community.service.dm.v1.DM/DmSegCache",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.community.service.dm.v1.DM", "DmSegCache"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn dm_seg_mobile(
             &mut self,
             request: impl tonic::IntoRequest<super::DmSegMobileReq>,
@@ -3231,6 +3281,14 @@ pub mod dm_server {
             &self,
             request: tonic::Request<super::DmPlayerConfigReq>,
         ) -> std::result::Result<tonic::Response<super::Response>, tonic::Status>;
+        ///
+        async fn dm_seg_cache(
+            &self,
+            request: tonic::Request<super::DmSegCacheReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DmSegMobileReply>,
+            tonic::Status,
+        >;
         ///
         async fn dm_seg_mobile(
             &self,
@@ -3403,6 +3461,49 @@ pub mod dm_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = DmPlayerConfigSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.community.service.dm.v1.DM/DmSegCache" => {
+                    #[allow(non_camel_case_types)]
+                    struct DmSegCacheSvc<T: Dm>(pub Arc<T>);
+                    impl<T: Dm> tonic::server::UnaryService<super::DmSegCacheReq>
+                    for DmSegCacheSvc<T> {
+                        type Response = super::DmSegMobileReply;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::DmSegCacheReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Dm>::dm_seg_cache(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = DmSegCacheSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

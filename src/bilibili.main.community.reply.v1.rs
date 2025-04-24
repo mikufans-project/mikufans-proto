@@ -415,6 +415,41 @@ pub struct DetailListReply {
     ///
     #[prost(string, tag = "9")]
     pub session_id: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "10")]
+    pub subject_title: ::core::option::Option<detail_list_reply::SubjectTitle>,
+}
+/// Nested message and enum types in `DetailListReply`.
+pub mod detail_list_reply {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct SubjectTitle {
+        ///
+        #[prost(string, tag = "1")]
+        pub left_icon: ::prost::alloc::string::String,
+        ///
+        #[prost(string, tag = "2")]
+        pub title: ::prost::alloc::string::String,
+        ///
+        #[prost(string, tag = "3")]
+        pub link: ::prost::alloc::string::String,
+        ///
+        #[prost(int64, tag = "4")]
+        pub rpid_mute: i64,
+        ///
+        #[prost(enumeration = "super::ReplyNotificationSwitch", tag = "5")]
+        pub push_switch: i32,
+    }
+    impl ::prost::Name for SubjectTitle {
+        const NAME: &'static str = "SubjectTitle";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.DetailListReply.SubjectTitle".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.DetailListReply.SubjectTitle".into()
+        }
+    }
 }
 impl ::prost::Name for DetailListReply {
     const NAME: &'static str = "DetailListReply";
@@ -461,6 +496,9 @@ pub struct DetailListReq {
     ///
     #[prost(string, tag = "10")]
     pub ad_extra: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "11")]
+    pub need_subject_title: bool,
 }
 impl ::prost::Name for DetailListReq {
     const NAME: &'static str = "DetailListReq";
@@ -3033,6 +3071,213 @@ impl ::prost::Name for ReplyExtra {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ReplyInAppPushPayload {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub reply: ::core::option::Option<reply_in_app_push_payload::Reply>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub parent_reply: ::core::option::Option<reply_in_app_push_payload::Reply>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub subject: ::core::option::Option<reply_in_app_push_payload::Subject>,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub subject_material: ::core::option::Option<
+        reply_in_app_push_payload::SubjectMaterial,
+    >,
+}
+/// Nested message and enum types in `ReplyInAppPushPayload`.
+pub mod reply_in_app_push_payload {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct Content {
+        ///
+        #[prost(string, tag = "1")]
+        pub message: ::prost::alloc::string::String,
+        ///
+        #[prost(map = "string, message", tag = "2")]
+        pub emotes: ::std::collections::HashMap<
+            ::prost::alloc::string::String,
+            super::Emote,
+        >,
+        ///
+        #[prost(map = "string, int64", tag = "3")]
+        pub at_name_to_mid: ::std::collections::HashMap<
+            ::prost::alloc::string::String,
+            i64,
+        >,
+        ///
+        #[prost(message, repeated, tag = "4")]
+        pub pictures: ::prost::alloc::vec::Vec<super::Picture>,
+    }
+    impl ::prost::Name for Content {
+        const NAME: &'static str = "Content";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.ReplyInAppPushPayload.Content".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.Content".into()
+        }
+    }
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct Member {
+        ///
+        #[prost(int64, tag = "1")]
+        pub mid: i64,
+        ///
+        #[prost(string, tag = "2")]
+        pub name: ::prost::alloc::string::String,
+        ///
+        #[prost(string, tag = "3")]
+        pub face: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Member {
+        const NAME: &'static str = "Member";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.ReplyInAppPushPayload.Member".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.Member".into()
+        }
+    }
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct Reply {
+        ///
+        #[prost(int64, tag = "1")]
+        pub id: i64,
+        ///
+        #[prost(int64, tag = "2")]
+        pub r#type: i64,
+        ///
+        #[prost(int64, tag = "3")]
+        pub oid: i64,
+        ///
+        #[prost(int64, tag = "4")]
+        pub mid: i64,
+        ///
+        #[prost(int64, tag = "5")]
+        pub root: i64,
+        ///
+        #[prost(int64, tag = "6")]
+        pub parent: i64,
+        ///
+        #[prost(int64, tag = "7")]
+        pub dialog: i64,
+        ///
+        #[prost(int64, tag = "8")]
+        pub ctime: i64,
+        ///
+        #[prost(message, optional, tag = "9")]
+        pub content: ::core::option::Option<Content>,
+        ///
+        #[prost(message, optional, tag = "10")]
+        pub member: ::core::option::Option<Member>,
+    }
+    impl ::prost::Name for Reply {
+        const NAME: &'static str = "Reply";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.ReplyInAppPushPayload.Reply".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.Reply".into()
+        }
+    }
+    ///
+    #[derive(Clone, Copy, PartialEq, ::prost::Message)]
+    pub struct Subject {
+        ///
+        #[prost(int64, tag = "1")]
+        pub r#type: i64,
+        ///
+        #[prost(int64, tag = "2")]
+        pub oid: i64,
+        ///
+        #[prost(int64, tag = "3")]
+        pub up_mid: i64,
+    }
+    impl ::prost::Name for Subject {
+        const NAME: &'static str = "Subject";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.ReplyInAppPushPayload.Subject".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.Subject".into()
+        }
+    }
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct SubjectMaterial {
+        ///
+        #[prost(oneof = "subject_material::Item", tags = "1")]
+        pub item: ::core::option::Option<subject_material::Item>,
+    }
+    /// Nested message and enum types in `SubjectMaterial`.
+    pub mod subject_material {
+        ///
+        #[derive(Clone, PartialEq, ::prost::Message)]
+        pub struct Archive {
+            ///
+            #[prost(int64, tag = "1")]
+            pub aid: i64,
+            ///
+            #[prost(string, tag = "2")]
+            pub title: ::prost::alloc::string::String,
+            ///
+            #[prost(string, tag = "3")]
+            pub cover: ::prost::alloc::string::String,
+        }
+        impl ::prost::Name for Archive {
+            const NAME: &'static str = "Archive";
+            const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+            fn full_name() -> ::prost::alloc::string::String {
+                "bilibili.main.community.reply.v1.ReplyInAppPushPayload.SubjectMaterial.Archive"
+                    .into()
+            }
+            fn type_url() -> ::prost::alloc::string::String {
+                "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.SubjectMaterial.Archive"
+                    .into()
+            }
+        }
+        ///
+        #[derive(Clone, PartialEq, ::prost::Oneof)]
+        pub enum Item {
+            ///
+            #[prost(message, tag = "1")]
+            Arc(Archive),
+        }
+    }
+    impl ::prost::Name for SubjectMaterial {
+        const NAME: &'static str = "SubjectMaterial";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v1.ReplyInAppPushPayload.SubjectMaterial"
+                .into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v1.ReplyInAppPushPayload.SubjectMaterial"
+                .into()
+        }
+    }
+}
+impl ::prost::Name for ReplyInAppPushPayload {
+    const NAME: &'static str = "ReplyInAppPushPayload";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.ReplyInAppPushPayload".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.ReplyInAppPushPayload".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ReplyInfo {
     ///
     #[prost(message, repeated, tag = "1")]
@@ -4153,6 +4398,46 @@ impl ::prost::Name for UpSelection {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct UpdateSingleReplyNotificationConfigReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub rpid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub r#type: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub oid: i64,
+    ///
+    #[prost(enumeration = "ReplyNotificationSwitch", tag = "4")]
+    pub push_switch: i32,
+}
+impl ::prost::Name for UpdateSingleReplyNotificationConfigReq {
+    const NAME: &'static str = "UpdateSingleReplyNotificationConfigReq";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.UpdateSingleReplyNotificationConfigReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.UpdateSingleReplyNotificationConfigReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct UpdateSingleReplyNotificationConfigResp {}
+impl ::prost::Name for UpdateSingleReplyNotificationConfigResp {
+    const NAME: &'static str = "UpdateSingleReplyNotificationConfigResp";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.UpdateSingleReplyNotificationConfigResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.UpdateSingleReplyNotificationConfigResp"
+            .into()
+    }
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Url {
     ///
@@ -4610,6 +4895,39 @@ impl Mode {
             "UNSPECIFIED" => Some(Self::Unspecified),
             "MAIN_LIST_TIME" => Some(Self::MainListTime),
             "MAIN_LIST_HOT" => Some(Self::MainListHot),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum ReplyNotificationSwitch {
+    ///
+    Unspecified = 0,
+    ///
+    Off = 1,
+    ///
+    On = 2,
+}
+impl ReplyNotificationSwitch {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unspecified => "ReplyNotificationSwitch_UNSPECIFIED",
+            Self::Off => "ReplyNotificationSwitch_OFF",
+            Self::On => "ReplyNotificationSwitch_ON",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "ReplyNotificationSwitch_UNSPECIFIED" => Some(Self::Unspecified),
+            "ReplyNotificationSwitch_OFF" => Some(Self::Off),
+            "ReplyNotificationSwitch_ON" => Some(Self::On),
             _ => None,
         }
     }
@@ -5216,6 +5534,38 @@ pub mod reply_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn update_single_reply_notification_config(
+            &mut self,
+            request: impl tonic::IntoRequest<
+                super::UpdateSingleReplyNotificationConfigReq,
+            >,
+        ) -> std::result::Result<
+            tonic::Response<super::UpdateSingleReplyNotificationConfigResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.main.community.reply.v1.Reply/UpdateSingleReplyNotificationConfig",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.main.community.reply.v1.Reply",
+                        "UpdateSingleReplyNotificationConfig",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn user_callback(
             &mut self,
             request: impl tonic::IntoRequest<super::UserCallbackReq>,
@@ -5347,6 +5697,14 @@ pub mod reply_server {
             request: tonic::Request<super::SuggestEmotesReq>,
         ) -> std::result::Result<
             tonic::Response<super::SuggestEmotesResp>,
+            tonic::Status,
+        >;
+        ///
+        async fn update_single_reply_notification_config(
+            &self,
+            request: tonic::Request<super::UpdateSingleReplyNotificationConfigReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::UpdateSingleReplyNotificationConfigResp>,
             tonic::Status,
         >;
         ///
@@ -6028,6 +6386,58 @@ pub mod reply_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = SuggestEmotesSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.main.community.reply.v1.Reply/UpdateSingleReplyNotificationConfig" => {
+                    #[allow(non_camel_case_types)]
+                    struct UpdateSingleReplyNotificationConfigSvc<T: Reply>(pub Arc<T>);
+                    impl<
+                        T: Reply,
+                    > tonic::server::UnaryService<
+                        super::UpdateSingleReplyNotificationConfigReq,
+                    > for UpdateSingleReplyNotificationConfigSvc<T> {
+                        type Response = super::UpdateSingleReplyNotificationConfigResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<
+                                super::UpdateSingleReplyNotificationConfigReq,
+                            >,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Reply>::update_single_reply_notification_config(
+                                        &inner,
+                                        request,
+                                    )
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = UpdateSingleReplyNotificationConfigSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
