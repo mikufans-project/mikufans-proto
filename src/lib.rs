@@ -22,7 +22,7 @@ pub use generated::*;
 pub const TARGET_VERSION: &str = "8.43.0";
 
 /// The version code number.
-pub const TARGET_VERSION_CODE: i32 = 8430100;
+pub const TARGET_VERSION_CODE: i32 = 8430300;
 
 /// The build serial number.
-pub const TARGET_BUILD_SN: i32 = 18565048;
+pub const TARGET_BUILD_SN: i32 = 18619313;
