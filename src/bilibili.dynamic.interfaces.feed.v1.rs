@@ -936,6 +936,9 @@ pub struct GetEditDynInfoRsp {
     ///
     #[prost(int64, tag = "17")]
     pub dyn_type: i64,
+    ///
+    #[prost(int32, tag = "18")]
+    pub pic_mode: i32,
 }
 impl ::prost::Name for GetEditDynInfoRsp {
     const NAME: &'static str = "GetEditDynInfoRsp";

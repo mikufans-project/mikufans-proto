@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.43.0+build.18619313"
+version = "8.44.0-rc.1+build.18746132"
 edition = "2021"
 rust-version = "1.75"             # same with tonic
 
@@ -64,6 +64,7 @@ feat-all-proto = [
     "bilibili_app_playurl_v1",
     "bilibili_app_resource_privacy_v1",
     "bilibili_app_resource_v1",
+    "bilibili_app_search_deepsearch_v1",
     "bilibili_app_search_v2",
     "bilibili_app_show_gateway_v1",
     "bilibili_app_show_mixture_v1",
@@ -88,6 +89,7 @@ feat-all-proto = [
     "bilibili_broadcast_live_voice_room",
     "bilibili_broadcast_message_archive",
     "bilibili_broadcast_message_bgroup",
+    "bilibili_broadcast_message_deepsearch",
     "bilibili_broadcast_message_gamecenter",
     "bilibili_broadcast_message_im",
     "bilibili_broadcast_message_main",
@@ -257,6 +259,8 @@ bilibili_app_resource_privacy = ["bilibili_app_resource"]
 bilibili_app_resource_privacy_v1 = ["bilibili_app_resource_privacy"]
 bilibili_app_resource_v1 = ["bilibili_app_resource"]
 bilibili_app_search = ["bilibili_app"]
+bilibili_app_search_deepsearch = ["bilibili_app_search"]
+bilibili_app_search_deepsearch_v1 = ["bilibili_app_search_deepsearch"]
 bilibili_app_search_v2 = ["bilibili_app_search", "bilibili_app_dynamic_v2", "bilibili_broadcast_message_main"]
 bilibili_app_show = ["bilibili_app"]
 bilibili_app_show_gateway = ["bilibili_app_show"]
@@ -329,6 +333,7 @@ bilibili_broadcast_live_voice_room = ["bilibili_broadcast_live"]
 bilibili_broadcast_message = ["bilibili_broadcast"]
 bilibili_broadcast_message_archive = ["bilibili_broadcast_message"]
 bilibili_broadcast_message_bgroup = ["bilibili_broadcast_message"]
+bilibili_broadcast_message_deepsearch = ["bilibili_broadcast_message"]
 bilibili_broadcast_message_gamecenter = ["bilibili_broadcast_message"]
 bilibili_broadcast_message_im = ["bilibili_broadcast_message"]
 bilibili_broadcast_message_main = ["bilibili_broadcast_message", "bilibili_app_dynamic_v2"]

@@ -302,6 +302,9 @@ pub struct Coupon {
     ///
     #[prost(string, tag = "12")]
     pub amount: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "RedemptionMode", tag = "13")]
+    pub redemption_mode: i32,
 }
 impl ::prost::Name for Coupon {
     const NAME: &'static str = "Coupon";
@@ -2694,6 +2697,39 @@ impl PromptBarType {
             "PROMPT_BAR_TYPE_UNKNOWN" => Some(Self::Unknown),
             "OPEN_PROMPT_BAR" => Some(Self::OpenPromptBar),
             "TRY_PROMPT_BAR" => Some(Self::TryPromptBar),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum RedemptionMode {
+    ///
+    Unknown = 0,
+    ///
+    Exchange = 1,
+    ///
+    Payment = 2,
+}
+impl RedemptionMode {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unknown => "REDEMPTION_MODE_UNKNOWN",
+            Self::Exchange => "EXCHANGE",
+            Self::Payment => "PAYMENT",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "REDEMPTION_MODE_UNKNOWN" => Some(Self::Unknown),
+            "EXCHANGE" => Some(Self::Exchange),
+            "PAYMENT" => Some(Self::Payment),
             _ => None,
         }
     }

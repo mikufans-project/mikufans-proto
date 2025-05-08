@@ -3313,6 +3313,8 @@ pub enum OpusBizType {
     ArticleGoods = 35,
     ///
     ArticleTag = 36,
+    ///
+    NickName = 37,
 }
 impl OpusBizType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3358,6 +3360,7 @@ impl OpusBizType {
             Self::OgvFollowCard => "OGV_FOLLOW_CARD",
             Self::ArticleGoods => "ARTICLE_GOODS",
             Self::ArticleTag => "ARTICLE_TAG",
+            Self::NickName => "NICK_NAME",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3400,6 +3403,7 @@ impl OpusBizType {
             "OGV_FOLLOW_CARD" => Some(Self::OgvFollowCard),
             "ARTICLE_GOODS" => Some(Self::ArticleGoods),
             "ARTICLE_TAG" => Some(Self::ArticleTag),
+            "NICK_NAME" => Some(Self::NickName),
             _ => None,
         }
     }

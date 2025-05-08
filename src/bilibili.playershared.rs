@@ -3564,6 +3564,8 @@ pub enum ToastType {
     NewUserDefinitionRemind = 8,
     ///
     VipRiskToast = 9,
+    ///
+    PremiumExtraDropsToast = 10,
 }
 impl ToastType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3582,6 +3584,7 @@ impl ToastType {
             Self::VipAiFixDefinitionRemind => "VIP_AI_FIX_DEFINITION_REMIND",
             Self::NewUserDefinitionRemind => "NEW_USER_DEFINITION_REMIND",
             Self::VipRiskToast => "VIP_RISK_TOAST",
+            Self::PremiumExtraDropsToast => "PREMIUM_EXTRA_DROPS_TOAST",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3597,6 +3600,7 @@ impl ToastType {
             "VIP_AI_FIX_DEFINITION_REMIND" => Some(Self::VipAiFixDefinitionRemind),
             "NEW_USER_DEFINITION_REMIND" => Some(Self::NewUserDefinitionRemind),
             "VIP_RISK_TOAST" => Some(Self::VipRiskToast),
+            "PREMIUM_EXTRA_DROPS_TOAST" => Some(Self::PremiumExtraDropsToast),
             _ => None,
         }
     }

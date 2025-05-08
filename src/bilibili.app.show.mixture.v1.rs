@@ -503,6 +503,9 @@ pub struct WidgetGuideReq {
     ///
     #[prost(enumeration = "GuideType", tag = "2")]
     pub guide_type: i32,
+    ///
+    #[prost(int64, tag = "3")]
+    pub up_mid: i64,
 }
 impl ::prost::Name for WidgetGuideReq {
     const NAME: &'static str = "WidgetGuideReq";

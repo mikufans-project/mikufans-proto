@@ -2529,6 +2529,38 @@ impl ::prost::Name for ChannelInfo {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ClickBubble {
+    ///
+    #[prost(string, tag = "1")]
+    pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub button: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "LinkNodeBubbleType", tag = "5")]
+    pub bubble_type: i32,
+    ///
+    #[prost(string, tag = "6")]
+    pub biz_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ClickBubble {
+    const NAME: &'static str = "ClickBubble";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.ClickBubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.ClickBubble".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CmtShowItem {
     ///
     #[prost(int64, tag = "1")]
@@ -5894,6 +5926,15 @@ pub struct LinkNode {
     ///
     #[prost(message, optional, tag = "12")]
     pub link_pics: ::core::option::Option<MdlDynDraw>,
+    ///
+    #[prost(message, optional, tag = "13")]
+    pub link_click_bubble: ::core::option::Option<ClickBubble>,
+    ///
+    #[prost(enumeration = "LinkNodeShowType", tag = "14")]
+    pub show_type: i32,
+    ///
+    #[prost(message, repeated, tag = "15")]
+    pub show_rich: ::prost::alloc::vec::Vec<LinkNodeRich>,
 }
 impl ::prost::Name for LinkNode {
     const NAME: &'static str = "LinkNode";
@@ -5903,6 +5944,36 @@ impl ::prost::Name for LinkNode {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.LinkNode".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct LinkNodeRich {
+    ///
+    #[prost(oneof = "link_node_rich::Content", tags = "1, 2")]
+    pub content: ::core::option::Option<link_node_rich::Content>,
+}
+/// Nested message and enum types in `LinkNodeRich`.
+pub mod link_node_rich {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Content {
+        ///
+        #[prost(message, tag = "1")]
+        Text(super::WordNode),
+        ///
+        #[prost(message, tag = "2")]
+        Emote(super::EmoteNode),
+    }
+}
+impl ::prost::Name for LinkNodeRich {
+    const NAME: &'static str = "LinkNodeRich";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.LinkNodeRich".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.LinkNodeRich".into()
     }
 }
 ///
@@ -10001,6 +10072,9 @@ pub mod paragraph {
         ///
         #[prost(message, optional, tag = "2")]
         pub list_format: ::core::option::Option<ListFormat>,
+        ///
+        #[prost(int32, tag = "3")]
+        pub max_lines: i32,
     }
     impl ::prost::Name for ParagraphFormat {
         const NAME: &'static str = "ParagraphFormat";
@@ -14789,6 +14863,64 @@ impl LightFromType {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum LinkNodeBubbleType {
+    ///
+    BubbleVideo = 0,
+    ///
+    BubbleComment = 1,
+}
+impl LinkNodeBubbleType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::BubbleVideo => "BUBBLE_VIDEO",
+            Self::BubbleComment => "BUBBLE_COMMENT",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "BUBBLE_VIDEO" => Some(Self::BubbleVideo),
+            "BUBBLE_COMMENT" => Some(Self::BubbleComment),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum LinkNodeShowType {
+    ///
+    PlainText = 0,
+    ///
+    RichText = 1,
+}
+impl LinkNodeShowType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::PlainText => "PLAIN_TEXT",
+            Self::RichText => "RICH_TEXT",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "PLAIN_TEXT" => Some(Self::PlainText),
+            "RICH_TEXT" => Some(Self::RichText),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum LinkNodeType {
     ///
     Invalid = 0,
@@ -14864,6 +14996,8 @@ pub enum LinkNodeType {
     ArticleGoods = 35,
     ///
     ArticleTag = 36,
+    ///
+    NickName = 37,
 }
 impl LinkNodeType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -14909,6 +15043,7 @@ impl LinkNodeType {
             Self::OgvFollowCard => "OGV_FOLLOW_CARD",
             Self::ArticleGoods => "ARTICLE_GOODS",
             Self::ArticleTag => "ARTICLE_TAG",
+            Self::NickName => "NICK_NAME",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -14951,6 +15086,7 @@ impl LinkNodeType {
             "OGV_FOLLOW_CARD" => Some(Self::OgvFollowCard),
             "ARTICLE_GOODS" => Some(Self::ArticleGoods),
             "ARTICLE_TAG" => Some(Self::ArticleTag),
+            "NICK_NAME" => Some(Self::NickName),
             _ => None,
         }
     }

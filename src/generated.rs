@@ -243,6 +243,13 @@ pub mod bilibili {
         }
         #[cfg(feature = "bilibili_app_search")]
         pub mod search {
+            #[cfg(feature = "bilibili_app_search_deepsearch")]
+            pub mod deepsearch {
+                #[cfg(feature = "bilibili_app_search_deepsearch_v1")]
+                pub mod v1 {
+                    include!("bilibili.app.search.deepsearch.v1.rs");
+                }
+            }
             #[cfg(feature = "bilibili_app_search_v2")]
             pub mod v2 {
                 include!("bilibili.app.search.v2.rs");
@@ -383,6 +390,10 @@ pub mod bilibili {
             #[cfg(feature = "bilibili_broadcast_message_bgroup")]
             pub mod bgroup {
                 include!("bilibili.broadcast.message.bgroup.rs");
+            }
+            #[cfg(feature = "bilibili_broadcast_message_deepsearch")]
+            pub mod deepsearch {
+                include!("bilibili.broadcast.message.deepsearch.rs");
             }
             #[cfg(feature = "bilibili_broadcast_message_gamecenter")]
             pub mod gamecenter {

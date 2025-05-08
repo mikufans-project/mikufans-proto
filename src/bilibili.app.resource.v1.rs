@@ -291,6 +291,9 @@ pub struct ModuleReply {
     ///
     #[prost(int64, tag = "25")]
     pub weight: i64,
+    ///
+    #[prost(int64, tag = "26")]
+    pub source_version: i64,
 }
 impl ::prost::Name for ModuleReply {
     const NAME: &'static str = "ModuleReply";

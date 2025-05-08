@@ -91,6 +91,12 @@ pub struct AvItem {
     ///
     #[prost(bool, tag = "16")]
     pub is_inline: bool,
+    ///
+    #[prost(message, optional, tag = "17")]
+    pub cover_badge: ::core::option::Option<ReasonStyle>,
+    ///
+    #[prost(int32, tag = "18")]
+    pub is_iaa_video: i32,
 }
 impl ::prost::Name for AvItem {
     const NAME: &'static str = "AvItem";
@@ -1351,7 +1357,7 @@ pub struct Item {
     ///
     #[prost(
         oneof = "item::CardItem",
-        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64, 65"
+        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64, 65, 66"
     )]
     pub card_item: ::core::option::Option<item::CardItem>,
 }
@@ -1531,6 +1537,9 @@ pub mod item {
         ///
         #[prost(message, tag = "65")]
         OgvClusterCard(::prost::alloc::boxed::Box<super::SearchOgvClusterCard>),
+        ///
+        #[prost(message, tag = "66")]
+        DigitalChat(super::SearchDigitalChatCard),
     }
 }
 impl ::prost::Name for Item {
@@ -3509,6 +3518,26 @@ impl ::prost::Name for SearchCommentClusterCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchCommentClusterCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchDigitalChatCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub watch_button: ::core::option::Option<WatchButton>,
+}
+impl ::prost::Name for SearchDigitalChatCard {
+    const NAME: &'static str = "SearchDigitalChatCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchDigitalChatCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchDigitalChatCard".into()
     }
 }
 ///
@@ -5763,6 +5792,12 @@ pub struct SearchVideoCard {
     ///
     #[prost(string, repeated, tag = "30")]
     pub highlight_tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    ///
+    #[prost(message, optional, tag = "31")]
+    pub cover_badge: ::core::option::Option<ReasonStyle>,
+    ///
+    #[prost(message, optional, tag = "32")]
+    pub short_ogv_info: ::core::option::Option<ShortOgvInfo>,
 }
 impl ::prost::Name for SearchVideoCard {
     const NAME: &'static str = "SearchVideoCard";
@@ -5939,6 +5974,29 @@ impl ::prost::Name for ShareTo {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.ShareTo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ShortOgvInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub app_id: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "2")]
+    pub season_id: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub episode_id: i64,
+}
+impl ::prost::Name for ShortOgvInfo {
+    const NAME: &'static str = "ShortOGVInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ShortOGVInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ShortOGVInfo".into()
     }
 }
 ///
