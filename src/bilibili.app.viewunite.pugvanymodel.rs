@@ -1173,7 +1173,7 @@ pub enum SeasonSectionType {
     Unspecified = 0,
     ///
     Default = 1,
-    ///
+    /// @Deprecated
     Custom = 2,
 }
 impl SeasonSectionType {

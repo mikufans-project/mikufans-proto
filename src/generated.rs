@@ -85,6 +85,13 @@ pub mod bilibili {
                 include!("bilibili.app.click.v1.rs");
             }
         }
+        #[cfg(feature = "bilibili_app_coldstart")]
+        pub mod coldstart {
+            #[cfg(feature = "bilibili_app_coldstart_v1")]
+            pub mod v1 {
+                include!("bilibili.app.coldstart.v1.rs");
+            }
+        }
         #[cfg(feature = "bilibili_app_distribution")]
         pub mod distribution {
             include!("bilibili.app.distribution.rs");
@@ -319,6 +326,13 @@ pub mod bilibili {
             #[cfg(feature = "bilibili_app_topic_v1")]
             pub mod v1 {
                 include!("bilibili.app.topic.v1.rs");
+            }
+        }
+        #[cfg(feature = "bilibili_app_translation")]
+        pub mod translation {
+            #[cfg(feature = "bilibili_app_translation_v1")]
+            pub mod v1 {
+                include!("bilibili.app.translation.v1.rs");
             }
         }
         #[cfg(feature = "bilibili_app_view")]

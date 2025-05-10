@@ -418,6 +418,9 @@ pub struct DetailListReply {
     ///
     #[prost(message, optional, tag = "10")]
     pub subject_title: ::core::option::Option<detail_list_reply::SubjectTitle>,
+    ///
+    #[prost(message, repeated, tag = "11")]
+    pub mixed_cards: ::prost::alloc::vec::Vec<MixedCard>,
 }
 /// Nested message and enum types in `DetailListReply`.
 pub mod detail_list_reply {
@@ -820,6 +823,84 @@ impl ::prost::Name for EmptyPage {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.main.community.reply.v1.EmptyPage".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct FoldCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub bottom_text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub fold_pagination: ::core::option::Option<
+        super::super::super::super::pagination::FeedPagination,
+    >,
+}
+impl ::prost::Name for FoldCard {
+    const NAME: &'static str = "FoldCard";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.FoldCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.FoldCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct FoldListReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub oid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub r#type: i64,
+    ///
+    #[prost(string, tag = "3")]
+    pub extra: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub pagination: ::core::option::Option<
+        super::super::super::super::pagination::FeedPagination,
+    >,
+}
+impl ::prost::Name for FoldListReq {
+    const NAME: &'static str = "FoldListReq";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.FoldListReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.FoldListReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct FoldListResp {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub replies: ::prost::alloc::vec::Vec<ReplyInfo>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub pagination_reply: ::core::option::Option<
+        super::super::super::super::pagination::FeedPaginationReply,
+    >,
+    ///
+    #[prost(string, tag = "3")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub subject_control: ::core::option::Option<SubjectControl>,
+}
+impl ::prost::Name for FoldListResp {
+    const NAME: &'static str = "FoldListResp";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.FoldListResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.FoldListResp".into()
     }
 }
 ///
@@ -1900,7 +1981,7 @@ pub struct MixedCard {
     #[prost(int64, tag = "3")]
     pub display_rank: i64,
     ///
-    #[prost(oneof = "mixed_card::Item", tags = "4")]
+    #[prost(oneof = "mixed_card::Item", tags = "4, 5")]
     pub item: ::core::option::Option<mixed_card::Item>,
 }
 /// Nested message and enum types in `MixedCard`.
@@ -1923,6 +2004,8 @@ pub mod mixed_card {
         Unknown = 0,
         ///
         Question = 1,
+        ///
+        Fold = 2,
     }
     impl Type {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -1933,6 +2016,7 @@ pub mod mixed_card {
             match self {
                 Self::Unknown => "UNKNOWN",
                 Self::Question => "QUESTION",
+                Self::Fold => "FOLD",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -1940,6 +2024,7 @@ pub mod mixed_card {
             match value {
                 "UNKNOWN" => Some(Self::Unknown),
                 "QUESTION" => Some(Self::Question),
+                "FOLD" => Some(Self::Fold),
                 _ => None,
             }
         }
@@ -1950,6 +2035,9 @@ pub mod mixed_card {
         ///
         #[prost(message, tag = "4")]
         Question(super::QuestionCard),
+        ///
+        #[prost(message, tag = "5")]
+        Fold(super::FoldCard),
     }
 }
 impl ::prost::Name for MixedCard {
@@ -5273,6 +5361,30 @@ pub mod reply_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn fold_list(
+            &mut self,
+            request: impl tonic::IntoRequest<super::FoldListReq>,
+        ) -> std::result::Result<tonic::Response<super::FoldListResp>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.main.community.reply.v1.Reply/FoldList",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.main.community.reply.v1.Reply", "FoldList"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn main_list(
             &mut self,
             request: impl tonic::IntoRequest<super::MainListReq>,
@@ -5640,6 +5752,11 @@ pub mod reply_server {
             request: tonic::Request<super::DoVoteReq>,
         ) -> std::result::Result<tonic::Response<super::DoVoteResp>, tonic::Status>;
         ///
+        async fn fold_list(
+            &self,
+            request: tonic::Request<super::FoldListReq>,
+        ) -> std::result::Result<tonic::Response<super::FoldListResp>, tonic::Status>;
+        ///
         async fn main_list(
             &self,
             request: tonic::Request<super::MainListReq>,
@@ -5993,6 +6110,49 @@ pub mod reply_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = DoVoteSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.main.community.reply.v1.Reply/FoldList" => {
+                    #[allow(non_camel_case_types)]
+                    struct FoldListSvc<T: Reply>(pub Arc<T>);
+                    impl<T: Reply> tonic::server::UnaryService<super::FoldListReq>
+                    for FoldListSvc<T> {
+                        type Response = super::FoldListResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::FoldListReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Reply>::fold_list(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = FoldListSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

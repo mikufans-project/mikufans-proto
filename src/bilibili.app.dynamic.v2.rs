@@ -2619,6 +2619,26 @@ impl ::prost::Name for CodeParagraph {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Color {
+    ///
+    #[prost(string, tag = "1")]
+    pub light: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub dark: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Color {
+    const NAME: &'static str = "Color";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.Color".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.Color".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ColoredText {
     ///
     #[prost(string, tag = "1")]
@@ -2884,6 +2904,8 @@ pub mod creation_item_action {
         EditCv = 5,
         ///
         VisibilityChange = 6,
+        ///
+        EditTribee = 7,
     }
     impl CreationAction {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -2899,6 +2921,7 @@ pub mod creation_item_action {
                 Self::RetractCv => "CREATION_ACTION_RETRACT_CV",
                 Self::EditCv => "CREATION_ACTION_EDIT_CV",
                 Self::VisibilityChange => "CREATION_ACTION_VISIBILITY_CHANGE",
+                Self::EditTribee => "CREATION_ACTION_EDIT_TRIBEE",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -2911,6 +2934,7 @@ pub mod creation_item_action {
                 "CREATION_ACTION_RETRACT_CV" => Some(Self::RetractCv),
                 "CREATION_ACTION_EDIT_CV" => Some(Self::EditCv),
                 "CREATION_ACTION_VISIBILITY_CHANGE" => Some(Self::VisibilityChange),
+                "CREATION_ACTION_EDIT_TRIBEE" => Some(Self::EditTribee),
                 _ => None,
             }
         }
@@ -4627,6 +4651,23 @@ impl ::prost::Name for EmoteSize {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.EmoteSize".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ExitTribeeToast {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub toast_dialog: ::core::option::Option<ToastDialog>,
+}
+impl ::prost::Name for ExitTribeeToast {
+    const NAME: &'static str = "ExitTribeeToast";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.ExitTribeeToast".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.ExitTribeeToast".into()
     }
 }
 ///
@@ -9054,6 +9095,88 @@ impl ::prost::Name for Nameplate {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct NavigationEntry {
+    ///
+    #[prost(enumeration = "NavigationType", tag = "1")]
+    pub navigation_type: i32,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub basic_info: ::core::option::Option<NavigationEntryBasicInfo>,
+    ///
+    #[prost(oneof = "navigation_entry::Data", tags = "3")]
+    pub data: ::core::option::Option<navigation_entry::Data>,
+}
+/// Nested message and enum types in `NavigationEntry`.
+pub mod navigation_entry {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Data {
+        ///
+        #[prost(message, tag = "3")]
+        JoinedOtherTribee(super::NavigationEntryJoinedOtherTribee),
+    }
+}
+impl ::prost::Name for NavigationEntry {
+    const NAME: &'static str = "NavigationEntry";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.NavigationEntry".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.NavigationEntry".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct NavigationEntryBasicInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub jump_uri: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub right_icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for NavigationEntryBasicInfo {
+    const NAME: &'static str = "NavigationEntryBasicInfo";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.NavigationEntryBasicInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.NavigationEntryBasicInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct NavigationEntryJoinedOtherTribee {
+    ///
+    #[prost(string, tag = "1")]
+    pub more_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub less_text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub tribee_list: ::prost::alloc::vec::Vec<TribeeDesc>,
+}
+impl ::prost::Name for NavigationEntryJoinedOtherTribee {
+    const NAME: &'static str = "NavigationEntryJoinedOtherTribee";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.NavigationEntryJoinedOtherTribee".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.NavigationEntryJoinedOtherTribee".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NewEp {
     ///
     #[prost(int32, tag = "1")]
@@ -10369,6 +10492,81 @@ impl ::prost::Name for ProtectedStaticResource {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PublishButton {
+    ///
+    #[prost(enumeration = "publish_button::PermissionType", tag = "1")]
+    pub perm_type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub icon_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub jump_uri: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub publish_join: ::core::option::Option<ToastDialog>,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub publish_abnormal: ::core::option::Option<ToastDialog>,
+}
+/// Nested message and enum types in `PublishButton`.
+pub mod publish_button {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum PermissionType {
+        ///
+        Unknown = 0,
+        ///
+        Whitelist = 1,
+        ///
+        NotWhitelist = 2,
+    }
+    impl PermissionType {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::Unknown => "UNKNOWN",
+                Self::Whitelist => "WHITELIST",
+                Self::NotWhitelist => "NOT_WHITELIST",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "UNKNOWN" => Some(Self::Unknown),
+                "WHITELIST" => Some(Self::Whitelist),
+                "NOT_WHITELIST" => Some(Self::NotWhitelist),
+                _ => None,
+            }
+        }
+    }
+}
+impl ::prost::Name for PublishButton {
+    const NAME: &'static str = "PublishButton";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.PublishButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.PublishButton".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuickConsumeMoreAvatarListReply {
     ///
     #[prost(string, tag = "1")]
@@ -11176,6 +11374,26 @@ impl ::prost::Name for ShareChannel {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.ShareChannel".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ShareConfig {
+    ///
+    #[prost(string, tag = "1")]
+    pub target_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub sub_title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShareConfig {
+    const NAME: &'static str = "ShareConfig";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.ShareConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.ShareConfig".into()
     }
 }
 ///
@@ -12173,6 +12391,159 @@ impl ::prost::Name for ThreePointWait {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TitleTagPic {
+    ///
+    #[prost(enumeration = "title_tag_pic::TitleTagPicType", tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub light_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub dark_url: ::prost::alloc::string::String,
+    ///
+    #[prost(double, tag = "4")]
+    pub width: f64,
+    ///
+    #[prost(double, tag = "5")]
+    pub height: f64,
+}
+/// Nested message and enum types in `TitleTagPic`.
+pub mod title_tag_pic {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum TitleTagPicType {
+        ///
+        UnknownTitleTagPicType = 0,
+        ///
+        Top = 1,
+    }
+    impl TitleTagPicType {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::UnknownTitleTagPicType => "UNKNOWN_TitleTagPicType",
+                Self::Top => "TOP",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "UNKNOWN_TitleTagPicType" => Some(Self::UnknownTitleTagPicType),
+                "TOP" => Some(Self::Top),
+                _ => None,
+            }
+        }
+    }
+}
+impl ::prost::Name for TitleTagPic {
+    const NAME: &'static str = "TitleTagPic";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TitleTagPic".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TitleTagPic".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ToastDialog {
+    ///
+    #[prost(enumeration = "toast_dialog::ToastDialogType", tag = "1")]
+    pub r#type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub desc: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub pic_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub confirm_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub cancel_text: ::prost::alloc::string::String,
+}
+/// Nested message and enum types in `ToastDialog`.
+pub mod toast_dialog {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum ToastDialogType {
+        ///
+        UnknownToastDialogType = 0,
+        ///
+        Exit = 1,
+        ///
+        PublishJoin = 2,
+        ///
+        PublishAbnormal = 3,
+    }
+    impl ToastDialogType {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::UnknownToastDialogType => "UNKNOWN_ToastDialogType",
+                Self::Exit => "EXIT",
+                Self::PublishJoin => "PUBLISH_JOIN",
+                Self::PublishAbnormal => "PUBLISH_ABNORMAL",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "UNKNOWN_ToastDialogType" => Some(Self::UnknownToastDialogType),
+                "EXIT" => Some(Self::Exit),
+                "PUBLISH_JOIN" => Some(Self::PublishJoin),
+                "PUBLISH_ABNORMAL" => Some(Self::PublishAbnormal),
+                _ => None,
+            }
+        }
+    }
+}
+impl ::prost::Name for ToastDialog {
+    const NAME: &'static str = "ToastDialog";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.ToastDialog".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.ToastDialog".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TopAdditionUp {
     ///
     #[prost(message, repeated, tag = "1")]
@@ -12505,6 +12876,201 @@ impl ::prost::Name for TopicSquareReq {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.TopicSquareReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeBaseInfo {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub tribee_info: ::core::option::Option<TribeeDesc>,
+    ///
+    #[prost(bool, tag = "2")]
+    pub is_joined: bool,
+}
+impl ::prost::Name for TribeeBaseInfo {
+    const NAME: &'static str = "TribeeBaseInfo";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeBaseInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeBaseInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeContent {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub dyn_list: ::prost::alloc::vec::Vec<TribeeDyn>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub next_page: ::core::option::Option<
+        super::super::super::pagination::PaginationReply,
+    >,
+}
+impl ::prost::Name for TribeeContent {
+    const NAME: &'static str = "TribeeContent";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeContent".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeContent".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeDesc {
+    ///
+    #[prost(int64, tag = "1")]
+    pub id: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub sub_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub face_url: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub bg_color: ::core::option::Option<Color>,
+    ///
+    #[prost(string, tag = "6")]
+    pub jump_uri: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TribeeDesc {
+    const NAME: &'static str = "TribeeDesc";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeDesc".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeDesc".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeDyn {
+    ///
+    #[prost(int64, tag = "1")]
+    pub dyn_id: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub jump_uri: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub left_text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub right_text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "6")]
+    pub title_tags: ::prost::alloc::vec::Vec<TitleTagPic>,
+}
+impl ::prost::Name for TribeeDyn {
+    const NAME: &'static str = "TribeeDyn";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeDyn".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeDyn".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeDynAllReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub tribee_id: i64,
+    ///
+    #[prost(enumeration = "super::common::TribeeRefresh", tag = "2")]
+    pub refresh_type: i32,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub page: ::core::option::Option<super::super::super::pagination::Pagination>,
+}
+impl ::prost::Name for TribeeDynAllReq {
+    const NAME: &'static str = "TribeeDynAllReq";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeDynAllReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeDynAllReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeDynAllResp {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub base_info: ::core::option::Option<TribeeBaseInfo>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub interaction: ::core::option::Option<TribeeInteraction>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub navigation: ::core::option::Option<TribeeNavigation>,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub content: ::core::option::Option<TribeeContent>,
+}
+impl ::prost::Name for TribeeDynAllResp {
+    const NAME: &'static str = "TribeeDynAllResp";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeDynAllResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeDynAllResp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeInteraction {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub publish: ::core::option::Option<PublishButton>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub exit: ::core::option::Option<ExitTribeeToast>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub share: ::core::option::Option<ShareConfig>,
+}
+impl ::prost::Name for TribeeInteraction {
+    const NAME: &'static str = "TribeeInteraction";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeInteraction".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeInteraction".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeNavigation {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub nav_entries: ::prost::alloc::vec::Vec<NavigationEntry>,
+}
+impl ::prost::Name for TribeeNavigation {
+    const NAME: &'static str = "TribeeNavigation";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.TribeeNavigation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.TribeeNavigation".into()
     }
 }
 ///
@@ -15659,6 +16225,43 @@ impl NftShowStatus {
             "nft_show_default" => Some(Self::NftShowDefault),
             "nft_show_zoominmainlang" => Some(Self::NftShowZoominmainlang),
             "nft_show_raw" => Some(Self::NftShowRaw),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum NavigationType {
+    ///
+    Common = 0,
+    ///
+    JoinedOtherTribee = 1,
+    ///
+    Share = 2,
+    ///
+    MyPost = 3,
+}
+impl NavigationType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Common => "COMMON",
+            Self::JoinedOtherTribee => "JOINED_OTHER_TRIBEE",
+            Self::Share => "SHARE",
+            Self::MyPost => "MY_POST",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "COMMON" => Some(Self::Common),
+            "JOINED_OTHER_TRIBEE" => Some(Self::JoinedOtherTribee),
+            "SHARE" => Some(Self::Share),
+            "MY_POST" => Some(Self::MyPost),
             _ => None,
         }
     }

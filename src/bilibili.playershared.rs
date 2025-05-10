@@ -1234,6 +1234,70 @@ impl ::prost::Name for Interaction {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Language {
+    ///
+    #[prost(bool, tag = "1")]
+    pub support: bool,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub items: ::prost::alloc::vec::Vec<LanguageItem>,
+    ///
+    #[prost(string, tag = "3")]
+    pub open_toast: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub close_toast: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub badge: ::core::option::Option<Badge>,
+    ///
+    #[prost(string, tag = "6")]
+    pub default_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "7")]
+    pub list_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "8")]
+    pub list_desc: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Language {
+    const NAME: &'static str = "Language";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.Language".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.Language".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct LanguageItem {
+    ///
+    #[prost(string, tag = "1")]
+    pub lang: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub button_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub subtitle_lang: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LanguageItem {
+    const NAME: &'static str = "LanguageItem";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.LanguageItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.LanguageItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LossLessItem {
     ///
     #[prost(bool, tag = "1")]
@@ -1522,6 +1586,88 @@ impl ::prost::Name for QnExp {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.playershared.QnExp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnGroup {
+    ///
+    #[prost(bool, tag = "1")]
+    pub need_vip: bool,
+    ///
+    #[prost(bool, tag = "2")]
+    pub need_login: bool,
+    ///
+    #[prost(bool, tag = "3")]
+    pub vip_free: bool,
+    ///
+    #[prost(string, tag = "4")]
+    pub title_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub title_img_selected: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "6")]
+    pub stream_infos: ::prost::alloc::vec::Vec<StreamInfo>,
+    ///
+    #[prost(enumeration = "QnGroupType", tag = "7")]
+    pub group_type: i32,
+}
+impl ::prost::Name for QnGroup {
+    const NAME: &'static str = "QnGroup";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.QnGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.QnGroup".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnItem {
+    ///
+    #[prost(oneof = "qn_item::Content", tags = "1, 2")]
+    pub content: ::core::option::Option<qn_item::Content>,
+}
+/// Nested message and enum types in `QnItem`.
+pub mod qn_item {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Content {
+        ///
+        #[prost(message, tag = "1")]
+        StreamInfo(super::StreamInfo),
+        ///
+        #[prost(message, tag = "2")]
+        QnGroup(super::QnGroup),
+    }
+}
+impl ::prost::Name for QnItem {
+    const NAME: &'static str = "QnItem";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.QnItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.QnItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnPanel {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub qn_items: ::prost::alloc::vec::Vec<QnItem>,
+}
+impl ::prost::Name for QnPanel {
+    const NAME: &'static str = "QnPanel";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.QnPanel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.QnPanel".into()
     }
 }
 ///
@@ -2084,6 +2230,24 @@ pub struct StreamInfo {
     ///
     #[prost(bool, tag = "17")]
     pub support_drm: bool,
+    ///
+    #[prost(string, tag = "18")]
+    pub display_desc_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "19")]
+    pub description_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "20")]
+    pub description_img_selected: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "21")]
+    pub description_fold_img: ::prost::alloc::string::String,
+    ///
+    #[prost(map = "string, string", tag = "22")]
+    pub report_params: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
 }
 impl ::prost::Name for StreamInfo {
     const NAME: &'static str = "StreamInfo";
@@ -2208,7 +2372,7 @@ impl ::prost::Name for VideoCtrl {
     }
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VideoVod {
     ///
     #[prost(int64, tag = "1")]
@@ -2249,6 +2413,12 @@ pub struct VideoVod {
     ///
     #[prost(int64, tag = "13")]
     pub soft_fnval: i64,
+    ///
+    #[prost(int64, tag = "14")]
+    pub client_attr: i64,
+    ///
+    #[prost(string, tag = "15")]
+    pub cur_language: ::prost::alloc::string::String,
 }
 impl ::prost::Name for VideoVod {
     const NAME: &'static str = "VideoVod";
@@ -2331,6 +2501,12 @@ pub struct VodInfo {
     ///
     #[prost(message, optional, tag = "11")]
     pub ai_audio: ::core::option::Option<AiAudio>,
+    ///
+    #[prost(message, optional, tag = "12")]
+    pub qn_panel: ::core::option::Option<QnPanel>,
+    ///
+    #[prost(string, tag = "13")]
+    pub cur_language: ::prost::alloc::string::String,
 }
 impl ::prost::Name for VodInfo {
     const NAME: &'static str = "VodInfo";
@@ -3225,6 +3401,35 @@ impl PromptBarType {
             "PROMPT_BAR_TYPE_UNKNOWN" => Some(Self::Unknown),
             "OPEN_PROMPT_BAR" => Some(Self::OpenPromptBar),
             "TRY_PROMPT_BAR" => Some(Self::TryPromptBar),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum QnGroupType {
+    ///
+    UnknownGroup = 0,
+    ///
+    VipVision = 1,
+}
+impl QnGroupType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::UnknownGroup => "UNKNOWN_GROUP",
+            Self::VipVision => "VIP_VISION",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "UNKNOWN_GROUP" => Some(Self::UnknownGroup),
+            "VIP_VISION" => Some(Self::VipVision),
             _ => None,
         }
     }

@@ -1480,6 +1480,9 @@ pub struct StreamInfo {
     ///
     #[prost(bool, tag = "18")]
     pub has_preview: bool,
+    ///
+    #[prost(int64, tag = "19")]
+    pub extend_attribute: i64,
 }
 impl ::prost::Name for StreamInfo {
     const NAME: &'static str = "StreamInfo";

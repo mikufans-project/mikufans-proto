@@ -1720,6 +1720,88 @@ impl ::prost::Name for PromptBar {
     }
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnGroup {
+    ///
+    #[prost(bool, tag = "1")]
+    pub need_vip: bool,
+    ///
+    #[prost(bool, tag = "2")]
+    pub need_login: bool,
+    ///
+    #[prost(bool, tag = "3")]
+    pub vip_free: bool,
+    ///
+    #[prost(string, tag = "4")]
+    pub title_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub title_img_selected: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "6")]
+    pub stream_infos: ::prost::alloc::vec::Vec<StreamInfo>,
+    ///
+    #[prost(enumeration = "QnGroupType", tag = "7")]
+    pub group_type: i32,
+}
+impl ::prost::Name for QnGroup {
+    const NAME: &'static str = "QnGroup";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.QnGroup".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.QnGroup".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnItem {
+    ///
+    #[prost(oneof = "qn_item::Content", tags = "1, 2")]
+    pub content: ::core::option::Option<qn_item::Content>,
+}
+/// Nested message and enum types in `QnItem`.
+pub mod qn_item {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum Content {
+        ///
+        #[prost(message, tag = "1")]
+        StreamInfo(super::StreamInfo),
+        ///
+        #[prost(message, tag = "2")]
+        QnGroup(super::QnGroup),
+    }
+}
+impl ::prost::Name for QnItem {
+    const NAME: &'static str = "QnItem";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.QnItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.QnItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct QnPanel {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub qn_items: ::prost::alloc::vec::Vec<QnItem>,
+}
+impl ::prost::Name for QnPanel {
+    const NAME: &'static str = "QnPanel";
+    const PACKAGE: &'static str = "bilibili.pgc.gateway.player.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.pgc.gateway.player.v2.QnPanel".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.pgc.gateway.player.v2.QnPanel".into()
+    }
+}
+///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct QualityExtInfo {
     ///
@@ -2107,6 +2189,24 @@ pub struct StreamInfo {
     ///
     #[prost(string, tag = "16")]
     pub subtitle: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "17")]
+    pub display_desc_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "18")]
+    pub description_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "19")]
+    pub description_img_selected: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "20")]
+    pub description_fold_img: ::prost::alloc::string::String,
+    ///
+    #[prost(map = "string, string", tag = "21")]
+    pub report_params: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
 }
 impl ::prost::Name for StreamInfo {
     const NAME: &'static str = "StreamInfo";
@@ -2278,6 +2378,9 @@ pub struct VideoInfo {
     ///
     #[prost(int64, tag = "8")]
     pub main_timelength: i64,
+    ///
+    #[prost(message, optional, tag = "9")]
+    pub qn_panel: ::core::option::Option<QnPanel>,
 }
 impl ::prost::Name for VideoInfo {
     const NAME: &'static str = "VideoInfo";
@@ -2697,6 +2800,35 @@ impl PromptBarType {
             "PROMPT_BAR_TYPE_UNKNOWN" => Some(Self::Unknown),
             "OPEN_PROMPT_BAR" => Some(Self::OpenPromptBar),
             "TRY_PROMPT_BAR" => Some(Self::TryPromptBar),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum QnGroupType {
+    ///
+    UnknownGroup = 0,
+    ///
+    VipVision = 1,
+}
+impl QnGroupType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::UnknownGroup => "UNKNOWN_GROUP",
+            Self::VipVision => "VIP_VISION",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "UNKNOWN_GROUP" => Some(Self::UnknownGroup),
+            "VIP_VISION" => Some(Self::VipVision),
             _ => None,
         }
     }

@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.44.1+build.18785450"
+version = "8.45.0-rc.1+build.18809135"
 edition = "2021"
 rust-version = "1.75"             # same with tonic
 
@@ -34,6 +34,7 @@ feat-all-proto = [
     "bilibili_app_archive_middleware_v1",
     "bilibili_app_card_v1",
     "bilibili_app_click_v1",
+    "bilibili_app_coldstart_v1",
     "bilibili_app_distribution",
     "bilibili_app_distribution_setting_download",
     "bilibili_app_distribution_setting_dynamic",
@@ -75,6 +76,7 @@ feat-all-proto = [
     "bilibili_app_splash_v1",
     "bilibili_app_story_v1",
     "bilibili_app_topic_v1",
+    "bilibili_app_translation_v1",
     "bilibili_app_view_v1",
     "bilibili_app_viewunite_common",
     "bilibili_app_viewunite_pgcanymodel",
@@ -197,6 +199,8 @@ bilibili_app_card = ["bilibili_app"]
 bilibili_app_card_v1 = ["bilibili_app_card"]
 bilibili_app_click = ["bilibili_app"]
 bilibili_app_click_v1 = ["bilibili_app_click"]
+bilibili_app_coldstart = ["bilibili_app"]
+bilibili_app_coldstart_v1 = ["bilibili_app_coldstart"]
 bilibili_app_distribution = ["bilibili_app"]
 bilibili_app_distribution_setting = ["bilibili_app_distribution"]
 bilibili_app_distribution_setting_download = ["bilibili_app_distribution_setting"]
@@ -294,6 +298,8 @@ bilibili_app_topic_v1 = [
     "bilibili_app_card_v1",
     "bilibili_app_dynamic_v2",
 ]
+bilibili_app_translation = ["bilibili_app"]
+bilibili_app_translation_v1 = ["bilibili_app_translation"]
 bilibili_app_view = ["bilibili_app"]
 bilibili_app_view_v1 = [
     "bilibili_app_view",

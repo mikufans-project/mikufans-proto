@@ -316,6 +316,23 @@ impl ::prost::Name for ConfigRsp {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct CreateCheckTribeeResp {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub setting: ::core::option::Option<TribeePublishConfig>,
+}
+impl ::prost::Name for CreateCheckTribeeResp {
+    const NAME: &'static str = "CreateCheckTribeeResp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.CreateCheckTribeeResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.CreateCheckTribeeResp".into()
+    }
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateDynReq {
     ///
@@ -857,6 +874,54 @@ impl ::prost::Name for EditDynRsp {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct EditOpusReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub dyn_id: i64,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub meta: ::core::option::Option<super::super::super::common::UserCreateMeta>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub opus: ::core::option::Option<super::super::super::common::Opus>,
+    ///
+    #[prost(enumeration = "super::super::super::common::CreateScene", tag = "4")]
+    pub scene: i32,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub option: ::core::option::Option<super::super::super::common::CreateOption>,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub topic: ::core::option::Option<super::super::super::common::CreateTopic>,
+    ///
+    #[prost(string, tag = "8")]
+    pub upload_id: ::prost::alloc::string::String,
+}
+impl ::prost::Name for EditOpusReq {
+    const NAME: &'static str = "EditOpusReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.EditOpusReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.EditOpusReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct EditOpusRsp {}
+impl ::prost::Name for EditOpusRsp {
+    const NAME: &'static str = "EditOpusRsp";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.EditOpusRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.EditOpusRsp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetEditDynInfoReq {
     ///
     #[prost(int64, tag = "1")]
@@ -934,6 +999,12 @@ pub struct GetEditDynInfoRsp {
     #[prost(message, optional, tag = "14")]
     pub commercial: ::core::option::Option<CreatePageCommercialInfo>,
     ///
+    #[prost(message, optional, tag = "15")]
+    pub tribee_setting: ::core::option::Option<TribeePublishConfig>,
+    ///
+    #[prost(message, optional, tag = "16")]
+    pub opus: ::core::option::Option<super::super::super::common::Opus>,
+    ///
     #[prost(int64, tag = "17")]
     pub dyn_type: i64,
     ///
@@ -1010,6 +1081,12 @@ pub struct GetEditDynInfoWebRsp {
     ///
     #[prost(string, tag = "9")]
     pub pre_dyn_id_str: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "10")]
+    pub tribee_setting: ::core::option::Option<TribeePublishConfig>,
+    ///
+    #[prost(message, optional, tag = "11")]
+    pub opus: ::core::option::Option<super::super::super::common::Opus>,
 }
 impl ::prost::Name for GetEditDynInfoWebRsp {
     const NAME: &'static str = "GetEditDynInfoWebRsp";
@@ -1247,6 +1324,26 @@ impl ::prost::Name for ICreateResp {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.dynamic.interfaces.feed.v1.ICreateResp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct InitCheckTribeeReq {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub check: ::core::option::Option<CreateInitCheckReq>,
+    ///
+    #[prost(int64, tag = "2")]
+    pub tribee_id: i64,
+}
+impl ::prost::Name for InitCheckTribeeReq {
+    const NAME: &'static str = "InitCheckTribeeReq";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.InitCheckTribeeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.InitCheckTribeeReq".into()
     }
 }
 ///
@@ -1853,6 +1950,35 @@ impl ::prost::Name for SuggestRsp {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.dynamic.interfaces.feed.v1.SuggestRsp".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct TribeePublishConfig {
+    ///
+    #[prost(int64, tag = "1")]
+    pub title_max_length: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub title_min_length: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub content_max_length: i64,
+    ///
+    #[prost(int64, tag = "4")]
+    pub content_min_length: i64,
+    ///
+    #[prost(int64, tag = "5")]
+    pub pic_max_num: i64,
+}
+impl ::prost::Name for TribeePublishConfig {
+    const NAME: &'static str = "TribeePublishConfig";
+    const PACKAGE: &'static str = "bilibili.dynamic.interfaces.feed.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.interfaces.feed.v1.TribeePublishConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.interfaces.feed.v1.TribeePublishConfig".into()
     }
 }
 ///
@@ -2676,6 +2802,33 @@ pub mod feed_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn edit_opus(
+            &mut self,
+            request: impl tonic::IntoRequest<super::EditOpusReq>,
+        ) -> std::result::Result<tonic::Response<super::EditOpusRsp>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.dynamic.interfaces.feed.v1.Feed/EditOpus",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.dynamic.interfaces.feed.v1.Feed",
+                        "EditOpus",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn get_edit_dyn_info(
             &mut self,
             request: impl tonic::IntoRequest<super::GetEditDynInfoReq>,
@@ -2877,6 +3030,36 @@ pub mod feed_client {
                     GrpcMethod::new(
                         "bilibili.dynamic.interfaces.feed.v1.Feed",
                         "ICreateGoodsReplySync",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn init_check_tribee(
+            &mut self,
+            request: impl tonic::IntoRequest<super::InitCheckTribeeReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::CreateCheckTribeeResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.dynamic.interfaces.feed.v1.Feed/InitCheckTribee",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.dynamic.interfaces.feed.v1.Feed",
+                        "InitCheckTribee",
                     ),
                 );
             self.inner.unary(req, path, codec).await
@@ -3285,6 +3468,11 @@ pub mod feed_server {
             request: tonic::Request<super::EditDynReq>,
         ) -> std::result::Result<tonic::Response<super::EditDynRsp>, tonic::Status>;
         ///
+        async fn edit_opus(
+            &self,
+            request: tonic::Request<super::EditOpusReq>,
+        ) -> std::result::Result<tonic::Response<super::EditOpusRsp>, tonic::Status>;
+        ///
         async fn get_edit_dyn_info(
             &self,
             request: tonic::Request<super::GetEditDynInfoReq>,
@@ -3334,6 +3522,14 @@ pub mod feed_server {
             &self,
             request: tonic::Request<super::ICreateGoodsReplySyncReq>,
         ) -> std::result::Result<tonic::Response<super::ICreateResp>, tonic::Status>;
+        ///
+        async fn init_check_tribee(
+            &self,
+            request: tonic::Request<super::InitCheckTribeeReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::CreateCheckTribeeResp>,
+            tonic::Status,
+        >;
         ///
         async fn nearby_poi_list(
             &self,
@@ -4267,6 +4463,49 @@ pub mod feed_server {
                     };
                     Box::pin(fut)
                 }
+                "/bilibili.dynamic.interfaces.feed.v1.Feed/EditOpus" => {
+                    #[allow(non_camel_case_types)]
+                    struct EditOpusSvc<T: Feed>(pub Arc<T>);
+                    impl<T: Feed> tonic::server::UnaryService<super::EditOpusReq>
+                    for EditOpusSvc<T> {
+                        type Response = super::EditOpusRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::EditOpusReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Feed>::edit_opus(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = EditOpusSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.dynamic.interfaces.feed.v1.Feed/GetEditDynInfo" => {
                     #[allow(non_camel_case_types)]
                     struct GetEditDynInfoSvc<T: Feed>(pub Arc<T>);
@@ -4566,6 +4805,49 @@ pub mod feed_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = ICreateGoodsReplySyncSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.dynamic.interfaces.feed.v1.Feed/InitCheckTribee" => {
+                    #[allow(non_camel_case_types)]
+                    struct InitCheckTribeeSvc<T: Feed>(pub Arc<T>);
+                    impl<T: Feed> tonic::server::UnaryService<super::InitCheckTribeeReq>
+                    for InitCheckTribeeSvc<T> {
+                        type Response = super::CreateCheckTribeeResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::InitCheckTribeeReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Feed>::init_check_tribee(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = InitCheckTribeeSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

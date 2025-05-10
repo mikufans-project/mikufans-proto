@@ -614,6 +614,9 @@ pub struct CreateOption {
     ///
     #[prost(message, optional, tag = "20")]
     pub live_water_mark: ::core::option::Option<LiveWaterMark>,
+    ///
+    #[prost(bool, tag = "22")]
+    pub sync_dynamic_enable: bool,
 }
 impl ::prost::Name for CreateOption {
     const NAME: &'static str = "CreateOption";
@@ -740,6 +743,11 @@ pub struct CreateResp {
     ///
     #[prost(message, optional, tag = "7")]
     pub share_window: ::core::option::Option<ShareDynWindow>,
+    ///
+    #[prost(message, optional, tag = "9")]
+    pub tribee_fake_card: ::core::option::Option<
+        super::super::app::dynamic::v2::TribeeDyn,
+    >,
 }
 impl ::prost::Name for CreateResp {
     const NAME: &'static str = "CreateResp";
@@ -1673,6 +1681,9 @@ pub struct Opus {
     ///
     #[prost(int64, tag = "11")]
     pub music_id: i64,
+    ///
+    #[prost(message, optional, tag = "12")]
+    pub attachments: ::core::option::Option<OpusAttachments>,
 }
 impl ::prost::Name for Opus {
     const NAME: &'static str = "Opus";
@@ -1682,6 +1693,23 @@ impl ::prost::Name for Opus {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.dynamic.common.Opus".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct OpusAttachments {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub tribee: ::core::option::Option<Tribee>,
+}
+impl ::prost::Name for OpusAttachments {
+    const NAME: &'static str = "OpusAttachments";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.OpusAttachments".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.OpusAttachments".into()
     }
 }
 ///
@@ -1728,6 +1756,9 @@ pub struct OpusSummary {
     ///
     #[prost(int64, tag = "8")]
     pub music_id: i64,
+    ///
+    #[prost(message, optional, tag = "9")]
+    pub attachments: ::core::option::Option<OpusAttachments>,
 }
 impl ::prost::Name for OpusSummary {
     const NAME: &'static str = "OpusSummary";
@@ -2659,6 +2690,23 @@ impl ::prost::Name for TextParagraph {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct Tribee {
+    ///
+    #[prost(int64, tag = "1")]
+    pub tribee_id: i64,
+}
+impl ::prost::Name for Tribee {
+    const NAME: &'static str = "Tribee";
+    const PACKAGE: &'static str = "bilibili.dynamic.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.dynamic.common.Tribee".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.dynamic.common.Tribee".into()
+    }
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpPermission {
     ///
@@ -3104,6 +3152,8 @@ pub enum CreateInitCheckScene {
     ReserveShare = 4,
     ///
     Article = 5,
+    ///
+    Tribee = 6,
 }
 impl CreateInitCheckScene {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3118,6 +3168,7 @@ impl CreateInitCheckScene {
             Self::Share => "CREATE_INIT_CHECK_SCENE_SHARE",
             Self::ReserveShare => "CREATE_INIT_CHECK_SCENE_RESERVE_SHARE",
             Self::Article => "CREATE_INIT_CHECK_SCENE_ARTICLE",
+            Self::Tribee => "CREATE_INIT_CHECK_SCENE_TRIBEE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3129,6 +3180,7 @@ impl CreateInitCheckScene {
             "CREATE_INIT_CHECK_SCENE_SHARE" => Some(Self::Share),
             "CREATE_INIT_CHECK_SCENE_RESERVE_SHARE" => Some(Self::ReserveShare),
             "CREATE_INIT_CHECK_SCENE_ARTICLE" => Some(Self::Article),
+            "CREATE_INIT_CHECK_SCENE_TRIBEE" => Some(Self::Tribee),
             _ => None,
         }
     }
@@ -3163,6 +3215,8 @@ pub enum CreateScene {
     CreateLiveRcmd = 11,
     ///
     CreateArticle = 12,
+    ///
+    CreateTribee = 13,
 }
 impl CreateScene {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3184,6 +3238,7 @@ impl CreateScene {
             Self::CreateAd => "CREATE_SCENE_CREATE_AD",
             Self::CreateLiveRcmd => "CREATE_SCENE_CREATE_LIVE_RCMD",
             Self::CreateArticle => "CREATE_SCENE_CREATE_ARTICLE",
+            Self::CreateTribee => "CREATE_SCENE_CREATE_TRIBEE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3202,6 +3257,7 @@ impl CreateScene {
             "CREATE_SCENE_CREATE_AD" => Some(Self::CreateAd),
             "CREATE_SCENE_CREATE_LIVE_RCMD" => Some(Self::CreateLiveRcmd),
             "CREATE_SCENE_CREATE_ARTICLE" => Some(Self::CreateArticle),
+            "CREATE_SCENE_CREATE_TRIBEE" => Some(Self::CreateTribee),
             _ => None,
         }
     }
@@ -3428,6 +3484,10 @@ pub enum OpusSource {
     Word = 6,
     ///
     Repost = 7,
+    ///
+    MangaEp = 8,
+    ///
+    MixedContent = 9,
 }
 impl OpusSource {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3444,6 +3504,8 @@ impl OpusSource {
             Self::ArticleH5 => "ARTICLE_H5",
             Self::Word => "WORD",
             Self::Repost => "REPOST",
+            Self::MangaEp => "MANGA_EP",
+            Self::MixedContent => "MIXED_CONTENT",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3457,6 +3519,8 @@ impl OpusSource {
             "ARTICLE_H5" => Some(Self::ArticleH5),
             "WORD" => Some(Self::Word),
             "REPOST" => Some(Self::Repost),
+            "MANGA_EP" => Some(Self::MangaEp),
+            "MIXED_CONTENT" => Some(Self::MixedContent),
             _ => None,
         }
     }

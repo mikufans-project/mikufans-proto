@@ -385,6 +385,111 @@ impl ::prost::Name for TimeLimited {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ToggleTribeeReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub tribee_id: i64,
+    ///
+    #[prost(int32, tag = "2")]
+    pub action: i32,
+}
+impl ::prost::Name for ToggleTribeeReq {
+    const NAME: &'static str = "ToggleTribeeReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.ToggleTribeeReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.ToggleTribeeReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ToggleTribeeRsp {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub member_info: ::core::option::Option<TribeeMemberInfo>,
+}
+impl ::prost::Name for ToggleTribeeRsp {
+    const NAME: &'static str = "ToggleTribeeRsp";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.ToggleTribeeRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.ToggleTribeeRsp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeDynClickReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub tribee_id: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub dyn_id: i64,
+    ///
+    #[prost(string, tag = "3")]
+    pub dyn_id_str: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TribeeDynClickReq {
+    const NAME: &'static str = "TribeeDynClickReq";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.TribeeDynClickReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.TribeeDynClickReq".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct TribeeDynClickRsp {}
+impl ::prost::Name for TribeeDynClickRsp {
+    const NAME: &'static str = "TribeeDynClickRsp";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.TribeeDynClickRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.TribeeDynClickRsp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TribeeMemberInfo {
+    ///
+    #[prost(int64, tag = "1")]
+    pub uid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub tribee_id: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub member_sn: i64,
+    ///
+    #[prost(enumeration = "TribeeMemberStatus", tag = "4")]
+    pub status: i32,
+    ///
+    #[prost(int64, tag = "5")]
+    pub join_ts: i64,
+    ///
+    #[prost(string, tag = "6")]
+    pub uid_str: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TribeeMemberInfo {
+    const NAME: &'static str = "TribeeMemberInfo";
+    const PACKAGE: &'static str = "bilibili.community.interfacess.cosmoconn.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.community.interfacess.cosmoconn.v1.TribeeMemberInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.community.interfacess.cosmoconn.v1.TribeeMemberInfo".into()
+    }
+}
+///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
 pub enum Action {
@@ -466,6 +571,47 @@ impl EntityBiz {
             "ENTITY_BIZ_DYNAMIC" => Some(Self::Dynamic),
             "ENTITY_BIZ_REPLY" => Some(Self::Reply),
             "ENTITY_BIZ_TOPIC" => Some(Self::Topic),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TribeeMemberStatus {
+    ///
+    Default = 0,
+    ///
+    Joined = 1,
+    ///
+    Owner = 2,
+    ///
+    Maintainer = 3,
+    ///
+    Banned = 100,
+}
+impl TribeeMemberStatus {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "DEFAULT",
+            Self::Joined => "JOINED",
+            Self::Owner => "OWNER",
+            Self::Maintainer => "MAINTAINER",
+            Self::Banned => "BANNED",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "DEFAULT" => Some(Self::Default),
+            "JOINED" => Some(Self::Joined),
+            "OWNER" => Some(Self::Owner),
+            "MAINTAINER" => Some(Self::Maintainer),
+            "BANNED" => Some(Self::Banned),
             _ => None,
         }
     }
@@ -666,6 +812,66 @@ pub mod cosmo_interface_client {
                 );
             self.inner.unary(req, path, codec).await
         }
+        ///
+        pub async fn toggle_tribee_membership(
+            &mut self,
+            request: impl tonic::IntoRequest<super::ToggleTribeeReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::ToggleTribeeRsp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.community.interfacess.cosmoconn.v1.CosmoInterface/ToggleTribeeMembership",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.community.interfacess.cosmoconn.v1.CosmoInterface",
+                        "ToggleTribeeMembership",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn tribee_dyn_click(
+            &mut self,
+            request: impl tonic::IntoRequest<super::TribeeDynClickReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::TribeeDynClickRsp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.community.interfacess.cosmoconn.v1.CosmoInterface/TribeeDynClick",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.community.interfacess.cosmoconn.v1.CosmoInterface",
+                        "TribeeDynClick",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
     }
 }
 /// Generated server implementations.
@@ -703,6 +909,19 @@ pub mod cosmo_interface_server {
             request: tonic::Request<super::SubscribeCardReq>,
         ) -> std::result::Result<
             tonic::Response<super::SubscribeCardRsp>,
+            tonic::Status,
+        >;
+        ///
+        async fn toggle_tribee_membership(
+            &self,
+            request: tonic::Request<super::ToggleTribeeReq>,
+        ) -> std::result::Result<tonic::Response<super::ToggleTribeeRsp>, tonic::Status>;
+        ///
+        async fn tribee_dyn_click(
+            &self,
+            request: tonic::Request<super::TribeeDynClickReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::TribeeDynClickRsp>,
             tonic::Status,
         >;
     }
@@ -943,6 +1162,101 @@ pub mod cosmo_interface_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = SubscribeCardSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.community.interfacess.cosmoconn.v1.CosmoInterface/ToggleTribeeMembership" => {
+                    #[allow(non_camel_case_types)]
+                    struct ToggleTribeeMembershipSvc<T: CosmoInterface>(pub Arc<T>);
+                    impl<
+                        T: CosmoInterface,
+                    > tonic::server::UnaryService<super::ToggleTribeeReq>
+                    for ToggleTribeeMembershipSvc<T> {
+                        type Response = super::ToggleTribeeRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::ToggleTribeeReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as CosmoInterface>::toggle_tribee_membership(
+                                        &inner,
+                                        request,
+                                    )
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = ToggleTribeeMembershipSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.community.interfacess.cosmoconn.v1.CosmoInterface/TribeeDynClick" => {
+                    #[allow(non_camel_case_types)]
+                    struct TribeeDynClickSvc<T: CosmoInterface>(pub Arc<T>);
+                    impl<
+                        T: CosmoInterface,
+                    > tonic::server::UnaryService<super::TribeeDynClickReq>
+                    for TribeeDynClickSvc<T> {
+                        type Response = super::TribeeDynClickRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::TribeeDynClickReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as CosmoInterface>::tribee_dyn_click(&inner, request)
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = TribeeDynClickSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

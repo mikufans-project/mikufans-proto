@@ -20,6 +20,9 @@ pub struct PlayerArgs {
     ///
     #[prost(enumeration = "QnPolicy", tag = "6")]
     pub qn_policy: i32,
+    ///
+    #[prost(int64, tag = "7")]
+    pub client_attr: i64,
 }
 impl ::prost::Name for PlayerArgs {
     const NAME: &'static str = "PlayerArgs";

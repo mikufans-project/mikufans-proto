@@ -17,6 +17,9 @@ pub struct CloudPlayConfig {
     ///
     #[prost(message, optional, tag = "5")]
     pub enable_loss_less: ::core::option::Option<super::super::BoolValue>,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub priority_use_dolby_h_d_r: ::core::option::Option<super::super::BoolValue>,
 }
 impl ::prost::Name for CloudPlayConfig {
     const NAME: &'static str = "CloudPlayConfig";

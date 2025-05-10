@@ -115,7 +115,9 @@ pub struct BigItem {
     pub can_play: i32,
     ///
     #[prost(message, optional, tag = "16")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
     ///
     #[prost(bool, tag = "17")]
     pub is_fav: bool,
@@ -579,7 +581,9 @@ pub struct CursorReq {
     pub player_preload: ::core::option::Option<PlayerPreloadParams>,
     ///
     #[prost(message, optional, tag = "4")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
 }
 impl ::prost::Name for CursorReq {
     const NAME: &'static str = "CursorReq";
@@ -657,7 +661,9 @@ pub struct CursorV2Req {
     pub player_preload: ::core::option::Option<PlayerPreloadParams>,
     ///
     #[prost(message, optional, tag = "4")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
     ///
     #[prost(bool, tag = "5")]
     pub is_local: bool,
@@ -1391,7 +1397,9 @@ pub struct MediaVideoReq {
     pub ps: i32,
     ///
     #[prost(message, optional, tag = "7")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
 }
 impl ::prost::Name for MediaVideoReq {
     const NAME: &'static str = "MediaVideoReq";
@@ -1775,6 +1783,21 @@ pub struct ResultItem {
     ///
     #[prost(int32, tag = "31")]
     pub is_sug_style_exp: i32,
+    ///
+    #[prost(bool, tag = "32")]
+    pub show_live_icon: bool,
+    ///
+    #[prost(int64, tag = "33")]
+    pub sug_ref: i64,
+    ///
+    #[prost(int64, tag = "34")]
+    pub sug_ref1: i64,
+    ///
+    #[prost(string, tag = "35")]
+    pub sug_sub_type: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "36")]
+    pub sug_query_tag: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ResultItem {
     const NAME: &'static str = "ResultItem";
@@ -1840,7 +1863,9 @@ pub struct SearchArchiveReq {
     pub ps: i64,
     ///
     #[prost(message, optional, tag = "5")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
 }
 impl ::prost::Name for SearchArchiveReq {
     const NAME: &'static str = "SearchArchiveReq";
@@ -1889,7 +1914,9 @@ pub struct SearchDynamicReq {
     pub ps: i64,
     ///
     #[prost(message, optional, tag = "5")]
-    pub player_args: ::core::option::Option<super::super::card::v1::PlayerArgs>,
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
 }
 impl ::prost::Name for SearchDynamicReq {
     const NAME: &'static str = "SearchDynamicReq";

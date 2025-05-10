@@ -25,6 +25,35 @@ impl ::prost::Name for ItemWhRatio {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum TribeeRefresh {
+    ///
+    RefreshNew = 0,
+    ///
+    RefreshHistory = 1,
+}
+impl TribeeRefresh {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::RefreshNew => "REFRESH_NEW",
+            Self::RefreshHistory => "REFRESH_HISTORY",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "REFRESH_NEW" => Some(Self::RefreshNew),
+            "REFRESH_HISTORY" => Some(Self::RefreshHistory),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum WhRatio {
     ///
     WHRatio11 = 0,
