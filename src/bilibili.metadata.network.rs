@@ -51,6 +51,47 @@ impl ::prost::Name for Network {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum CellularType {
+    ///
+    CNone = 0,
+    ///
+    C2g = 1,
+    ///
+    C3g = 2,
+    ///
+    C4g = 3,
+    ///
+    C5g = 4,
+}
+impl CellularType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::CNone => "C_NONE",
+            Self::C2g => "C_2G",
+            Self::C3g => "C_3G",
+            Self::C4g => "C_4G",
+            Self::C5g => "C_5G",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "C_NONE" => Some(Self::CNone),
+            "C_2G" => Some(Self::C2g),
+            "C_3G" => Some(Self::C3g),
+            "C_4G" => Some(Self::C4g),
+            "C_5G" => Some(Self::C5g),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum NetworkType {
     ///
     NtUnknown = 0,

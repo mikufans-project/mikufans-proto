@@ -294,6 +294,9 @@ pub struct ModuleReply {
     ///
     #[prost(int64, tag = "26")]
     pub source_version: i64,
+    ///
+    #[prost(string, tag = "27")]
+    pub region: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ModuleReply {
     const NAME: &'static str = "ModuleReply";
@@ -433,6 +436,9 @@ pub struct VersionReq {
     ///
     #[prost(bool, tag = "4")]
     pub need_full: bool,
+    ///
+    #[prost(int64, tag = "5")]
+    pub module_id: i64,
 }
 impl ::prost::Name for VersionReq {
     const NAME: &'static str = "VersionReq";
