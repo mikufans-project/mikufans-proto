@@ -1285,6 +1285,12 @@ pub struct LanguageItem {
     ///
     #[prost(string, tag = "4")]
     pub subtitle_lang: ::prost::alloc::string::String,
+    ///
+    #[prost(bool, tag = "5")]
+    pub video_detext: bool,
+    ///
+    #[prost(bool, tag = "6")]
+    pub video_mouth_shape_change: bool,
 }
 impl ::prost::Name for LanguageItem {
     const NAME: &'static str = "LanguageItem";

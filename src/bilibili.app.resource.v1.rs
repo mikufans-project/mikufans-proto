@@ -199,6 +199,9 @@ pub struct ListReq {
     ///
     #[prost(bool, tag = "12")]
     pub support_peak: bool,
+    ///
+    #[prost(string, tag = "13")]
+    pub region: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ListReq {
     const NAME: &'static str = "ListReq";

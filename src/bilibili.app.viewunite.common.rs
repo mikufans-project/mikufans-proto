@@ -6128,6 +6128,8 @@ pub enum ModuleType {
     Merchandise = 55,
     ///
     ActivityGuidanceBar = 56,
+    ///
+    AiTip = 57,
 }
 impl ModuleType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -6193,6 +6195,7 @@ impl ModuleType {
             Self::PlayList => "PLAY_LIST",
             Self::Merchandise => "MERCHANDISE",
             Self::ActivityGuidanceBar => "ACTIVITY_GUIDANCE_BAR",
+            Self::AiTip => "AI_TIP",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -6255,6 +6258,7 @@ impl ModuleType {
             "PLAY_LIST" => Some(Self::PlayList),
             "MERCHANDISE" => Some(Self::Merchandise),
             "ACTIVITY_GUIDANCE_BAR" => Some(Self::ActivityGuidanceBar),
+            "AI_TIP" => Some(Self::AiTip),
             _ => None,
         }
     }

@@ -37,6 +37,12 @@ pub struct Network {
     ///
     #[prost(string, tag = "3")]
     pub oid: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "CellularType", tag = "4")]
+    pub cellular: i32,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub quality: ::core::option::Option<NetQuality>,
 }
 impl ::prost::Name for Network {
     const NAME: &'static str = "Network";
