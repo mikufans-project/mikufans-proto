@@ -1798,6 +1798,15 @@ pub struct ResultItem {
     ///
     #[prost(string, tag = "36")]
     pub sug_query_tag: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "SugPreIcon", tag = "37")]
+    pub pre_icon: i32,
+    ///
+    #[prost(enumeration = "SugPostIcon", tag = "38")]
+    pub post_icon: i32,
+    ///
+    #[prost(string, tag = "39")]
+    pub sug_rcmd_reason: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ResultItem {
     const NAME: &'static str = "ResultItem";
@@ -2747,6 +2756,68 @@ impl PwdFrom {
             "OSTeenagersLogout" => Some(Self::OsTeenagersLogout),
             "TeenagersSetAge" => Some(Self::TeenagersSetAge),
             "OSTeenagersSetAge" => Some(Self::OsTeenagersSetAge),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SugPostIcon {
+    ///
+    Default = 0,
+    ///
+    Arrow = 1,
+}
+impl SugPostIcon {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "SUG_POST_ICON_DEFAULT",
+            Self::Arrow => "SUG_POST_ICON_ARROW",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "SUG_POST_ICON_DEFAULT" => Some(Self::Default),
+            "SUG_POST_ICON_ARROW" => Some(Self::Arrow),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum SugPreIcon {
+    ///
+    Default = 0,
+    ///
+    Clock = 1,
+    ///
+    MagnifyingGlass = 2,
+}
+impl SugPreIcon {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "SUG_PRE_ICON_DEFAULT",
+            Self::Clock => "SUG_PRE_ICON_CLOCK",
+            Self::MagnifyingGlass => "SUG_PRE_ICON_MAGNIFYING_GLASS",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "SUG_PRE_ICON_DEFAULT" => Some(Self::Default),
+            "SUG_PRE_ICON_CLOCK" => Some(Self::Clock),
+            "SUG_PRE_ICON_MAGNIFYING_GLASS" => Some(Self::MagnifyingGlass),
             _ => None,
         }
     }

@@ -496,6 +496,9 @@ pub struct AdCardDto {
     ///
     #[prost(int32, tag = "89")]
     pub item_source: i32,
+    ///
+    #[prost(int32, tag = "90")]
+    pub underframe_icon_type: i32,
 }
 impl ::prost::Name for AdCardDto {
     const NAME: &'static str = "AdCardDto";

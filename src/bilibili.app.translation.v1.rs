@@ -131,6 +131,8 @@ pub enum TranslationBusiness {
     TransBizOpus = 3,
     ///
     TransBizLive = 4,
+    ///
+    TransBizCheese = 5,
 }
 impl TranslationBusiness {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -144,6 +146,7 @@ impl TranslationBusiness {
             Self::TransBizReply => "TRANS_BIZ_REPLY",
             Self::TransBizOpus => "TRANS_BIZ_OPUS",
             Self::TransBizLive => "TRANS_BIZ_LIVE",
+            Self::TransBizCheese => "TRANS_BIZ_CHEESE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -154,6 +157,7 @@ impl TranslationBusiness {
             "TRANS_BIZ_REPLY" => Some(Self::TransBizReply),
             "TRANS_BIZ_OPUS" => Some(Self::TransBizOpus),
             "TRANS_BIZ_LIVE" => Some(Self::TransBizLive),
+            "TRANS_BIZ_CHEESE" => Some(Self::TransBizCheese),
             _ => None,
         }
     }

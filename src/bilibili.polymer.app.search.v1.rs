@@ -97,6 +97,9 @@ pub struct AvItem {
     ///
     #[prost(int32, tag = "18")]
     pub is_iaa_video: i32,
+    ///
+    #[prost(string, tag = "19")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for AvItem {
     const NAME: &'static str = "AvItem";
@@ -453,6 +456,29 @@ impl ::prost::Name for CardLayout {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CardUi {
+    ///
+    #[prost(string, tag = "1")]
+    pub mask_color_value: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub mask_opacity: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub module_color: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CardUi {
+    const NAME: &'static str = "CardUI";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CardUI".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CardUI".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ChannelLabel {
     ///
     #[prost(string, tag = "1")]
@@ -618,6 +644,56 @@ impl ::prost::Name for Comment {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CountdownInfo {
+    ///
+    #[prost(int64, tag = "1")]
+    pub countdown_time: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub countdown_pic_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub countdown_num_pic_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub countdown_num_color: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub countdown_time_color: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "6")]
+    pub button_type: i32,
+    ///
+    #[prost(string, tag = "7")]
+    pub button_pic_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "8")]
+    pub reserve_button_pic_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub countdown_jump_url: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "10")]
+    pub reserve_info: ::core::option::Option<SearchReserveInfo>,
+    ///
+    #[prost(int64, tag = "11")]
+    pub is_follow: i64,
+    ///
+    #[prost(int64, tag = "12")]
+    pub state: i64,
+}
+impl ::prost::Name for CountdownInfo {
+    const NAME: &'static str = "CountdownInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.CountdownInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.CountdownInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DetailsRelationItem {
     ///
     #[prost(string, tag = "1")]
@@ -765,6 +841,9 @@ pub struct DisplayOption {
     ///
     #[prost(double, tag = "10")]
     pub cover_exp_large: f64,
+    ///
+    #[prost(int32, tag = "11")]
+    pub alienation_card_count: i32,
 }
 impl ::prost::Name for DisplayOption {
     const NAME: &'static str = "DisplayOption";
@@ -1357,7 +1436,7 @@ pub struct Item {
     ///
     #[prost(
         oneof = "item::CardItem",
-        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64, 65, 66"
+        tags = "7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 60, 61, 62, 64, 65, 66, 67"
     )]
     pub card_item: ::core::option::Option<item::CardItem>,
 }
@@ -1540,6 +1619,9 @@ pub mod item {
         ///
         #[prost(message, tag = "66")]
         DigitalChat(super::SearchDigitalChatCard),
+        ///
+        #[prost(message, tag = "67")]
+        AlienationCard(super::SearchAlienationCard),
     }
 }
 impl ::prost::Name for Item {
@@ -2509,6 +2591,49 @@ impl ::prost::Name for ReserveInfo {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ReserveRequest {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub reserve_info: ::core::option::Option<SearchReserveInfo>,
+}
+impl ::prost::Name for ReserveRequest {
+    const NAME: &'static str = "ReserveRequest";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ReserveRequest".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ReserveRequest".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ReserveResponse {
+    ///
+    #[prost(string, tag = "1")]
+    pub toast: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub reserve_info: ::core::option::Option<SearchReserveInfo>,
+    ///
+    #[prost(int64, tag = "3")]
+    pub is_follow: i64,
+    ///
+    #[prost(int64, tag = "4")]
+    pub state: i64,
+}
+impl ::prost::Name for ReserveResponse {
+    const NAME: &'static str = "ReserveResponse";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.ReserveResponse".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.ReserveResponse".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RightTopLiveBadge {
     ///
     #[prost(int32, tag = "1")]
@@ -2586,6 +2711,38 @@ impl ::prost::Name for SearchAdCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchAdCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchAlienationCard {
+    ///
+    #[prost(int32, tag = "1")]
+    pub cover_type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub cover: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "3")]
+    pub cover_pic_height: i64,
+    ///
+    #[prost(string, tag = "4")]
+    pub jump_url: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub card_ui: ::core::option::Option<CardUi>,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub countdown_info: ::core::option::Option<CountdownInfo>,
+}
+impl ::prost::Name for SearchAlienationCard {
+    const NAME: &'static str = "SearchAlienationCard";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchAlienationCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchAlienationCard".into()
     }
 }
 ///
@@ -2914,6 +3071,9 @@ pub struct SearchAuthorNewCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+    ///
+    #[prost(int64, tag = "35")]
+    pub translation_status: i64,
 }
 impl ::prost::Name for SearchAuthorNewCard {
     const NAME: &'static str = "SearchAuthorNewCard";
@@ -3262,6 +3422,12 @@ pub struct SearchCheese {
     ///
     #[prost(message, optional, tag = "14")]
     pub card_layout: ::core::option::Option<CardLayout>,
+    ///
+    #[prost(int64, tag = "15")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "16")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SearchCheese {
     const NAME: &'static str = "SearchCheese";
@@ -3915,6 +4081,9 @@ pub struct SearchInlineData {
     ///
     #[prost(string, tag = "40")]
     pub report_flow_data: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "41")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SearchInlineData {
     const NAME: &'static str = "SearchInlineData";
@@ -4006,6 +4175,18 @@ pub struct SearchLiveCard {
     ///
     #[prost(message, optional, tag = "13")]
     pub card_layout: ::core::option::Option<CardLayout>,
+    ///
+    #[prost(message, repeated, tag = "14")]
+    pub three_point: ::prost::alloc::vec::Vec<ThreePoint>,
+    ///
+    #[prost(int64, tag = "15")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "16")]
+    pub translated_title: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "17")]
+    pub roomid: i64,
 }
 impl ::prost::Name for SearchLiveCard {
     const NAME: &'static str = "SearchLiveCard";
@@ -4055,6 +4236,18 @@ pub struct SearchLiveInlineCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+    ///
+    #[prost(message, repeated, tag = "12")]
+    pub three_point: ::prost::alloc::vec::Vec<ThreePoint>,
+    ///
+    #[prost(int64, tag = "13")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "14")]
+    pub translated_title: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "15")]
+    pub inline_title_style: i32,
 }
 impl ::prost::Name for SearchLiveInlineCard {
     const NAME: &'static str = "SearchLiveInlineCard";
@@ -4140,6 +4333,15 @@ pub struct SearchLiveMaster {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+    ///
+    #[prost(message, repeated, tag = "24")]
+    pub three_point: ::prost::alloc::vec::Vec<ThreePoint>,
+    ///
+    #[prost(int64, tag = "25")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "26")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SearchLiveMaster {
     const NAME: &'static str = "SearchLiveMaster";
@@ -4196,6 +4398,15 @@ pub struct SearchLiveRoom {
     ///
     #[prost(string, tag = "14")]
     pub live_link: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "15")]
+    pub three_point: ::prost::alloc::vec::Vec<ThreePoint>,
+    ///
+    #[prost(int64, tag = "16")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "17")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SearchLiveRoom {
     const NAME: &'static str = "SearchLiveRoom";
@@ -4655,6 +4866,9 @@ pub struct SearchOgvInlineCard {
     ///
     #[prost(message, optional, tag = "17")]
     pub sale_info: ::core::option::Option<SaleInfo>,
+    ///
+    #[prost(int32, tag = "18")]
+    pub inline_title_style: i32,
 }
 impl ::prost::Name for SearchOgvInlineCard {
     const NAME: &'static str = "SearchOgvInlineCard";
@@ -5098,6 +5312,29 @@ impl ::prost::Name for SearchRelatedSearch {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchRelatedSearch".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchReserveInfo {
+    ///
+    #[prost(int64, tag = "1")]
+    pub sid: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub oid: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "ReserveType", tag = "3")]
+    pub r#type: i32,
+}
+impl ::prost::Name for SearchReserveInfo {
+    const NAME: &'static str = "SearchReserveInfo";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchReserveInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchReserveInfo".into()
     }
 }
 ///
@@ -5609,6 +5846,18 @@ pub struct SearchUgcInlineCard {
     pub avatar_info: ::core::option::Option<
         super::super::super::super::dagw::component::avatar::v1::AvatarItem,
     >,
+    ///
+    #[prost(message, repeated, tag = "14")]
+    pub three_point: ::prost::alloc::vec::Vec<ThreePoint>,
+    ///
+    #[prost(int64, tag = "15")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "16")]
+    pub translated_title: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "17")]
+    pub inline_title_style: i32,
 }
 impl ::prost::Name for SearchUgcInlineCard {
     const NAME: &'static str = "SearchUgcInlineCard";
@@ -5798,6 +6047,12 @@ pub struct SearchVideoCard {
     ///
     #[prost(message, optional, tag = "32")]
     pub short_ogv_info: ::core::option::Option<ShortOgvInfo>,
+    ///
+    #[prost(int64, tag = "33")]
+    pub translation_status: i64,
+    ///
+    #[prost(string, tag = "34")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for SearchVideoCard {
     const NAME: &'static str = "SearchVideoCard";
@@ -6184,6 +6439,12 @@ pub struct ThreePoint {
     ///
     #[prost(string, tag = "3")]
     pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub alternate_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub alternate_icon: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ThreePoint {
     const NAME: &'static str = "ThreePoint";
@@ -6929,6 +7190,43 @@ impl OpusType {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum ReserveType {
+    ///
+    Unknown = 0,
+    ///
+    Ogv = 1,
+    ///
+    Live = 2,
+    ///
+    Sports = 3,
+}
+impl ReserveType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unknown => "RESERVE_TYPE_UNKNOWN",
+            Self::Ogv => "RESERVE_TYPE_OGV",
+            Self::Live => "RESERVE_TYPE_LIVE",
+            Self::Sports => "RESERVE_TYPE_SPORTS",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "RESERVE_TYPE_UNKNOWN" => Some(Self::Unknown),
+            "RESERVE_TYPE_OGV" => Some(Self::Ogv),
+            "RESERVE_TYPE_LIVE" => Some(Self::Live),
+            "RESERVE_TYPE_SPORTS" => Some(Self::Sports),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum Sort {
     ///
     Default = 0,
@@ -7124,6 +7422,36 @@ pub mod search_client {
             self
         }
         ///
+        pub async fn search_add_reserve(
+            &mut self,
+            request: impl tonic::IntoRequest<super::ReserveRequest>,
+        ) -> std::result::Result<
+            tonic::Response<super::ReserveResponse>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.polymer.app.search.v1.Search/SearchAddReserve",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.polymer.app.search.v1.Search",
+                        "SearchAddReserve",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn search_all(
             &mut self,
             request: impl tonic::IntoRequest<super::SearchAllRequest>,
@@ -7206,6 +7534,36 @@ pub mod search_client {
                     GrpcMethod::new(
                         "bilibili.polymer.app.search.v1.Search",
                         "SearchComic",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn search_del_reserve(
+            &mut self,
+            request: impl tonic::IntoRequest<super::ReserveRequest>,
+        ) -> std::result::Result<
+            tonic::Response<super::ReserveResponse>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.polymer.app.search.v1.Search/SearchDelReserve",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.polymer.app.search.v1.Search",
+                        "SearchDelReserve",
                     ),
                 );
             self.inner.unary(req, path, codec).await
@@ -7311,6 +7669,11 @@ pub mod search_server {
     #[async_trait]
     pub trait Search: std::marker::Send + std::marker::Sync + 'static {
         ///
+        async fn search_add_reserve(
+            &self,
+            request: tonic::Request<super::ReserveRequest>,
+        ) -> std::result::Result<tonic::Response<super::ReserveResponse>, tonic::Status>;
+        ///
         async fn search_all(
             &self,
             request: tonic::Request<super::SearchAllRequest>,
@@ -7334,6 +7697,11 @@ pub mod search_server {
             tonic::Response<super::SearchComicResponse>,
             tonic::Status,
         >;
+        ///
+        async fn search_del_reserve(
+            &self,
+            request: tonic::Request<super::ReserveRequest>,
+        ) -> std::result::Result<tonic::Response<super::ReserveResponse>, tonic::Status>;
         ///
         async fn search_ogv(
             &self,
@@ -7433,6 +7801,49 @@ pub mod search_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
+                "/bilibili.polymer.app.search.v1.Search/SearchAddReserve" => {
+                    #[allow(non_camel_case_types)]
+                    struct SearchAddReserveSvc<T: Search>(pub Arc<T>);
+                    impl<T: Search> tonic::server::UnaryService<super::ReserveRequest>
+                    for SearchAddReserveSvc<T> {
+                        type Response = super::ReserveResponse;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::ReserveRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Search>::search_add_reserve(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = SearchAddReserveSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.polymer.app.search.v1.Search/SearchAll" => {
                     #[allow(non_camel_case_types)]
                     struct SearchAllSvc<T: Search>(pub Arc<T>);
@@ -7551,6 +7962,49 @@ pub mod search_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = SearchComicSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.polymer.app.search.v1.Search/SearchDelReserve" => {
+                    #[allow(non_camel_case_types)]
+                    struct SearchDelReserveSvc<T: Search>(pub Arc<T>);
+                    impl<T: Search> tonic::server::UnaryService<super::ReserveRequest>
+                    for SearchDelReserveSvc<T> {
+                        type Response = super::ReserveResponse;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::ReserveRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Search>::search_del_reserve(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = SearchDelReserveSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
