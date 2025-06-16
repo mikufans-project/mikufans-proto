@@ -64,6 +64,9 @@ pub struct Arc {
     ///
     #[prost(string, tag = "10")]
     pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(int32, tag = "11")]
+    pub state: i32,
 }
 impl ::prost::Name for Arc {
     const NAME: &'static str = "Arc";
@@ -1322,6 +1325,12 @@ pub struct RelatesFeedReq {
     ///
     #[prost(string, tag = "14")]
     pub tab_category_name: ::prost::alloc::string::String,
+    ///
+    #[prost(map = "string, string", tag = "15")]
+    pub extra_content: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
 }
 impl ::prost::Name for RelatesFeedReq {
     const NAME: &'static str = "RelatesFeedReq";
@@ -1582,7 +1591,7 @@ pub struct SourceContentItem {
     #[prost(enumeration = "SourceContentType", tag = "2")]
     pub sc_type: i32,
     ///
-    #[prost(oneof = "source_content_item::Data", tags = "3")]
+    #[prost(oneof = "source_content_item::Data", tags = "3, 4")]
     pub data: ::core::option::Option<source_content_item::Data>,
 }
 /// Nested message and enum types in `SourceContentItem`.
@@ -1593,6 +1602,9 @@ pub mod source_content_item {
         ///
         #[prost(message, tag = "3")]
         Av(super::SourceContentAv),
+        ///
+        #[prost(message, tag = "4")]
+        Live(super::super::common::SourceContentLive),
     }
 }
 impl ::prost::Name for SourceContentItem {
@@ -1887,6 +1899,29 @@ impl ::prost::Name for TabModule {
     }
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Translation {
+    ///
+    #[prost(int32, tag = "1")]
+    pub translation_status: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub cur_language: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub arc_language: ::prost::alloc::string::String,
+}
+impl ::prost::Name for Translation {
+    const NAME: &'static str = "Translation";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.v1.Translation".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.v1.Translation".into()
+    }
+}
+///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct UpperInfos {
     ///
@@ -2078,6 +2113,9 @@ pub struct ViewBase {
     ///
     #[prost(message, optional, tag = "5")]
     pub config: ::core::option::Option<Config>,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub translation: ::core::option::Option<Translation>,
 }
 impl ::prost::Name for ViewBase {
     const NAME: &'static str = "ViewBase";
@@ -2600,6 +2638,8 @@ pub enum SourceContentType {
     ScDefault = 0,
     ///
     ScAv = 1,
+    ///
+    ScLive = 2,
 }
 impl SourceContentType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -2610,6 +2650,7 @@ impl SourceContentType {
         match self {
             Self::ScDefault => "SC_DEFAULT",
             Self::ScAv => "SC_AV",
+            Self::ScLive => "SC_LIVE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -2617,6 +2658,7 @@ impl SourceContentType {
         match value {
             "SC_DEFAULT" => Some(Self::ScDefault),
             "SC_AV" => Some(Self::ScAv),
+            "SC_LIVE" => Some(Self::ScLive),
             _ => None,
         }
     }

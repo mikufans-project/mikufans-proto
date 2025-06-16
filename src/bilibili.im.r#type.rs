@@ -435,6 +435,9 @@ pub struct HighText {
     ///
     #[prost(int32, tag = "3")]
     pub index: i32,
+    ///
+    #[prost(enumeration = "ActionType", tag = "4")]
+    pub action: i32,
 }
 impl ::prost::Name for HighText {
     const NAME: &'static str = "HighText";
@@ -1227,6 +1230,35 @@ impl ::prost::Name for VipLabel {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.im.type.VipLabel".into()
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum ActionType {
+    ///
+    Invalid = 0,
+    ///
+    Recall = 1,
+}
+impl ActionType {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Invalid => "INVALID",
+            Self::Recall => "RECALL",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "INVALID" => Some(Self::Invalid),
+            "RECALL" => Some(Self::Recall),
+            _ => None,
+        }
     }
 }
 ///

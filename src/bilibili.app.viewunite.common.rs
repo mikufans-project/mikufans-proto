@@ -687,6 +687,29 @@ impl ::prost::Name for Button {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ButtonMeta {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub button_status: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ButtonMeta {
+    const NAME: &'static str = "ButtonMeta";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.ButtonMeta".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.ButtonMeta".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ButtonWidget {
     ///
     #[prost(string, tag = "1")]
@@ -768,6 +791,9 @@ pub struct CardBasicInfo {
     ///
     #[prost(message, optional, tag = "17")]
     pub dimension: ::core::option::Option<CoverDimension>,
+    ///
+    #[prost(string, tag = "18")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for CardBasicInfo {
     const NAME: &'static str = "CardBasicInfo";
@@ -1707,6 +1733,9 @@ pub struct LiveOrder {
     ///
     #[prost(message, optional, tag = "6")]
     pub reserve_calendar_info: ::core::option::Option<ReserveCalendarInfo>,
+    ///
+    #[prost(string, tag = "7")]
+    pub business: ::prost::alloc::string::String,
 }
 impl ::prost::Name for LiveOrder {
     const NAME: &'static str = "LiveOrder";
@@ -3725,6 +3754,9 @@ pub struct RelateCmCard {
     ///
     #[prost(int32, tag = "5")]
     pub nature_ad: i32,
+    ///
+    #[prost(message, optional, tag = "6")]
+    pub live: ::core::option::Option<RelateCmLive>,
 }
 impl ::prost::Name for RelateCmCard {
     const NAME: &'static str = "RelateCMCard";
@@ -3734,6 +3766,32 @@ impl ::prost::Name for RelateCmCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.RelateCMCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct RelateCmLive {
+    ///
+    #[prost(int64, tag = "1")]
+    pub room_id: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub area_name: ::prost::alloc::string::String,
+    ///
+    #[prost(int64, tag = "3")]
+    pub live_status: i64,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub stat_info: ::core::option::Option<StatInfo>,
+}
+impl ::prost::Name for RelateCmLive {
+    const NAME: &'static str = "RelateCMLive";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.RelateCMLive".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.RelateCMLive".into()
     }
 }
 ///
@@ -4125,6 +4183,9 @@ pub struct RelateThreePoint {
     ///
     #[prost(string, tag = "4")]
     pub dislike_report_data: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub translate_button: ::core::option::Option<TranslateButton>,
 }
 impl ::prost::Name for RelateThreePoint {
     const NAME: &'static str = "RelateThreePoint";
@@ -4488,6 +4549,32 @@ impl ::prost::Name for SkipRange {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.SkipRange".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SourceContentLive {
+    ///
+    #[prost(int64, tag = "1")]
+    pub room_id: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub live_status: i64,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub stat_info: ::core::option::Option<StatInfo>,
+    ///
+    #[prost(string, tag = "4")]
+    pub up_name: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SourceContentLive {
+    const NAME: &'static str = "SourceContentLive";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.SourceContentLive".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.SourceContentLive".into()
     }
 }
 ///
@@ -4991,6 +5078,26 @@ impl ::prost::Name for TitleDeliveryButton {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.TitleDeliveryButton".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TranslateButton {
+    ///
+    #[prost(string, tag = "1")]
+    pub button_status: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub button_metas: ::prost::alloc::vec::Vec<ButtonMeta>,
+}
+impl ::prost::Name for TranslateButton {
+    const NAME: &'static str = "TranslateButton";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.TranslateButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.TranslateButton".into()
     }
 }
 ///

@@ -5513,6 +5513,9 @@ pub struct ImgInlineCfg {
     ///
     #[prost(message, optional, tag = "3")]
     pub color: ::core::option::Option<Colors>,
+    ///
+    #[prost(int32, tag = "4")]
+    pub round_radius: i32,
 }
 impl ::prost::Name for ImgInlineCfg {
     const NAME: &'static str = "ImgInlineCfg";

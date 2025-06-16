@@ -2937,6 +2937,9 @@ pub struct ReplyControl {
     ///
     #[prost(message, optional, tag = "36")]
     pub insert_effect: ::core::option::Option<reply_control::InsertEffect>,
+    ///
+    #[prost(enumeration = "TranslationSwitch", tag = "37")]
+    pub translation_switch: i32,
 }
 /// Nested message and enum types in `ReplyControl`.
 pub mod reply_control {
@@ -3415,6 +3418,9 @@ pub struct ReplyInfo {
     ///
     #[prost(string, tag = "16")]
     pub track_info: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "17")]
+    pub translated_content: ::core::option::Option<Content>,
 }
 impl ::prost::Name for ReplyInfo {
     const NAME: &'static str = "ReplyInfo";
@@ -4441,6 +4447,46 @@ impl ::prost::Name for Topic {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TranslateReplyReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub r#type: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub oid: i64,
+    ///
+    #[prost(int64, repeated, tag = "3")]
+    pub rpids: ::prost::alloc::vec::Vec<i64>,
+}
+impl ::prost::Name for TranslateReplyReq {
+    const NAME: &'static str = "TranslateReplyReq";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.TranslateReplyReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.TranslateReplyReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TranslateReplyResp {
+    ///
+    #[prost(map = "int64, message", tag = "1")]
+    pub translated_replies: ::std::collections::HashMap<i64, ReplyInfo>,
+}
+impl ::prost::Name for TranslateReplyResp {
+    const NAME: &'static str = "TranslateReplyResp";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.TranslateReplyResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.TranslateReplyResp".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UgcVideoSearchItem {
     ///
     #[prost(string, tag = "1")]
@@ -5089,6 +5135,43 @@ impl SearchItemVideoSubType {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum TranslationSwitch {
+    ///
+    Unspecified = 0,
+    ///
+    Unsupported = 1,
+    ///
+    ShowTranslation = 2,
+    ///
+    ShowOrigin = 3,
+}
+impl TranslationSwitch {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unspecified => "TRANSLATION_SWITCH_UNSPECIFIED",
+            Self::Unsupported => "TRANSLATION_SWITCH_UNSUPPORTED",
+            Self::ShowTranslation => "TRANSLATION_SWITCH_SHOW_TRANSLATION",
+            Self::ShowOrigin => "TRANSLATION_SWITCH_SHOW_ORIGIN",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "TRANSLATION_SWITCH_UNSPECIFIED" => Some(Self::Unspecified),
+            "TRANSLATION_SWITCH_UNSUPPORTED" => Some(Self::Unsupported),
+            "TRANSLATION_SWITCH_SHOW_TRANSLATION" => Some(Self::ShowTranslation),
+            "TRANSLATION_SWITCH_SHOW_ORIGIN" => Some(Self::ShowOrigin),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum UserCallbackAction {
     ///
     Dismiss = 0,
@@ -5646,6 +5729,36 @@ pub mod reply_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn translate_reply(
+            &mut self,
+            request: impl tonic::IntoRequest<super::TranslateReplyReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::TranslateReplyResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.main.community.reply.v1.Reply/TranslateReply",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.main.community.reply.v1.Reply",
+                        "TranslateReply",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn update_single_reply_notification_config(
             &mut self,
             request: impl tonic::IntoRequest<
@@ -5814,6 +5927,14 @@ pub mod reply_server {
             request: tonic::Request<super::SuggestEmotesReq>,
         ) -> std::result::Result<
             tonic::Response<super::SuggestEmotesResp>,
+            tonic::Status,
+        >;
+        ///
+        async fn translate_reply(
+            &self,
+            request: tonic::Request<super::TranslateReplyReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::TranslateReplyResp>,
             tonic::Status,
         >;
         ///
@@ -6546,6 +6667,49 @@ pub mod reply_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = SuggestEmotesSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.main.community.reply.v1.Reply/TranslateReply" => {
+                    #[allow(non_camel_case_types)]
+                    struct TranslateReplySvc<T: Reply>(pub Arc<T>);
+                    impl<T: Reply> tonic::server::UnaryService<super::TranslateReplyReq>
+                    for TranslateReplySvc<T> {
+                        type Response = super::TranslateReplyResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::TranslateReplyReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Reply>::translate_reply(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = TranslateReplySvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

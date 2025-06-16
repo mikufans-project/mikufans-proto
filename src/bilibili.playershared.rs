@@ -1583,6 +1583,9 @@ pub struct QnExp {
     ///
     #[prost(bool, tag = "2")]
     pub qn_exp2: bool,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub qn_exp3: ::core::option::Option<QnExpThree>,
 }
 impl ::prost::Name for QnExp {
     const NAME: &'static str = "QnExp";
@@ -1592,6 +1595,29 @@ impl ::prost::Name for QnExp {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.playershared.QnExp".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct QnExpThree {
+    ///
+    #[prost(bool, tag = "1")]
+    pub qn_exp3: bool,
+    ///
+    #[prost(int64, tag = "2")]
+    pub sid: i64,
+    ///
+    #[prost(float, tag = "3")]
+    pub low_screen_threshold: f32,
+}
+impl ::prost::Name for QnExpThree {
+    const NAME: &'static str = "QnExpThree";
+    const PACKAGE: &'static str = "bilibili.playershared";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.playershared.QnExpThree".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.playershared.QnExpThree".into()
     }
 }
 ///
@@ -2851,6 +2877,8 @@ pub enum ConfType {
     WatchLater = 37,
     ///
     SystemRecord = 38,
+    ///
+    Translate = 39,
 }
 impl ConfType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -2898,6 +2926,7 @@ impl ConfType {
             Self::Listen => "LISTEN",
             Self::WatchLater => "WATCH_LATER",
             Self::SystemRecord => "SYSTEM_RECORD",
+            Self::Translate => "TRANSLATE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -2942,6 +2971,7 @@ impl ConfType {
             "LISTEN" => Some(Self::Listen),
             "WATCH_LATER" => Some(Self::WatchLater),
             "SYSTEM_RECORD" => Some(Self::SystemRecord),
+            "TRANSLATE" => Some(Self::Translate),
             _ => None,
         }
     }
@@ -3588,6 +3618,8 @@ pub enum SettingItemType {
     SettingAiAudio = 35,
     ///
     SettingAiAudioExchange = 36,
+    ///
+    SettingTranslate = 37,
 }
 impl SettingItemType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3633,6 +3665,7 @@ impl SettingItemType {
             Self::SettingBacktracking => "SETTING_BACKTRACKING",
             Self::SettingAiAudio => "SETTING_AI_AUDIO",
             Self::SettingAiAudioExchange => "SETTING_AI_AUDIO_EXCHANGE",
+            Self::SettingTranslate => "SETTING_TRANSLATE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3675,6 +3708,7 @@ impl SettingItemType {
             "SETTING_BACKTRACKING" => Some(Self::SettingBacktracking),
             "SETTING_AI_AUDIO" => Some(Self::SettingAiAudio),
             "SETTING_AI_AUDIO_EXCHANGE" => Some(Self::SettingAiAudioExchange),
+            "SETTING_TRANSLATE" => Some(Self::SettingTranslate),
             _ => None,
         }
     }

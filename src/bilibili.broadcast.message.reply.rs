@@ -147,6 +147,9 @@ pub struct SubjectReplyInsertionResp {
     ///
     #[prost(string, repeated, tag = "9")]
     pub support_tag: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    ///
+    #[prost(int64, repeated, tag = "10")]
+    pub support_tag_ids: ::prost::alloc::vec::Vec<i64>,
 }
 impl ::prost::Name for SubjectReplyInsertionResp {
     const NAME: &'static str = "SubjectReplyInsertionResp";

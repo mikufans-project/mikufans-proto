@@ -176,6 +176,29 @@ impl ::prost::Name for CardItem {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ClipInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ClipInfo {
+    const NAME: &'static str = "ClipInfo";
+    const PACKAGE: &'static str = "bilibili.broadcast.message.deepsearch";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.broadcast.message.deepsearch.ClipInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.broadcast.message.deepsearch.ClipInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeepSearchContent {
     ///
     #[prost(oneof = "deep_search_content::ContentItem", tags = "1, 2")]
@@ -497,6 +520,9 @@ pub struct VideoCard {
     ///
     #[prost(string, tag = "6")]
     pub card_desc: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "7")]
+    pub clip_info: ::core::option::Option<ClipInfo>,
 }
 impl ::prost::Name for VideoCard {
     const NAME: &'static str = "VideoCard";

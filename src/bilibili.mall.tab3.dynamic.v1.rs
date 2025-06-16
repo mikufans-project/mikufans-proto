@@ -317,6 +317,9 @@ pub struct OpusDetailResp {
     ///
     #[prost(string, tag = "16")]
     pub item_type: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "17")]
+    pub support_info: ::core::option::Option<SupportInfo>,
 }
 impl ::prost::Name for OpusDetailResp {
     const NAME: &'static str = "OpusDetailResp";
@@ -504,6 +507,41 @@ impl ::prost::Name for ShareInfo {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.mall.tab3.dynamic.v1.ShareInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SupportInfo {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub support_status: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub score: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub long_bg_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub short_bg_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "7")]
+    pub icon_dynamic_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for SupportInfo {
+    const NAME: &'static str = "SupportInfo";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.SupportInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.SupportInfo".into()
     }
 }
 ///
