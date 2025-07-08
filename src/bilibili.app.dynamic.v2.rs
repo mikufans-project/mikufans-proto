@@ -904,7 +904,7 @@ impl ::prost::Name for AlumniDynamicsReply {
     }
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AlumniDynamicsReq {
     ///
     #[prost(int64, tag = "1")]
@@ -2073,7 +2073,7 @@ impl ::prost::Name for CampusRecommendReply {
     }
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CampusRecommendReq {
     ///
     #[prost(int64, tag = "1")]
@@ -3764,7 +3764,7 @@ impl ::prost::Name for DynRcmdReply {
     }
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DynRcmdReq {
     ///
     #[prost(message, optional, tag = "1")]
@@ -4275,6 +4275,57 @@ impl ::prost::Name for DynThumbReq {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.DynThumbReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct DynTranslateReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub dyn_id: i64,
+    ///
+    #[prost(int32, tag = "2")]
+    pub local_time: i32,
+    ///
+    #[prost(string, tag = "3")]
+    pub from: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "4")]
+    pub player_args: ::core::option::Option<
+        super::super::archive::middleware::v1::PlayerArgs,
+    >,
+    ///
+    #[prost(string, tag = "5")]
+    pub scene: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "super::common::TranslateSwitch", tag = "6")]
+    pub switch: i32,
+}
+impl ::prost::Name for DynTranslateReq {
+    const NAME: &'static str = "DynTranslateReq";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.DynTranslateReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.DynTranslateReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct DynTranslateResp {
+    ///
+    #[prost(message, optional, tag = "1")]
+    pub dynamic_item: ::core::option::Option<DynamicItem>,
+}
+impl ::prost::Name for DynTranslateResp {
+    const NAME: &'static str = "DynTranslateResp";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.DynTranslateResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.DynTranslateResp".into()
     }
 }
 ///
@@ -9926,6 +9977,9 @@ pub struct OpusDetailReq {
     ///
     #[prost(string, tag = "15")]
     pub pattern: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "super::common::TranslateSwitch", tag = "16")]
+    pub switch: i32,
 }
 impl ::prost::Name for OpusDetailReq {
     const NAME: &'static str = "OpusDetailReq";
@@ -9943,6 +9997,9 @@ pub struct OpusDetailResp {
     ///
     #[prost(message, optional, tag = "1")]
     pub opus_item: ::core::option::Option<OpusItem>,
+    ///
+    #[prost(enumeration = "super::common::TranslateState", tag = "2")]
+    pub state: i32,
 }
 impl ::prost::Name for OpusDetailResp {
     const NAME: &'static str = "OpusDetailResp";
@@ -12002,6 +12059,9 @@ pub struct ThreePointDynEdit {
     ///
     #[prost(string, tag = "4")]
     pub url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub guide_toast: ::prost::alloc::string::String,
 }
 impl ::prost::Name for ThreePointDynEdit {
     const NAME: &'static str = "ThreePointDynEdit";
@@ -12109,7 +12169,7 @@ pub struct ThreePointItem {
     ///
     #[prost(
         oneof = "three_point_item::Item",
-        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16"
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17"
     )]
     pub item: ::core::option::Option<three_point_item::Item>,
 }
@@ -12163,6 +12223,9 @@ pub mod three_point_item {
         ///
         #[prost(message, tag = "16")]
         TopicTop(super::ThreePointTopicTop),
+        ///
+        #[prost(message, tag = "17")]
+        Translate(super::ThreePointTranslate),
     }
 }
 impl ::prost::Name for ThreePointItem {
@@ -12306,6 +12369,29 @@ impl ::prost::Name for ThreePointTopicTop {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.dynamic.v2.ThreePointTopicTop".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ThreePointTranslate {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(enumeration = "super::common::TranslateSwitch", tag = "3")]
+    pub switch: i32,
+}
+impl ::prost::Name for ThreePointTranslate {
+    const NAME: &'static str = "ThreePointTranslate";
+    const PACKAGE: &'static str = "bilibili.app.dynamic.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.dynamic.v2.ThreePointTranslate".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.dynamic.v2.ThreePointTranslate".into()
     }
 }
 ///
@@ -16805,6 +16891,8 @@ pub enum ThreePointType {
     VisibilityChange = 21,
     ///
     TopicTop = 22,
+    ///
+    Translate = 23,
 }
 impl ThreePointType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -16836,6 +16924,7 @@ impl ThreePointType {
             Self::OgvSubscribe => "ogv_subscribe",
             Self::VisibilityChange => "visibility_change",
             Self::TopicTop => "topic_top",
+            Self::Translate => "translate",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -16864,6 +16953,7 @@ impl ThreePointType {
             "ogv_subscribe" => Some(Self::OgvSubscribe),
             "visibility_change" => Some(Self::VisibilityChange),
             "topic_top" => Some(Self::TopicTop),
+            "translate" => Some(Self::Translate),
             _ => None,
         }
     }
@@ -18219,6 +18309,33 @@ pub mod dynamic_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn dyn_space_internal(
+            &mut self,
+            request: impl tonic::IntoRequest<super::DynSpaceReq>,
+        ) -> std::result::Result<tonic::Response<super::DynSpaceRsp>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.dynamic.v2.Dynamic/DynSpaceInternal",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.app.dynamic.v2.Dynamic",
+                        "DynSpaceInternal",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn dyn_space_search_details(
             &mut self,
             request: impl tonic::IntoRequest<super::DynSpaceSearchDetailsReq>,
@@ -18290,6 +18407,33 @@ pub mod dynamic_client {
             let mut req = request.into_request();
             req.extensions_mut()
                 .insert(GrpcMethod::new("bilibili.app.dynamic.v2.Dynamic", "DynThumb"));
+            self.inner.unary(req, path, codec).await
+        }
+        ///
+        pub async fn dyn_translate(
+            &mut self,
+            request: impl tonic::IntoRequest<super::DynTranslateReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DynTranslateResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.dynamic.v2.Dynamic/DynTranslate",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.dynamic.v2.Dynamic", "DynTranslate"),
+                );
             self.inner.unary(req, path, codec).await
         }
         ///
@@ -19177,6 +19321,30 @@ pub mod opus_client {
             self.inner.unary(req, path, codec).await
         }
         ///
+        pub async fn opus_translate(
+            &mut self,
+            request: impl tonic::IntoRequest<super::OpusDetailReq>,
+        ) -> std::result::Result<tonic::Response<super::OpusDetailResp>, tonic::Status> {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.dynamic.v2.Opus/OpusTranslate",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new("bilibili.app.dynamic.v2.Opus", "OpusTranslate"),
+                );
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn sign_resources(
             &mut self,
             request: impl tonic::IntoRequest<super::SignResourcesReq>,
@@ -19632,6 +19800,11 @@ pub mod dynamic_server {
             request: tonic::Request<super::DynSpaceReq>,
         ) -> std::result::Result<tonic::Response<super::DynSpaceRsp>, tonic::Status>;
         ///
+        async fn dyn_space_internal(
+            &self,
+            request: tonic::Request<super::DynSpaceReq>,
+        ) -> std::result::Result<tonic::Response<super::DynSpaceRsp>, tonic::Status>;
+        ///
         async fn dyn_space_search_details(
             &self,
             request: tonic::Request<super::DynSpaceSearchDetailsReq>,
@@ -19649,6 +19822,14 @@ pub mod dynamic_server {
             &self,
             request: tonic::Request<super::DynThumbReq>,
         ) -> std::result::Result<tonic::Response<super::NoReply>, tonic::Status>;
+        ///
+        async fn dyn_translate(
+            &self,
+            request: tonic::Request<super::DynTranslateReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DynTranslateResp>,
+            tonic::Status,
+        >;
         ///
         async fn dyn_un_login_rcmd(
             &self,
@@ -21318,6 +21499,49 @@ pub mod dynamic_server {
                     };
                     Box::pin(fut)
                 }
+                "/bilibili.app.dynamic.v2.Dynamic/DynSpaceInternal" => {
+                    #[allow(non_camel_case_types)]
+                    struct DynSpaceInternalSvc<T: Dynamic>(pub Arc<T>);
+                    impl<T: Dynamic> tonic::server::UnaryService<super::DynSpaceReq>
+                    for DynSpaceInternalSvc<T> {
+                        type Response = super::DynSpaceRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::DynSpaceReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Dynamic>::dyn_space_internal(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = DynSpaceInternalSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.app.dynamic.v2.Dynamic/DynSpaceSearchDetails" => {
                     #[allow(non_camel_case_types)]
                     struct DynSpaceSearchDetailsSvc<T: Dynamic>(pub Arc<T>);
@@ -21435,6 +21659,49 @@ pub mod dynamic_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = DynThumbSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.dynamic.v2.Dynamic/DynTranslate" => {
+                    #[allow(non_camel_case_types)]
+                    struct DynTranslateSvc<T: Dynamic>(pub Arc<T>);
+                    impl<T: Dynamic> tonic::server::UnaryService<super::DynTranslateReq>
+                    for DynTranslateSvc<T> {
+                        type Response = super::DynTranslateResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::DynTranslateReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Dynamic>::dyn_translate(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = DynTranslateSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(
@@ -22683,6 +22950,11 @@ pub mod opus_server {
             tonic::Status,
         >;
         ///
+        async fn opus_translate(
+            &self,
+            request: tonic::Request<super::OpusDetailReq>,
+        ) -> std::result::Result<tonic::Response<super::OpusDetailResp>, tonic::Status>;
+        ///
         async fn sign_resources(
             &self,
             request: tonic::Request<super::SignResourcesReq>,
@@ -22970,6 +23242,49 @@ pub mod opus_server {
                     let inner = self.inner.clone();
                     let fut = async move {
                         let method = OpusSpaceFlowSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/bilibili.app.dynamic.v2.Opus/OpusTranslate" => {
+                    #[allow(non_camel_case_types)]
+                    struct OpusTranslateSvc<T: Opus>(pub Arc<T>);
+                    impl<T: Opus> tonic::server::UnaryService<super::OpusDetailReq>
+                    for OpusTranslateSvc<T> {
+                        type Response = super::OpusDetailResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::OpusDetailReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Opus>::opus_translate(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = OpusTranslateSvc(inner);
                         let codec = tonic::codec::ProstCodec::default();
                         let mut grpc = tonic::server::Grpc::new(codec)
                             .apply_compression_config(

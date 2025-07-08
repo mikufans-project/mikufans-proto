@@ -166,6 +166,13 @@ pub mod bilibili {
                 include!("bilibili.app.dynamic.v2.rs");
             }
         }
+        #[cfg(feature = "bilibili_app_growth")]
+        pub mod growth {
+            #[cfg(feature = "bilibili_app_growth_v1")]
+            pub mod v1 {
+                include!("bilibili.app.growth.v1.rs");
+            }
+        }
         #[cfg(feature = "bilibili_app_home")]
         pub mod home {
             #[cfg(feature = "bilibili_app_home_v1")]
@@ -482,6 +489,13 @@ pub mod bilibili {
                     include!("bilibili.community.interfacess.cosmoconn.v1.rs");
                 }
             }
+            #[cfg(feature = "bilibili_community_interfacess_watch")]
+            pub mod watch {
+                #[cfg(feature = "bilibili_community_interfacess_watch_v1")]
+                pub mod v1 {
+                    include!("bilibili.community.interfacess.watch.v1.rs");
+                }
+            }
         }
         #[cfg(feature = "bilibili_community_service")]
         pub mod service {
@@ -654,9 +668,30 @@ pub mod bilibili {
                 }
             }
         }
+        #[cfg(feature = "bilibili_live_component")]
+        pub mod component {
+            #[cfg(feature = "bilibili_live_component_common_model")]
+            pub mod common_model {
+                #[cfg(feature = "bilibili_live_component_common_model_fans_club")]
+                pub mod fans_club {
+                    include!("bilibili.live.component.common_model.fans_club.rs");
+                }
+                #[cfg(feature = "bilibili_live_component_common_model_user_dagw")]
+                pub mod user_dagw {
+                    include!("bilibili.live.component.common_model.user_dagw.rs");
+                }
+            }
+        }
         #[cfg(feature = "bilibili_live_play_gateway")]
         pub mod play_gateway {
             include!("bilibili.live.play_gateway.rs");
+        }
+        #[cfg(feature = "bilibili_live_rankdb")]
+        pub mod rankdb {
+            #[cfg(feature = "bilibili_live_rankdb_v1")]
+            pub mod v1 {
+                include!("bilibili.live.rankdb.v1.rs");
+            }
         }
         #[cfg(feature = "bilibili_live_rtc")]
         pub mod rtc {
@@ -678,6 +713,13 @@ pub mod bilibili {
                 pub mod v1 {
                     include!("bilibili.live.xroom_extend.api.v1.rs");
                 }
+            }
+        }
+        #[cfg(feature = "bilibili_live_xuserreward")]
+        pub mod xuserreward {
+            #[cfg(feature = "bilibili_live_xuserreward_v1")]
+            pub mod v1 {
+                include!("bilibili.live.xuserreward.v1.rs");
             }
         }
     }

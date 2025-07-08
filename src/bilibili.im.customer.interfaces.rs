@@ -50,6 +50,101 @@ impl ::prost::Name for Announcement {
 }
 ///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct CloseConversationReq {
+    ///
+    #[prost(int64, tag = "1")]
+    pub shop_id: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub shop_father_id: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub custom_session_id: i64,
+    ///
+    #[prost(enumeration = "close_conversation_req::CloseConversationSource", tag = "4")]
+    pub source: i32,
+    ///
+    #[prost(int32, tag = "5")]
+    pub msg_source: i32,
+    ///
+    #[prost(int32, tag = "6")]
+    pub situation: i32,
+}
+/// Nested message and enum types in `CloseConversationReq`.
+pub mod close_conversation_req {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum CloseConversationSource {
+        ///
+        Default = 0,
+        ///
+        InputBox = 1,
+        ///
+        Back = 2,
+    }
+    impl CloseConversationSource {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::Default => "CLOSE_CONVERSATION_SOURCE_DEFAULT",
+                Self::InputBox => "CLOSE_CONVERSATION_SOURCE_INPUT_BOX",
+                Self::Back => "CLOSE_CONVERSATION_SOURCE_BACK",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "CLOSE_CONVERSATION_SOURCE_DEFAULT" => Some(Self::Default),
+                "CLOSE_CONVERSATION_SOURCE_INPUT_BOX" => Some(Self::InputBox),
+                "CLOSE_CONVERSATION_SOURCE_BACK" => Some(Self::Back),
+                _ => None,
+            }
+        }
+    }
+}
+impl ::prost::Name for CloseConversationReq {
+    const NAME: &'static str = "CloseConversationReq";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.CloseConversationReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.CloseConversationReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CloseConversationRsp {
+    ///
+    #[prost(string, tag = "1")]
+    pub evaluation_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for CloseConversationRsp {
+    const NAME: &'static str = "CloseConversationRsp";
+    const PACKAGE: &'static str = "bilibili.im.customer.interfaces";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.im.customer.interfaces.CloseConversationRsp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.im.customer.interfaces.CloseConversationRsp".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Empty {}
 impl ::prost::Name for Empty {
     const NAME: &'static str = "Empty";
@@ -318,6 +413,12 @@ pub struct PreEvaluateReq {
     ///
     #[prost(int64, tag = "4")]
     pub msg_key: i64,
+    ///
+    #[prost(int64, tag = "5")]
+    pub custom_session_id: i64,
+    ///
+    #[prost(int64, tag = "6")]
+    pub machine_session_id: i64,
 }
 impl ::prost::Name for PreEvaluateReq {
     const NAME: &'static str = "PreEvaluateReq";
@@ -335,6 +436,9 @@ pub struct PreEvaluateRsp {
     ///
     #[prost(message, optional, tag = "1")]
     pub rsp: ::core::option::Option<super::model::EvaluationShowInfo>,
+    ///
+    #[prost(message, optional, tag = "2")]
+    pub rsp_v2: ::core::option::Option<super::model::EvaluationShowInfoV2>,
 }
 impl ::prost::Name for PreEvaluateRsp {
     const NAME: &'static str = "PreEvaluateRsp";
@@ -555,6 +659,11 @@ pub struct SessionMsgRsp {
     ///
     #[prost(int32, tag = "6")]
     pub fetch_interval: i32,
+    ///
+    #[prost(message, optional, tag = "7")]
+    pub hot_update_session_info: ::core::option::Option<
+        super::model::HotUpdateSessionInfo,
+    >,
 }
 impl ::prost::Name for SessionMsgRsp {
     const NAME: &'static str = "SessionMsgRsp";
@@ -781,6 +890,12 @@ pub struct WindowOptionsReq {
     ///
     #[prost(int64, tag = "3")]
     pub shop_id: i64,
+    ///
+    #[prost(int32, tag = "4")]
+    pub situation: i32,
+    ///
+    #[prost(int32, tag = "5")]
+    pub msg_source: i32,
 }
 impl ::prost::Name for WindowOptionsReq {
     const NAME: &'static str = "WindowOptionsReq";
@@ -902,6 +1017,36 @@ pub mod customer_interface_client {
         pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
             self.inner = self.inner.max_encoding_message_size(limit);
             self
+        }
+        ///
+        pub async fn close_conversation(
+            &mut self,
+            request: impl tonic::IntoRequest<super::CloseConversationReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::CloseConversationRsp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.im.customer.interfaces.CustomerInterface/CloseConversation",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(
+                    GrpcMethod::new(
+                        "bilibili.im.customer.interfaces.CustomerInterface",
+                        "CloseConversation",
+                    ),
+                );
+            self.inner.unary(req, path, codec).await
         }
         ///
         pub async fn customer_pre_evaluate(
@@ -1424,6 +1569,14 @@ pub mod customer_interface_server {
     #[async_trait]
     pub trait CustomerInterface: std::marker::Send + std::marker::Sync + 'static {
         ///
+        async fn close_conversation(
+            &self,
+            request: tonic::Request<super::CloseConversationReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::CloseConversationRsp>,
+            tonic::Status,
+        >;
+        ///
         async fn customer_pre_evaluate(
             &self,
             request: tonic::Request<super::PreEvaluateReq>,
@@ -1609,6 +1762,55 @@ pub mod customer_interface_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
+                "/bilibili.im.customer.interfaces.CustomerInterface/CloseConversation" => {
+                    #[allow(non_camel_case_types)]
+                    struct CloseConversationSvc<T: CustomerInterface>(pub Arc<T>);
+                    impl<
+                        T: CustomerInterface,
+                    > tonic::server::UnaryService<super::CloseConversationReq>
+                    for CloseConversationSvc<T> {
+                        type Response = super::CloseConversationRsp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::CloseConversationReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as CustomerInterface>::close_conversation(
+                                        &inner,
+                                        request,
+                                    )
+                                    .await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = CloseConversationSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.im.customer.interfaces.CustomerInterface/CustomerPreEvaluate" => {
                     #[allow(non_camel_case_types)]
                     struct CustomerPreEvaluateSvc<T: CustomerInterface>(pub Arc<T>);

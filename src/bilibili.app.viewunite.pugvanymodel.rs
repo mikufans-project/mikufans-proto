@@ -70,6 +70,29 @@ impl ::prost::Name for CatalogueLiveInfo {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ConsultBubble {
+    ///
+    #[prost(string, tag = "1")]
+    pub home_toast: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub slide_toast: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub wx_icon: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ConsultBubble {
+    const NAME: &'static str = "ConsultBubble";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.pugvanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.pugvanymodel.ConsultBubble".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.pugvanymodel.ConsultBubble".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CourseCoach {
     ///
     #[prost(string, tag = "1")]
@@ -522,6 +545,9 @@ pub struct OperationAreaButton {
     ///
     #[prost(string, tag = "4")]
     pub link: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub consult_bubble: ::core::option::Option<ConsultBubble>,
 }
 impl ::prost::Name for OperationAreaButton {
     const NAME: &'static str = "OperationAreaButton";

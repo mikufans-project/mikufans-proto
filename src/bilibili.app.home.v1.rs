@@ -579,7 +579,7 @@ impl ::prost::Name for RecentRecommendMetaInfo {
     }
 }
 ///
-#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RecentReq {
     ///
     #[prost(message, optional, tag = "1")]

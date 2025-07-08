@@ -362,6 +362,8 @@ pub enum FeatureFlag {
     CloudDraft = 124,
     ///
     LiveToEditor = 127,
+    ///
+    LiveClipRecreation = 128,
 }
 impl FeatureFlag {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -470,6 +472,7 @@ impl FeatureFlag {
             Self::TextToAudio => "TextToAudio",
             Self::CloudDraft => "CloudDraft",
             Self::LiveToEditor => "LiveToEditor",
+            Self::LiveClipRecreation => "LiveClipRecreation",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -575,6 +578,7 @@ impl FeatureFlag {
             "TextToAudio" => Some(Self::TextToAudio),
             "CloudDraft" => Some(Self::CloudDraft),
             "LiveToEditor" => Some(Self::LiveToEditor),
+            "LiveClipRecreation" => Some(Self::LiveClipRecreation),
             _ => None,
         }
     }

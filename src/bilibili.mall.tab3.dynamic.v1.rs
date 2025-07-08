@@ -70,6 +70,41 @@ impl ::prost::Name for Bottom {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct CreatorSmallShopEntry {
+    ///
+    #[prost(string, tag = "1")]
+    pub icon_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub icon_url_night: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub shop_name: ::prost::alloc::string::String,
+    ///
+    #[prost(string, repeated, tag = "4")]
+    pub work_identity: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+    ///
+    #[prost(string, tag = "5")]
+    pub shop_meta: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "6")]
+    pub shop_url: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "7")]
+    pub shop_items: ::prost::alloc::vec::Vec<ShopItem>,
+}
+impl ::prost::Name for CreatorSmallShopEntry {
+    const NAME: &'static str = "CreatorSmallShopEntry";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.CreatorSmallShopEntry".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.CreatorSmallShopEntry".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IconInfo {
     ///
     #[prost(string, tag = "1")]
@@ -320,6 +355,9 @@ pub struct OpusDetailResp {
     ///
     #[prost(message, optional, tag = "17")]
     pub support_info: ::core::option::Option<SupportInfo>,
+    ///
+    #[prost(message, optional, tag = "18")]
+    pub small_shop: ::core::option::Option<CreatorSmallShopEntry>,
 }
 impl ::prost::Name for OpusDetailResp {
     const NAME: &'static str = "OpusDetailResp";
@@ -507,6 +545,29 @@ impl ::prost::Name for ShareInfo {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.mall.tab3.dynamic.v1.ShareInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ShopItem {
+    ///
+    #[prost(int64, tag = "1")]
+    pub item_id: i64,
+    ///
+    #[prost(string, tag = "2")]
+    pub item_img: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub item_url: ::prost::alloc::string::String,
+}
+impl ::prost::Name for ShopItem {
+    const NAME: &'static str = "ShopItem";
+    const PACKAGE: &'static str = "bilibili.mall.tab3.dynamic.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.mall.tab3.dynamic.v1.ShopItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.mall.tab3.dynamic.v1.ShopItem".into()
     }
 }
 ///

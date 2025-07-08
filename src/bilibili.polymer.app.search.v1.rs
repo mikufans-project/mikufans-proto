@@ -844,6 +844,9 @@ pub struct DisplayOption {
     ///
     #[prost(int32, tag = "11")]
     pub alienation_card_count: i32,
+    ///
+    #[prost(int32, tag = "12")]
+    pub comment43_exp: i32,
 }
 impl ::prost::Name for DisplayOption {
     const NAME: &'static str = "DisplayOption";
@@ -1140,6 +1143,80 @@ impl ::prost::Name for FeedbackSection {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.FeedbackSection".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct FilterEntries {
+    ///
+    #[prost(string, tag = "1")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "2")]
+    pub values: ::prost::alloc::vec::Vec<FilterValue>,
+    ///
+    #[prost(string, tag = "3")]
+    pub subtitle: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub filter_type: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub area_for_neuron: ::prost::alloc::string::String,
+}
+impl ::prost::Name for FilterEntries {
+    const NAME: &'static str = "FilterEntries";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FilterEntries".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FilterEntries".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct FilterValue {
+    ///
+    #[prost(string, tag = "1")]
+    pub value: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub sub_module_for_neuron: ::prost::alloc::string::String,
+    ///
+    #[prost(oneof = "filter_value::FilterParam", tags = "3, 4, 5, 6, 7")]
+    pub filter_param: ::core::option::Option<filter_value::FilterParam>,
+}
+/// Nested message and enum types in `FilterValue`.
+pub mod filter_value {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Oneof)]
+    pub enum FilterParam {
+        ///
+        #[prost(string, tag = "3")]
+        Param(::prost::alloc::string::String),
+        ///
+        #[prost(int32, tag = "4")]
+        SortValue(i32),
+        ///
+        #[prost(int32, tag = "5")]
+        UserSortValue(i32),
+        ///
+        #[prost(int32, tag = "6")]
+        CategorySortValue(i32),
+        ///
+        #[prost(int32, tag = "7")]
+        UserTypeValue(i32),
+    }
+}
+impl ::prost::Name for FilterValue {
+    const NAME: &'static str = "FilterValue";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.FilterValue".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.FilterValue".into()
     }
 }
 ///
@@ -2888,6 +2965,9 @@ pub struct SearchAllResponse {
     ///
     #[prost(int32, tag = "20")]
     pub is_new_user: i32,
+    ///
+    #[prost(message, optional, tag = "21")]
+    pub search_filter: ::core::option::Option<SearchFilter>,
 }
 impl ::prost::Name for SearchAllResponse {
     const NAME: &'static str = "SearchAllResponse";
@@ -3319,6 +3399,9 @@ pub struct SearchByTypeResponse {
     ///
     #[prost(int64, tag = "10")]
     pub page: i64,
+    ///
+    #[prost(message, optional, tag = "11")]
+    pub search_filter: ::core::option::Option<SearchFilter>,
 }
 impl ::prost::Name for SearchByTypeResponse {
     const NAME: &'static str = "SearchByTypeResponse";
@@ -3839,6 +3922,23 @@ impl ::prost::Name for SearchDynamicCard {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.polymer.app.search.v1.SearchDynamicCard".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SearchFilter {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub filter_entries: ::prost::alloc::vec::Vec<FilterEntries>,
+}
+impl ::prost::Name for SearchFilter {
+    const NAME: &'static str = "SearchFilter";
+    const PACKAGE: &'static str = "bilibili.polymer.app.search.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.polymer.app.search.v1.SearchFilter".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.polymer.app.search.v1.SearchFilter".into()
     }
 }
 ///

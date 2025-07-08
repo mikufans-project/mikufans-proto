@@ -1669,10 +1669,10 @@ pub mod qn_item {
     pub enum Content {
         ///
         #[prost(message, tag = "1")]
-        StreamInfo(super::StreamInfo),
+        StreamInfo(::prost::alloc::boxed::Box<super::StreamInfo>),
         ///
         #[prost(message, tag = "2")]
-        QnGroup(super::QnGroup),
+        QnGroup(::prost::alloc::boxed::Box<super::QnGroup>),
     }
 }
 impl ::prost::Name for QnItem {
@@ -2392,6 +2392,9 @@ pub struct VideoCtrl {
     ///
     #[prost(message, optional, tag = "2")]
     pub qn_exp: ::core::option::Option<QnExp>,
+    ///
+    #[prost(string, tag = "3")]
+    pub qn_feature: ::prost::alloc::string::String,
 }
 impl ::prost::Name for VideoCtrl {
     const NAME: &'static str = "VideoCtrl";
@@ -3811,6 +3814,8 @@ pub enum ToastType {
     VipRiskToast = 9,
     ///
     PremiumExtraDropsToast = 10,
+    ///
+    PremiumFinaleAccessToast = 11,
 }
 impl ToastType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -3830,6 +3835,7 @@ impl ToastType {
             Self::NewUserDefinitionRemind => "NEW_USER_DEFINITION_REMIND",
             Self::VipRiskToast => "VIP_RISK_TOAST",
             Self::PremiumExtraDropsToast => "PREMIUM_EXTRA_DROPS_TOAST",
+            Self::PremiumFinaleAccessToast => "PREMIUM_FINALE_ACCESS_TOAST",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -3846,6 +3852,7 @@ impl ToastType {
             "NEW_USER_DEFINITION_REMIND" => Some(Self::NewUserDefinitionRemind),
             "VIP_RISK_TOAST" => Some(Self::VipRiskToast),
             "PREMIUM_EXTRA_DROPS_TOAST" => Some(Self::PremiumExtraDropsToast),
+            "PREMIUM_FINALE_ACCESS_TOAST" => Some(Self::PremiumFinaleAccessToast),
             _ => None,
         }
     }

@@ -4258,7 +4258,7 @@ pub struct SubjectTopCards {
     #[prost(string, tag = "2")]
     pub oid: ::prost::alloc::string::String,
     ///
-    #[prost(oneof = "subject_top_cards::Item", tags = "3")]
+    #[prost(oneof = "subject_top_cards::Item", tags = "3, 4, 5, 6, 7, 8, 9")]
     pub item: ::core::option::Option<subject_top_cards::Item>,
 }
 /// Nested message and enum types in `SubjectTopCards`.
@@ -4281,6 +4281,18 @@ pub mod subject_top_cards {
         UnknownType = 0,
         ///
         OgvGrade = 1,
+        ///
+        UpProtection = 2,
+        ///
+        Cm = 3,
+        ///
+        UpSelection = 4,
+        ///
+        Operation = 5,
+        ///
+        Vote = 6,
+        ///
+        EsportsGrade = 7,
     }
     impl Type {
         /// String value of the enum field names used in the ProtoBuf definition.
@@ -4291,6 +4303,12 @@ pub mod subject_top_cards {
             match self {
                 Self::UnknownType => "UNKNOWN_Type",
                 Self::OgvGrade => "OGV_GRADE",
+                Self::UpProtection => "UP_PROTECTION",
+                Self::Cm => "CM",
+                Self::UpSelection => "UP_SELECTION",
+                Self::Operation => "OPERATION",
+                Self::Vote => "VOTE",
+                Self::EsportsGrade => "ESPORTS_GRADE",
             }
         }
         /// Creates an enum from field names used in the ProtoBuf definition.
@@ -4298,6 +4316,12 @@ pub mod subject_top_cards {
             match value {
                 "UNKNOWN_Type" => Some(Self::UnknownType),
                 "OGV_GRADE" => Some(Self::OgvGrade),
+                "UP_PROTECTION" => Some(Self::UpProtection),
+                "CM" => Some(Self::Cm),
+                "UP_SELECTION" => Some(Self::UpSelection),
+                "OPERATION" => Some(Self::Operation),
+                "VOTE" => Some(Self::Vote),
+                "ESPORTS_GRADE" => Some(Self::EsportsGrade),
                 _ => None,
             }
         }
@@ -4308,6 +4332,24 @@ pub mod subject_top_cards {
         ///
         #[prost(message, tag = "3")]
         OgvGrade(super::OgvGradeCard),
+        ///
+        #[prost(message, tag = "4")]
+        UpProtection(super::UpProtectionCard),
+        ///
+        #[prost(message, tag = "5")]
+        Cm(super::Cm),
+        ///
+        #[prost(message, tag = "6")]
+        UpSelection(super::UpSelection),
+        ///
+        #[prost(message, tag = "7")]
+        Operation(super::OperationV2),
+        ///
+        #[prost(message, tag = "8")]
+        Vote(super::VoteCard),
+        ///
+        #[prost(message, tag = "9")]
+        EsportsGrade(super::ESportsGradeCard),
     }
 }
 impl ::prost::Name for SubjectTopCards {
@@ -4509,6 +4551,23 @@ impl ::prost::Name for UgcVideoSearchItem {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.main.community.reply.v1.UGCVideoSearchItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UpProtectionCard {
+    ///
+    #[prost(string, tag = "1")]
+    pub text: ::prost::alloc::string::String,
+}
+impl ::prost::Name for UpProtectionCard {
+    const NAME: &'static str = "UpProtectionCard";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v1.UpProtectionCard".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v1.UpProtectionCard".into()
     }
 }
 ///

@@ -306,6 +306,9 @@ pub struct ShareGuide {
     ///
     #[prost(string, tag = "7")]
     pub emphasized_text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "8")]
+    pub active_exps: ::prost::alloc::vec::Vec<ShareGuideExpConfig>,
 }
 impl ::prost::Name for ShareGuide {
     const NAME: &'static str = "ShareGuide";
@@ -315,6 +318,110 @@ impl ::prost::Name for ShareGuide {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.ugcanymodel.ShareGuide".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct ShareGuideExpConfig {
+    ///
+    #[prost(enumeration = "share_guide_exp_config::ExpType", tag = "1")]
+    pub exp_type: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(message, repeated, tag = "3")]
+    pub strategies: ::prost::alloc::vec::Vec<ShareGuideStrategy>,
+    ///
+    #[prost(int32, tag = "4")]
+    pub daily_total_limit: i32,
+    ///
+    #[prost(map = "string, string", tag = "5")]
+    pub extra_params: ::std::collections::HashMap<
+        ::prost::alloc::string::String,
+        ::prost::alloc::string::String,
+    >,
+}
+/// Nested message and enum types in `ShareGuideExpConfig`.
+pub mod share_guide_exp_config {
+    ///
+    #[derive(
+        Clone,
+        Copy,
+        Debug,
+        PartialEq,
+        Eq,
+        Hash,
+        PartialOrd,
+        Ord,
+        ::prost::Enumeration
+    )]
+    #[repr(i32)]
+    pub enum ExpType {
+        ///
+        Unknown = 0,
+        ///
+        ShareFirstReward = 1,
+        ///
+        ShareOnlineViewers = 2,
+    }
+    impl ExpType {
+        /// String value of the enum field names used in the ProtoBuf definition.
+        ///
+        /// The values are not transformed in any way and thus are considered stable
+        /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+        pub fn as_str_name(&self) -> &'static str {
+            match self {
+                Self::Unknown => "UNKNOWN",
+                Self::ShareFirstReward => "SHARE_FIRST_REWARD",
+                Self::ShareOnlineViewers => "SHARE_ONLINE_VIEWERS",
+            }
+        }
+        /// Creates an enum from field names used in the ProtoBuf definition.
+        pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+            match value {
+                "UNKNOWN" => Some(Self::Unknown),
+                "SHARE_FIRST_REWARD" => Some(Self::ShareFirstReward),
+                "SHARE_ONLINE_VIEWERS" => Some(Self::ShareOnlineViewers),
+                _ => None,
+            }
+        }
+    }
+}
+impl ::prost::Name for ShareGuideExpConfig {
+    const NAME: &'static str = "ShareGuideExpConfig";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.ugcanymodel.ShareGuideExpConfig".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.ugcanymodel.ShareGuideExpConfig".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct ShareGuideStrategy {
+    ///
+    #[prost(int32, tag = "1")]
+    pub delay_seconds: i32,
+    ///
+    #[prost(float, tag = "2")]
+    pub play_progress_threshold: f32,
+    ///
+    #[prost(int32, tag = "3")]
+    pub play_time_threshold: i32,
+    ///
+    #[prost(int32, tag = "4")]
+    pub online_viewer_threshold: i32,
+}
+impl ::prost::Name for ShareGuideStrategy {
+    const NAME: &'static str = "ShareGuideStrategy";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.ugcanymodel";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.ugcanymodel.ShareGuideStrategy".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.ugcanymodel.ShareGuideStrategy".into()
     }
 }
 ///

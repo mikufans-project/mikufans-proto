@@ -213,6 +213,36 @@ impl ::prost::Name for Color {
     }
 }
 ///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct DeviceFeatureReq {}
+impl ::prost::Name for DeviceFeatureReq {
+    const NAME: &'static str = "DeviceFeatureReq";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.DeviceFeatureReq".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.DeviceFeatureReq".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct DeviceFeatureResp {
+    ///
+    #[prost(string, tag = "1")]
+    pub action_data: ::prost::alloc::string::String,
+}
+impl ::prost::Name for DeviceFeatureResp {
+    const NAME: &'static str = "DeviceFeatureResp";
+    const PACKAGE: &'static str = "bilibili.app.mine.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.mine.v1.DeviceFeatureResp".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.mine.v1.DeviceFeatureResp".into()
+    }
+}
+///
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DisplayReportReq {
     ///
@@ -711,6 +741,31 @@ pub mod mine_client {
             self
         }
         ///
+        pub async fn device_feature(
+            &mut self,
+            request: impl tonic::IntoRequest<super::DeviceFeatureReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DeviceFeatureResp>,
+            tonic::Status,
+        > {
+            self.inner
+                .ready()
+                .await
+                .map_err(|e| {
+                    tonic::Status::unknown(
+                        format!("Service was not ready: {}", e.into()),
+                    )
+                })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/bilibili.app.mine.v1.Mine/DeviceFeature",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("bilibili.app.mine.v1.Mine", "DeviceFeature"));
+            self.inner.unary(req, path, codec).await
+        }
+        ///
         pub async fn display_report(
             &mut self,
             request: impl tonic::IntoRequest<super::DisplayReportReq>,
@@ -770,6 +825,14 @@ pub mod mine_server {
     /// Generated trait containing gRPC methods that should be implemented for use with MineServer.
     #[async_trait]
     pub trait Mine: std::marker::Send + std::marker::Sync + 'static {
+        ///
+        async fn device_feature(
+            &self,
+            request: tonic::Request<super::DeviceFeatureReq>,
+        ) -> std::result::Result<
+            tonic::Response<super::DeviceFeatureResp>,
+            tonic::Status,
+        >;
         ///
         async fn display_report(
             &self,
@@ -858,6 +921,49 @@ pub mod mine_server {
         }
         fn call(&mut self, req: http::Request<B>) -> Self::Future {
             match req.uri().path() {
+                "/bilibili.app.mine.v1.Mine/DeviceFeature" => {
+                    #[allow(non_camel_case_types)]
+                    struct DeviceFeatureSvc<T: Mine>(pub Arc<T>);
+                    impl<T: Mine> tonic::server::UnaryService<super::DeviceFeatureReq>
+                    for DeviceFeatureSvc<T> {
+                        type Response = super::DeviceFeatureResp;
+                        type Future = BoxFuture<
+                            tonic::Response<Self::Response>,
+                            tonic::Status,
+                        >;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::DeviceFeatureReq>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move {
+                                <T as Mine>::device_feature(&inner, request).await
+                            };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let method = DeviceFeatureSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
                 "/bilibili.app.mine.v1.Mine/DisplayReport" => {
                     #[allow(non_camel_case_types)]
                     struct DisplayReportSvc<T: Mine>(pub Arc<T>);

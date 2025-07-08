@@ -395,6 +395,9 @@ pub struct DanmakuElem {
     #[prost(int32, tag = "13")]
     pub attr: i32,
     ///
+    #[prost(int64, tag = "15")]
+    pub like_count: i64,
+    ///
     #[prost(string, tag = "22")]
     pub animation: ::prost::alloc::string::String,
     ///
@@ -1370,6 +1373,9 @@ pub struct DmViewReq {
     ///
     #[prost(string, tag = "6")]
     pub context_ext: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "7")]
+    pub cur_language: ::prost::alloc::string::String,
 }
 impl ::prost::Name for DmViewReq {
     const NAME: &'static str = "DmViewReq";

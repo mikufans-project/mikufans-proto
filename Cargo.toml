@@ -1,6 +1,6 @@
 [package]
 name = "mikufans-proto"
-version = "8.49.0+build.19246369"
+version = "8.52.0+build.19546312"
 edition = "2021"
 rust-version = "1.75"             # same with tonic
 
@@ -52,6 +52,7 @@ feat-all-proto = [
     "bilibili_app_dynamic_common",
     "bilibili_app_dynamic_v1",
     "bilibili_app_dynamic_v2",
+    "bilibili_app_growth_v1",
     "bilibili_app_home_v1",
     "bilibili_app_im_v1",
     "bilibili_app_interfaces_v1",
@@ -105,6 +106,7 @@ feat-all-proto = [
     "bilibili_cheese_gateway_player_v1",
     "bilibili_community_interfacess_biligram_v1",
     "bilibili_community_interfacess_cosmoconn_v1",
+    "bilibili_community_interfacess_watch_v1",
     "bilibili_community_service_cert_v1",
     "bilibili_community_service_dm_v1",
     "bilibili_community_service_govern_v1",
@@ -126,11 +128,15 @@ feat-all-proto = [
     "bilibili_live_app_interfaces_api_grpc_v1",
     "bilibili_live_app_room_v1",
     "bilibili_live_approom_api_grpc_v1",
+    "bilibili_live_component_common_model_fans_club",
+    "bilibili_live_component_common_model_user_dagw",
     "bilibili_live_play_gateway",
+    "bilibili_live_rankdb_v1",
     "bilibili_live_rtc",
     "bilibili_live_rtc_datachannel",
     "bilibili_live_rtc_datachannel_report",
     "bilibili_live_xroom_extend_api_v1",
+    "bilibili_live_xuserreward_v1",
     "bilibili_main_community_reply_v1",
     "bilibili_main_community_reply_v2",
     "bilibili_mall_tab3_dynamic_v1",
@@ -228,6 +234,8 @@ bilibili_app_dynamic_v2 = [
     "bilibili_pagination",
     "bilibili_vas_garb_service",
 ]
+bilibili_app_growth = ["bilibili_app"]
+bilibili_app_growth_v1 = ["bilibili_app_growth"]
 bilibili_app_home = ["bilibili_app"]
 bilibili_app_home_v1 = ["bilibili_app_home", "bilibili_app_archive_middleware_v1"]
 bilibili_app_im = ["bilibili_app"]
@@ -360,6 +368,8 @@ bilibili_community_interfacess_biligram = ["bilibili_community_interfacess"]
 bilibili_community_interfacess_biligram_v1 = ["bilibili_community_interfacess_biligram", "bilibili_pagination"]
 bilibili_community_interfacess_cosmoconn = ["bilibili_community_interfacess"]
 bilibili_community_interfacess_cosmoconn_v1 = ["bilibili_community_interfacess_cosmoconn"]
+bilibili_community_interfacess_watch = ["bilibili_community_interfacess"]
+bilibili_community_interfacess_watch_v1 = ["bilibili_community_interfacess_watch"]
 bilibili_community_service = ["bilibili_community"]
 bilibili_community_service_cert = ["bilibili_community_service"]
 bilibili_community_service_cert_v1 = ["bilibili_community_service_cert"]
@@ -414,13 +424,21 @@ bilibili_live_approom = ["bilibili_live"]
 bilibili_live_approom_api = ["bilibili_live_approom"]
 bilibili_live_approom_api_grpc = ["bilibili_live_approom_api"]
 bilibili_live_approom_api_grpc_v1 = ["bilibili_live_approom_api_grpc"]
+bilibili_live_component = ["bilibili_live"]
+bilibili_live_component_common_model = ["bilibili_live_component"]
+bilibili_live_component_common_model_fans_club = ["bilibili_live_component_common_model"]
+bilibili_live_component_common_model_user_dagw = ["bilibili_live_component_common_model"]
 bilibili_live_play_gateway = ["bilibili_live"]
+bilibili_live_rankdb = ["bilibili_live"]
+bilibili_live_rankdb_v1 = ["bilibili_live_rankdb"]
 bilibili_live_rtc = ["bilibili_live"]
 bilibili_live_rtc_datachannel = ["bilibili_live_rtc", "bilibili_live_rtc_datachannel_report"]
 bilibili_live_rtc_datachannel_report = ["bilibili_live_rtc_datachannel"]
 bilibili_live_xroom_extend = ["bilibili_live"]
 bilibili_live_xroom_extend_api = ["bilibili_live_xroom_extend"]
 bilibili_live_xroom_extend_api_v1 = ["bilibili_live_xroom_extend_api"]
+bilibili_live_xuserreward = ["bilibili_live"]
+bilibili_live_xuserreward_v1 = ["bilibili_live_xuserreward"]
 bilibili_main = ["bilibili"]
 bilibili_main_community = ["bilibili_main"]
 bilibili_main_community_reply = ["bilibili_main_community"]
@@ -496,3 +514,6 @@ pgc_biz = ["pgc"]
 pgc_gateway = ["pgc"]
 pgc_gateway_vega = ["pgc_gateway"]
 pgc_gateway_vega_v1 = ["pgc_gateway_vega", "bilibili_rpc"]
+
+[profile.dev]
+debug = "line-tables-only"

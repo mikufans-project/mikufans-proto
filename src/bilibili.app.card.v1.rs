@@ -212,6 +212,9 @@ pub struct Base {
     ///
     #[prost(string, tag = "20")]
     pub track_id: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "21")]
+    pub translated_title: ::prost::alloc::string::String,
 }
 impl ::prost::Name for Base {
     const NAME: &'static str = "Base";
@@ -2186,6 +2189,9 @@ pub struct ThreePointV4 {
     ///
     #[prost(message, optional, tag = "2")]
     pub watch_later: ::core::option::Option<WatchLater>,
+    ///
+    #[prost(message, optional, tag = "3")]
+    pub translate_button: ::core::option::Option<TranslateButton>,
 }
 impl ::prost::Name for ThreePointV4 {
     const NAME: &'static str = "ThreePointV4";
@@ -2282,6 +2288,23 @@ impl ::prost::Name for TopicListItem {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.card.v1.TopicListItem".into()
+    }
+}
+///
+#[derive(Clone, Copy, PartialEq, ::prost::Message)]
+pub struct TranslateButton {
+    ///
+    #[prost(enumeration = "TranslateStatus", tag = "1")]
+    pub button_status: i32,
+}
+impl ::prost::Name for TranslateButton {
+    const NAME: &'static str = "TranslateButton";
+    const PACKAGE: &'static str = "bilibili.app.card.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.card.v1.TranslateButton".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.card.v1.TranslateButton".into()
     }
 }
 ///
@@ -2450,5 +2473,34 @@ impl ::prost::Name for WatchLater {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.card.v1.WatchLater".into()
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TranslateStatus {
+    ///
+    Default = 0,
+    ///
+    SeeOriginal = 1,
+}
+impl TranslateStatus {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Default => "TRANSLATE_STATUS_DEFAULT",
+            Self::SeeOriginal => "TRANSLATE_STATUS_SEE_ORIGINAL",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "TRANSLATE_STATUS_DEFAULT" => Some(Self::Default),
+            "TRANSLATE_STATUS_SEE_ORIGINAL" => Some(Self::SeeOriginal),
+            _ => None,
+        }
     }
 }

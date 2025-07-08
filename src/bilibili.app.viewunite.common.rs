@@ -1883,7 +1883,7 @@ pub struct Module {
     ///
     #[prost(
         oneof = "module::Data",
-        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47"
+        tags = "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48"
     )]
     pub data: ::core::option::Option<module::Data>,
 }
@@ -2030,6 +2030,9 @@ pub mod module {
         ///
         #[prost(message, tag = "47")]
         ActivityGuidanceBar(super::ActivityGuidanceBar),
+        ///
+        #[prost(message, tag = "48")]
+        Questionaire(super::Questionaire),
     }
 }
 impl ::prost::Name for Module {
@@ -3463,6 +3466,38 @@ impl ::prost::Name for PugvZoneItem {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.viewunite.common.PugvZoneItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Questionaire {
+    ///
+    #[prost(int64, tag = "1")]
+    pub qid: i64,
+    ///
+    #[prost(int64, tag = "2")]
+    pub qshowtype: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub qshowtime: i64,
+    ///
+    #[prost(string, tag = "4")]
+    pub qtype: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "5")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, repeated, tag = "6")]
+    pub qoptions: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
+}
+impl ::prost::Name for Questionaire {
+    const NAME: &'static str = "Questionaire";
+    const PACKAGE: &'static str = "bilibili.app.viewunite.common";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.viewunite.common.Questionaire".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.viewunite.common.Questionaire".into()
     }
 }
 ///
@@ -6237,6 +6272,8 @@ pub enum ModuleType {
     ActivityGuidanceBar = 56,
     ///
     AiTip = 57,
+    ///
+    Questionaire = 58,
 }
 impl ModuleType {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -6303,6 +6340,7 @@ impl ModuleType {
             Self::Merchandise => "MERCHANDISE",
             Self::ActivityGuidanceBar => "ACTIVITY_GUIDANCE_BAR",
             Self::AiTip => "AI_TIP",
+            Self::Questionaire => "QUESTIONAIRE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -6366,6 +6404,7 @@ impl ModuleType {
             "MERCHANDISE" => Some(Self::Merchandise),
             "ACTIVITY_GUIDANCE_BAR" => Some(Self::ActivityGuidanceBar),
             "AI_TIP" => Some(Self::AiTip),
+            "QUESTIONAIRE" => Some(Self::Questionaire),
             _ => None,
         }
     }

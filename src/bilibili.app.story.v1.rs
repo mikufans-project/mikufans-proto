@@ -40,6 +40,9 @@ pub struct AiAudioReply {
     ///
     #[prost(string, tag = "4")]
     pub ai_close_toast: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "5")]
+    pub language: ::core::option::Option<Language>,
 }
 impl ::prost::Name for AiAudioReply {
     const NAME: &'static str = "AIAudioReply";
@@ -184,6 +187,49 @@ impl ::prost::Name for DashItem {
     }
     fn type_url() -> ::prost::alloc::string::String {
         "/bilibili.app.story.v1.DashItem".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Language {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub items: ::prost::alloc::vec::Vec<LanguageItem>,
+}
+impl ::prost::Name for Language {
+    const NAME: &'static str = "Language";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.Language".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.Language".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct LanguageItem {
+    ///
+    #[prost(string, tag = "1")]
+    pub lang: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "2")]
+    pub title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "3")]
+    pub button_title: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "4")]
+    pub subtitle_lang: ::prost::alloc::string::String,
+}
+impl ::prost::Name for LanguageItem {
+    const NAME: &'static str = "LanguageItem";
+    const PACKAGE: &'static str = "bilibili.app.story.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.story.v1.LanguageItem".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.story.v1.LanguageItem".into()
     }
 }
 ///

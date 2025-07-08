@@ -156,6 +156,49 @@ impl ::prost::Name for EmptyPage {
     }
 }
 ///
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct GuideText {
+    ///
+    #[prost(message, repeated, tag = "1")]
+    pub texts: ::prost::alloc::vec::Vec<guide_text::Text>,
+}
+/// Nested message and enum types in `GuideText`.
+pub mod guide_text {
+    ///
+    #[derive(Clone, PartialEq, ::prost::Message)]
+    pub struct Text {
+        ///
+        #[prost(string, tag = "1")]
+        pub raw: ::prost::alloc::string::String,
+        ///
+        #[prost(message, optional, tag = "2")]
+        pub style: ::core::option::Option<super::TextStyle>,
+        ///
+        #[prost(string, tag = "3")]
+        pub link: ::prost::alloc::string::String,
+    }
+    impl ::prost::Name for Text {
+        const NAME: &'static str = "Text";
+        const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+        fn full_name() -> ::prost::alloc::string::String {
+            "bilibili.main.community.reply.v2.GuideText.Text".into()
+        }
+        fn type_url() -> ::prost::alloc::string::String {
+            "/bilibili.main.community.reply.v2.GuideText.Text".into()
+        }
+    }
+}
+impl ::prost::Name for GuideText {
+    const NAME: &'static str = "GuideText";
+    const PACKAGE: &'static str = "bilibili.main.community.reply.v2";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.main.community.reply.v2.GuideText".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.main.community.reply.v2.GuideText".into()
+    }
+}
+///
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PlayerParams {
     ///
@@ -280,6 +323,9 @@ pub struct SubjectDescriptionReply {
     ///
     #[prost(bool, tag = "10")]
     pub guest_limit: bool,
+    ///
+    #[prost(message, optional, tag = "11")]
+    pub filter_guide_text: ::core::option::Option<GuideText>,
 }
 /// Nested message and enum types in `SubjectDescriptionReply`.
 pub mod subject_description_reply {

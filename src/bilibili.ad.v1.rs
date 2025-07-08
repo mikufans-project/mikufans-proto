@@ -1316,6 +1316,12 @@ pub struct FeedsRcmdReasonStyle {
     ///
     #[prost(string, tag = "8")]
     pub text: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "9")]
+    pub icon_url: ::prost::alloc::string::String,
+    ///
+    #[prost(string, tag = "10")]
+    pub icon_night_url: ::prost::alloc::string::String,
 }
 impl ::prost::Name for FeedsRcmdReasonStyle {
     const NAME: &'static str = "FeedsRcmdReasonStyle";

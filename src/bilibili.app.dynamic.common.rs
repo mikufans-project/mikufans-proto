@@ -25,6 +25,68 @@ impl ::prost::Name for ItemWhRatio {
 ///
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
+pub enum TranslateState {
+    ///
+    StateOriginal = 0,
+    ///
+    StateTranslated = 1,
+}
+impl TranslateState {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::StateOriginal => "STATE_ORIGINAL",
+            Self::StateTranslated => "STATE_TRANSLATED",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "STATE_ORIGINAL" => Some(Self::StateOriginal),
+            "STATE_TRANSLATED" => Some(Self::StateTranslated),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TranslateSwitch {
+    ///
+    TransUnknown = 0,
+    ///
+    TransSeeOriginal = 1,
+    ///
+    TransTranslate = 2,
+}
+impl TranslateSwitch {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::TransUnknown => "TRANS_UNKNOWN",
+            Self::TransSeeOriginal => "TRANS_SEE_ORIGINAL",
+            Self::TransTranslate => "TRANS_TRANSLATE",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "TRANS_UNKNOWN" => Some(Self::TransUnknown),
+            "TRANS_SEE_ORIGINAL" => Some(Self::TransSeeOriginal),
+            "TRANS_TRANSLATE" => Some(Self::TransTranslate),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
 pub enum TribeeRefresh {
     ///
     RefreshNew = 0,

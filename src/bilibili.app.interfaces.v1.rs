@@ -217,6 +217,9 @@ pub struct CardCheese {
     ///
     #[prost(int64, tag = "5")]
     pub state: i64,
+    ///
+    #[prost(int64, tag = "6")]
+    pub season_id: i64,
 }
 impl ::prost::Name for CardCheese {
     const NAME: &'static str = "CardCheese";
@@ -505,6 +508,9 @@ pub struct CursorItem {
     ///
     #[prost(string, tag = "15")]
     pub report: ::prost::alloc::string::String,
+    ///
+    #[prost(message, optional, tag = "16")]
+    pub translate_info: ::core::option::Option<TranslateInfo>,
     ///
     #[prost(oneof = "cursor_item::CardItem", tags = "1, 2, 3, 4, 5")]
     pub card_item: ::core::option::Option<cursor_item::CardItem>,
@@ -2246,6 +2252,26 @@ impl ::prost::Name for Tab {
 }
 ///
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct TranslateInfo {
+    ///
+    #[prost(enumeration = "TranslateStatus", tag = "1")]
+    pub translation_status: i32,
+    ///
+    #[prost(string, tag = "2")]
+    pub translated_title: ::prost::alloc::string::String,
+}
+impl ::prost::Name for TranslateInfo {
+    const NAME: &'static str = "TranslateInfo";
+    const PACKAGE: &'static str = "bilibili.app.interfaces.v1";
+    fn full_name() -> ::prost::alloc::string::String {
+        "bilibili.app.interfaces.v1.TranslateInfo".into()
+    }
+    fn type_url() -> ::prost::alloc::string::String {
+        "/bilibili.app.interfaces.v1.TranslateInfo".into()
+    }
+}
+///
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateReserveStartTimeReply {
     ///
     #[prost(string, tag = "1")]
@@ -2270,6 +2296,9 @@ pub struct UpdateReserveStartTimeReq {
     ///
     #[prost(int64, tag = "2")]
     pub new_live_plan_start_time: i64,
+    ///
+    #[prost(int64, tag = "3")]
+    pub r#type: i64,
 }
 impl ::prost::Name for UpdateReserveStartTimeReq {
     const NAME: &'static str = "UpdateReserveStartTimeReq";
@@ -2859,6 +2888,39 @@ impl TabType {
             "TAB_OGV_REPLY" => Some(Self::TabOgvReply),
             "TAB_FEED_BID" => Some(Self::TabFeedBid),
             "TAB_FEED_SMALL" => Some(Self::TabFeedSmall),
+            _ => None,
+        }
+    }
+}
+///
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[repr(i32)]
+pub enum TranslateStatus {
+    ///
+    Unneeded = 0,
+    ///
+    Translated = 1,
+    ///
+    Untranslated = 2,
+}
+impl TranslateStatus {
+    /// String value of the enum field names used in the ProtoBuf definition.
+    ///
+    /// The values are not transformed in any way and thus are considered stable
+    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
+    pub fn as_str_name(&self) -> &'static str {
+        match self {
+            Self::Unneeded => "TRANSLATE_STATUS_UNNEEDED",
+            Self::Translated => "TRANSLATE_STATUS_TRANSLATED",
+            Self::Untranslated => "TRANSLATE_STATUS_UNTRANSLATED",
+        }
+    }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "TRANSLATE_STATUS_UNNEEDED" => Some(Self::Unneeded),
+            "TRANSLATE_STATUS_TRANSLATED" => Some(Self::Translated),
+            "TRANSLATE_STATUS_UNTRANSLATED" => Some(Self::Untranslated),
             _ => None,
         }
     }

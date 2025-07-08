@@ -1768,10 +1768,10 @@ pub mod qn_item {
     pub enum Content {
         ///
         #[prost(message, tag = "1")]
-        StreamInfo(super::StreamInfo),
+        StreamInfo(::prost::alloc::boxed::Box<super::StreamInfo>),
         ///
         #[prost(message, tag = "2")]
-        QnGroup(super::QnGroup),
+        QnGroup(::prost::alloc::boxed::Box<super::QnGroup>),
     }
 }
 impl ::prost::Name for QnItem {
